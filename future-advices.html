@@ -1,0 +1,23 @@
+<head>
+    <title>Futuros Conselhos</title>
+</head>
+
+<template name='adviceListing'>
+    <div id='advices-container'>
+        <div class='title'>Your saved advices:</div>
+        <ul id='advices'>
+            {{#each list}}
+                <li class='advice'>
+                    {{Advice}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</template>
+
+<body>
+    <h1>Olá, Fulano!</h1>
+
+    {{> adviceListing}}
+</body>
+
