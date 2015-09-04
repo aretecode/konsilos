@@ -1,1 +1,8 @@
-/* CSS declarations go here */
+#advices-form input,
+#advices-form input,
+#advices-form textarea {
+    display: block;
+    margin: 1em;
+    width: 15em;
+}
+
