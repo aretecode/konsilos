@@ -1,6 +1,6 @@
 Meteor.startup(function () {
     Meteor.publish('AdviceList', function() {
-        return adviceList.find();
+        return adviceList.find({ creator: this.userId });
     });
 });
 
@@ -16,3 +16,15 @@ function isAdmin(user) {
     return adminUser && adminUser._id === user._id;
 }
 
+//TODO remove and do proper user logic later
+function TEMP_ALLOW(userId) {
+    return userId;
+}
+
+//TODO Do the following in a smarter way, check slides from spotify/soundcloud crew on how\
+//they hire / interview code examples
+adviceList.allow({
+    insert: TEMP_ALLOW,
+    update: TEMP_ALLOW,
+    remove: TEMP_ALLOW
+});

@@ -2,6 +2,10 @@
     <title>Futuros Conselhos</title>
 </head>
 
+<template name='greeting'>
+    <h1>Hi there, {{email}}!</h1>
+</template>
+
 <template name='adviceForm'>
     <form action='' id='advices-form' method='post'>
         <h2>Make this advice unforgetable:</h2>
@@ -19,7 +23,7 @@
         <ul id='advices'>
             {{#each list}}
                 <li class='advice'>
-                    {{Advice}} &mdash; {{Description}} &rarr; {{When}}
+                    {{advice}} &mdash; {{description}} &rarr; {{when}}
                 </li>
             {{/each}}
         </ul>
@@ -28,10 +32,13 @@
 
 <body>
     {{> loginButtons}}
-    <h1>Hi there, Fulano!</h1>
 
-    {{> adviceForm}}
+    {{#if currentUser}}
+        {{> greeting}}
 
-    {{> adviceListing}}
+        {{> adviceForm}}
+
+        {{> adviceListing}}
+    {{/if}}
 </body>
 

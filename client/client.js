@@ -1,8 +1,14 @@
 Meteor.subscribe('AdviceList');
 
+Template.greeting.helpers({
+    email: function() {
+        return Meteor.user().emails[0].address;
+    }
+});
+
 Template.adviceListing.helpers({
     list: function () {
-        return adviceList.find({}, { sort: { Advice: 1 }});
+        return adviceList.find({}, { sort: { advice: 1 }});
     }
 });
 
@@ -15,9 +21,10 @@ Template.adviceForm.events({
         var adviceWhen = templateInstance.find('.adviceWhen').value;
 
         adviceList.insert({
-            Advice: adviceName,
-            Description: adviceDescription,
-            When: adviceWhen
+            advice: adviceName,
+            description: adviceDescription,
+            when: adviceWhen,
+            creator: Meteor.userId()
         });
     }
 });
