@@ -9,6 +9,17 @@ Accounts.config({
     sendVerificationEmail: true
 });
 
+Meteor.methods({
+    addAdvice: function(adviceData) {
+        //TODO proper authorization checks (Iron Router?)
+        if (!Meteor.userId()) {
+            throw new Meteor.Error('not-authorized');
+        }
+        adviceData.creator = Meteor.userId();
+        adviceList.insert(adviceData);
+    }
+});
+
 //TODO i18n
 Accounts.emailTemplates.siteName = 'Future Advices';
 Accounts.emailTemplates.from = 'Future Advices <contact@futureadvices.com>';

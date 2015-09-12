@@ -23,11 +23,10 @@ Template.adviceForm.events({
         var adviceDescription = templateInstance.find('.adviceDescription').value;
         var adviceWhen = templateInstance.find('.adviceWhen').value;
 
-        adviceList.insert({
+        Meteor.call('addAdvice', {
             advice: adviceName,
             description: adviceDescription,
-            when: adviceWhen,
-            creator: Meteor.userId()
+            when: adviceWhen
         });
     }
 });
