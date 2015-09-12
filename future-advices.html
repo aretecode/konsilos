@@ -4,6 +4,10 @@
 
 <template name='greeting'>
     <h1>Hi there, {{email}}!</h1>
+
+    {{#unless isVerifiedEmail}}
+        <h3>Your email is not verified yet! Please click the verification link we sent you.</h3>
+    {{/unless}}
 </template>
 
 <template name='adviceForm'>

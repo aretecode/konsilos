@@ -3,6 +3,9 @@ Meteor.subscribe('AdviceList');
 Template.greeting.helpers({
     email: function() {
         return Meteor.user().emails[0].address.split('@')[0];
+    },
+    isVerifiedEmail: function() {
+        return Meteor.user().emails[0].verified;
     }
 });
 
