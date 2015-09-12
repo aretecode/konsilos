@@ -23,12 +23,14 @@ Meteor.methods({
 //TODO i18n
 Accounts.emailTemplates.siteName = 'Future Advices';
 Accounts.emailTemplates.from = 'Future Advices <contact@futureadvices.com>';
-//TODO grab user.profile.name instead:
-Accounts.emailTemplates.enrollAccount.subject = function(user) {
+//TODO we currently have no user.profile
+var welcomeMessage = function(user) {
     return 'Welcome to Future Advices, ' + user.profile.name;
 };
-Accounts.emailTemplates.enrollAccount.text = function(user, url) {
-    return 'Welcome........... Click to activate: ' + url;
+Accounts.emailTemplates.enrollAccount.subject = welcomeMessage;
+Accounts.emailTemplates.verifyEmail.subject = welcomeMessage;
+Accounts.emailTemplates.verifyEmail.text = function(user, url) {
+    return 'Welcome to Future Advices,........... Click to verify you email: ' + url;
 };
 
 // function isAdmin(user) {
