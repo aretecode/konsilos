@@ -2,6 +2,18 @@
     <title>Future Advices</title>
 </head>
 
+<template name='Home'>
+    {{> loginButtons}}
+
+    {{#if currentUser}}
+        {{> greeting}}
+
+        {{> adviceForm}}
+
+        {{> adviceListing}}
+    {{/if}}
+</template>
+
 <template name='greeting'>
     <h1>Hi there, {{email}}!</h1>
 
@@ -34,15 +46,5 @@
     </div>
 </template>
 
-<body>
-    {{> loginButtons}}
-
-    {{#if currentUser}}
-        {{> greeting}}
-
-        {{> adviceForm}}
-
-        {{> adviceListing}}
-    {{/if}}
-</body>
+<body></body>
 
