@@ -22,3 +22,4 @@ check
 ecmascript
 promise
 es5-shim
+iron:router
