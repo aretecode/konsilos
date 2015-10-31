@@ -6,7 +6,7 @@ Meteor.startup(function () {
 });
 
 Meteor.methods({
-    addAdvice: function(adviceData) {
+    addAdvice(adviceData) {
         //TODO proper authorization checks (Iron Router?)
         if (!Meteor.userId()) {
             throw new Meteor.Error('not-authorized');
