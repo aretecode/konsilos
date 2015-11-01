@@ -1,0 +1,35 @@
+#advices-form {
+    input,
+    textarea {
+        display: block;
+        margin: 1em;
+        width: 15em;
+    }
+}
+
+#content-wrapper { clear: both; }
+
+#navigation-bar {
+    float: left;
+    //TODO: Remove after insert an resetting css sheet:
+    padding: 0;
+    margin-top: 0;
+
+    li {
+        list-style: none;
+        display: inline-block;
+        &:after { content: ' | '; }
+        &:last-child:after { content: ''; }
+    }
+}
+
+
+/* FIXME: accounts-ui bug: */
+#login-buttons {
+    float: right;
+
+    &.login-buttons-dropdown-align-right .login-link-and-dropdown-list {
+        position: absolute;
+        right: 0;
+    }
+}

@@ -10,15 +10,19 @@
     {{/if}}
 </template>
 
+<template name='NavigationBar'>
+    <ul id='navigation-bar'>
+        <li>
+            {{#linkTo route='home'}}Home{{/linkTo}}
+        </li>
+        <li>
+            {{#linkTo route='profile'}}Edit profile{{/linkTo}}
+        </li>
+    </ul>
+</template>
+
 <template name='Greeting'>
-    <h1>
-        Hi there, {{firstName}}!
-        <small>
-            {{#linkTo route='profile'}}
-                Edit profile
-            {{/linkTo}}
-        </small>
-    </h1>
+    <h1>Hi there, {{firstName}}!</h1>
 
     {{#unless isVerifiedEmail}}
         <h3>Your email is not verified yet! Please click the verification link we sent you.</h3>
@@ -50,7 +54,8 @@
 </template>
 
 <template name='ApplicationLayout'>
-    {{> loginButtons}}
+    {{> loginButtons align='right'}}
+    {{> NavigationBar}}
     <div id='content-wrapper'>
         {{> yield}}
     </div>
