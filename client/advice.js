@@ -8,9 +8,9 @@ Template.AdviceForm.events({
     'submit #advices-form': (event, templateInstance) => {
         event.preventDefault();
 
-        var adviceName = templateInstance.find('.adviceName').value;
-        var adviceDescription = templateInstance.find('.adviceDescription').value;
-        var adviceWhen = templateInstance.find('.adviceWhen').value;
+        const adviceName = templateInstance.find('.adviceName').value;
+        const adviceDescription = templateInstance.find('.adviceDescription').value;
+        const adviceWhen = templateInstance.find('.adviceWhen').value;
 
         Meteor.call('addAdvice', {
             advice: adviceName,

@@ -11,7 +11,7 @@
 </template>
 
 <template name='Greeting'>
-    <h1>Hi there, {{email}}!</h1>
+    <h1>Hi there, {{firstName}}!</h1>
 
     {{#unless isVerifiedEmail}}
         <h3>Your email is not verified yet! Please click the verification link we sent you.</h3>
@@ -19,7 +19,7 @@
 </template>
 
 <template name='AdviceForm'>
-    <form action='' id='advices-form' method='post'>
+    <form id='advices-form'>
         <h2>Make this advice unforgetable:</h2>
 
         <input placeholder='Title' type='text' class='adviceName' value='' />
@@ -42,6 +42,11 @@
     </div>
 </template>
 
-<body>
+<template name='ApplicationLayout'>
     {{> loginButtons}}
-</body>
+    <div id='content-wrapper'>
+        {{> yield}}
+    </div>
+</template>
+
+<body></body>

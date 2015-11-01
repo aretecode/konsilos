@@ -1,6 +1,6 @@
 Template.Greeting.helpers({
-    email() {
-        return Meteor.user().emails[0].address.split('@')[0];
+    firstName() {
+        return Meteor.user().profile.name.split(' ')[0];
     },
     isVerifiedEmail() {
         return Meteor.user().emails[0].verified;

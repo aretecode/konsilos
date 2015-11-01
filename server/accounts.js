@@ -2,6 +2,11 @@ Accounts.config({
     sendVerificationEmail: true
 });
 
+Accounts.onCreateUser((options, user) => {
+    user.profile = { name: user.emails[0].address.split('@')[0] };
+    return user;
+});
+
 //TODO i18n
 Accounts.emailTemplates.siteName = 'Future Advices';
 Accounts.emailTemplates.from = 'Future Advices <contact@futureadvices.com>';

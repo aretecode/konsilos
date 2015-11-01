@@ -1,0 +1,9 @@
+<template name='Profile'>
+    <form id='profile-form'>
+        <h1>Here you can edit your profile</h1>
+        <label for='userFullName'>Name:</label>
+        <input placeholder='Your Name' type='text' id='userFullName' value='{{currentUser.profile.name}}' />
+
+        <input type='submit' class='submit' value='Update my profile' />
+    </form>
+</template>
