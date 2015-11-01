@@ -1,20 +1,8 @@
 <template name='Home'>
     {{#if currentUser}}
         {{> Greeting}}
-        {{> AdviceForm}}
         {{> AdviceListing}}
     {{/if}}
-</template>
-
-<template name='NavigationBar'>
-    <ul id='navigation-bar'>
-        <li>
-            {{#linkTo route='home'}}Home{{/linkTo}}
-        </li>
-        <li>
-            {{#linkTo route='profile'}}Edit profile{{/linkTo}}
-        </li>
-    </ul>
 </template>
 
 <template name='Greeting'>

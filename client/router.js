@@ -6,3 +6,4 @@ Router.configure({
 
 Router.route('/', { name: 'home' });
 Router.route('/me', { name: 'profile' });
+Router.route('/my-advices', { name: 'my-advices' });
