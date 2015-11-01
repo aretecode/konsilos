@@ -11,7 +11,14 @@
 </template>
 
 <template name='Greeting'>
-    <h1>Hi there, {{firstName}}!</h1>
+    <h1>
+        Hi there, {{firstName}}!
+        <small>
+            {{#linkTo route='profile'}}
+                Edit profile
+            {{/linkTo}}
+        </small>
+    </h1>
 
     {{#unless isVerifiedEmail}}
         <h3>Your email is not verified yet! Please click the verification link we sent you.</h3>
