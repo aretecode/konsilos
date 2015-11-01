@@ -1,0 +1,23 @@
+<template name='AdviceForm'>
+    <form id='advices-form'>
+        <h2>Make this advice unforgetable:</h2>
+
+        <input placeholder='Title' type='text' class='adviceName' value='' />
+        <textarea placeholder='Description' rows='4' class='adviceDescription'></textarea>
+        <input placeholder='Timing' type='text' class='adviceWhen' value='' />
+        <input type='submit' class='submit' value='Eternize your advice!' />
+    </form>
+</template>
+
+<template name='AdviceListing'>
+    <div id='advices-container'>
+        <h2>Your registered advices:</h2>
+        <ul id='advices'>
+            {{#each list}}
+                <li class='advice'>
+                    {{advice}} &mdash; {{description}} &rarr; {{when}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</template>

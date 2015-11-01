@@ -1,0 +1,27 @@
+<template name='Home'>
+    {{#if currentUser}}
+        {{> Greeting}}
+        {{> AdviceForm}}
+        {{> AdviceListing}}
+    {{/if}}
+</template>
+
+<template name='NavigationBar'>
+    <ul id='navigation-bar'>
+        <li>
+            {{#linkTo route='home'}}Home{{/linkTo}}
+        </li>
+        <li>
+            {{#linkTo route='profile'}}Edit profile{{/linkTo}}
+        </li>
+    </ul>
+</template>
+
+<template name='Greeting'>
+    <h1>Hi there, {{firstName}}!</h1>
+
+    {{#unless isVerifiedEmail}}
+        <h3>Your email is not verified yet! Please click the verification link we sent you.</h3>
+    {{/unless}}
+</template>
+
