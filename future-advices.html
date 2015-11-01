@@ -3,18 +3,14 @@
 </head>
 
 <template name='Home'>
-    {{> loginButtons}}
-
     {{#if currentUser}}
-        {{> greeting}}
-
-        {{> adviceForm}}
-
-        {{> adviceListing}}
+        {{> Greeting}}
+        {{> AdviceForm}}
+        {{> AdviceListing}}
     {{/if}}
 </template>
 
-<template name='greeting'>
+<template name='Greeting'>
     <h1>Hi there, {{email}}!</h1>
 
     {{#unless isVerifiedEmail}}
@@ -22,7 +18,7 @@
     {{/unless}}
 </template>
 
-<template name='adviceForm'>
+<template name='AdviceForm'>
     <form action='' id='advices-form' method='post'>
         <h2>Make this advice unforgetable:</h2>
 
@@ -33,7 +29,7 @@
     </form>
 </template>
 
-<template name='adviceListing'>
+<template name='AdviceListing'>
     <div id='advices-container'>
         <h2>Your registered advices:</h2>
         <ul id='advices'>
@@ -46,5 +42,6 @@
     </div>
 </template>
 
-<body></body>
-
+<body>
+    {{> loginButtons}}
+</body>

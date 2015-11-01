@@ -1,10 +1,10 @@
-Template.adviceListing.helpers({
+Template.AdviceListing.helpers({
     list() {
         return adviceList.find({}, { sort: { advice: 1 }});
     }
 });
 
-Template.adviceForm.events({
+Template.AdviceForm.events({
     'submit #advices-form': (event, templateInstance) => {
         event.preventDefault();
 

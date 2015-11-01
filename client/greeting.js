@@ -1,4 +1,4 @@
-Template.greeting.helpers({
+Template.Greeting.helpers({
     email() {
         return Meteor.user().emails[0].address.split('@')[0];
     },
