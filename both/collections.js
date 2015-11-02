@@ -3,7 +3,7 @@ Advices = new Mongo.Collection('Advices');
 Advices.attachSchema(new SimpleSchema({
     creator: {
         type: String,
-        autoValue: function() { return Meteor.userId(); },
+        autoValue: () => Meteor.userId(),
         autoform: {
             afFieldInput: {
                 type: 'hidden'
