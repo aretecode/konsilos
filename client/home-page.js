@@ -1,2 +1,2 @@
-Meteor.subscribe('AdviceList');
+Meteor.subscribe('Advices');
 

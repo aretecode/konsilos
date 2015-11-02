@@ -24,3 +24,5 @@ promise
 es5-shim
 iron:router
 less
+aldeed:autoform
+aldeed:collection2
