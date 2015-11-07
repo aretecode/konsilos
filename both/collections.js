@@ -1,10 +1,10 @@
-Advices = new Mongo.Collection('Advices');
+Schemas = {};
 
-Advices.attachSchema(new SimpleSchema({
+Schemas.advice = new SimpleSchema({
     creator: {
         type: String,
         autoValue: () => Meteor.userId(),
-        autoform: {
+            autoform: {
             afFieldInput: {
                 type: 'hidden'
             }
@@ -28,4 +28,14 @@ Advices.attachSchema(new SimpleSchema({
         type: Date,
         optional: true
     }
-}));
+});
+
+Schemas.profile = new SimpleSchema({
+    name: {
+        type: String,
+        label: 'Name'
+    }
+});
+
+Advices = new Mongo.Collection('Advices');
+Advices.attachSchema(Schemas.advice);

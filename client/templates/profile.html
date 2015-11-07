@@ -1,9 +1,12 @@
 <template name='Profile'>
-    <form id='profile-form'>
-        <h1>Here you can edit your profile</h1>
-        <label for='userFullName'>Name:</label>
-        <input placeholder='Your Name' type='text' id='userFullName' value='{{currentUser.profile.name}}' />
+    <h1 class='ui horizontal divider header'>Here you can edit your profile</h1>
 
-        <input type='submit' class='submit' value='Update my profile' />
-    </form>
+    {{> quickForm id='UpdateProfileForm'
+        schema=profileSchema
+        doc=profile
+        type='method'
+        meteormethod='updateProfile'
+        class='stacked segment'
+        buttonContent='Update my profile'
+    }}
 </template>
