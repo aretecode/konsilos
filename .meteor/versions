@@ -18,6 +18,7 @@ caching-compiler@1.0.0
 caching-html-compiler@1.0.2
 callback-hook@1.0.4
 check@1.1.0
+coffeescript@1.0.11
 ddp@1.2.2
 ddp-client@1.2.1
 ddp-common@1.2.2
@@ -30,6 +31,8 @@ ecmascript-runtime@0.2.6
 ejson@1.0.7
 email@1.0.8
 es5-shim@4.1.14
+fabienb4:autoform-semantic-ui@0.7.2
+flemay:less-autoprefixer@1.2.0
 geojson-utils@1.0.4
 hot-code-push@1.0.0
 html-tools@1.0.5
@@ -68,9 +71,12 @@ reactive-var@1.0.6
 reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
+semantic:ui@2.1.5
+semantic:ui-data@2.1.5
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
+softwarerero:accounts-t9n@1.1.4
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 srp@1.0.4
@@ -80,5 +86,9 @@ tracker@1.0.9
 ui@1.0.8
 underscore@1.0.4
 url@1.0.5
+useraccounts:core@1.12.4
+useraccounts:iron-routing@1.12.4
+useraccounts:semantic-ui@1.12.4
 webapp@1.2.3
 webapp-hashing@1.0.5
+zimme:active-route@2.3.2

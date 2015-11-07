@@ -1,12 +1,17 @@
 <head>
     <title>Future Advices</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
 </head>
 
 <template name='ApplicationLayout'>
-    {{> loginButtons align='right'}}
-    {{> NavigationBar}}
-    <div id='content-wrapper'>
-        {{> yield}}
+    <div class='ui container'>
+        {{> yield region='nav'}}
+
+        <div id='content' class='ui fluid aligned basic'>
+            {{> yield }}
+        </div>
+
+        {{> yield region='footer' }}
     </div>
 </template>
 

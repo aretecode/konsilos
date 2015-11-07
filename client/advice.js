@@ -1,8 +1,6 @@
 Template.AdviceListing.helpers({
     list() {
-        const advices = Advices.find({}, { sort: { advice: 1 }});
-        console.log(advices);
-        return advices;
+        return Advices.find({}, { sort: { advice: 1 }});
     }
 });
 

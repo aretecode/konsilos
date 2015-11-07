@@ -1,5 +1,15 @@
 <template name='InsertAdviceForm'>
-    {{> quickForm collection='Advices' id='InsertAdviceForm' type='insert' omitFields='creator'}}
+    <h2 class='ui horizontal divider header padded'>
+        <i class='tag icon'></i>
+        Add a new advice
+    </h2>
+    {{> quickForm id='InsertAdviceForm'
+        collection='Advices'
+        type='insert'
+        omitFields='creator'
+        class='stacked segment'
+        buttonContent='Make this advice eternal!'
+    }}
 </template>
 
 <template name='UpdateAdviceForm'>
@@ -19,7 +29,10 @@
 
 <template name='AdviceListing'>
     <div id='advices-container'>
-        <h2>Your advices so far:</h2>
+        <h2 class='ui horizontal divider header'>
+            <i class='tag icon'></i>
+            Your advices so far
+        </h2>
         <ul id='advices'>
             {{#each list}}
                 <li class='advice'>

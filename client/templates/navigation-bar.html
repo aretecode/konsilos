@@ -1,8 +1,29 @@
 <template name='NavigationBar'>
-    <ul id='navigation-bar'>
-        <li>{{#linkTo route='home'}}Home{{/linkTo}}</li>
-        <li>{{#linkTo route='profile'}}Edit profile{{/linkTo}}</li>
-        <li>{{#linkTo route='my-advices'}}My advices{{/linkTo}}</li>
-    </ul>
+    <div class='ui menu'>
+        <a href='{{pathFor "home"}}' class='{{isActiveRoute regex="home"}} item'>
+            <i class='home icon'></i>
+        </a>
+        <a href='{{pathFor "profile"}}' class='{{isActiveRoute regex="profile"}} item'>
+            My profile
+        </a>
+        <a href='{{pathFor "my-advices"}}' class='{{isActiveRoute regex="my-advices"}} item'>
+            My Advices
+        </a>
+
+        <div class='right menu'>
+            <div class='ui dropdown item'>
+                Language <i class='dropdown icon'></i>
+                <div class='menu'>
+                    <a class='item'>English</a>
+                    <a class='item'>Portuguese</a>
+                </div>
+            </div>
+            {{> atNavButton}}
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        $('.right.menu .dropdown').dropdown();
+    </script>
 </template>
 

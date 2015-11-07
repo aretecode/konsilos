@@ -23,6 +23,11 @@ ecmascript
 promise
 es5-shim
 iron:router
-less
 aldeed:autoform
 aldeed:collection2
+semantic:ui
+flemay:less-autoprefixer
+useraccounts:semantic-ui
+useraccounts:iron-routing
+zimme:active-route
+fabienb4:autoform-semantic-ui
