@@ -1,6 +1,9 @@
 <template name='InsertAdviceForm'>
     <h2 class='ui horizontal divider header'>
-        <i class='tag icon'></i>
+        <i class='icons'>
+            <i class='heart icon'></i>
+            <i class='inverted corner add icon'></i>
+        </i>
         Add a new advice
     </h2>
     {{> quickForm id='InsertAdviceForm'
@@ -30,7 +33,11 @@
 <template name='AdviceListing'>
     <div id='advices-container'>
         <h2 class='ui horizontal divider header'>
-            <i class='tag icon'></i>
+            <!-- <i class='tag icon'></i> -->
+            <i class='icons'>
+                <i class='heart icon'></i>
+                <i class='inverted corner list icon'></i>
+            </i>
             Your advices so far
         </h2>
         <ul id='advices'>
