@@ -1,5 +1,11 @@
 <template name='Profile'>
-    <h1 class='ui horizontal divider header'>Here you can edit your profile</h1>
+    <h2 class='ui horizontal divider header'>
+        <i class='icons'>
+            <i class='user icon'></i>
+            <i class='inverted corner write icon'></i>
+        </i>
+        Here you can edit your profile
+    </h2>
 
     {{> quickForm id='UpdateProfileForm'
         schema=profileSchema
