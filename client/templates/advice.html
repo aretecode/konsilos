@@ -1,5 +1,5 @@
 <template name='InsertAdviceForm'>
-    <h2 class='ui horizontal divider header'>
+    <h2 class='ui horizontal divider section header'>
         <i class='icons'>
             <i class='heart icon'></i>
             <i class='inverted corner add icon'></i>
@@ -21,7 +21,7 @@
 
 <template name='AdviceListing'>
     <div id='advices-container'>
-        <h2 class='ui horizontal divider header'>
+        <h2 class='ui horizontal divider section header'>
             <i class='icons'>
                 <i class='heart icon'></i>
                 <i class='inverted corner list icon'></i>
@@ -40,5 +40,6 @@
 
 <template name='MyAdvices'>
     {{> InsertAdviceForm}}
+    <div class='ui hidden divider'></div>
     {{> AdviceListing}}
 </template>

@@ -3,27 +3,30 @@
         <a href='{{pathFor "home"}}' class='{{isActiveRoute regex="home"}} item'>
             <i class='home icon'></i>
         </a>
-        <a href='{{pathFor "profile"}}' class='{{isActiveRoute regex="profile"}} item'>
-            My profile
-        </a>
         <a href='{{pathFor "my-advices"}}' class='{{isActiveRoute regex="my-advices"}} item'>
             My Advices
         </a>
 
         <div class='right menu'>
-            <div class='ui dropdown item'>
-                Language <i class='dropdown icon'></i>
-                <div class='menu'>
-                    <a class='item'>English</a>
-                    <a class='item'>Portuguese</a>
+            {{#if currentUser}}
+                <div class='ui dropdown item'>
+                    <i class='user icon'></i>
+                    {{firstName}} <i class='dropdown icon'></i>
+                    <div class='menu'>
+                        <a href='{{pathFor "profile"}}' class='{{isActiveRoute regex="profile"}} item'>
+                            <i class='write icon'></i>
+                            Edit My Profile
+                        </a>
+                        <a href='{{pathFor "sign-out"}}' class='{{isActiveRoute regex="sign-out"}} item'>
+                            <i class='sign out icon'></i>
+                            Sign Out
+                        </a>
+                    </div>
                 </div>
-            </div>
-            {{> atNavButton}}
+            {{else}}
+                {{> atNavButton}}
+            {{/if}}
         </div>
     </div>
-
-    <script type='text/javascript'>
-        $('.right.menu .dropdown').dropdown();
-    </script>
 </template>
 

@@ -13,16 +13,21 @@ Router.configure({
 //TODO should we change to "DataNotFound"?
 Router.plugin('dataNotFound', { notFoundTemplate: 'PageNotFound' });
 
+//Routes
 Router.route('/', { name: 'home' });
 Router.route('/me', { name: 'profile' });
 Router.route('/my-advices', { name: 'my-advices' });
-
-//TODO
-Router.plugin('ensureSignedIn', {
-  only: ['private']
+Router.route('/sign-out', {
+    name: 'sign-out',
+    onBeforeAction: () => {
+        AccountsTemplates.logout();
+        this.next();
+    }
 });
 
-//Routes
+//TODO Home page with login
+Router.plugin('ensureSignedIn');
+
 
 AccountsTemplates.configure({
     //defaultLayout: 'emptyLayout',
