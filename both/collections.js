@@ -4,10 +4,18 @@ Schemas.advice = new SimpleSchema({
     creator: {
         type: String,
         autoValue: () => Meteor.userId(),
-            autoform: {
+        autoform: {
             afFieldInput: {
                 type: 'hidden'
-            }
+            },
+            omit: true
+        }
+    },
+    created_at: {
+        type: Date,
+        autoValue: () => new Date(),
+        autoform: {
+            omit: true
         }
     },
     advice: {
