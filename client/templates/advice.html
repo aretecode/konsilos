@@ -30,12 +30,21 @@
         </h2>
         <div class='advices ui relaxed divided list'>
             {{#each list}}
-                <div class='advice item'>
-                    <i class='big empty heart middle aligned icon'></i>
-                    <div class='content'>
-                        <div class='header'>{{advice}}</div>
-                        <div class='meta'>{{when}}</div>
-                        <div class='description'>{{description}}</div>
+                <div class='advice item stackable relaxed grid'>
+                    <div class='row'>
+                        <div class='column left floated'>
+                            <i class='big empty heart middle aligned icon'></i>
+                        </div>
+                        <div class='column content'>
+                            <div class='row'>
+                                <div class='column left floated header'>{{advice}}</div>
+                                <div class='column meta'>
+                                    <i class='wait icon'></i>
+                                    {{fromNow when}}
+                                </div>
+                            </div>
+                            <div class='row description'>{{description}}</div>
+                        </div>
                     </div>
                 </div>
             {{/each}}
