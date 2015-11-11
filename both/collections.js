@@ -1,7 +1,7 @@
 Schemas = {};
 
 Schemas.advice = new SimpleSchema({
-    creator: {
+    adviser: {
         type: String,
         autoValue: () => Meteor.userId(),
         autoform: {
@@ -10,6 +10,12 @@ Schemas.advice = new SimpleSchema({
             },
             omit: true
         }
+    },
+    advisee: {
+        type: String,
+        optional: true,
+        label: "Who's this advice for?"
+
     },
     created_at: {
         type: Date,
@@ -20,11 +26,11 @@ Schemas.advice = new SimpleSchema({
     },
     advice: {
         type: String,
-        label: 'Title'
+        label: "What's your advice?"
     },
     description: {
         type: String,
-        label: 'Description',
+        label: 'Why does this advice matters?',
         optional: true,
         autoform: {
             afFieldInput: {
@@ -34,7 +40,8 @@ Schemas.advice = new SimpleSchema({
     },
     when: {
         type: Date,
-        optional: true
+        optional: true,
+        label: 'When is the best time for this advice?'
     }
 });
 

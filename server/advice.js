@@ -1,16 +1,3 @@
-// Meteor.methods({
-//     addAdvice(adviceData) {
-//         Advices.clean()
-//         //TODO proper authorization checks (Iron Router?)
-//         if (!Meteor.userId()) {
-//             throw new Meteor.Error('not-authorized');
-//         }
-//         //TODO insert creator via hidden autoform field
-//         adviceData.creator = Meteor.userId();
-//         Advices.insert(adviceData);
-//     }
-// });
-
 //TODO remove and do proper user logic later
 function TEMP_ALLOW(userId) {
     return userId;
