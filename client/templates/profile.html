@@ -8,8 +8,9 @@
     </h2>
 
     {{> quickForm id='UpdateProfileForm'
-        schema=profileSchema
+        schema=Schemas.Profile
         doc=profile
+        omitFields='family'
         type='method'
         meteormethod='updateProfile'
         class='segment'

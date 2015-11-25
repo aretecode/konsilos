@@ -1,6 +1,6 @@
 Schemas = {};
 
-Schemas.advice = new SimpleSchema({
+Schemas.Advice = new SimpleSchema({
     adviser: {
         type: String,
         autoValue: () => Meteor.userId(),
@@ -45,12 +45,56 @@ Schemas.advice = new SimpleSchema({
     }
 });
 
-Schemas.profile = new SimpleSchema({
+Schemas.Profile = new SimpleSchema({
     name: {
         type: String,
+        label: 'Name',
+        optional: true
+    },
+    family: {
+        type: Array,
+        // label: 'My Family',
+        optional: true
+    },
+    'family.$': {
+        type: Object,
+        // label: 'Family Member'
+    },
+    'family.$.name': {
+        type: String,
         label: 'Name'
+    },
+    'family.$.gender': {
+        type: String,
+        label: 'Gender',
+        allowedValues: ['male', 'female', 'other/nd'],
+        autoform: {
+            options: [
+                { label: 'Male', value: 'male' },
+                { label: 'Female', value: 'female' },
+                { label: 'Other', value: 'other' },
+                { label: 'I prefer not to say', value: 'rather-not' },
+            ],
+        }
+    },
+    'family.$.birhdate': {
+        type: Date,
+        label: 'Date of Birth'
+    },
+    'family.$.relationship': {
+        type: String,
+        allowedValues: ['child', 'father', 'mother', 'sibling', 'other'],
+        autoform: {
+            options: [
+                { label: 'Child', value: 'child' },
+                { label: 'Father', value: 'father' },
+                { label: 'Mother', value: 'mother' },
+                { label: 'Sibling', value: 'sibling' },
+                { label: 'Other', value: 'other' },
+            ],
+        }
     }
 });
 
 Advices = new Mongo.Collection('Advices');
-Advices.attachSchema(Schemas.advice);
+Advices.attachSchema(Schemas.Advice);

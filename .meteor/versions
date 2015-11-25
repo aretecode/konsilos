@@ -31,7 +31,7 @@ ecmascript-runtime@0.2.6
 ejson@1.0.7
 email@1.0.8
 es5-shim@4.1.14
-fabienb4:autoform-semantic-ui@0.7.2
+fabienb4:autoform-semantic-ui@0.8.0
 flemay:less-autoprefixer@1.2.0
 geojson-utils@1.0.4
 hot-code-push@1.0.0
@@ -76,7 +76,7 @@ semantic:ui-data@2.1.6
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
-softwarerero:accounts-t9n@1.1.4
+softwarerero:accounts-t9n@1.1.6
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 srp@1.0.4

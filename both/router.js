@@ -17,6 +17,7 @@ Router.plugin('dataNotFound', { notFoundTemplate: 'PageNotFound' });
 Router.route('/', { name: 'home' });
 Router.route('/me', { name: 'profile' });
 Router.route('/my-advices', { name: 'my-advices' });
+Router.route('/my-family', { name: 'my-family' });
 Router.route('/sign-out', {
     name: 'sign-out',
     onBeforeAction: () => {
