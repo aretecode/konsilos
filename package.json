@@ -1,0 +1,22 @@
+{
+  "name": "future-advices",
+  "version": "1.0.0",
+  "description": "Eternize-se",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^4.1.6",
+    "eslint": "^1.10.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/luizfilho/future-advices.git"
+  },
+  "author": "Luiz Gonzaga dos Santos Filho, Leonardo Teixeira Queiroz",
+  "license": "Proprietary",
+  "homepage": "https://bitbucket.org/luizfilho/future-advices#readme"
+}
