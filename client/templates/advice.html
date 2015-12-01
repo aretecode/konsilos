@@ -1,4 +1,4 @@
-<template name='InsertAdviceForm'>
+<template name='AdviceForm'>
     <h2 class='ui horizontal divider section header'>
         <i class='icons'>
             <i class='heart icon'></i>
@@ -6,7 +6,7 @@
         </i>
         Add a new advice
     </h2>
-    {{#autoForm id='InsertAdviceForm'
+    {{#autoForm id='AdviceForm'
         collection=Collections.Advices
         type='insert'
         class='stacked segment'
@@ -15,17 +15,9 @@
         {{> afQuickField name='advice'}}
         {{> afQuickField name='description'}}
         {{> afQuickField name='when'}}
+
         {{> afFieldInput type='submit' value='Make this advice eternal!'}}
-
     {{/autoForm}}
-</template>
-
-<template name='UpdateAdviceForm'>
-    {{> quickForm id='UpdateAdviceForm'
-        collection=Collections.Advices
-        doc=this
-        type='update'
-    }}
 </template>
 
 <template name='AdviceListing'>
@@ -62,7 +54,7 @@
 </template>
 
 <template name='MyAdvices'>
-    {{> InsertAdviceForm}}
+    {{> AdviceForm}}
     <div class='ui hidden divider'></div>
     {{> AdviceListing}}
 </template>
