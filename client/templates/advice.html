@@ -6,17 +6,26 @@
         </i>
         Add a new advice
     </h2>
-    {{> quickForm id='InsertAdviceForm'
+    {{#autoForm id='InsertAdviceForm'
         collection=Collections.Advices
         type='insert'
-        omitFields='adviser'
         class='stacked segment'
-        buttonContent='Make this advice eternal!'
     }}
+        {{> afQuickField name='advisee'}}
+        {{> afQuickField name='advice'}}
+        {{> afQuickField name='description'}}
+        {{> afQuickField name='when'}}
+        {{> afFieldInput type='submit' value='Make this advice eternal!'}}
+
+    {{/autoForm}}
 </template>
 
 <template name='UpdateAdviceForm'>
-    {{> quickForm collection=Collections.Advices doc=this id='UpdateAdviceForm' type='update'}}
+    {{> quickForm id='UpdateAdviceForm'
+        collection=Collections.Advices
+        doc=this
+        type='update'
+    }}
 </template>
 
 <template name='AdviceListing'>
