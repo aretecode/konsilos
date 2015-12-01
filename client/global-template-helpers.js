@@ -1,4 +1,5 @@
 Template.registerHelper('Schemas', Schemas);
+Template.registerHelper('Collections', Collections);
 
 Template.registerHelper('firstName', () => {
     return Meteor.user() && Meteor.user().profile.name.split(' ')[0];
