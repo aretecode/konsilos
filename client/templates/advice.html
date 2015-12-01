@@ -7,7 +7,7 @@
         Add a new advice
     </h2>
     {{> quickForm id='InsertAdviceForm'
-        collection='Advices'
+        collection=Collections.Advices
         type='insert'
         omitFields='adviser'
         class='stacked segment'
@@ -16,7 +16,7 @@
 </template>
 
 <template name='UpdateAdviceForm'>
-    {{> quickForm collection='Advices' doc=this id='UpdateAdviceForm' type='update'}}
+    {{> quickForm collection=Collections.Advices doc=this id='UpdateAdviceForm' type='update'}}
 </template>
 
 <template name='AdviceListing'>

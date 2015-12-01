@@ -5,7 +5,7 @@ function TEMP_ALLOW(userId) {
 
 //TODO Do the following in a smarter way, check slides from spotify/soundcloud crew on how\
 //they hire / interview code examples
-Advices.allow({
+Collections.Advices.allow({
     insert: TEMP_ALLOW,
     update: TEMP_ALLOW,
     remove: TEMP_ALLOW

@@ -1,4 +1,5 @@
 Schemas = {};
+Collections = {};
 
 Schemas.Advice = new SimpleSchema({
     adviser: {
@@ -96,5 +97,5 @@ Schemas.Profile = new SimpleSchema({
     }
 });
 
-Advices = new Mongo.Collection('Advices');
-Advices.attachSchema(Schemas.Advice);
+Collections.Advices = new Mongo.Collection('Advices');
+Collections.Advices.attachSchema(Schemas.Advice);
