@@ -1,3 +1,7 @@
+Meteor.publish('Advices', function() {
+    return Collections.Advices.find({ adviser: this.userId });
+});
+
 //TODO remove and do proper user logic later
 function TEMP_ALLOW(userId) {
     return userId;

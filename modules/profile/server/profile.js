@@ -1,3 +1,12 @@
+Accounts.onCreateUser((options, user) => {
+    user.profile = {
+        name: user.emails[0].address.split('@')[0],
+        family: []
+    };
+
+    return user;
+});
+
 Meteor.methods({
     updateProfile(profileData) {
         //TODO proper authorization checks (Iron Router?)
