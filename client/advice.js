@@ -5,7 +5,7 @@ Template.AdviceListing.helpers({
 
 Template.AdviceForm.helpers({
     adviseeList: () => {
-        const familyMembers = Meteor.user().profile.family;
+        const familyMembers = Meteor.user().profile.family || [];
         const familyMembersOptions = familyMembers.map(member => {
             return {
                 label: `${member.name} (${member.relationship})`,
@@ -27,4 +27,3 @@ Template.AdviceForm.helpers({
         return finalOptions;
     }
 });
-
