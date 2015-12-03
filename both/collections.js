@@ -13,14 +13,17 @@ Schemas.Advice = new SimpleSchema({
         }
     },
     advisee: {
-        type: String,
-        optional: true,
-        label: "Who's this advice for?"
-
+        type: 'select',
+        label: "Who's this advice for?",
+        autoform: {
+            search: true
+        }
     },
     created_at: {
         type: Date,
-        autoValue: () => new Date(),
+        autoValue: function() {
+            return this.value || new Date();
+        },
         autoform: {
             omit: true
         }
@@ -60,6 +63,18 @@ Schemas.Profile = new SimpleSchema({
     'family.$': {
         type: Object,
         // label: 'Family Member'
+    },
+    'family.$.id': {
+        type: String,
+        autoValue: function () {
+            return this.value || Random.id();
+        },
+        autoform: {
+            afFieldInput: {
+                type: 'hidden'
+            },
+            omit: true
+        }
     },
     'family.$.name': {
         type: String,
