@@ -1,14 +1,14 @@
 <template name='NavigationBar'>
-    <div class='ui menu'>
-        <a href='{{pathFor "home"}}' class='{{isActiveRoute regex="home"}} item'>
-            <i class='home icon'></i>
-        </a>
-        <a href='{{pathFor "my-advices"}}' class='{{isActiveRoute regex="my-advices"}} item'>
-            My Advices
-        </a>
+    {{#if currentUser}}
+        <div class='ui menu'>
+            <a href='{{pathFor "home"}}' class='{{isActiveRoute regex="home"}} item'>
+                <i class='home icon'></i>
+            </a>
+            <a href='{{pathFor "my-advices"}}' class='{{isActiveRoute regex="my-advices"}} item'>
+                My Advices
+            </a>
 
-        <div class='right menu'>
-            {{#if currentUser}}
+            <div class='right menu'>
                 <div class='ui dropdown item'>
                     <i class='user icon'></i>
                     {{firstName}} <i class='dropdown icon'></i>
@@ -27,10 +27,8 @@
                         </a>
                     </div>
                 </div>
-            {{else}}
-                {{> atNavButton}}
-            {{/if}}
+            </div>
         </div>
-    </div>
+    {{/if}}
 </template>
 
