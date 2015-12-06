@@ -1,4 +1,12 @@
 <template name='AdviceForm'>
+    <div class='family-member ui modal'>
+        <i class='close icon'></i>
+        <div class='header'>Add a new family member here and then select it on the list</div>
+        <div class='ui hidden divider'></div>
+
+        {{> MyFamily}}
+    </div>
+
     <h2 class='ui horizontal divider section header'>
         <i class='icons'>
             <i class='heart icon'></i>
@@ -11,7 +19,7 @@
         type='insert'
         class='stacked segment'
     }}
-        {{> afQuickField name='advisee' options=adviseeList}}
+        {{> afQuickField name='advisee' classNames='advisee' options=adviseeOptions}}
         {{> afQuickField name='advice'}}
         {{> afQuickField name='description'}}
         {{> afQuickField name='when'}}

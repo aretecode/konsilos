@@ -12,7 +12,7 @@ Template.AdviceListing.helpers({
 });
 
 Template.AdviceForm.helpers({
-    adviseeList: () => {
+    adviseeOptions: () => {
         const familyMembers = Meteor.user().profile.family || [];
         const familyMembersOptions = familyMembers.map(member => {
             return {
@@ -34,4 +34,19 @@ Template.AdviceForm.helpers({
 
         return finalOptions;
     }
+});
+
+Template.AdviceForm.onRendered(function() {
+    const addFamilyModal = this.$('.family-member')
+        .modal('setting', 'transition', 'scale')
+        .modal('attach events', '.positive.button', 'hide');
+
+    this.$('.advisee').dropdown({
+        onChange: newValue => {
+            // TODO: make an unit test for ensuring the following value correctness:
+            if (newValue === 'add-new-family-member') {
+                addFamilyModal.modal('show');
+            }
+        }
+    });
 });
