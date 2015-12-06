@@ -4,6 +4,7 @@ Meteor.publish('Advices', function() {
 
 //TODO remove and do proper user logic later
 function TEMP_ALLOW(userId) {
+    // User is logged in:
     return userId;
 }
 
