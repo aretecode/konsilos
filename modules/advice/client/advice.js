@@ -34,10 +34,27 @@ Template.AdviceForm.helpers({
         }]);
 
         return finalOptions;
+    },
+
+    whenOptions: () => {
+        // Quando <label> completar a idade _______
+        // Especificamente na data...
+        // Em um momento marcante [formatura, 1º dia de aula, 1ª namoradinha, 1ª decepção amorosa, Quero adicionar um outro momento]
+
+        const options = [
+            {
+                category: { value: 'specific-age', label: 'When ____ turns __ yearls old' },
+                items: _.range(100)
+            }
+        ];
+
+        return options;
     }
 });
 
 Template.AdviceForm.onRendered(function() {
+    this.$('.when').dropdown();
+
     const addFamilyModal = this.$('.family-member')
         .modal('setting', 'transition', 'scale')
         .modal('attach events', '.positive.button', 'hide');

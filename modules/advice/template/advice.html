@@ -22,7 +22,37 @@
         {{> afQuickField name='advisee' class='advisee' options=adviseeOptions}}
         {{> afQuickField name='advice'}}
         {{> afQuickField name='description'}}
-        {{> afQuickField name='when'}}
+
+        <div class='when ui dropdown button'>
+            <span class='text'>Choose Category</span>
+            <i class='dropdown icon'></i>
+            <div class='menu'>
+                <div class='item'>
+                    <!-- TODO: pegar valor reativo do familiar selecionado acima -->
+                    <span class='text'>When ____ turns __ years old</span>
+                </div>
+                <div class='item'>
+                    <i class='dropdown icon'></i>
+                    <span class='text'>At the specific date of...</span>
+                    <div class='menu'>
+                        <div class='item'>Selecionar data</div>
+                    </div>
+                </div>
+                <div class='item'>
+                    <i class='dropdown icon'></i>
+                    <span class='text'>Upon an imporant life's moment...</span>
+                    <div class='menu'>
+                        <div class='item'>Graduation</div>
+                        <div class='item'>First day of school</div>
+                        <div class='item'>First girl/boyfriend</div>
+                        <div class='item'>First love disillusion</div>
+                        <div class='item'>I wanna add my own...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- {{> afQuickField name='when'}} -->
 
         {{> afFieldInput type='submit' value='Make this advice eternal!'}}
     {{/autoForm}}
