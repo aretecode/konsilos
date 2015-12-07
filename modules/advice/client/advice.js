@@ -16,9 +16,10 @@ Template.AdviceForm.helpers({
         const familyMembers = Meteor.user() && Meteor.user().profile.family || [];
         const familyMembersOptions = familyMembers.map(member => {
             return {
-                label: `${member.name} (${member.relationship})`,
+                label: `${member.name}`,
                 value: member.id,
-                icon: 'users icon'
+                icon: 'users icon',
+                description: member.relationship.capitalizeFirstLetter()
             }
         });
         const otherOptions = [
