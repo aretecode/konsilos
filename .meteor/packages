@@ -20,7 +20,6 @@ ejson
 spacebars
 check
 ecmascript
-promise
 es5-shim
 iron:router
 aldeed:autoform
