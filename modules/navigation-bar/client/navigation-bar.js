@@ -1,3 +1,3 @@
 Template.NavigationBar.onRendered(function() {
-    this.$('.ui.dropdown').dropdown();
+    this.$('.user.dropdown').dropdown();
 });
