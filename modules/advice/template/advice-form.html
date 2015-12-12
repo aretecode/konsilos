@@ -1,0 +1,60 @@
+<template name='AdviceForm'>
+    <div class='family-member ui modal'>
+        <i class='close icon'></i>
+        <div class='header'>Add a new family member here and then select it on the list</div>
+        <div class='ui hidden divider'></div>
+
+        {{> MyFamily}}
+    </div>
+
+    <h2 class='ui horizontal divider section header'>
+        <i class='icons'>
+            <i class='heart icon'></i>
+            <i class='inverted corner add icon'></i>
+        </i>
+        Add a new advice
+    </h2>
+
+    {{#autoForm id='AdviceForm'
+        collection=Collections.Advices
+        type='insert'
+        class='stacked segment'
+    }}
+        {{> afQuickField name='advisee' class='advisee' options=adviseeOptions}}
+        {{> afQuickField name='advice'}}
+        {{> afQuickField name='description'}}
+        {{> afQuickField name='when.type' options=whenTypeOptions fullTextSearch=true}}
+
+        <!-- TODO waiting for fabien4 semantic ui package to fix this bug: https://github.com/fabienb4/meteor-autoform-semantic-ui/issues/42 -->
+        <!-- Date time picker-->
+        {{> afQuickField name='when.value' class='ui dropdown datetimepicker'}}
+
+        <!-- Moment chooser-->
+        {{> afQuickField name='when.value' options=importantMomentOptions fullTextSearch=true allowAdditions=true}}
+
+        <!-- Specific age-->
+        <div class='ui right labeled input'>
+            {{> afQuickField type='number' name='when.value' min=0}}
+
+            <div class='ui basic label'>years</div>
+        </div>
+
+        {{#if afFieldValueIs name='when.type' value='specific-age'}}
+        {{else}}
+            {{#if afFieldValueIs name='when.type' value='specific-date'}}
+            {{else}}
+                {{#if afFieldValueIs name='when.type' value='important-moment'}}
+                    {{> afQuickField name='when.value' options=whenImportantMomentOptions settings=whenImportantMomentSettings}}
+                {{else}}
+                    {{#if afFieldValueIs name='when.type' value='my-own'}}
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+        {{/if}}
+
+        <div class='ui clearing hidden divider'></div>
+
+        {{> afFieldInput type='submit' value='Make this advice eternal!'}}
+    {{/autoForm}}
+</template>
+

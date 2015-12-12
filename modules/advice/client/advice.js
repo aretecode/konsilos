@@ -25,27 +25,35 @@ Template.AdviceForm.helpers({
         const otherOptions = [
             { label: 'My future child', value: 'future-child', icon: 'wait icon' },
             { label: 'A future someone', value: 'future-someone', icon: 'wait icon' },
-            { label: 'Add a new family member...', value: 'add-new-family-member', icon: 'add user icon' }
+            { label: 'Add a new family member...', value: 'add-new-family-member', icon: 'add user icon', description: '»' }
         ];
 
-        const finalOptions = familyMembersOptions.concat([{
+        const options = familyMembersOptions.concat([{
             itemGroup: 'Not here yet:',
             items: otherOptions
         }]);
 
-        return finalOptions;
+        return options;
     },
 
-    whenOptions: () => {
-        // Quando <label> completar a idade _______
-        // Especificamente na data...
-        // Em um momento marcante [formatura, 1º dia de aula, 1ª namoradinha, 1ª decepção amorosa, Quero adicionar um outro momento]
-
+    whenTypeOptions: () => {
+        //TODO the following is not working due https://github.com/fabienb4/meteor-autoform-semantic-ui/issues/42
+        const selectedAdvisee = AutoForm.getFieldValue('advisee') || '____';
         const options = [
-            {
-                category: { value: 'specific-age', label: 'When ____ turns __ yearls old' },
-                items: _.range(100)
-            }
+            { value: 'specific-age', label: `When ${selectedAdvisee} turns __ years old...`, description: '»' },
+            { value: 'specific-date', label: 'At an specific date...', description: '»' },
+            { value: 'important-moment', label: `Upon an important life's moment...`, description: '»' },
+        ];
+
+        return options;
+    },
+
+    importantMomentOptions: () => {
+        const options = [
+            { label: 'Graduation', value: 'graduation' },
+            { label: 'First day of school', value: 'first-day-of-school' },
+            { label: 'First girl/boyfriend', value: 'first-girl-boyfriend' },
+            { label: 'First breakup', value: 'first-breakup' },
         ];
 
         return options;
@@ -54,6 +62,7 @@ Template.AdviceForm.helpers({
 
 Template.AdviceForm.onRendered(function() {
     this.$('.when').dropdown();
+    this.$('.datetimepicker').datetimepicker();
 
     const addFamilyModal = this.$('.family-member')
         .modal('setting', 'transition', 'scale')
@@ -65,6 +74,15 @@ Template.AdviceForm.onRendered(function() {
             if (newValue === 'add-new-family-member') {
                 addFamilyModal.modal('show');
             }
+        }
+    });
+
+    //TODO: remove the following soon
+    this.$('.when').dropdown({
+        onChange: (a,b,c,d) => {
+            console.log(`a ${a}`);
+            console.log(`b ${b}`);
+            console.log(`c`, c);
         }
     });
 });
