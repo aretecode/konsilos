@@ -23,34 +23,32 @@
         {{> afQuickField name='advisee' class='advisee' options=adviseeOptions}}
         {{> afQuickField name='advice'}}
         {{> afQuickField name='description'}}
-        {{> afQuickField name='when.type' options=whenTypeOptions fullTextSearch=true}}
 
-        <!-- TODO waiting for fabien4 semantic ui package to fix this bug: https://github.com/fabienb4/meteor-autoform-semantic-ui/issues/42 -->
-        <!-- Date time picker-->
-        {{> afQuickField name='when.value' class='ui dropdown datetimepicker'}}
+        <div class='two fields'>
+            {{> afQuickField name='when.type' class='when' options=whenTypeOptions fullTextSearch=true}}
 
-        <!-- Moment chooser-->
-        {{> afQuickField name='when.value' options=importantMomentOptions fullTextSearch=true allowAdditions=true}}
-
-        <!-- Specific age-->
-        <div class='ui right labeled input'>
-            {{> afQuickField type='number' name='when.value' min=0}}
-
-            <div class='ui basic label'>years</div>
-        </div>
-
-        {{#if afFieldValueIs name='when.type' value='specific-age'}}
-        {{else}}
-            {{#if afFieldValueIs name='when.type' value='specific-date'}}
+            {{#if afFieldValueIs name='when.type' value='specific-age'}}
+                {{! The following looks broken currently}}
+                {{! Waiting on: https://github.com/Semantic-Org/Semantic-UI/issues/3462 }}
+                {{> afQuickField type='number' name='when.value' min=0 label=false leftLabel='Type the age' rightLabel='years'}}
             {{else}}
-                {{#if afFieldValueIs name='when.type' value='important-moment'}}
-                    {{> afQuickField name='when.value' options=whenImportantMomentOptions settings=whenImportantMomentSettings}}
+                {{#if afFieldValueIs name='when.type' value='specific-date'}}
+                    {{> afQuickField name='when.value' class='ui dropdown datetimepicker' label='Choose the date'}}
+                    <script type='text/javascript'>
+                        $('#AdviceForm .datetimepicker').datetimepicker({
+                            inline: true,
+                            sideBySide: true,
+                            minDate: new Date(),
+                            format: whenDateFormat
+                        });
+                    </script>
                 {{else}}
-                    {{#if afFieldValueIs name='when.type' value='my-own'}}
+                    {{#if afFieldValueIs name='when.type' value='important-moment'}}
+                        {{> afQuickField name='when.value' options=importantMomentOptions fullTextSearch=true allowAdditions=true label='Choose the best moment for it'}}
                     {{/if}}
                 {{/if}}
             {{/if}}
-        {{/if}}
+        </div>
 
         <div class='ui clearing hidden divider'></div>
 

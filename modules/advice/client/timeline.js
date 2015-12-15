@@ -3,30 +3,29 @@ Meteor.startup(() => {
 });
 
 function getTemporalAdvices() {
+    //TODO adicionar eventos de idade, caso soubermos a idade (calcular o evento futuro... data de nascimento + idade desejada)
     return Collections.Advices.find({
-        when: { '$exists': 1}
+        'when.type': 'specific-date'
     }, {
-        sort: { advice: 1 }
+        sort: { 'when.value': 1 }
     })
     .map(advice => {
-        const startDate = moment(advice.when).startOf('day');
-        const endDate = moment(advice.when).endOf('day');
+        const startDate = moment(advice.when.value).startOf('day');
 
         return {
             type: 'point',
             content: advice.advice,
             title: advice.advice,
-            start: startDate,
-            end: endDate
+            start: startDate
         };
     });
 }
 
-Template.AdviceTimeline.onRendered(function() {
+Template.AdviceTimeline.onRendered(() => {
     const container = document.getElementById('advice-timeline');
     const timelineData = getTemporalAdvices();
     const options = {
-        timeAxis: { scale: 'day', step: 1}
+        timeAxis: { scale: 'day', step: 1 }
     };
     const timeline = new vis.Timeline(container, timelineData, options);
 });

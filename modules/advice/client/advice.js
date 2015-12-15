@@ -37,10 +37,9 @@ Template.AdviceForm.helpers({
     },
 
     whenTypeOptions: () => {
-        //TODO the following is not working due https://github.com/fabienb4/meteor-autoform-semantic-ui/issues/42
-        const selectedAdvisee = AutoForm.getFieldValue('advisee') || '____';
+        const selectedAdviseeLabel = Session.get('selectedAdviseeLabel') || '____';
         const options = [
-            { value: 'specific-age', label: `When ${selectedAdvisee} turns __ years old...`, description: '»' },
+            { value: 'specific-age', label: `When ${selectedAdviseeLabel} turns __ years old...`, description: '»' },
             { value: 'specific-date', label: 'At an specific date...', description: '»' },
             { value: 'important-moment', label: `Upon an important life's moment...`, description: '»' },
         ];
@@ -61,28 +60,17 @@ Template.AdviceForm.helpers({
 });
 
 Template.AdviceForm.onRendered(function() {
-    this.$('.when').dropdown();
-    this.$('.datetimepicker').datetimepicker();
-
     const addFamilyModal = this.$('.family-member')
         .modal('setting', 'transition', 'scale')
         .modal('attach events', '.positive.button', 'hide');
 
     this.$('.advisee').dropdown({
-        onChange: newValue => {
+        onChange: (newValue, newText, $newEl) => {
             // TODO: make an unit test for ensuring the following value correctness:
             if (newValue === 'add-new-family-member') {
                 addFamilyModal.modal('show');
             }
-        }
-    });
-
-    //TODO: remove the following soon
-    this.$('.when').dropdown({
-        onChange: (a,b,c,d) => {
-            console.log(`a ${a}`);
-            console.log(`b ${b}`);
-            console.log(`c`, c);
+            Session.set('selectedAdviseeLabel', getTagOrphanTextOnly($newEl));
         }
     });
 });
