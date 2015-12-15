@@ -13,6 +13,15 @@
             </i>
             Your advices so far
         </h2>
+
+        {{> AdviceTimeline}}
+
+        <div class='ui hidden divider'></div>
+
+        <h3 class='ui section header'>
+            And here are all of them
+        </h3>
+
         <div class='advices ui relaxed divided list'>
             {{#each list}}
                 <div class='advice item stackable relaxed grid'>
