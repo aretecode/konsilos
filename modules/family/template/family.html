@@ -4,7 +4,7 @@
             <i class='user icon'></i>
             <i class='inverted corner add icon'></i>
         </i>
-        Add a new family member
+        {{_ 'add-new-family-member' }}
     </h2>
     {{> quickForm id='InsertFamilyMemberForm'
         collection='Family'
@@ -21,7 +21,7 @@
             <i class='icons'>
                 <i class='users icon'></i>
             </i>
-            My Family
+            {{_ 'my-family'}}
         </h2>
         <div class='family ui relaxed horizontal divided list'>
             {{#each list}}
@@ -59,6 +59,6 @@
         type='method'
         meteormethod='updateFamily'
         class='segment'
-        buttonContent='Update my beloved ones'
+        buttonContent=(_ 'update-my-beloved-ones')
     }}
 </template>

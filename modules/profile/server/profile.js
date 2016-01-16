@@ -1,7 +1,8 @@
-Accounts.onCreateUser((options, user) => {
+Accounts.onCreateUser(function(options, user) {
     user.profile = {
-        name: user.emails[0].address.split('@')[0],
-        family: []
+        name: getUsernameFromUserEmail(user),
+        family: [],
+        language: undefined
     };
 
     return user;
@@ -16,7 +17,10 @@ Meteor.methods({
 
         Meteor.users.update(
             { _id: Meteor.user()._id },
-            { $set: { 'profile.name': profileData.name } }
+            { $set: {
+                'profile.name': profileData.name,
+                'profile.language': profileData.language
+            }}
         );
     }
 });

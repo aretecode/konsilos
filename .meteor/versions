@@ -20,6 +20,7 @@ boilerplate-generator@1.0.4
 caching-compiler@1.0.0
 caching-html-compiler@1.0.2
 callback-hook@1.0.4
+cfs:http-methods@0.0.30
 check@1.1.0
 coffeescript@1.0.11
 dburles:mongo-collection-instances@0.3.4
@@ -37,6 +38,7 @@ email@1.0.8
 es5-shim@4.1.14
 fabienb4:autoform-semantic-ui@0.9.1
 flemay:less-autoprefixer@1.2.0
+gadicohen:headers@0.0.31
 geojson-utils@1.0.4
 gwendall:body-events@0.1.6
 hot-code-push@1.0.0
@@ -62,6 +64,8 @@ logging@1.0.8
 mdg:validation-error@0.2.0
 meteor@1.1.10
 meteor-base@1.0.1
+meteorhacks:inject-initial@1.0.3
+meteorspark:util@0.2.0
 meteortoys:allthings@2.3.1
 meteortoys:authenticate@2.1.0
 meteortoys:autopub@2.1.0
@@ -107,6 +111,7 @@ softwarerero:accounts-t9n@1.1.7
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 srp@1.0.4
+tap:i18n@1.7.0
 templating@1.1.5
 templating-tools@1.0.0
 tracker@1.0.9

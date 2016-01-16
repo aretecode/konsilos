@@ -11,7 +11,7 @@
                 <i class='heart icon'></i>
                 <i class='inverted corner list icon'></i>
             </i>
-            Your advices so far
+            {{_ 'your-advices-so-far' }}
         </h2>
 
         {{> AdviceTimeline}}
@@ -19,7 +19,7 @@
         <div class='ui hidden divider'></div>
 
         <h3 class='ui section header'>
-            And here are all of them
+            {{_ 'and-here-are-all-of-them' }}
         </h3>
 
         <div class='advices ui relaxed divided list'>
@@ -43,7 +43,8 @@
                 </div>
             {{else}}
                 <h3 class='ui header center aligned'>
-                    No advice eternized yet! The future awaits! Go ahead and add some!<i class='right floated smile icon'></i>
+                    {{_ 'no-advice-yet' }}
+                    <i class='right floated smile icon'></i>
                 </h3>
             {{/each}}
         </div>

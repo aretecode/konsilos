@@ -19,17 +19,17 @@ Template.AdviceForm.helpers({
                 label: `${member.name}`,
                 value: member.id,
                 icon: 'users icon',
-                description: member.relationship.capitalizeFirstLetter()
+                description: __(member.relationship).capitalizeFirstLetter()
             }
         });
         const otherOptions = [
-            { label: 'My future child', value: 'future-child', icon: 'wait icon' },
-            { label: 'A future someone', value: 'future-someone', icon: 'wait icon' },
-            { label: 'Add a new family member...', value: 'add-new-family-member', icon: 'add user icon', description: '»' }
+            { label: __('my-future-child'), value: 'future-child', icon: 'wait icon' },
+            { label: __('a-future-someone'), value: 'future-someone', icon: 'wait icon' },
+            { label: __('add-a-new-family-member'), value: 'add-new-family-member', icon: 'add user icon', description: '»' }
         ];
 
         const options = familyMembersOptions.concat([{
-            itemGroup: 'Not here yet:',
+            itemGroup: __('not-here-yet'),
             items: otherOptions
         }]);
 
@@ -38,10 +38,13 @@ Template.AdviceForm.helpers({
 
     whenTypeOptions: () => {
         const selectedAdviseeLabel = Session.get('selectedAdviseeLabel') || '____';
+        const when =  __('when');
+        const turns = __('turns-__-years-old');
+        const specificAgeLabel =  `${when} ${selectedAdviseeLabel} ${turns}`;
         const options = [
-            { value: 'specific-age', label: `When ${selectedAdviseeLabel} turns __ years old...`, description: '»' },
-            { value: 'specific-date', label: 'At an specific date...', description: '»' },
-            { value: 'important-moment', label: `Upon an important life's moment...`, description: '»' },
+            { value: 'specific-age', label: specificAgeLabel, description: '»' },
+            { value: 'specific-date', label: __('at-an-specific-date'), description: '»' },
+            { value: 'important-moment', label: __('upon-an-important-lifes-moment'), description: '»' },
         ];
 
         return options;
@@ -49,10 +52,10 @@ Template.AdviceForm.helpers({
 
     importantMomentOptions: () => {
         const options = [
-            { label: 'Graduation', value: 'graduation' },
-            { label: 'First day of school', value: 'first-day-of-school' },
-            { label: 'First girl/boyfriend', value: 'first-girl-boyfriend' },
-            { label: 'First breakup', value: 'first-breakup' },
+            { label: __('graduation'), value: 'graduation' },
+            { label: __('first-day-of-school'), value: 'first-day-of-school' },
+            { label: __('first-girl/boyfriend'), value: 'first-girl-boyfriend' },
+            { label: __('first-breakup'), value: 'first-breakup' },
         ];
 
         return options;
