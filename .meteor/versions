@@ -3,8 +3,11 @@ accounts-password@1.1.4
 accounts-ui@1.1.6
 accounts-ui-unstyled@1.1.8
 aldeed:autoform@5.8.1
-aldeed:collection2@2.7.0
-aldeed:simple-schema@1.5.0
+aldeed:collection2@2.8.0
+aldeed:collection2-core@1.0.0
+aldeed:schema-deny@1.0.1
+aldeed:schema-index@1.0.1
+aldeed:simple-schema@1.5.3
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -56,7 +59,7 @@ less@2.5.1
 livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
-mdg:validation-error@0.1.0
+mdg:validation-error@0.2.0
 meteor@1.1.10
 meteor-base@1.0.1
 meteortoys:allthings@2.3.1
@@ -76,7 +79,7 @@ meteortoys:throttle@2.1.0
 meteortoys:toykit@2.2.1
 minifiers@1.1.7
 minimongo@1.0.10
-momentjs:moment@2.10.6
+momentjs:moment@2.11.1
 mongo@1.1.3
 mongo-id@1.0.1
 msavin:jetsetter@1.5.2
@@ -95,8 +98,8 @@ reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
 sarasate:semantic-ui-datetimepicker@0.0.2
-semantic:ui@2.1.6
-semantic:ui-data@2.1.6
+semantic:ui@2.1.7
+semantic:ui-data@2.1.7
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
