@@ -1,5 +1,5 @@
 {
-  "name": "future-advices",
+  "name": "konsilos",
   "version": "1.0.0",
   "description": "Eternize-se",
   "main": "",
@@ -14,9 +14,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/luizfilho/future-advices.git"
+    "url": "git+ssh://git@bitbucket.org/luizfilho/konsilos.git"
   },
   "author": "Luiz Gonzaga dos Santos Filho, Leonardo Teixeira Queiroz",
   "license": "Proprietary",
-  "homepage": "https://bitbucket.org/luizfilho/future-advices#readme"
+  "homepage": "https://bitbucket.org/luizfilho/konsilos#readme"
 }
