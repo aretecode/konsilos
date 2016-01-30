@@ -3,11 +3,4 @@
 		min-width: 300px !important;
 		width: 100% !important;
 	}
-
-	.ui.container {
-		margin-left: 5px !important;
-		margin-right: 5px !important;
-		width: calc(100% - 10px) !important;
-	}
 }
-
