@@ -101,9 +101,9 @@ tracker@1.0.12
 ui@1.0.10
 underscore@1.0.7
 url@1.0.8
-useraccounts:core@1.13.1
-useraccounts:iron-routing@1.13.1
-useraccounts:semantic-ui@1.13.1
+useraccounts:core@1.14.2
+useraccounts:iron-routing@1.14.2
+useraccounts:semantic-ui@1.14.2
 webapp@1.2.7
 webapp-hashing@1.0.8
 zimme:active-route@2.3.2
