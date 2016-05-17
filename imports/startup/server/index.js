@@ -1,6 +1,6 @@
 import './accounts'
 import './mail'
 
-import '../../modules/advice/server'
-import '../../modules/family/server'
-import '../../modules/profile/server'
+import '../../advice/server'
+import '../../family/server'
+import '../../profile/server'

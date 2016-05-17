@@ -1,8 +1,8 @@
 import './templating.js'
-import '../../modules/advice/client'
-import '../../modules/family/client'
-import '../../modules/navigation-bar/client'
-import '../../modules/profile/client'
+import '../../advice/client'
+import '../../family/client'
+import '../../navigation-bar/client'
+import '../../profile/client'
 
 import './templates/footer.html'
 import './templates/home.html'
