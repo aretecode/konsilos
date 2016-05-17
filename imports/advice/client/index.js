@@ -2,6 +2,8 @@ import './timeline'
 
 import './template/advice-form.html'
 import './template/advice.html'
+import { getTagOrphanTextOnly } from '../../util/jquery'
+import { capitalizeFirstLetter } from '../../util/string'
 
 Meteor.startup(() => {
     Meteor.subscribe('Advices');
@@ -24,7 +26,7 @@ Template.AdviceForm.helpers({
                 label: `${member.name}`,
                 value: member.id,
                 icon: 'users icon',
-                description: __(member.relationship).capitalizeFirstLetter()
+                description: __(capitalizeFirstLetter(member.relationship))
             }
         });
         const otherOptions = [
