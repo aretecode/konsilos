@@ -1,4 +1,5 @@
 import './templating.js'
+import '../../modules/advice/client'
 
 import './templates/footer.html'
 import './templates/home.html'
