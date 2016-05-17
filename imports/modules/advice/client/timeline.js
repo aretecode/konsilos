@@ -1,3 +1,5 @@
+import '../template/timeline.html'
+
 Meteor.startup(() => {
     Meteor.subscribe('Advices');
 });
