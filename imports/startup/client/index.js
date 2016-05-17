@@ -1,5 +1,6 @@
 import './templating.js'
 import '../../modules/advice/client'
+import '../../modules/family/client'
 
 import './templates/footer.html'
 import './templates/home.html'
