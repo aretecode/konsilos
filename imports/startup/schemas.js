@@ -1,4 +1,4 @@
-import momentHelper from '../imports/util/momentHelper'
+import momentHelper from '../util/momentHelper'
 
 // Translate function helper:
 __ = key => TAPi18n.__.bind(TAPi18n, key);
