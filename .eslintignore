@@ -1,4 +1,5 @@
 # node_modules is ignored by default
 coverage/
-client/lib/semantic-ui/
+# Semantic UI stuff:
+before/client/
 .meteor/
