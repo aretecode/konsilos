@@ -8,6 +8,7 @@ getHeaderLanguage = (context) => {
 
     return acceptedLanguage;
 }
+
 getProfileLanguage = () => Meteor.user() && Meteor.user().profile.language;
 getUserLanguage = () => getProfileLanguage() || getHeaderLanguage() || 'en';
 
@@ -18,14 +19,13 @@ if (Meteor.isClient) {
         Tracker.autorun(() => {
             const userLanguage = getUserLanguage();
             T9n.setLanguage(userLanguage);
-            TAPi18n.setLanguage(userLanguage)
+            TAPi18n
+                .setLanguage(userLanguage)
                 .done(() => {
                     Session.set('showLoadingIndicator', false);
                     Meteor.call('configureEmailTemplates', userLanguage);
                 })
-                .fail((error_message) => {
-                    console.log(error_message);
-                });
+                .fail(console.log);
         });
     });
 }

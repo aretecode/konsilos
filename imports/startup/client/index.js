@@ -1,4 +1,6 @@
 import './templating.js'
+import '../../../i18n'
+
 import '../../advice/client'
 import '../../family/client'
 import '../../navigation-bar/client'
