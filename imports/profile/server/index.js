@@ -1,3 +1,5 @@
+import { getUsernameFromUserEmail } from '../../util/string'
+
 Accounts.onCreateUser(function(options, user) {
     user.profile = {
         name: getUsernameFromUserEmail(user),

@@ -1,3 +1,5 @@
+import { getUsernameFromUserEmail } from '../../util/string'
+
 Accounts.config({
     sendVerificationEmail: true
 });
