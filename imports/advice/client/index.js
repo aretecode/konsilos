@@ -46,8 +46,8 @@ Template.AdviceForm.helpers({
 
     whenTypeOptions: () => {
         const selectedAdviseeLabel = Session.get('selectedAdviseeLabel') || '____';
-        const when =  __('when');
-        const turns = __('turns-__-years-old');
+        const when =  __('when')();
+        const turns = __('turns-__-years-old')();
         const specificAgeLabel =  `${when} ${selectedAdviseeLabel} ${turns}`;
         const options = [
             { value: 'specific-age', label: specificAgeLabel, description: '»' },
