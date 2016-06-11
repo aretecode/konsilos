@@ -57,7 +57,9 @@ Template.AdviceForm.helpers({
 
         return options;
     },
+});
 
+Template.AdviceForm_When_Moment.helpers({
     importantMomentOptions: () => {
         const options = [
             { label: __('graduation'), value: 'graduation' },
@@ -71,7 +73,6 @@ Template.AdviceForm.helpers({
 });
 
 Template.AdviceForm_When_Date.onRendered(function(){
-    console.log('TD:',Template.parentData(1));
     this.$('.datetimepicker').datetimepicker({
         inline: true,
         sideBySide: true,

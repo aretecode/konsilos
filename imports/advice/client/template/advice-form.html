@@ -28,15 +28,13 @@
             {{> afQuickField name='when.type' class='when' options=whenTypeOptions fullTextSearch=true}}
 
             {{#if afFieldValueIs name='when.type' value='specific-age'}}
-                {{! The following looks broken currently}}
-                {{! Waiting on: https://github.com/Semantic-Org/Semantic-UI/issues/3462 }}
-                {{> afQuickField type='number' name='when.value' min=0 label=false leftLabel=(_ 'type-the-age') rightLabel=(_ 'years')}}
+                {{> AdviceForm_When_Age}}
             {{else}}
                 {{#if afFieldValueIs name='when.type' value='specific-date'}}
                     {{> AdviceForm_When_Date}}
                 {{else}}
                     {{#if afFieldValueIs name='when.type' value='important-moment'}}
-                        {{> afQuickField name='when.value' options=importantMomentOptions fullTextSearch=true allowAdditions=true label=(_ 'choose-the-best-moment-for-it')}}
+                        {{> AdviceForm_When_Moment}}
                     {{/if}}
                 {{/if}}
             {{/if}}
@@ -48,6 +46,16 @@
     {{/autoForm}}
 </template>
 
+<template name='AdviceForm_When_Age'>
+    {{! The following looks broken currently}}
+    {{! Waiting on: https://github.com/Semantic-Org/Semantic-UI/issues/3462 }}
+    {{> afQuickField type='number' name='when.value' min=0 label=false leftLabel=(_ 'type-the-age') rightLabel=(_ 'years')}}
+</template>
+
 <template name='AdviceForm_When_Date'>
     {{> afQuickField name='when.value' class='ui dropdown datetimepicker' label=(_ 'choose-the-date')}}
+</template>
+
+<template name='AdviceForm_When_Moment'>
+    {{> afQuickField name='when.value' options=importantMomentOptions fullTextSearch=true allowAdditions=true label=(_ 'choose-the-best-moment-for-it')}}
 </template>
