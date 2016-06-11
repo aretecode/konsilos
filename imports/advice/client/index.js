@@ -4,6 +4,7 @@ import './template/advice-form.html'
 import './template/advice.html'
 import { getTagOrphanTextOnly } from '../../util/jquery'
 import { capitalizeFirstLetter } from '../../util/string'
+import momentHelper from '../../util/momentHelper'
 
 Meteor.startup(() => {
     Meteor.subscribe('Advices');
@@ -67,6 +68,16 @@ Template.AdviceForm.helpers({
 
         return options;
     }
+});
+
+Template.AdviceForm_When_Date.onRendered(function(){
+    console.log('TD:',Template.parentData(1));
+    this.$('.datetimepicker').datetimepicker({
+        inline: true,
+        sideBySide: true,
+        minDate: new Date(),
+        format: momentHelper.WHEN_DATE_FORMAT
+    });
 });
 
 Template.AdviceForm.onRendered(function() {

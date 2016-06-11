@@ -33,15 +33,7 @@
                 {{> afQuickField type='number' name='when.value' min=0 label=false leftLabel=(_ 'type-the-age') rightLabel=(_ 'years')}}
             {{else}}
                 {{#if afFieldValueIs name='when.type' value='specific-date'}}
-                    {{> afQuickField name='when.value' class='ui dropdown datetimepicker' label=(_ 'choose-the-date')}}
-                    <script type='text/javascript'>
-                        $('#AdviceForm .datetimepicker').datetimepicker({
-                            inline: true,
-                            sideBySide: true,
-                            minDate: new Date(),
-                            format: whenDateFormat
-                        });
-                    </script>
+                    {{> AdviceForm_When_Date}}
                 {{else}}
                     {{#if afFieldValueIs name='when.type' value='important-moment'}}
                         {{> afQuickField name='when.value' options=importantMomentOptions fullTextSearch=true allowAdditions=true label=(_ 'choose-the-best-moment-for-it')}}
@@ -56,3 +48,6 @@
     {{/autoForm}}
 </template>
 
+<template name='AdviceForm_When_Date'>
+    {{> afQuickField name='when.value' class='ui dropdown datetimepicker' label=(_ 'choose-the-date')}}
+</template>
