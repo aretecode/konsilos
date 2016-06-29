@@ -14,9 +14,15 @@ Router.configure({
 
 // Render loading spinner if user is still being logged in:
 Router.onBeforeAction(function(){
-    if (Meteor.loggingIn()) {
-        this.render('Loading')
+    const isLoggedIn = Meteor.userId();
+    const isLoggingIn = Meteor.loggingIn();
+
+    if (isLoggedIn) {
+        this.next();
+    } else if (isLoggingIn) {
+        this.render('Loading');
     } else {
+        this.redirect('landing-home')
         this.next();
     }
 });
@@ -33,12 +39,17 @@ Router.route('/sign-out', {
     name: 'sign-out',
     onBeforeAction: function() {
         AccountsTemplates.logout();
+        this.redirect('landing-home')
         this.next();
     }
 });
-
-//TODO Home page with login
-Router.plugin('ensureSignedIn');
+Router.route('/welcome', {
+    name: 'landing-home',
+    layoutTemplate: 'LandingPageLayout',
+    yieldTemplates: {
+        Footer: { to: 'footer' }
+    },
+});
 
 AccountsTemplates.configure({
     //defaultLayout: 'emptyLayout',

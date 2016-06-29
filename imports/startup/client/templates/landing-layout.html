@@ -1,0 +1,24 @@
+<head>
+    <title>Konsilos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<template name='LandingPageLayout'>
+    <div class='ui container'>
+        {{> loginButtons }}
+        <div class='ui hidden divider'></div>
+
+        <div id='content' class='ui fluid aligned basic'>
+            {{> LandingHome }}
+            {{#if currentUser}}
+                <a href='{{pathFor "home"}}'>
+                    Go to main app
+                </a>
+            {{/if}}
+        </div>
+
+        {{> yield region='footer' }}
+    </div>
+</template>
+
+<body></body>
