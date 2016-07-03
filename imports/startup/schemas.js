@@ -160,3 +160,17 @@ Schemas.Profile = new SimpleSchema({
     }
 });
 
+// Launch page email gathering:
+Schemas.LaunchGathering = new SimpleSchema({
+    email: {
+        type: String,
+        label: __('email'),
+        regEx: SimpleSchema.RegEx.Email
+    },
+    name: {
+        type: String,
+        label: __('name')
+    }
+});
+
+Collections.LaunchGathering.attachSchema(Schemas.LaunchGathering);
