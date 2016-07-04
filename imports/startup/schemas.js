@@ -170,7 +170,14 @@ Schemas.LaunchGathering = new SimpleSchema({
     name: {
         type: String,
         label: __('name')
-    }
+    },
+    created_at: {
+        type: Date,
+        autoValue: function() {
+            return this.value || new Date();
+        },
+        autoform: { omit: true }
+    },
 });
 
 Collections.LaunchGathering.attachSchema(Schemas.LaunchGathering);
