@@ -13,4 +13,5 @@ import './templates/app-layout.html'
 import './templates/loading.html'
 import './templates/page-not-found.html'
 
+import './css/semantic/semantic.less'
 import './css/konsilos.less'
