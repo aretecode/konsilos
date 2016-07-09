@@ -1,4 +1,7 @@
 import './templating.js'
+import './css/konsilos.less'
+import './css/semantic'
+
 import '../../../i18n'
 
 import '../../advice/client'
@@ -13,5 +16,3 @@ import './templates/app-layout.html'
 import './templates/loading.html'
 import './templates/page-not-found.html'
 
-import './css/semantic/semantic.less'
-import './css/konsilos.less'
