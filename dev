@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Specyfing an IP so we can alter /etc/hosts to something else and use it in the browser like `konsilos:3000` ;-)
+meteor --port 127.0.0.1:3000
