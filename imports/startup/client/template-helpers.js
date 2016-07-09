@@ -1,7 +1,3 @@
-Meteor.startup(() => {
-    AutoForm.setDefaultTemplate('semanticUI');
-});
-
 ///////////////////////////
 // Global template helpers:
 ///////////////////////////
