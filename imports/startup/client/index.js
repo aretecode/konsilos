@@ -13,4 +13,4 @@ import './templates/app-layout.html'
 import './templates/loading.html'
 import './templates/page-not-found.html'
 
-import './css/konsilos.css'
+import './css/konsilos.less'
