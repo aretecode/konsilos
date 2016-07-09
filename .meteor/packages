@@ -25,7 +25,6 @@ iron:router
 aldeed:autoform
 aldeed:collection2
 semantic:ui
-flemay:less-autoprefixer
 useraccounts:semantic-ui
 useraccounts:iron-routing
 zimme:active-route
@@ -36,3 +35,5 @@ jorisbontje:vis
 tap:i18n
 softwarerero:accounts-t9n
 gadicohen:headers
+juliancwirko:postcss
+less

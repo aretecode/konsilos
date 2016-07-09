@@ -2,9 +2,13 @@
   "name": "konsilos",
   "version": "1.0.0",
   "description": "Eternize-se",
+  "author": "Luiz Gonzaga dos Santos Filho, Leonardo Teixeira Queiroz",
+  "license": "Proprietary",
+  "homepage": "https://bitbucket.org/luizfilho/konsilos#readme",
   "main": "",
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^6.3.1",
     "babel-eslint": "^6.0.4",
     "eslint": "^2.12.0"
   },
@@ -16,7 +20,9 @@
     "type": "git",
     "url": "git+ssh://git@bitbucket.org/luizfilho/konsilos.git"
   },
-  "author": "Luiz Gonzaga dos Santos Filho, Leonardo Teixeira Queiroz",
-  "license": "Proprietary",
-  "homepage": "https://bitbucket.org/luizfilho/konsilos#readme"
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {"browsers": ["last 2 versions"]}
+    }
+  }
 }
