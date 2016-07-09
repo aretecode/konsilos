@@ -31,7 +31,7 @@ Router.onBeforeAction(function(){
 Router.plugin('dataNotFound', { notFoundTemplate: 'PageNotFound' });
 
 //Routes
-Router.route('/', { name: 'home' });
+Router.route('/', { name: 'app-home' });
 Router.route('/me', { name: 'profile' });
 Router.route('/my-advices', { name: 'my-advices' });
 Router.route('/my-family', { name: 'my-family' });
@@ -49,6 +49,12 @@ Router.route('/welcome', {
     yieldTemplates: {
         Footer: { to: 'footer' }
     },
+    onBeforeAction: function() {
+        const isLoggedIn = Meteor.userId();
+        if (isLoggedIn) {
+            this.redirect('app-home')
+        }
+    }
 });
 
 AccountsTemplates.configure({

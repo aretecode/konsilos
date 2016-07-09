@@ -1,7 +1,7 @@
 <template name='NavigationBar'>
     {{#if currentUser}}
         <div class='ui menu'>
-            <a href='{{pathFor "home"}}' class='{{isActiveRoute regex="home"}} item'>
+            <a href='{{pathFor "app-home"}}' class='{{isActiveRoute regex="app-home"}} item'>
                 <i class='home icon'></i>
             </a>
             <a href='{{pathFor "my-advices"}}' class='{{isActiveRoute regex="my-advices"}} item'>
