@@ -1,9 +1,5 @@
 import './timeline.html'
 
-Meteor.startup(() => {
-    Meteor.subscribe('Advices');
-});
-
 function getTemporalAdvices() {
     //TODO adicionar eventos de idade, caso soubermos a idade (calcular o evento futuro... data de nascimento + idade desejada)
     return Collections.Advices.find({
