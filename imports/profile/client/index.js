@@ -1,1 +1,1 @@
-import './template/profile.html'
+import './profile.html'

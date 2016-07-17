@@ -1,1 +1,1 @@
-import './template/family.html'
+import './family.html'

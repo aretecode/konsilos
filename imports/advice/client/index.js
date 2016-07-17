@@ -1,7 +1,7 @@
 import './timeline'
 
-import './template/advice-form.html'
-import './template/advice.html'
+import './advice-form.html'
+import './advice.html'
 import { getTagOrphanTextOnly } from '../../util/jquery'
 import { capitalizeFirstLetter } from '../../util/string'
 import momentHelper from '../../util/momentHelper'

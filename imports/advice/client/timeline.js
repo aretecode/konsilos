@@ -1,4 +1,4 @@
-import './template/timeline.html'
+import './timeline.html'
 
 Meteor.startup(() => {
     Meteor.subscribe('Advices');
