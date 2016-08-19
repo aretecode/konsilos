@@ -6,7 +6,9 @@
   "license": "Proprietary",
   "homepage": "https://bitbucket.org/luizfilho/konsilos#readme",
   "main": "",
-  "dependencies": {},
+  "dependencies": {
+    "bcrypt": "^0.8.7"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "babel-eslint": "^6.0.4",
@@ -22,7 +24,11 @@
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": { "browsers": ["last 2 versions"] }
+      "autoprefixer": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      }
     }
   }
 }
