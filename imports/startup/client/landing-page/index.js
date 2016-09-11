@@ -13,7 +13,7 @@ Template.LandingHome.helpers({
     getLaunchGatheringCollection: () => Collections.LaunchGathering
 })
 
-Template.body.onRendered(function() {
+Template.LandingPageLayout.onRendered(function() {
     $(function() {
         $('select').msDropdown();
 

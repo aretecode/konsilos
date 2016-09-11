@@ -104,7 +104,7 @@ nav ul li ul li > a:hover			{color:#fff !important; background:#000;}
 .menu								{display:none;}
 .sub_menu	 						{display:none;}
 
-nav ul li a.clock					{margin: 0 0 0 16px;padding: 0 0 0 20px;background: url(../img/landing/clock.png) no-repeat 9% center #f27059;font-family: 'Lato-Bold';font-size:14px;line-height:36px;height:36px;width: 156px;text-align:center;border-radius:5px;font-weight:normal; color:#fff;}
+nav ul li a.clock					{margin: 0 0 0 11px;padding: 0 0 0 30px;background: url(../img/landing/clock.png) no-repeat 9% center #f27059;font-family: 'Lato-Bold';font-size:14px;line-height:36px;height:36px;width: 166px;text-align:center;border-radius:5px;font-weight:normal; color:#fff;}
 nav ul li a.clock:hover				{background: url(../img/landing/clock.png) no-repeat 9% center #ec5b41; color:#fff;}
 
 .country							{margin: 9px 0 0 0;padding:0;float:right;width:67px;}
