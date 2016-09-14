@@ -1,0 +1,14 @@
+<template name='SubscribeModal'>
+    <div class="ui subscribe tiny modal">
+        <div class="header">Saiba quando lançarmos</div>
+        <div class="content">
+            <div class="description">
+                {{> quickForm id='LaunchGatheringForm'
+                    collection=getLaunchGatheringCollection
+                    type='insert'
+                    buttonContent='Yay, notify me!'
+                }}
+            </div>
+        </div>
+    </div>
+</template>

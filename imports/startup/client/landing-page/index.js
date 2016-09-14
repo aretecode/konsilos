@@ -1,3 +1,4 @@
+import './subscribe-modal.html'
 import './landing-layout.html'
 import './landing-home.html'
 
@@ -9,30 +10,28 @@ import './responsive.css'
 import './jquery.dd'
 import './owl.carousel.min'
 
-Template.LandingHome.helpers({
+Template.SubscribeModal.helpers({
     getLaunchGatheringCollection: () => Collections.LaunchGathering
 })
 
-Template.LandingPageLayout.onRendered(function() {
-    $(function() {
-        $('select').msDropdown();
+Template.LandingPageLayout.onRendered(() => {
+    $(() => {
+        const $body = this.$('body')
 
-        $('nav').clone().appendTo('.sub_menu')
+        this.$('select').msDropdown()
 
-        $('.menu a').click(function(e) {
-            $('body').toggleClass('open_menu')
-        });
+        this.$('nav').clone().appendTo('.sub_menu')
 
-        $('.close').click(function(e) {
-            $('body').removeClass('open_menu')
-        });
+        this.$('.menu a').click(() => $body.toggleClass('open_menu'))
 
-        $('.sub_menu nav ul li a').click(function(e) {
-            $(this).parent().find('ul').slideToggle();
+        this.$('.close').click(() => $body.removeClass('open_menu'))
+
+        this.$('.sub_menu nav ul li a').click(() => {
+            $(this).parent().find('ul').slideToggle()
             $(this).toggleClass('active')
-        });
+        })
 
-        var owl = $('#owl-example1');
+        const owl = this.$('#owl-example1')
 
         owl.owlCarousel({
             items: 3,
@@ -49,6 +48,12 @@ Template.LandingPageLayout.onRendered(function() {
             autoPlay: true,
             navigation: true,
             pagination: true,
-        });
-    });
+        })
+    })
+
+    this.$('.ui.subscribe.tiny.modal')
+        .modal({ inverted: true})
+        .modal('setting', 'transition', 'scale')
+        .modal('attach events', '.positive.button', 'hide')
+        .modal('attach events', '.subscribe', 'show')
 })
