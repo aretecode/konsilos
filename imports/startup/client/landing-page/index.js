@@ -1,4 +1,5 @@
-import './subscribe-modal.html'
+import './subscribe-modal.js'
+
 import './landing-layout.html'
 import './landing-home.html'
 
@@ -9,10 +10,6 @@ import './responsive.css'
 
 import './jquery.dd'
 import './owl.carousel.min'
-
-Template.SubscribeModal.helpers({
-    getLaunchGatheringCollection: () => Collections.LaunchGathering
-})
 
 Template.LandingPageLayout.onRendered(() => {
     $(() => {
@@ -51,9 +48,11 @@ Template.LandingPageLayout.onRendered(() => {
         })
     })
 
-    this.$('.ui.subscribe.tiny.modal')
-        .modal({ inverted: true})
+    this.$('.subscribe.modal')
+        .modal({
+            inverted: true,
+            blurring: true
+        })
         .modal('setting', 'transition', 'scale')
-        .modal('attach events', '.positive.button', 'hide')
-        .modal('attach events', '.subscribe', 'show')
+        .modal('attach events', '.subscribe.button', 'show')
 })
