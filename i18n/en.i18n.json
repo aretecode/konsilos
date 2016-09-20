@@ -13,6 +13,7 @@
     "date-of-birth": "Date of Birth",
     "edit-my-profile": "Edit My Profile",
     "english-usa": "English (USA)",
+    "email": "Email",
     "father": "Father",
     "female": "Female",
     "first-breakup": "First breakup",
@@ -24,6 +25,9 @@
     "here-you-can-edit-your-profile": "Here you can edit your profile",
     "home_greeting": "Hi there",
     "i-prefer-not-to-say": "I prefer not to say",
+    "launchPage": {
+        "subscribe-button": "Yay, notify me!"
+    },
     "language": "Language",
     "loading": "Loading",
     "make-this-advice-eternal": "Make this advice eternal!",

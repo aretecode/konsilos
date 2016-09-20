@@ -1,31 +1,40 @@
-getHeaderLanguage = (context) => {
-    const acceptedLanguagesString = headers.get('accept-language') || '';
-    const acceptedLanguages = acceptedLanguagesString.split(/[,;]/).filter(e => e.indexOf('q=') === -1);
-    const availableLanguages = T9n.getLanguages();
-    const possibleLanguages = _.intersection(acceptedLanguages, availableLanguages);
+getHeaderLanguage = () => {
+    const acceptedLanguagesString = headers.get('accept-language') || ''
+    const acceptedLanguages = [].concat(
+        acceptedLanguagesString
+        .split(/[,;]/)
+        .filter(e => e.indexOf('q=') === -1)
+    )
+    let acceptedLanguage = acceptedLanguages[0]
+    let [baseLanguage, dialect] = acceptedLanguage.split(/-/)
+    dialect = dialect && dialect.toUpperCase() || ''
+    acceptedLanguage = `${baseLanguage}-${dialect}`
 
-    const acceptedLanguage = possibleLanguages && possibleLanguages[0];
-
-    return acceptedLanguage;
+    //TODO Bug in tap:i18n prevents us from using pt-BR. Gotta tone it down to pt. Waiting for fix
+    // return acceptedLanguage
+    return baseLanguage
 }
 
-getProfileLanguage = () => Meteor.user() && Meteor.user().profile.language;
-getUserLanguage = () => getProfileLanguage() || getHeaderLanguage() || 'en';
+const DEFAULT_LANGUAGE = 'en'
+getProfileLanguage = () => Meteor.user() && Meteor.user().profile.language
+getUserLanguage = () => getProfileLanguage() || getHeaderLanguage() || DEFAULT_LANGUAGE
 
 if (Meteor.isClient) {
     Meteor.startup(() => {
-        Session.set('showLoadingIndicator', true);
+        Session.set('showLoadingIndicator', true)
 
         Tracker.autorun(() => {
-            const userLanguage = getUserLanguage();
-            T9n.setLanguage(userLanguage);
+            const userLanguage = getUserLanguage()
+
+            T9n.setLanguage(userLanguage)
             TAPi18n
                 .setLanguage(userLanguage)
                 .done(() => {
-                    Session.set('showLoadingIndicator', false);
-                    Meteor.call('configureEmailTemplates', userLanguage);
+                    Session.set('userLanguage', userLanguage)
+                    Session.set('showLoadingIndicator', false)
+                    Meteor.call('configureEmailTemplates', userLanguage)
                 })
-                .fail(console.log);
+                .fail(console.log)
         });
     });
 }

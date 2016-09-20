@@ -3,11 +3,18 @@
         <div class="header">Saiba quando lançarmos</div>
         <div class="content">
             <div class="description">
-                {{> quickForm id='LaunchGatheringForm'
-                    collection=getLaunchGatheringCollection
+                {{#autoForm id='LaunchGatheringForm'
+                    collection=launchGatheringCollection
                     type='insert'
-                    buttonContent='Yay, notify me!'
                 }}
+
+                    {{> afQuickField name='name' class='advisee' options=adviseeOptions}}
+                    {{> afQuickField name='email'}}
+                    {{> afFieldInput name='userLanguage' type='hidden' value=userLanguage}}
+
+                    {{> afFieldInput type='submit' value=(_ 'launchPage.subscribe-button')}}
+
+                {{/autoForm}}
             </div>
         </div>
     </div>

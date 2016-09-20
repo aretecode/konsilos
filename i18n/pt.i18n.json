@@ -12,6 +12,7 @@
     "date-of-birth": "Data de Nascimento",
     "edit-my-profile": "Editar meu perfil",
     "english-usa": "Inglês (EUA)",
+    "email": "Email",
     "father": "Pai",
     "female": "Masculino",
     "first-breakup": "Primeiro término de namoro",
@@ -24,6 +25,9 @@
     "home_greeting": "Olá",
     "i-prefer-not-to-say": "Prefiro não responder",
     "language": "Idioma",
+    "launchPage": {
+        "subscribe-button": "Oba, me avise!"
+    },
     "loading": "Carregando",
     "make-this-advice-eternal": "Eternize esse conselho!",
     "male": "Feminino",

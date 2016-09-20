@@ -1,7 +1,8 @@
 import './subscribe-modal.html'
 
 Template.SubscribeModal.helpers({
-    getLaunchGatheringCollection: () => Collections.LaunchGathering
+    launchGatheringCollection: () => Collections.LaunchGathering,
+    userLanguage: () => Session.get('userLanguage')
 })
 
 Template.SubscribeModal.onRendered(() => {

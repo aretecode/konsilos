@@ -1,9 +1,9 @@
 import momentHelper from '../util/momentHelper'
 
 // Translate function helper:
-__ = key => TAPi18n.__.bind(TAPi18n, key);
+__ = key => TAPi18n.__.bind(TAPi18n, key)
 
-Schemas = {};
+Schemas = {}
 
 //////////
 // Advice:
@@ -26,7 +26,7 @@ Schemas.Advice = new SimpleSchema({
     created_at: {
         type: Date,
         autoValue: function() {
-            return this.value || new Date();
+            return this.value || new Date()
         },
         autoform: { omit: true }
     },
@@ -58,13 +58,13 @@ Schemas.Advice = new SimpleSchema({
         autoValue: function() {
             // If it's a date, let's store it in ISO format instead of the picker's format
             if (this.field('when.type').value === 'specific-date') {
-                return moment(this.value, momentHelper.WHEN_DATE_FORMAT).format();
+                return moment(this.value, momentHelper.WHEN_DATE_FORMAT).format()
             }
         }
     }
-});
+})
 
-Collections.Advices.attachSchema(Schemas.Advice);
+Collections.Advices.attachSchema(Schemas.Advice)
 
 ///////////
 // Profile:
@@ -80,7 +80,7 @@ Schemas.Profile = new SimpleSchema({
         type: String,
         label: __('language'),
         autoValue: function () {
-            return this.value || getUserLanguage();
+            return this.value || getUserLanguage()
         },
         allowedValues: ['en', 'pt'],
         autoform: {
@@ -99,13 +99,13 @@ Schemas.Profile = new SimpleSchema({
         type: Object,
         label: function() {
             //TODO try to find a way of labeling each family object:
-            console.log('heeeeeeere', arguments);
+            console.log('heeeeeeere', arguments)
         }
     },
     'family.$.id': {
         type: String,
         autoValue: function () {
-            return this.value || Random.id();
+            return this.value || Random.id()
         },
         autoform: {
             afFieldInput: { type: 'hidden' },
@@ -158,7 +158,7 @@ Schemas.Profile = new SimpleSchema({
             ],
         }
     }
-});
+})
 
 // Launch page email gathering:
 Schemas.LaunchGathering = new SimpleSchema({
@@ -174,10 +174,16 @@ Schemas.LaunchGathering = new SimpleSchema({
     created_at: {
         type: Date,
         autoValue: function() {
-            return this.value || new Date();
+            return this.value || new Date()
         },
         autoform: { omit: true }
     },
-});
+    userLanguage: {
+        type: String,
+        autoform: {
+            afFieldInput: { type: 'hidden' }
+        }
+    }
+})
 
-Collections.LaunchGathering.attachSchema(Schemas.LaunchGathering);
+Collections.LaunchGathering.attachSchema(Schemas.LaunchGathering)
