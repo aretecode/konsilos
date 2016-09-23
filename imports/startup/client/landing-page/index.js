@@ -11,6 +11,24 @@ import './responsive.css'
 import './jquery.dd'
 import './owl.carousel.min'
 
+const SUBSCRIBE_MODAL_CLASS = '.subscribe.modal'
+
+Template.LandingPageLayout.events({
+    'click .subscribe.button'(event) {
+        const subscribeButton = event.currentTarget
+        const subscribedFromValue = subscribeButton.dataset.pageSection
+
+        $(SUBSCRIBE_MODAL_CLASS)
+            .modal({
+                onShow: () => {
+                    const subscribedFromField = document.querySelector('input[name=subscribedFrom]')
+                    subscribedFromField.value = subscribedFromValue
+                }
+            })
+            .modal('show')
+    }
+})
+
 Template.LandingPageLayout.onRendered(() => {
     $(() => {
         const $body = this.$('body')
@@ -48,11 +66,10 @@ Template.LandingPageLayout.onRendered(() => {
         })
     })
 
-    this.$('.subscribe.modal')
+    this.$(SUBSCRIBE_MODAL_CLASS)
         .modal({
             inverted: true,
             blurring: true
         })
         .modal('setting', 'transition', 'scale')
-        .modal('attach events', '.subscribe.button', 'show')
 })

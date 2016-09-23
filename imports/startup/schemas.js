@@ -183,6 +183,12 @@ Schemas.LaunchGathering = new SimpleSchema({
         autoform: {
             afFieldInput: { type: 'hidden' }
         }
+    },
+    subscribedFrom: {
+        type: String,
+        autoform: {
+            afFieldInput: { type: 'hidden' }
+        }
     }
 })
 
