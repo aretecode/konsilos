@@ -1261,6 +1261,16 @@ footer .container {
 .footer_logo a {
     display: inline-block;
 }
+.footer_lft .start-now-button {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 36px;
+    height: 36px;
+    width: 153px;
+    text-align: center;
+    border-radius: 5px;
+}
 .footer_nav {
     margin: 0 17px 0 0;
     padding: 40px 0 0 0;
@@ -1307,7 +1317,7 @@ footer .container {
 }
 .footer_rgt {
     margin: 0;
-    padding: 6px 0 0 0;
+    padding: 16px 0 0 0;
     float: left;
     width: 530px;
 }
@@ -1330,15 +1340,14 @@ footer .container {
     margin: 0;
     padding: 0;
 }
-.footer_rgt a.clock1 {
-    margin: 24px 20px 0 38px;
-    padding: 0 0 0 20px;
+a.clock1 {
+    margin: 0 20px 0 38px;
+    padding: 0 10px 0 37px;
     background: url(img/landing/clock.png) no-repeat 9% center #f27059;
     font-family: 'Lato-Bold';
     font-size: 14px;
     line-height: 36px;
     height: 36px;
-    width: 153px;
     text-align: center;
     border-radius: 5px;
     font-weight: normal;
@@ -1351,7 +1360,7 @@ footer .container {
     -webkit-: all ease-in-out 0.5s;
     display: inline-block;
 }
-.footer_rgt a.clock1:hover {
+a.clock1:hover {
     background: url(img/landing/clock.png) no-repeat 9% center #ec5b41;
     color: #fff;
 }
