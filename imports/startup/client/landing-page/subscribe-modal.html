@@ -1,6 +1,6 @@
 <template name='SubscribeModal'>
     <div class="ui subscribe tiny modal">
-        <div class="header">Saiba quando lançarmos</div>
+        <div class="header">{{_ 'launch-page.know-when-we-launch'}}</div>
         <div class="content">
             <div class="description">
                 {{#autoForm id='LaunchGatheringForm'
@@ -13,7 +13,7 @@
                     {{> afFieldInput name='userLanguage' type='hidden' value=userLanguage}}
                     {{> afFieldInput name='subscribedFrom' type='hidden' }}
 
-                    {{> afFieldInput type='submit' value=(_ 'launchPage.subscribe-button')}}
+                    {{> afFieldInput type='submit' value=(_ 'launch-page.subscribe-button')}}
 
                 {{/autoForm}}
             </div>
@@ -25,7 +25,7 @@
 
 <template name='SuccessfulSubscriptionModal'>
     <div class='ui subscribed tiny modal'>
-        <div class='header'>Obrigado!</div>
-        <div class='content'>Te informaremos assim que lançarmos</div>
+        <div class='header'>{{_ 'thanks'}}!</div>
+        <div class='content'>{{_ 'launch-page.successfully-subscribed'}}</div>
     </div>
 </template>

@@ -19,9 +19,13 @@
             <div class="container">
 
                 <header>
-                    <div class="logo"><a href="#"><img src="img/landing/logo.png" width="163" height="102" alt="logo"></a></div>
+                    <div class="logo">
+                        <img src="img/landing/logo.png" width="163" height="102" alt="logo">
+                    </div>
                     <div class="header_rgt">
-                        <a href="#" class="clock1 subscribe button" data-page-section="time-capsule-top">Cápsula do Tempo</a>
+                        <a href="#" class="clock1 subscribe button" data-page-section="time-capsule-top">
+                            {{_ 'time-capsule'}}
+                        </a>
                         <div class="country">
                             <select>
                                 <option value="en" data-image="img/landing/flag-uk.png">EN</option>
@@ -32,21 +36,23 @@
 
                         {{!--
                         <nav>
-                            <div class="menu"><a href="#"><img src="img/landing/menu.png" width="30" height="20" alt="menu"></a></div>
+                            <div class="menu"><a href="#">
+                                    <img src="img/landing/menu.png" width="30" height="20" alt="menu">
+                            </a></div>
 
                             <ul>
-                                <li><a href="#">Login </a></li>
-                                <li><a href="#" class="subscribe button" data-page-section="top-navigation-bar">Inscrever-se</a>
+                                <li><a href="#">{{_ 'login'}}</a></li>
+                                <li><a href="#" class="subscribe button" data-page-section="top-navigation-bar">{{_ 'subscribe'}}</a>
 
                                     <ul>
-                                        <li><a href="#">Login</a></li>
-                                        <li><a href="#">Inscrever-se</a></li>
-                                        <li><a href="#">Sobre Nós</a></li>
+                                        <li><a href="#">{{_ 'login'}}</a></li>
+                                        <li><a href="#">{{_ 'subscribe'}}</a></li>
+                                        <li><a href="#">{{_ 'about-us'}}</a></li>
                                     </ul>
                                     <div class="clear"></div>
 
                                 </li>
-                                <li class="last"><a href="#" class="clock">Cápsula do Tempo</a></li>
+                                <li class="last"><a href="#" class="clock">{{_ 'time-capsule'}}</a></li>
                             </ul>
                             <div class="clear"></div>
                         </nav>
@@ -59,13 +65,13 @@
                 </header>
 
                 <div class="title">
+                    <h1>{{_ 'landing-page.splash-impact-phrase'}}</h1>
+                    <p>{{_ 'landing-page.splash-impact-text'}}</p>
 
-                    <h1>Eternize<br />seus conselhos</h1>
-                    <p>Seu repertorio de vida deve fazer diferença no futuro dos seus filhos. Imagine a emoçao e gratidão deles ao
-                        descobrirem no futuro que você deixou uma cápsula do tempo cheia de valiosos conselhos para diferentes situações e momentos? </p>
-
-                    <a href="#" class="start-now-button subscribe button" data-page-section="splash-screen">Comece agora</a>
-                    {{!<span>Já sou cadastrado</span>}}
+                    <a href="#" class="start-now-button subscribe button" data-page-section="splash-screen">
+                        {{_ 'subscribe'}}
+                    </a>
+                    {{!--<span>{{_ 'landing-page.already-a-member'}}</span>--}}
                 </div>
 
             </div>
@@ -81,16 +87,20 @@
                     <ul>
                         <li>
                             <div class="lft_content">
-                                <figure><img src="img/landing/big1.png" width="88" height="132" alt="big1"></figure>
+                                <figure>
+                                    <img src="img/landing/big1.png" width="88" height="132" alt="big1">
+                                </figure>
                                 <div class="right_side">
-                                    <span><img src="img/landing/small1.png" width="61" height="61" alt="img"></span>
+                                    <span>
+                                        <img src="img/landing/small1.png" width="61" height="61" alt="img">
+                                    </span>
                                     <h5>Julia</h5>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Sobre a vida</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.about-life'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -108,9 +118,9 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Ter uma experiência</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.have-an-experience'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -124,13 +134,13 @@
                                 <figure><img src="img/landing/big2.png" width="88" height="132" alt="big1"></figure>
                                 <div class="right_side">
                                     <span><img src="img/landing/small2.png" width="61" height="61" alt="img"></span>
-                                    <h5>Thiago</h5>
+                                    <h5>Daniel</h5>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Assistir um FIlme</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.watch-a-movie'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -149,9 +159,9 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Sobre a vida</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.about-life'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -165,13 +175,13 @@
                                 <figure><img src="img/landing/big4.png" width="88" height="132" alt="big1"></figure>
                                 <div class="right_side">
                                     <span><img src="img/landing/small5.png" width="61" height="61" alt="img"></span>
-                                    <h5>Juliana</h5>
+                                    <h5>Sarah</h5>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Ter uma experiência</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.have-an-experience'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -189,9 +199,9 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Sobre a vida</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.about-life'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -209,9 +219,9 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Ter uma experiência</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.have-an-experience'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -225,13 +235,13 @@
                                 <figure><img src="img/landing/big4.png" width="88" height="132" alt="big1"></figure>
                                 <div class="right_side">
                                     <span><img src="img/landing/small5.png" width="61" height="61" alt="img"></span>
-                                    <h5>Juliana</h5>
+                                    <h5>Sarah</h5>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Ter uma experiência</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.have-an-experience'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -249,9 +259,9 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Sobre a vida</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.about-life'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -270,9 +280,9 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Sobre a vida</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.about-life'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -286,13 +296,13 @@
                                 <figure><img src="img/landing/big5.png" width="88" height="132" alt="big1"></figure>
                                 <div class="right_side">
                                     <span><img src="img/landing/small5.png" width="61" height="61" alt="img"></span>
-                                    <h5>Juliana</h5>
+                                    <h5>Sarah</h5>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Ter uma experiência</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.have-an-experience'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -310,9 +320,9 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="mdl_content">
-                                    <h2>Sobre a vida</h2>
-                                    <h3>Quando completar 18 anos</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <h2>{{_ 'advice-types.about-life'}}</h2>
+                                    <h3>{{_ 'advice-times.when-turning'}} 18 {{_ 'years'}}</h3>
+                                    <p>[...]</p>
                                     <h6>02/05/2001</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
                                     <div class="clear"></div>
@@ -361,7 +371,7 @@
                                         </div>
 
                                         <div class="feature_block_btm">
-                                            <h4>Sobre a vida</h4>
+                                            <h4>{{_ 'advice-types.about-life'}}</h4>
                                             <small><img src="img/landing/text_img.png" width="235" height="133" alt="test"></small>
                                         </div>
                                     </div>
@@ -437,7 +447,7 @@
                         <div class="sign">
                             <h3>Seus Conselhos, <br/>sempre seus</h3>
                             <p>Seguranca, privacidade, backup, liberdade e disponibilidade. Somente voce e seus filhos tem acesso aos conselhos. E voce é livre para a qualquer momento baixar seus conselhos e debar de usar o sistema.</p>
-                            <a href="#" class="subscribe button" data-page-section="your-advices-always-yours">Inscrever-se</a>
+                            <a href="#" class="subscribe button" data-page-section="your-advices-always-yours">{{_ 'subscribe'}}</a>
                         </div>
                     </div>
                 </div>
@@ -449,9 +459,9 @@
 
                     <div class="advice_btm_lft">
                         <div class="sign sign1">
-                            <h3>Cápsula do tempo</h3>
+                            <h3>{{_ 'time-capsule'}}</h3>
                             <p>Se voce desejar, seus filhos poderao ter acesso no futuro a todos os conselhos que voce eternizou, acessando-os medida em que forem desbloqueados de acordo com a sua programacao. Funciona como uma capsula do tempo que vai fazer voce estar presente durante toda a vida deles. </p>
-                            <a href="#" class="subscribe button" data-page-section="time-capsule-section">Inscrever-se</a>
+                            <a href="#" class="subscribe button" data-page-section="time-capsule-section">{{_ 'subscribe'}}</a>
                         </div>
                     </div>
                     <div class="advice_btm_rgt">
@@ -553,16 +563,30 @@
                     </div>
                     <div class="footer_nav">
 
-                {{!--
+                        {{!--
                         <ul>
-                            <li><a href="#">Login </a></li>
-                            <li><a href="#" class="subscribe button" data-page-section="footer">Inscrever-se</a></li>
-                            <li><a href="#">Sobre Nós</a></li>
-                            <li class="last pad_last no_bod"><a href="#">Termos de Privacidade</a></li>
+                            <li>
+                                <a href="#">{{_ 'login'}}</a>
+                            </li>
+                            <li>
+                                <a href="#" class="subscribe button" data-page-section="footer">
+                                    {{_ 'subscribe'}}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">{{_ 'about-us'}}</a>
+                            </li>
+                            <li class="last pad_last no_bod">
+                                <a href="#">{{_ 'privacy-policy'}}</a>
+                            </li>
                         </ul>
-                --}}
-                        <a href="#" class="start-now-button subscribe button" data-page-section="start-now-footer">Comece agora</a>
-                        <a href="#" class="clock1 subscribe button" data-page-section="time-capsule-footer">Cápsula do Tempo</a>
+                        --}}
+                        <a href="#" class="start-now-button subscribe button" data-page-section="start-now-footer">
+                            {{_ 'subscribe'}}
+                        </a>
+                        <a href="#" class="clock1 subscribe button" data-page-section="time-capsule-footer">
+                            {{_ 'time-capsule'}}
+                        </a>
                         <div class="clear"></div>
 
                     </div>
@@ -575,8 +599,12 @@
                     {{!--
                     <div class="social_icon">
                         <ul>
-                            <li><a href="#"><img src="img/landing/fb.png" width="32" height="32" alt="fb"></a></li>
-                            <li class="last1"><a href="#"><img src="img/landing/tw.png" width="32" height="32" alt="fb"></a></li>
+                            <li>
+                                <a href="#"><img src="img/landing/fb.png" width="32" height="32" alt="fb"></a>
+                            </li>
+                            <li class="last1">
+                                <a href="#"><img src="img/landing/tw.png" width="32" height="32" alt="fb"></a>
+                            </li>
                         </ul>
                         <div class="clear"></div>
                     </div>
@@ -584,10 +612,14 @@
 
 
                     <div class="apps">
-                        <h3>Em breve:</h3>
+                        <h3>{{_ 'soon'}}:</h3>
                         <ul>
-                            <li><a href="#"><img src="img/landing/app.png" width="101" height="36" alt="apps"></a></li>
-                            <li class="last1"><a href="#"><img src="img/landing/google.png" width="109" height="36" alt="apps"></a></li>
+                            <li>
+                                <a href="#"><img src="img/landing/app.png" width="101" height="36" alt="App Store"></a>
+                            </li>
+                            <li class="last1">
+                                <a href="#"><img src="img/landing/google.png" width="109" height="36" alt="Google Play"></a>
+                            </li>
                         </ul>
                         <div class="clear"></div>
                     </div>
@@ -603,7 +635,7 @@
 
         <div class="copy">
             <div class="container">
-                <p>&copy; {{ currentYear }} Konsilos - Todos os direitos reservados.</p>
+                <p>&copy; {{ currentYear }} Konsilos &mdash; {{_ 'copyright'}}.</p>
             </div>
         </div>
     </div>

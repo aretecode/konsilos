@@ -1,14 +1,24 @@
 {
     "a-future-someone": "Um alguém futuro",
+    "about-us": "Sobre nós",
     "add-a-new-advice": "Adicionar um novo conselho",
     "add-a-new-family-member": "Adicionar novo membro da família...",
     "add-a-new-family-member-here-and-then-select-it-on-the-list": "Adicione um novo familiar aqui e depois selecione-o na lista",
+    "advice-types": {
+        "about-life": "Sobre a Vida",
+        "have-an-experience": "Ter uma Experiência",
+        "watch-a-movie": "Assistir um Filme"
+    },
+    "advice-times": {
+        "when-turning": "Quando completar"
+    },
     "and-here-are-all-of-them": "E aqui estão todos eles",
     "at-an-specific-date": "Numa data específica...",
     "child": "Filho(a)",
     "choose-the-best-moment-for-it": "Escolha o melhor momento para ele",
     "choose-the-date": "Escolha a data",
     "click-to-verify": "Clique para verificar seu email",
+    "copyright": "Todos os direitos reservados",
     "date-of-birth": "Data de Nascimento",
     "edit-my-profile": "Editar meu perfil",
     "english-usa": "Inglês (EUA)",
@@ -25,10 +35,19 @@
     "home_greeting": "Olá",
     "i-prefer-not-to-say": "Prefiro não responder",
     "language": "Idioma",
-    "launchPage": {
-        "subscribe-button": "Oba, me avise!"
+    "landing-page": {
+        "already-a-member": "Já sou cadastrado",
+        "splash-impact-phrase": "Eternize conselhos para seus filhos",
+        "splash-impact-text": "Livros, filmes, experiências, conselhos... Tudo que te tornou uma pessoa melhor e mais preparada para a vida merece ser compartilhado com seus filhos no momento certo da vida deles. Com o Konsilos você registra seuss conselhos e nós não te deixaremos esquecer."
+    },
+    "launch-page": {
+        "from-time-capsule-description": "No futuro, será por aqui que seus filhos e entes queridos poderão acessar, individualmente, as cápsulas do tempo que você criar para cada um deles. De forma simples e segura uma cápsula poderá ser aberta a partir do momento que você decidir compartilhar com seu filho uma chave(senha) que permite o acesso. Dentro da cápsula, todo conselho eternizado para o filho ficará disponivel e será desbloqueado para visualização de acordo com a programação temporal que você definir. Seja quando seu filhos completar uma certa idade, em uma data específica ou em um momento marcante.",
+        "know-when-we-launch": "Saiba quando lançarmos",
+        "subscribe-button": "Oba, me avise!",
+        "successfully-subscribed": "Te informaremos assim que lançarmos"
     },
     "loading": "Carregando",
+    "login": "Login",
     "make-this-advice-eternal": "Eternize esse conselho!",
     "male": "Feminino",
     "mother": "Mãe",
@@ -41,12 +60,17 @@
     "oops!-page-not-found!": "Ops! Página não encontrada!",
     "other": "Outro",
     "portuguese-brazil": "Português (Brasil)",
+    "privacy-policy": "Política de Privacidade",
     "relationship": "Relacionamento",
     "report-broken-link": "Certifique-ese que você digitou a URL corretamente or se este é um link quebrado, por favor nos informe para que possamos consertá-lo! Obrigado!",
     "sibling": "Irmã(o)",
     "sign-out": "Sair",
     "site-footer": "Konsilos. Um amanhã melhor, hoje.",
-    "turns-__-years-old": "fizer __ anos...",
+    "soon": "Em breve",
+    "subscribe": "Inscrever-se",
+    "thanks": "Obrigado",
+    "time-capsule": "Cápsula do Tempo",
+    "turns-__-years-old": "completar __ anos...",
     "type-the-age": "Digite a idade",
     "update-my-beloved-ones": "Atualizar meus amados",
     "update-my-profile": "Atualizar meu perfil",
