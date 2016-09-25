@@ -12,6 +12,9 @@
     "advice-times": {
         "when-turning": "Quando completar"
     },
+    "advice-form": {
+        "what-kind": "Que tipo de conselho você quer eternizar?"
+    },
     "and-here-are-all-of-them": "E aqui estão todos eles",
     "at-an-specific-date": "Numa data específica...",
     "child": "Filho(a)",
@@ -36,6 +39,8 @@
     "i-prefer-not-to-say": "Prefiro não responder",
     "language": "Idioma",
     "landing-page": {
+        "advices-creation-title": "Registro de Conselhos",
+        "advices-creation-body": "Sempre que valer a pena compartilhar um conselho com seus filhos no futuro registre-os na hora e não corra o risco de esquecê-los. Você pode explicar com detalhes porque o conselho é importante e decidir quando é o melhor momento para que ele seja transmitido.",
         "already-a-member": "Já sou cadastrado",
         "cards-body-text": "<p>Livros, filmes, viagens, palestras, desafios, conhecimentos, experiências, etc... Tudo que te tornou uma pessoa melhor e mais preparada para a vida merece ser transmitido para seus filhos através de conselhos, seja quando for.</p><br/><p>O Konsilos é uma iniciativa, sem fins lucrativos, para incentivar pessoa de todo o mundo a eternizarem seus conselhos, garantindo que eles não se perderão e que no momento certo serão compartilhados com seus filhos.</p>",
         "cards-title-text": "De ❤️s para ❤️s",
