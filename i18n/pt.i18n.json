@@ -52,7 +52,17 @@
         "security-title": "Seus Conselhos,<br/>Sempre Seus",
         "splash-impact-phrase": "Eternize conselhos para seus filhos",
         "splash-impact-text": "Pense em todas as experiências que te impactaram positivamente. Agora imagine o futuro de seus filhos se você compartilhar tudo isso no momento certo da vida deles.",
-        "time-capsule-body": "Se você desejar, seus filhos poderão ter acesso no futuro a todos os conselhos que você eternizou, acessando-os na medida em que forem desbloqueados de acordo com a sua programação. Funciona como uma cápsula do tempo que vai fazer você estar presente durante toda a vida deles."
+        "time-capsule-body": "Se você desejar, seus filhos poderão ter acesso no futuro a todos os conselhos que você eternizou, acessando-os na medida em que forem desbloqueados de acordo com a sua programação. Funciona como uma cápsula do tempo que vai fazer você estar presente durante toda a vida deles.",
+        "dad-of-female": "Pai da",
+        "dad-of-male": "Pai do",
+        "mom-of-female": "Mãe da",
+        "mom-of-male": "Mãe do",
+        "profession": {
+            "civil-engineer-female": "Engenheira Civil",
+            "civil-engineer-male": "Engenheiro Civil",
+            "teacher-female": "Professora",
+            "teacher-male": "Professor"
+        }
     },
     "launch-page": {
         "from-time-capsule-description": "No futuro, será por aqui que seus filhos e entes queridos poderão acessar, individualmente, as cápsulas do tempo que você criar para cada um deles. De forma simples e segura uma cápsula poderá ser aberta a partir do momento que você decidir compartilhar com seu filho uma chave(senha) que permite o acesso. Dentro da cápsula, todo conselho eternizado para o filho ficará disponivel e será desbloqueado para visualização de acordo com a programação temporal que você definir. Seja quando seu filhos completar uma certa idade, em uma data específica ou em um momento marcante.",
