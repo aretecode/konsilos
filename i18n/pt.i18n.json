@@ -37,10 +37,14 @@
     "language": "Idioma",
     "landing-page": {
         "already-a-member": "Já sou cadastrado",
-        "splash-impact-phrase": "Eternize conselhos para seus filhos",
-        "splash-impact-text": "Pense em todas as experiências que te impactaram positivamente. Agora imagine o futuro de seus filhos se você compartilhar tudo isso no momento certo da vida deles.",
+        "cards-body-text": "<p>Livros, filmes, viagens, palestras, desafios, conhecimentos, experiências, etc... Tudo que te tornou uma pessoa melhor e mais preparada para a vida merece ser transmitido para seus filhos através de conselhos, seja quando for.</p><br/><p>O Konsilos é uma iniciativa, sem fins lucrativos, para incentivar pessoa de todo o mundo a eternizarem seus conselhos, garantindo que eles não se perderão e que no momento certo serão compartilhados com seus filhos.</p>",
         "cards-title-text": "De ❤️s para ❤️s",
-        "cards-body-text": "<p>Livros, filmes, viagens, palestras, desafios, conhecimentos, experiências, etc... Tudo que te tornou uma pessoa melhor e mais preparada para a vida merece ser transmitido para seus filhos através de conselhos, seja quando for.</p><br/><p>O Konsilos é uma iniciativa, sem fins lucrativos, para incentivar pessoa de todo o mundo a eternizarem seus conselhos, garantindo que eles não se perderão e que no momento certo serão compartilhados com seus filhos.</p>"
+        "how-konsilos-help-you-body": "O Konsilos te ajuda [...]",
+        "how-konsilos-help-you-title": "Como o Konsilos te Ajuda",
+        "reminders-for-parents-and-children-body": "Você decide como e quando te lembraremos dos conselhos. Pode ser em uma data específica no futuro ou quando seus filhos completarem uma determinada idade. Além disso, de tempos em tempos te lembraremos daqueles conselhos que você pretende compartilhar em momentos importantes da vida deles.",
+        "reminders-for-parents-and-children-title": "Lembretes para Pais e Filhos",
+        "splash-impact-phrase": "Eternize conselhos para seus filhos",
+        "splash-impact-text": "Pense em todas as experiências que te impactaram positivamente. Agora imagine o futuro de seus filhos se você compartilhar tudo isso no momento certo da vida deles."
     },
     "launch-page": {
         "from-time-capsule-description": "No futuro, será por aqui que seus filhos e entes queridos poderão acessar, individualmente, as cápsulas do tempo que você criar para cada um deles. De forma simples e segura uma cápsula poderá ser aberta a partir do momento que você decidir compartilhar com seu filho uma chave(senha) que permite o acesso. Dentro da cápsula, todo conselho eternizado para o filho ficará disponivel e será desbloqueado para visualização de acordo com a programação temporal que você definir. Seja quando seu filhos completar uma certa idade, em uma data específica ou em um momento marcante.",
