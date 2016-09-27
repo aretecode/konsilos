@@ -22,6 +22,11 @@
     "choose-the-date": "Escolha a data",
     "click-to-verify": "Clique para verificar seu email",
     "copyright": "Todos os direitos reservados",
+    "countries": {
+        "brazil": "Brasil",
+        "germany": "Alemanha",
+        "usa": "EUA"
+    },
     "date-of-birth": "Data de Nascimento",
     "edit-my-profile": "Editar meu perfil",
     "english-usa": "Inglês (EUA)",
