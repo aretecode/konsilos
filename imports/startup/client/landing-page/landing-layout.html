@@ -23,6 +23,18 @@
                         <a href="#" class="clock1 subscribe button" data-page-section="time-capsule-top">
                             {{_ 'time-capsule'}}
                         </a>
+
+                        <div class="ui language selection dropdown">
+                            <input type="hidden" name="language" value={{getInitialLanguage}}>
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Language</div>
+                            <div class="menu">
+                                <div class="item" data-value="en">EN</div>
+                                <div class="item" data-value="pt-BR">BR</div>
+                                <div class="item" data-value="de">DE</div>
+                            </div>
+                        </div>
+
                         <div class="country">
                             <select>
                                 <option value="en" data-image="img/landing/flag-uk.png">EN</option>

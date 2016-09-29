@@ -1,4 +1,15 @@
-getHeaderLanguage = () => {
+normalizeLanguageString = languageString => {
+    let [baseLanguage, dialect] = languageString.split(/-/)
+    const hasDialect = !!dialect
+    baseLanguage = baseLanguage.toLowerCase()
+    dialect = hasDialect && dialect.toUpperCase()
+
+    //TODO Bug in tap:i18n prevents us from using pt-BR. Gotta tone it down to pt. Waiting for fix
+    // return hasDialect ? `${baseLanguage}-${dialect}` : baseLanguage
+    return baseLanguage
+}
+
+getLanguageFromHeader = () => {
     const acceptedLanguagesString = headers.get('accept-language') || ''
     const acceptedLanguages = [].concat(
         acceptedLanguagesString
@@ -6,18 +17,32 @@ getHeaderLanguage = () => {
         .filter(e => e.indexOf('q=') === -1)
     )
     let acceptedLanguage = acceptedLanguages[0]
-    let [baseLanguage, dialect] = acceptedLanguage.split(/-/)
-    dialect = dialect && dialect.toUpperCase() || ''
-    acceptedLanguage = `${baseLanguage}-${dialect}`
+    const parsedLanguage = normalizeLanguageString(acceptedLanguage)
 
-    //TODO Bug in tap:i18n prevents us from using pt-BR. Gotta tone it down to pt. Waiting for fix
-    // return acceptedLanguage
-    return baseLanguage
+    return parsedLanguage
 }
 
+getLanguageFromUserProfile = () => Meteor.user() && Meteor.user().profile && Meteor.user().profile.language
+
+getLanguageFromSession = () => Session.get('userLanguage')
+
 const DEFAULT_LANGUAGE = 'en'
-getProfileLanguage = () => Meteor.user() && Meteor.user().profile.language
-getUserLanguage = () => getProfileLanguage() || getHeaderLanguage() || DEFAULT_LANGUAGE
+getUserLanguage = () => (
+    getLanguageFromUserProfile() ||
+    getLanguageFromSession() ||
+    getLanguageFromHeader() ||
+    DEFAULT_LANGUAGE
+)
+
+changeAppLanguage = newLanguage => {
+    const parsedLanguage = normalizeLanguageString(newLanguage)
+
+    Session.set('userLanguage', parsedLanguage)
+    T9n.setLanguage(parsedLanguage)
+    return TAPi18n
+        .setLanguage(parsedLanguage)
+        .fail(console.log)
+}
 
 if (Meteor.isClient) {
     Meteor.startup(() => {
@@ -26,11 +51,8 @@ if (Meteor.isClient) {
         Tracker.autorun(() => {
             const userLanguage = getUserLanguage()
 
-            T9n.setLanguage(userLanguage)
-            TAPi18n
-                .setLanguage(userLanguage)
+            changeAppLanguage(userLanguage)
                 .done(() => {
-                    Session.set('userLanguage', userLanguage)
                     Session.set('showLoadingIndicator', false)
                     Meteor.call('configureEmailTemplates', userLanguage)
                 })

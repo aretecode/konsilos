@@ -29,6 +29,10 @@ Template.LandingPageLayout.events({
     }
 })
 
+Template.LandingPageLayout.helpers({
+    getInitialLanguage: getUserLanguage
+})
+
 Template.LandingPageLayout.onRendered(() => {
     $(() => {
         const $body = this.$('body')
@@ -72,4 +76,8 @@ Template.LandingPageLayout.onRendered(() => {
             blurring: true
         })
         .modal('setting', 'transition', 'scale')
+
+    this.$('.language.dropdown').dropdown({
+        onChange: changeAppLanguage
+    })
 })

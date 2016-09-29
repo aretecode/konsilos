@@ -174,11 +174,12 @@ Schemas.LaunchGathering = new SimpleSchema({
     created_at: {
         type: Date,
         autoValue: function() {
+            //TODO Remove this.value and make fat arrow
             return this.value || new Date()
         },
         autoform: { omit: true }
     },
-    userLanguage: {
+    preferredLanguage: {
         type: String,
         autoform: {
             afFieldInput: { type: 'hidden' }

@@ -8,12 +8,12 @@
                     type='insert'
                 }}
 
-                    {{> afQuickField name='name' class='advisee' options=adviseeOptions}}
+                    {{> afQuickField name='name'}}
                     {{> afQuickField name='email'}}
-                    {{> afFieldInput name='userLanguage' type='hidden' value=userLanguage}}
+                    {{> afFieldInput name='preferredLanguage' type='hidden' value=getInitialLanguage}}
                     {{> afFieldInput name='subscribedFrom' type='hidden' }}
 
-                    {{> afFieldInput type='submit' value=(_ 'launch-page.subscribe-button')}}
+                    {{> afFieldInput name='submitButton' type='submit' value=(_ 'launch-page.subscribe-button')}}
 
                 {{/autoForm}}
             </div>
