@@ -7,10 +7,18 @@
     "advice-types": {
         "about-life": "Sobre a Vida",
         "have-an-experience": "Ter uma Experiência",
+        "just-an-advice": "Apenas um Conselho",
+        "read-a-book": "Ler um Livro",
         "watch-a-movie": "Assistir um Filme"
     },
     "advice-times": {
-        "when-turning": "Quando completar"
+        "falling-in-love": "Quando se apaixonar",
+        "having-baby": "Quando tiver um filho",
+        "life-is-hard": "Quando a vida ficar difícil",
+        "marrying": "Quando se casar",
+        "specific-day": "Quando for o dia",
+        "turning": "Quando completar",
+        "first-job": "Quando ter um emprego"
     },
     "advice-form": {
         "what-kind": "Que tipo de conselho você quer eternizar?"
@@ -46,8 +54,26 @@
     "landing-page": {
         "advices-creation-title": "Registro de Conselhos",
         "advices-creation-body": "Sempre que valer a pena compartilhar um conselho com seus filhos no futuro registre-os na hora e não corra o risco de esquecê-los. Você pode explicar com detalhes porque o conselho é importante e decidir quando é o melhor momento para que ele seja transmitido.",
+        "advices-examples": {
+            "card-1-complement-title": "",
+            "card-1-text": "Tenho uma coisa muito importante para te falar...",
+            "card-2-text": "Meu filho, tomar decisões quando está muito apaixonado ...",
+            "card-3-complement-title": "O Pequeno Príncipe",
+            "card-3-text": "Não posso deixar de ler este livro com o Daniel e ensinar...",
+            "card-4-complement-title": "A Arte da Guerra",
+            "card-4-text": "Na vida sempre teremos situações que talvez seja necessário...",
+            "card-5-text": "Que tal organizar uma primeira viagem sozinho para o... ",
+            "card-6-text": "Espero que você esteja trabalhando com algo...",
+            "card-7-complement-title": "Rocky Balboa",
+            "card-7-text": "Filho, niguém baterá tão forte quanto a vida. Porém...",
+            "card-8-text": "Querida filha, o silêncio pode ser um grande amigo. Tente...",
+            "card-9-complement-title": "A República",
+            "card-10-text": "Tenho uma coisa muito importante para te falar...",
+            "card-11-text": "Desde o primento dia se permita transformar...",
+            "card-12-text": "Tenho uma coisa muito importante para te falar..."
+        },
         "already-a-member": "Já sou cadastrado",
-        "cards-body-text": "<p>Livros, filmes, viagens, palestras, desafios, conhecimentos, experiências, etc... Tudo que te tornou uma pessoa melhor e mais preparada para a vida merece ser transmitido para seus filhos através de conselhos, seja quando for.</p><br/><p>O Konsilos é uma iniciativa, sem fins lucrativos, para incentivar pessoa de todo o mundo a eternizarem seus conselhos, garantindo que eles não se perderão e que no momento certo serão compartilhados com seus filhos.</p>",
+        "cards-body-text": "<p>Livros, filmes, viagens, palestras, desafios, conhecimentos, experiências, etc... Tudo que te tornou uma pessoa melhor e mais preparada para a vida merece ser transmitido para seus filhos através de conselhos, seja quando for.</p><br/><p>O Konsilos é uma iniciativa, sem fins lucrativos, para encorajar pessoa de todo o mundo a eternizarem seus conselhos, garantindo que eles não se perderão e que no momento certo serão compartilhados com seus filhos.</p>",
         "cards-title-text": "De ❤️s para ❤️s",
         "how-konsilos-help-you-body": "O Konsilos te ajuda [...]",
         "how-konsilos-help-you-title": "Como o Konsilos te Ajuda",
@@ -62,6 +88,7 @@
         "dad-of-male": "Pai do",
         "mom-of-female": "Mãe da",
         "mom-of-male": "Mãe do",
+        "page-title": "Konsilos - Eternize conselhos para seus filhos",
         "profession": {
             "civil-engineer-female": "Engenheira Civil",
             "civil-engineer-male": "Engenheiro Civil",
