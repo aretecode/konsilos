@@ -7,18 +7,18 @@
     "advice-types": {
         "about-life": "Sobre a Vida",
         "have-an-experience": "Ter uma Experiência",
-        "just-an-advice": "Apenas um conselho",
-        "read-a-book": "",
-        "watch-a-movie": ""
+        "just-an-advice": "Apenas um Conselho",
+        "read-a-book": "Ler um Livro",
+        "watch-a-movie": "Assistir um Filme"
     },
     "advice-times": {
-        "when-fall-in-love": "Quando se apaixonar",
-        "when-have-baby": "Quando tiver um filho",
-        "when-life-hard": "Quando a vida ficar difícil",
-        "when-marry": "Quando se casar",
-        "when-the-day": "Quando for o dia",
-        "when-turning": "Quando completar",
-        "when-your-first-job": "Quando ter um emprego"
+        "falling-in-love": "Quando se apaixonar",
+        "having-baby": "Quando tiver um filho",
+        "life-is-hard": "Quando a vida ficar difícil",
+        "marrying": "Quando se casar",
+        "specific-day": "Quando for o dia",
+        "turning": "Quando completar",
+        "first-job": "Quando ter um emprego"
     },
     "advice-form": {
         "what-kind": "Que tipo de conselho você quer eternizar?"
@@ -70,10 +70,10 @@
             "card-9-complement-title": "A República",
             "card-10-text": "Tenho uma coisa muito importante para te falar...",
             "card-11-text": "Desde o primento dia se permita transformar...",
-            "card-11-text": "Tenho uma coisa muito importante para te falar..."
+            "card-12-text": "Tenho uma coisa muito importante para te falar..."
         },
         "already-a-member": "Já sou cadastrado",
-        "cards-body-text": "<p>Livros, filmes, viagens, palestras, desafios, conhecimentos, experiências, etc... Tudo que te tornou uma pessoa melhor e mais preparada para a vida merece ser transmitido para seus filhos através de conselhos, seja quando for.</p><br/><p>O Konsilos é uma iniciativa, sem fins lucrativos, para incentivar pessoa de todo o mundo a eternizarem seus conselhos, garantindo que eles não se perderão e que no momento certo serão compartilhados com seus filhos.</p>",
+        "cards-body-text": "<p>Livros, filmes, viagens, palestras, desafios, conhecimentos, experiências, etc... Tudo que te tornou uma pessoa melhor e mais preparada para a vida merece ser transmitido para seus filhos através de conselhos, seja quando for.</p><br/><p>O Konsilos é uma iniciativa, sem fins lucrativos, para encorajar pessoa de todo o mundo a eternizarem seus conselhos, garantindo que eles não se perderão e que no momento certo serão compartilhados com seus filhos.</p>",
         "cards-title-text": "De ❤️s para ❤️s",
         "how-konsilos-help-you-body": "O Konsilos te ajuda [...]",
         "how-konsilos-help-you-title": "Como o Konsilos te Ajuda",
