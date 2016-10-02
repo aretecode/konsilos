@@ -7,7 +7,7 @@
 .sign1 				{ padding:0 0 0 60px; width:80% !important;}
 .simple_lft			{ transform:rotate(30deg) translateX(-36%) translateY(8%) scale(0.9); -moz-transform:rotate(30deg) translateX(-36%) translateY(8%) scale(0.9); -ms-transform:rotate(30deg) translateX(-36%) translateY(8%) scale(0.9); -o-transform:rotate(30deg) translateX(-36%) translateY(8%) scale(0.9);-webkit-transform:rotate(30deg) translateX(-36%) translateY(8%) scale(0.9);}
 .civil .owl-prev	{ left:-50px;}
-.top_block 			{ margin:0}
+.top_block 			{ margin:0; width: 80%;}
 .simple_rgt			{ float:none; padding:0 20px 0 55%; z-index:1;}
 
 .sign 				{padding:0 0 0 60px;}

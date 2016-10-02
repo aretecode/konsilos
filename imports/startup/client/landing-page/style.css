@@ -626,7 +626,6 @@ nav ul li a.clock:hover {
     padding: 0 0 20px 0;
     display: table-cell;
     vertical-align: middle;
-    width: 450px;
     float: right;
 }
 .simple_rgt {
