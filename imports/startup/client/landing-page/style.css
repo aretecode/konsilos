@@ -742,17 +742,17 @@ nav ul li a.clock:hover {
 .close img {
     display: block;
 }
-.julia {
+.reminder-picture {
     margin: 25px 29px 0 0;
     padding: 0;
     float: right;
 }
-.julia span {
+.reminder-picture span {
     margin: 0;
     padding: 0 0 2px 0;
     display: block;
 }
-.julia h5 {
+.reminder-picture h5 {
     margin: 0;
     padding: 0;
     font-family: 'Lato-Bold';
