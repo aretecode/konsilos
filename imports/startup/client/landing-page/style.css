@@ -1409,3 +1409,8 @@ a.clock1:hover {
     font-weight: normal;
 }
 /* ---------------------------------------------------------*/
+
+.ui.language.dropdown {
+    min-width: 4em;
+    padding: 1em 1.5em;
+}
