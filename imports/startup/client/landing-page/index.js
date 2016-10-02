@@ -32,18 +32,18 @@ Template.LandingPageLayout.helpers({
 
 Template.LandingPageLayout.onRendered(() => {
     $(() => {
-        const $body = this.$('body')
-
-        this.$('nav').clone().appendTo('.sub_menu')
-
-        this.$('.menu a').click(() => $body.toggleClass('open_menu'))
-
-        this.$('.close').click(() => $body.removeClass('open_menu'))
-
-        this.$('.sub_menu nav ul li a').click(() => {
-            $(this).parent().find('ul').slideToggle()
-            $(this).toggleClass('active')
-        })
+        // const $body = this.$('body')
+        //
+        // this.$('nav').clone().appendTo('.sub_menu')
+        //
+        // this.$('.menu a').click(() => $body.toggleClass('open_menu'))
+        //
+        // this.$('.close').click(() => $body.removeClass('open_menu'))
+        //
+        // this.$('.sub_menu nav ul li a').click(() => {
+        //     $(this).parent().find('ul').slideToggle()
+        //     $(this).toggleClass('active')
+        // })
 
         const owl = this.$('#owl-example1')
 

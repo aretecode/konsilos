@@ -173,10 +173,7 @@ Schemas.LaunchGathering = new SimpleSchema({
     },
     created_at: {
         type: Date,
-        autoValue: function() {
-            //TODO Remove this.value and make fat arrow
-            return this.value || new Date()
-        },
+        autoValue: () => { return new Date() },
         autoform: { omit: true }
     },
     preferredLanguage: {
