@@ -4,11 +4,9 @@ import './landing-layout.html'
 import './landing-home.html'
 
 import './owl.carousel.css'
-import './dd.css'
 import './style.css'
 import './responsive.css'
 
-import './jquery.dd'
 import './owl.carousel.min'
 
 const SUBSCRIBE_MODAL_CLASS = '.subscribe.modal'
@@ -36,8 +34,6 @@ Template.LandingPageLayout.helpers({
 Template.LandingPageLayout.onRendered(() => {
     $(() => {
         const $body = this.$('body')
-
-        this.$('select').msDropdown()
 
         this.$('nav').clone().appendTo('.sub_menu')
 
