@@ -1,7 +1,6 @@
 import './subscribe-modal.js'
 
 import './landing-layout.html'
-import './landing-home.html'
 
 import './owl.carousel.css'
 import './style.css'

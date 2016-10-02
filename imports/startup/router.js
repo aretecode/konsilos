@@ -46,14 +46,12 @@ Router.route('/sign-out', {
 Router.route('/welcome', {
     name: 'landing-home',
     layoutTemplate: 'LandingPageLayout',
-    yieldTemplates: {
-        Footer: { to: 'footer' }
-    },
     onBeforeAction: function() {
         const isLoggedIn = Meteor.userId();
         if (isLoggedIn) {
             this.redirect('app-home')
         }
+        this.next()
     }
 });
 
