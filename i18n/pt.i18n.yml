@@ -36,7 +36,7 @@ edit-my-profile: Editar meu perfil
 english-usa: Inglês (EUA)
 email: Email
 father: Pai
-female: Masculino
+female: Feminino
 first-breakup: Primeiro término de namoro
 first-day-of-school: Primeiro dia na escola
 first-girl/boyfriend: Primeiro(a) namorado(a)
@@ -46,7 +46,6 @@ here-are-your-advices-set-for-a-specific-date: Aqui estão seus conselhos defini
 here-you-can-edit-your-profile: Aqui você pode editar seu perfil
 home_greeting: Olá
 i-prefer-not-to-say: Prefiro não responder
-language: Idioma
 landing-page:
   advices-creation-title: Registro de Conselhos
   advices-creation-body: Sempre que valer a pena compartilhar um conselho com seus filhos no futuro registre-os na hora e não corra o risco de esquecê-los. Você pode explicar com detalhes porque o conselho é importante e decidir quando é o melhor momento para que ele seja transmitido.
@@ -94,10 +93,11 @@ launch-page:
   know-when-we-launch: Saiba quando lançarmos
   subscribe-button: Oba, me avise!
   successfully-subscribed: Te informaremos assim que lançarmos
+language: Idioma
 loading: Carregando
 login: Login
 make-this-advice-eternal: Eternize esse conselho!
-male: Feminino
+male: Masculino
 mother: Mãe
 my-advices: Meus conselhos
 my-family: Minha família
