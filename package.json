@@ -12,9 +12,11 @@
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "babel-eslint": "^6.0.4",
-    "eslint": "^2.12.0"
+    "eslint": "^2.12.0",
+    "mup": "^1.0.3"
   },
   "scripts": {
+    "mup": "mup --config=.deploy/mup.js --settings=.deploy/settings.json",
     "lint": "eslint .",
     "test": "npm run lint"
   },

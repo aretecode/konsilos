@@ -12,20 +12,13 @@ Konsilos
 
 ## Deploying:
 
-Follow the guide here: http://meteortips.com/deployment-tutorial/digitalocean-part-1/
+Deploy workflow created based in [this guide](http://meteortips.com/deployment-tutorial/digitalocean-part-1/).
 
-In short:
+Deploying the app:
 
-First time, installing mup and configuring it:
-
-1. `npm i -g mup`
-2. `mkdir .deploy && cd .deploy && mup init`
-
-Subsequent times, deploying the app:
-
-1. `mup setup`
-2. `meteor npm install`
-3. `mup deploy`
+1. `npm run mup setup` (only if server configuration has changed)
+2. `npm i --production` (only if production dependencies have changed)
+3. `npm run mup deploy`
 
 ## Testing:
 
