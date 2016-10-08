@@ -6,21 +6,21 @@
 
 accounts-password@1.3.0
 accounts-ui@1.1.9
-email@1.1.17
+email@1.1.17_1
 meteor-base@1.0.4
-mongo@1.1.12
+mongo@1.1.12_1
 blaze-html-templates@1.0.4
 session@1.1.6
 jquery@1.11.9
 tracker@1.1.0
-logging@1.1.15
+logging@1.1.15_1
 reload@1.1.10
 random@1.0.10
 ejson@1.0.12
 spacebars@1.0.12
 check@1.2.3
-ecmascript@0.5.8
-es5-shim@4.6.14
+ecmascript@0.5.8_1
+es5-shim@4.6.14_1
 iron:router
 aldeed:autoform
 aldeed:collection2
@@ -36,5 +36,5 @@ tap:i18n
 softwarerero:accounts-t9n
 gadicohen:headers
 juliancwirko:postcss
-less@2.7.5
+less@2.7.5_1
 shell-server@0.2.1
