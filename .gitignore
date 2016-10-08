@@ -63,3 +63,4 @@ node_modules/
 ### Eclipse ###
 /.project
 /.tern-project
+*.pem
