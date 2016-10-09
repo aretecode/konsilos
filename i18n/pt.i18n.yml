@@ -94,6 +94,10 @@ launch-page:
   subscribe-button: Oba, me avise!
   successfully-subscribed: Te informaremos assim que lançarmos
 language: Idioma
+languages:
+  english: Inglês
+  german: Alemão
+  portuguese: Português
 loading: Carregando
 login: Login
 make-this-advice-eternal: Eternize esse conselho!
