@@ -15,9 +15,11 @@ Mix steps extracted from:
 8. Copy `ssl.pem` to your mup folder: `cp ssl.pem YOUR_PROJECT/.deploy/ssl.pem`
 9. Add this line to your `mup.js`:
 ```javascript
-    ssl: {
-        pem: './ssl.pem'
-    }
+ssl: {
+    port: 443,
+    crt: './fullchain.pem',
+    key: './privkey.pem'
+}
 ```
 10. Add the `force-ssl` package to meteor: `meteor add force-ssl`
 11. Add the pem file to .gitignore: `echo "*.pem" >> .gitignore`
