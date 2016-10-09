@@ -1413,3 +1413,12 @@ a.clock1:hover {
     min-width: 4em;
     padding: .6em 1.5em;
 }
+.ui.language.dropdown .menu {
+    background: rgba(255,255,255,.65);
+}
+.ui.language.dropdown .menu > .item:hover {
+    background: rgba(0,0,0,.2);
+}
+.ui.language.dropdown .menu > .item > img {
+    margin: 0;
+}
