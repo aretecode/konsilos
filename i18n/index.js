@@ -54,7 +54,8 @@ if (Meteor.isClient) {
             changeAppLanguage(userLanguage)
                 .done(() => {
                     Session.set('showLoadingIndicator', false)
-                    Meteor.call('configureEmailTemplates', userLanguage)
+                    // TODO not necessary for lauch page only phase:
+                    // Meteor.call('configureEmailTemplates', userLanguage)
                 })
                 .fail(console.log)
         });
