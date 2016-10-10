@@ -78,7 +78,6 @@
                 <div class="title">
                     <h1>{{_ 'landing-page.splash-impact-phrase'}}</h1>
                     <p>{{_ 'landing-page.splash-impact-text'}}</p>
-
                     <a href="#" class="start-now-button subscribe button" data-page-section="splash-screen">
                         {{_ 'subscribe'}}
                     </a>
@@ -240,7 +239,7 @@
                                 <div class="clear"></div>
                                 <div class="mdl_content">
                                     <h2>{{_ 'advice-types.have-an-experience'}} </h2>
-                                    <h3>{{_ 'advice-times.turning'}} 35 {{_ 'years'}}</h3>
+                                    <h3>{{_ 'advice-times.turning'}} 40 {{_ 'years'}}</h3>
                                     <p>{{_ 'landing-page.advices-examples.card-8-text'}} </p>
                                     <h6>27/09/2016</h6>
                                     <small><img src="img/landing/lock.png" width="24" height="24" alt="lock"></small>
@@ -331,7 +330,16 @@
                     <div class="top_simple">
                         <div class="simple_rgt">
                             <h2>{{_ 'landing-page.cards-title-text'}}</h2>
-                            {{{_ 'landing-page.cards-body-text'}}}
+                            <p>{{{_ 'landing-page.cards-body-text-part1'}}}</p>
+                            <br>
+                            <p>{{{_ 'landing-page.cards-body-text-part2'}}}</p>
+                            <br>
+                            <div class="right_side">
+                              <a href="#" class="start-now-button subscribe button" data-page-section="cards-area">
+                                  {{_ 'subscribe'}}
+                              </a>
+                          </div>
+
                         </div>
                     </div>
                 </div>
@@ -344,6 +352,46 @@
                     <h2>{{_ 'landing-page.how-konsilos-help-you-title'}}</h2>
                     <p>{{_ 'landing-page.how-konsilos-help-you-body'}}</p>
 
+                    <!-- >  advices-creation <!-->
+                    <div class="feature_btm">
+                        <div class="feature_btm_rgt1">
+                            <div class="feature_rgt_block">
+                                <div class="feature_rgt_mdl">
+                                    <div class="feature_rgt_top"></div>
+                                    <div class="feature_rgt_btm">
+                                        <h4>{{_ 'landing-page.question-king-advice'}}</h4>
+                                        <div class="terms"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature_btm_lft">
+                            <span>
+                                <img src="img/landing/img2.jpg" width="78" height="68" alt="img">
+                            </span>
+                            <h3>{{_ 'landing-page.advices-creation-title'}}</h3>
+                            <p>{{_ 'landing-page.advices-creation-body'}}</p>
+                        </div>
+
+                        <div class="feature_btm_rgt">
+                            <div class="feature_rgt_block">
+                                <div class="feature_rgt_mdl">
+                                    <div class="feature_rgt_top">
+                                    </div>
+                                    <div class="feature_rgt_btm">
+                                        <h4>{{_ 'advice-form.what-kind'}}</h4>
+                                        <div class="terms"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <!-- >  advices-creation-end <!-->
+
+                    <!-- >  reminders-for-parents <!-->
                     <div class="feature_top">
                         <div class="feature_top_lft">
                             <div class="feature_block">
@@ -381,43 +429,8 @@
 
                         <div class="clear"></div>
                     </div>
+                    <!-- >  reminders-for-parents-end <!-->
 
-                    <div class="feature_btm">
-                        <div class="feature_btm_rgt1">
-                            <div class="feature_rgt_block">
-                                <div class="feature_rgt_mdl">
-                                    <div class="feature_rgt_top"></div>
-                                    <div class="feature_rgt_btm">
-                                        <h4>Que tipo de conselho voce quer eternizar?</h4>
-                                        <div class="terms"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="feature_btm_lft">
-                            <span>
-                                <img src="img/landing/img2.jpg" width="78" height="68" alt="img">
-                            </span>
-                            <h3>{{_ 'landing-page.advices-creation-title'}}</h3>
-                            <p>{{_ 'landing-page.advices-creation-body'}}</p>
-                        </div>
-
-                        <div class="feature_btm_rgt">
-                            <div class="feature_rgt_block">
-                                <div class="feature_rgt_mdl">
-                                    <div class="feature_rgt_top">
-                                    </div>
-                                    <div class="feature_rgt_btm">
-                                        <h4>{{_ 'advice-form.what-kind'}}</h4>
-                                        <div class="terms"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="clear"></div>
-                    </div>
                 </div>
             </div>
 
@@ -432,8 +445,8 @@
 
                     <div class="advice_top_rgt">
                         <div class="sign">
-                            <h3>{{{_ 'landing-page.security-title'}}}</h3>
-                            <p>{{_ 'landing-page.security-body'}}</p>
+                            <h3>{{{_ 'landing-page.free-forever-title'}}}</h3>
+                            <p>{{_ 'landing-page.free-forever-body'}}</p>
                             <a href="#" class="subscribe button" data-page-section="your-advices-always-yours">
                                 {{_ 'subscribe'}}
                             </a>
@@ -450,8 +463,8 @@
 
                     <div class="advice_btm_lft">
                         <div class="sign sign1">
-                            <h3>{{_ 'time-capsule'}}</h3>
-                            <p>{{_ 'landing-page.time-capsule-body'}}</p>
+                            <h3>{{{_ 'landing-page.security-title'}}}</h3>
+                            <p>{{_ 'landing-page.security-body'}}</p>
                             <a href="#" class="subscribe button" data-page-section="time-capsule-section">
                                 {{_ 'subscribe'}}
                             </a>

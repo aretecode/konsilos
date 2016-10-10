@@ -47,8 +47,8 @@ here-you-can-edit-your-profile: Aqui você pode editar seu perfil
 home_greeting: Olá
 i-prefer-not-to-say: Prefiro não responder
 landing-page:
-  advices-creation-title: Registro de Conselhos
-  advices-creation-body: Sempre que valer a pena compartilhar um conselho com seus filhos no futuro registre-os na hora e não corra o risco de esquecê-los. Você pode explicar com detalhes porque o conselho é importante e decidir quando é o melhor momento para que ele seja transmitido.
+  advices-creation-title: Registre Vários Conselhos
+  advices-creation-body: Podem ser conselhos sobre a vida, ler livros, assistir filmes ou, apenas conselhos. Diga quem vai receber cada um deles e detalhe sua importância. Sinta-se livre também para editá-los a qualquer momento.
   advices-examples:
     card-1-complement-title:
     card-1-text: Tenho uma coisa muito importante para te falar...
@@ -67,16 +67,20 @@ landing-page:
     card-11-text: Desde o primento dia se permita transformar...
     card-12-text: Tenho uma coisa muito importante para te falar...
   already-a-member: Já sou cadastrado
-  cards-body-text: <p>Livros, filmes, viagens, palestras, desafios, conhecimentos, experiências, etc... Tudo que te tornou uma pessoa melhor e mais preparada para a vida merece ser transmitido para seus filhos através de conselhos, seja quando for.</p><br/><p>O Konsilos é uma iniciativa, sem fins lucrativos, para encorajar pessoa de todo o mundo a eternizarem seus conselhos, garantindo que eles não se perderão e que no momento certo serão compartilhados com seus filhos.</p>
-  cards-title-text: De ❤️s para ❤️s
-  how-konsilos-help-you-body: O Konsilos te ajuda [...]
-  how-konsilos-help-you-title: Como o Konsilos te Ajuda
-  reminders-for-parents-and-children-body: Você decide como e quando te lembraremos dos conselhos. Pode ser em uma data específica no futuro ou quando seus filhos completarem uma determinada idade. Além disso, de tempos em tempos te lembraremos daqueles conselhos que você pretende compartilhar em momentos importantes da vida deles.
-  reminders-for-parents-and-children-title: Lembretes para Pais e Filhos
-  security-body: Segurança, privacidade, backup, liberdade e disponibilidade. Somente você e seus filhos tem acesso aos conselhos. E você é livre para a qualquer momento baixar seus conselhos e deixar de usar o sistema.
-  security-title: Seus Conselhos,<br/>Sempre Seus
+  cards-body-text-part1: Sabe aqueles livros, conselhos, filmes, experiências e tudo mais que te tornou uma pessoa melhor e mais preparada para a vida? Você poderia transformá-los em poderosos e inspiradores conselhos para o futuro dos seus filhos.
+  cards-body-text-part2: Mas com o tempo existe também o risco de você esquecer ou não estar mais presente para trasmití-los na ocasião ou idade ideal. Registrar esses conselhos e ser alertado no futuro pode fazer toda a diferença na vida deles.
+  cards-title-text: Deixe seu legado
+  cards-title-text-old: De ❤️s para ❤️s
+  free-forever-title: Gratuito,<br/>Para Sempre!
+  free-forever-body: Isso é possível pois o Konsilos é uma iniciativa sem fins lucrativos que, através de um projeto Open Source, está sendo desenvolvido por talentosos voluntários de diferentes lugares do mundo que acreditam na nossa iniciativa . Além disso contamos com doações de pessoas e empresas que apoiam o projeto.
+  how-konsilos-help-you-body: Acreditamos que bons conselhos podem mudar as pessoas. Por isso o Konsilos é uma iniciativa para encorajar pais a eternizarem conselhos para seus filhos através de uma plataforma simples, segura e gratuita. Usando um computador ou smartphone, qualquer pessoa pode criar uma conta, começar a registrar conselhos, ser notificado no futuro e deixar tudo eternizado para seus filhos em cápsulas do tempo.
+  how-konsilos-help-you-title: Simples. Poderoso. Konsilos.
+  reminders-for-parents-and-children-body: É você que decide quando será notificado para transmitir cada conselho. Pode ser em uma situação específica ou em uma determinada idade do seu filho. Além disso, seus filhos poderão acessar todos os conselhos, a medida que forem desbloqueados, em cápsulas do tempo programadas por você. Imagine só a emoção deles ao desbloquearem conselhos em diferentes momentos de suas vidas.
+  reminders-for-parents-and-children-title: Notificações e Cápsula do Tempo
+  security-body: Segurança, privacidade e liberdade. Somente você e seus filhos tem acesso aos conselhos. Você é livre para a qualquer momento importar seus conselhos e deixar de usar o sistema. As cápsulas do tempo só podem ser acessadas por chaves/senhas que só você sabe. Entrege-as para seus filhos quando achar que é o momento certo.
+  security-title: Seus Conselhos,<br/>Sempre Seus!
   splash-impact-phrase: Eternize conselhos para seus filhos
-  splash-impact-text: Pense em todas as experiências que te impactaram positivamente.  Agora imagine o futuro de seus filhos se você compartilhar tudo isso no momento certo da vida deles.
+  splash-impact-text: Pense em todos os conselhos e experiências que te impactaram positivamente. Agora imagine o futuro dos seus filhos se você puder compartilhar tudo isso no momento certo da vida deles.
   time-capsule-body: Se você desejar, seus filhos poderão ter acesso no futuro a todos os conselhos que você eternizou, acessando-os na medida em que forem desbloqueados de acordo com a sua programação. Funciona como uma cápsula do tempo que vai fazer você estar presente durante toda a vida deles.
   dad-of-female: Pai da
   dad-of-male: Pai do
@@ -88,11 +92,12 @@ landing-page:
     civil-engineer-male: Engenheiro Civil
     teacher-female: Professora
     teacher-male: Professor
+  question-king-advice: Que tipo de conselho você quer eternizar?
 launch-page:
-  from-time-capsule-description: No futuro, será por aqui que seus filhos e entes queridos poderão acessar, individualmente, as cápsulas do tempo que você criar para cada um deles. De forma simples e segura uma cápsula poderá ser aberta a partir do momento que você decidir compartilhar com seu filho uma chave (senha) que permite o acesso. Dentro da cápsula, todo conselho eternizado para o filho ficará disponivel e será desbloqueado para visualização de acordo com a programação temporal que você definir. Seja quando seu filhos completar uma certa idade, em uma data específica ou em um momento marcante.
-  know-when-we-launch: Saiba quando lançarmos
-  subscribe-button: Oba, me avise!
-  successfully-subscribed: Te informaremos assim que lançarmos
+  from-time-capsule-description: No futuro, será por aqui que seus filhos e entes queridos poderão acessar, individualmente, as cápsulas do tempo que você criar para cada um deles. De forma simples e segura uma cápsula poderá ser aberta a partir do momento que você decidir compartilhar com seu filho uma chave(senha) que permite o acesso. Dentro da cápsula, todo conselho eternizado para o filho ficará disponivel e será desbloqueado para visualização de acordo com a programação temporal que você definir. Seja quando seu filhos completar uma certa idade, em uma data específica ou em um momento marcante.
+  know-when-we-launch: Nosso time esta focado para lançarmos o Konsilos muito em breve. Nos diga seu email para receber o convite no lançamento.
+  subscribe-button: Enviar
+  successfully-subscribed: Pré-inscrição realizada com sucesso.
 language: Idioma
 languages:
   english: Inglês
@@ -136,4 +141,3 @@ whos-this-advice-for?: Para quem é esse conselho?
 why-does-this-advice-matters?: Porquê esse conselho importa?
 years: anos
 your-advices-so-far: Seus conselhos até agora
-
