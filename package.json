@@ -13,10 +13,12 @@
     "autoprefixer": "^6.3.1",
     "babel-eslint": "^6.0.4",
     "eslint": "^2.12.0",
-    "mup": "^1.0.3"
+    "mup": "^1.0.4",
+    "mupx-letsencrypt": "^1.0.3",
+    "ssh2": "^0.5.2"
   },
   "scripts": {
-    "mup": "mup --config=.deploy/mup.js --settings=.deploy/settings.json",
+    "mup": "mupx-letsencrypt --config=.deploy/mup.json --settings=.deploy/settings.json",
     "lint": "eslint .",
     "test": "npm run lint"
   },
