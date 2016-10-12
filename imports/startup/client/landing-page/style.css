@@ -86,7 +86,7 @@ acronym {
     margin: 0 !important;
 }
 .last1 {
-    margin: 0 !important;
+    margin-right: 2em !important;
 }
 .pad_last {
     padding: 0 !important;
@@ -1331,7 +1331,7 @@ footer .container {
     display: inline-block;
 }
 .social_icon ul li {
-    margin: 0 17px 0 0;
+    margin: 0;
     padding: 0;
     display: inline-block;
 }

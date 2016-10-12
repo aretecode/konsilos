@@ -120,6 +120,9 @@ report-broken-link: Make sure you typed the correct URL or if this was a broken 
 sibling: Sibling
 sign-out: Sign Out
 site-footer: Konsilos. A better tomorrow today.
+social-links:
+  facebook: https://www.facebook.com/konsilos/
+  twitter: https://twitter.com/konsilos
 soon: Soon
 subscribe: Subscribe
 thanks: Thanks

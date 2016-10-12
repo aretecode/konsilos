@@ -120,6 +120,9 @@ report-broken-link: Certifique-se que você digitou a URL corretamente ou se est
 sibling: Irmã(o)
 sign-out: Sair
 site-footer: Konsilos. Um amanhã melhor, hoje.
+social-links:
+  facebook: https://www.facebook.com/konsilos.brasil/
+  twitter: https://twitter.com/konsilos_br
 soon: Em breve
 subscribe: Inscrever-se
 thanks: Obrigado
