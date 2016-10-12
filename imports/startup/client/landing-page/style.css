@@ -1422,3 +1422,7 @@ a.clock1:hover {
 .ui.language.dropdown .menu > .item > img {
     margin: 0;
 }
+
+.ui.subscribe.modal p:last-of-type {
+    margin: 1em 0;
+}

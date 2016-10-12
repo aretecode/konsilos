@@ -1,23 +1,23 @@
 <template name='SubscribeModal'>
     <div class="ui subscribe tiny modal">
         <i class="close icon"></i>
-        <div class="header">{{_ 'launch-page.know-when-we-launch'}}</div>
+        <div class="header">{{_ 'launch-page.know-when-we-launch-title'}}</div>
         <div class="content">
-            <div class="description">
-                {{#autoForm id='LaunchGatheringForm'
-                    collection=launchGatheringCollection
-                    type='insert'
-                }}
+            {{{_ 'launch-page.know-when-we-launch-body'}}}
 
-                    {{> afQuickField name='name'}}
-                    {{> afQuickField name='email'}}
-                    {{> afFieldInput name='preferredLanguage' type='hidden' value=getInitialLanguage}}
-                    {{> afFieldInput name='subscribedFrom' type='hidden' }}
+            {{#autoForm id='LaunchGatheringForm'
+                collection=launchGatheringCollection
+                type='insert'
+            }}
 
-                    {{> afFieldInput name='submitButton' type='submit' value=(_ 'launch-page.subscribe-button')}}
+                {{> afQuickField name='name'}}
+                {{> afQuickField name='email'}}
+                {{> afFieldInput name='preferredLanguage' type='hidden' value=getInitialLanguage}}
+                {{> afFieldInput name='subscribedFrom' type='hidden' }}
 
-                {{/autoForm}}
-            </div>
+                {{> afFieldInput name='submitButton' type='submit' value=(_ 'launch-page.subscribe-button')}}
+
+            {{/autoForm}}
         </div>
     </div>
 
