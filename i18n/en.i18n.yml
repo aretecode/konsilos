@@ -52,38 +52,41 @@ languages:
   german: German
   portuguese: Portuguese
 landing-page:
-  advices-creation-title: Advice Registration
-  advices-creation-body: Anytime an advice is worth sharing with your children in the future, register them in the spot and without risking forgetting about them. You can explain in detail why that advice is important and decide when is the best moment for it to be given.
+  advices-creation-title: Register Several Advices
+  advices-creation-body: They can be about life, books to be read, movies to be watched or whatever you want. Choose who will receive the advice and point out why it matters. You can edit them at any time.
   advices-examples:
     card-1-text: I have something very important to tell you...
     card-2-text: My son, to make decisions when you're passionate about...
     card-3-complement-title: The Little Prince
     card-3-text: I must read this book with Daniel and teach...
     card-4-complement-title: The Art of War
-    card-4-text: In life there's alsways situations where it might be necessary...
+    card-4-text: In life there's always situations where it might be necessary...
     card-5-text: How about organizing your first solo trip to...
     card-6-text: I hope you're working with something...
     card-7-complement-title: Rocky Balboa
     card-7-text: Son, nobody will hit you as hard as life. But...
     card-8-text: Dear daughter, silence can be a great friend. Try...
     card-9-complement-title: The Republic
-    card-10-text: I have something very imporant to tell you...
+    card-10-text: I have something very important to tell you...
     card-11-text: Since day one allow yourself to change...
-    card-12-text: I have something very imporant to tell you...
-    already-a-member: I'm already a member
-  cards-body-text: <p>Books, movies, trips, talks, challenges, knowledge, experiences... Everything that made you a better person and more prepared for life deserves to be shared with your children via advices, whenever it is.</p><br/><p>Konsilos is non for profit initiative, to encourage people from all over the world to eternize their advices, making sure they won't get lost and in due time they will be shared with your children.</p>
-  cards-title-text: From ❤️s to ❤️s
-  how-konsilos-help-you-body: Konsilos helps you [...]
-  how-konsilos-help-you-title: How Konsilos helps you
-  reminders-for-parents-and-children-body: You decide how and when we will remind you of the advices. It can be a specifc date in the future or when your children reach a certain age. In addition, from time to time we will remind you of those advices you plan to share in certain important moments of their life.
-  reminders-for-parents-and-children-title: Reminders for Parents and Children
-  security-body: Security, privacy, backup, freedom and availability. Only you and your children have acess to the advices. And you are free to download your advices and leave the system at any time.
+    card-12-text: I have something very important to tell you...
+  already-a-member: I'm already a member
+  cards-body-text-part1: Think about advices, books, movies, experiences and everything else that helped you become a better and more prepared person. Now imagine being able to transform them in powerful and inspiring advices to your children too!
+  cards-body-text-part2: We want to help you remember to share them in the right occasion or the ideal age, even if you are not there anymore.
+  cards-title-text: Leave your legacy
+  free-forever-body: We're a non-for-profit and open source initiative, thought and built by volunteers who share our values from different places around the world. We also benefit from the support from people and companies that believe in our idea.
+  free-forever-title: Free,<br/>Forever!
+  how-konsilos-help-you-body: We believe good advices can change people. Konsilos is an initiative to encourage parents to eternize advices to their children through an easy platform, secure and free. From a computer or mobile device, anyone can create an account, start to register advices, be notified in the future and let everything to their children eternized in time capsules.
+  how-konsilos-help-you-title: Simple. Powerful. Konsilos.
+  reminders-for-parents-and-children-body: You are in control. You decide when and we will remind you to give an advice. It can be a specific date or when your children reach a certain age. Additionally, your children will be able to access all advices in time capsule programmed by you. Just imagine their reaction when seeing different advices being unlocked in different moments of their lives.
+  reminders-for-parents-and-children-title: Notifications and Time Capsule
+  security-body: Security, privacy, backup, freedom and availability. Only you and your children have access to the advices. And you are free to download your advices and leave the system at any time.
   security-title: Your Advices,<br/>Forever Yours
   splash-impact-phrase: Eternize advices to your children
-  splash-impact-text: Think of all experiences that have impacted you posivetly. Now image your chilndren's future if you all of them in the right moment of their lives.
+  splash-impact-text: Think of all advices and experiences that have impacted you positively. Now image your children's future if you could share all of these in the right moment of their lives.
   time-capsule-body: If you wish, your children can have access in the future to all advices you eternized, accessing them as they become unlocked according to your plan. It works like a time capsule that makes you present during their entire life.
   dad-of-female: Dad of
-  dad-of-male: Pai do
+  dad-of-male: Dad of
   mom-of-female: Mom of
   mom-of-male: Mom of
   page-title: Konsilos - Eternize advices for your children
@@ -93,10 +96,10 @@ landing-page:
     teacher-female: Teacher
     teacher-male: Teacher
 launch-page:
-  from-time-capsule-description: In the future, it will be around here that dear ones would be able to access, individually, the time capsules you create for each one of them. In a simple and secure manner a capsule could be open from the moment you decide to share with your child a key (password) that will grant them access. Inside the capsule, every eternized advice to your child will be available and will be unlocked for visualization according to the time plan you define. Be it when they complete a certain age, a specific date or in an impactful moment.
-  know-when-we-launch: Know when we launch
-  subscribe-button: Yay, let me know!
-  successfully-subscribed: We'll let you know as soon as we launch
+  from-time-capsule-description: In the future, it will be around here that each of your children will be able to access the time capsules you create for each of them. In a simple and secure manner a capsule could be open from the moment you decide to share with your child a key that will grant them access. Inside the capsule, every eternized advice to your child will be available and will be unlocked for visualization according to the time plan you define. Be it when they complete a certain age, a specific date or in an impactful moment.
+  know-when-we-launch: We're looking forward to share Konsilos with you and the world. Leave your email to be notified when we launch!
+  subscribe-button: Let me know!
+  successfully-subscribed: 💌 Congratulations for such care for your children! Now all you have to do is keep an eye in your inbox!
 language: Language
 loading: Loading
 login: Login
@@ -135,4 +138,3 @@ whos-this-advice-for?: Who's this advice for?
 why-does-this-advice-matters?: Why does this advice matters?
 years: years
 your-advices-so-far: Your advices so far
-
