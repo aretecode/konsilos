@@ -15,6 +15,7 @@
 <template name='LandingPageLayout'>
 
     {{> SubscribeModal }}
+    {{> TimeCapsuleModal }}
 
     {{!-- <div class="sub_menu"><a href="#" class="close"></a></div> --}}
 
@@ -26,7 +27,7 @@
                         <img src="img/landing/logo.png" width="163" height="102" alt="logo">
                     </div>
                     <div class="header_rgt">
-                        <a href="#" class="clock1 subscribe button" data-page-section="time-capsule-top">
+                        <a href="#" class="clock1 time-capsule button">
                             {{_ 'time-capsule'}}
                         </a>
 
@@ -471,7 +472,7 @@
                         <div class="sign sign1">
                             <h3>{{{_ 'landing-page.security-title'}}}</h3>
                             <p>{{_ 'landing-page.security-body'}}</p>
-                            <a href="#" class="subscribe button" data-page-section="time-capsule-section">
+                            <a href="#" class="time-capsule button">
                                 {{_ 'subscribe'}}
                             </a>
                         </div>
@@ -614,7 +615,7 @@
                         <a href="#" class="start-now-button subscribe button" data-page-section="start-now-footer">
                             {{_ 'subscribe'}}
                         </a>
-                        <a href="#" class="clock1 subscribe button" data-page-section="time-capsule-footer">
+                        <a href="#" class="clock1 time-capsule button">
                             {{_ 'time-capsule'}}
                         </a>
 

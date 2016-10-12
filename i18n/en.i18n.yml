@@ -96,7 +96,7 @@ landing-page:
     teacher-female: Teacher
     teacher-male: Teacher
 launch-page:
-  from-time-capsule-description: In the future, it will be around here that each of your children will be able to access the time capsules you create for each of them. In a simple and secure manner a capsule could be open from the moment you decide to share with your child a key that will grant them access. Inside the capsule, every eternized advice to your child will be available and will be unlocked for visualization according to the time plan you define. Be it when they complete a certain age, a specific date or in an impactful moment.
+  time-capsule-description: In the future, it will be around here that each of your children will be able to access the time capsules you create for each of them. In a simple and secure manner a capsule could be open from the moment you decide to share with your child a key that will grant them access. Inside the capsule, every eternized advice to your child will be available and will be unlocked for visualization according to the time plan you define. Be it when they complete a certain age, a specific date or in an impactful moment.
   know-when-we-launch-body: <p>We're looking forward to share Konsilos with you and the world.</p><p>Leave your email to be notified when we launch!</p>
   know-when-we-launch-title: Thanks!
   subscribe-button: Let me know!

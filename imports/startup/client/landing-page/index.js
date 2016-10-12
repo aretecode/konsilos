@@ -1,5 +1,6 @@
 import './subscribe-modal.js'
 
+import './time-capsule-modal.html'
 import './landing-layout.html'
 
 import './owl.carousel.css'
@@ -9,6 +10,7 @@ import './responsive.css'
 import './owl.carousel.min'
 
 const SUBSCRIBE_MODAL_CLASS = '.subscribe.modal'
+const TIME_CAPSULE_MODAL_CLASS = '.time-capsule.modal'
 
 Template.LandingPageLayout.events({
     'click .subscribe.button'(event) {
@@ -23,6 +25,10 @@ Template.LandingPageLayout.events({
                 }
             })
             .modal('show')
+    },
+
+    'click .time-capsule.button'() {
+        $(TIME_CAPSULE_MODAL_CLASS).modal('show')
     }
 })
 
@@ -64,6 +70,13 @@ Template.LandingPageLayout.onRendered(() => {
             pagination: true,
         })
     })
+
+    this.$(TIME_CAPSULE_MODAL_CLASS)
+        .modal({
+            inverted: true,
+            blurring: true
+        })
+        .modal('setting', 'transition', 'scale')
 
     this.$(SUBSCRIBE_MODAL_CLASS)
         .modal({
