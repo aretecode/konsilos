@@ -740,7 +740,6 @@ nav ul li a.clock:hover {
     position: absolute;
     top: -8px;
     right: -9px;
-    cursor: pointer;
 }
 .close img {
     display: block;
@@ -947,7 +946,7 @@ nav ul li a.clock:hover {
 .sign {
     margin: 0;
     padding: 76px 0 0 60px;
-    width: 59%;
+    width: 80%;
 }
 .sign h3 {
     margin: 0;
@@ -1016,7 +1015,7 @@ nav ul li a.clock:hover {
 .sign1 {
     margin: 0;
     padding: 83px 0 0 27%;
-    width: 59%;
+    width: 80%;
 }
 .sign1 a {
     margin: 0 30px 0 0;
