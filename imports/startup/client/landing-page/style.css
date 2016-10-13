@@ -617,9 +617,12 @@ nav ul li a.clock:hover {
     margin: 0;
     padding: 0;
     display: table-cell;
-    width: 50%;
+    width: 30%;
     vertical-align: middle;
     align-self: auto;
+    position: absolute;
+    top: 5em;
+    left: 45%;
 }
 .top_simple {
     margin: 0;
