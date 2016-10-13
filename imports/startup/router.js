@@ -1,4 +1,5 @@
 Router.configure({
+    trackPageView: true,
     layoutTemplate: 'ApplicationLayout',
     loadingTemplate: 'Loading',
     notFoundTemplate: 'PageNotFound',
