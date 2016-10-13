@@ -90,17 +90,17 @@ landing-page:
     civil-engineer-male: Engenheiro Civil
     teacher-female: Professora
     teacher-male: Professor
+language: Idioma
+languages:
+  english: Inglês
+  german: Alemão
+  portuguese: Português
 launch-page:
   time-capsule-description: No futuro, será por aqui que cada um dos seus filhos poderão acessar as cápsulas do tempo que você criar para cada um deles. De forma simples e segura uma cápsula poderá ser aberta a partir do momento que você decidir compartilhar com seu filho uma chave que permite o acesso. Dentro da cápsula, todo conselho eternizado para o filho ficará disponível e será desbloqueado para visualização de acordo com a programação temporal que você definir. Seja quando seu filhos completar uma certa idade, em uma data específica ou em uma ocasião marcante.
   know-when-we-launch-body: <p>Estamos ansiosos para compartilhar o Konsilos com você e com o mundo.</p><p>Deixe seu email aqui para ser notificado quando lançarmos!</p>
   know-when-we-launch-title: Obrigado!
   subscribe-button: Me avise!
   successfully-subscribed: 💌 Parabéns pelo cuidado com seus filhos! Agora é só ficar de olho em sua caixa de entrada!
-language: Idioma
-languages:
-  english: Inglês
-  german: Alemão
-  portuguese: Português
 loading: Carregando
 login: Login
 make-this-advice-eternal: Eternize esse conselho!

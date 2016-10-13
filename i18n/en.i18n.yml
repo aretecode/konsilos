@@ -46,11 +46,6 @@ here-are-your-advices-set-for-a-specific-date: Here are your advices set for a s
 here-you-can-edit-your-profile: Here you can edit your profile
 home_greeting: Hi there
 i-prefer-not-to-say: I prefer not to say
-language: Language
-languages:
-  english: English
-  german: German
-  portuguese: Portuguese
 landing-page:
   advices-creation-title: Register Several Advices
   advices-creation-body: They can be about life, books to be read, movies to be watched or whatever you want. Choose who will receive the advice and point out why it matters. You can edit them at any time.
@@ -74,7 +69,7 @@ landing-page:
   cards-body-text-part1: Think about advices, books, movies, experiences and everything else that helped you become a better and more prepared person. Now imagine being able to transform them in powerful and inspiring advices to your children too!
   cards-body-text-part2: We want to help you remember to share them in the right occasion or the ideal age, even if you are not there anymore.
   cards-title-text: Leave your legacy
-  free-forever-body: We're a non-for-profit and open source initiative, thought and built by volunteers who share our values from different places around the world. We also benefit from the support from people and companies that believe in our idea.
+  free-forever-body: We're a nonprofit and open source initiative, thought and built by volunteers who share our values from different places around the world. We also benefit from the support from people and companies that believe in our idea.
   free-forever-title: Free,<br/>Forever!
   how-konsilos-help-you-body: We believe good advices can change people. Konsilos is an initiative to encourage parents to eternize advices to their children through an easy platform, secure and free. From a computer or mobile device, anyone can create an account, start to register advices, be notified in the future and let everything to their children eternized in time capsules.
   how-konsilos-help-you-title: Simple. Powerful. Konsilos.
@@ -95,13 +90,17 @@ landing-page:
     civil-engineer-male: Civil Engineer
     teacher-female: Teacher
     teacher-male: Teacher
+language: Language
+languages:
+  english: English
+  german: German
+  portuguese: Portuguese
 launch-page:
   time-capsule-description: In the future, it will be around here that each of your children will be able to access the time capsules you create for each of them. In a simple and secure manner a capsule could be open from the moment you decide to share with your child a key that will grant them access. Inside the capsule, every eternized advice to your child will be available and will be unlocked for visualization according to the time plan you define. Be it when they complete a certain age, a specific date or in an impactful moment.
   know-when-we-launch-body: <p>We're looking forward to share Konsilos with you and the world.</p><p>Leave your email to be notified when we launch!</p>
   know-when-we-launch-title: Thanks!
   subscribe-button: Let me know!
   successfully-subscribed: 💌 Congratulations for such care for your children! Now all you have to do is keep an eye in your inbox!
-language: Language
 loading: Loading
 login: Login
 make-this-advice-eternal: Make this advice eternal!
