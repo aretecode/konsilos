@@ -708,7 +708,7 @@ nav ul li a.clock:hover {
 .feature_block_in {
     margin: 0;
     padding: 100px 0 0 0;
-    background: url(img/landing/lap_bg1.png) no-repeat top center;
+    background: url(img/landing/lap_bg1.jpg) no-repeat top center;
     min-height: 453px;
 }
 .feature_block_mdl {
@@ -880,7 +880,7 @@ nav ul li a.clock:hover {
 .feature_rgt_top {
     margin: 0 0 0 0;
     padding: 0;
-    background: url(img/landing/top_bg.png) no-repeat top center;
+    background: url(img/landing/top_bg.jpg) no-repeat top center;
     min-height: 100px;
 }
 .feature_rgt_btm {
