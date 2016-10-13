@@ -1429,3 +1429,7 @@ a.clock1:hover {
 .ui.subscribe.modal p:last-of-type {
     margin: 1em 0;
 }
+
+.close.read-only {
+	cursor: default !important;
+}
