@@ -72,11 +72,11 @@ minimongo@1.0.17
 modules@0.7.6_1
 modules-runtime@0.7.6_1
 momentjs:moment@2.15.1
-mongo@1.1.12_3
+mongo@1.1.12_5
 mongo-id@1.0.5
 npm-bcrypt@0.9.1_1
-npm-mongo@1.5.50
-observe-sequence@1.0.12
+npm-mongo@2.2.10_1
+observe-sequence@1.0.13
 ordered-dict@1.0.8
 promise@0.8.7
 raix:eventemitter@0.1.3
