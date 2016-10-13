@@ -5,10 +5,10 @@ Konsilos
 
 1. Install meteor: https://www.meteor.com/install
 2. Install NVM: https://github.com/creationix/nvm#installation
-3. Install Node 6: `nvm install 6`
+3. Install Node: `nvm install 4.4.7` (locked version is needed for production's docker container)
 4. Install some dependencies to help development not covered by meteor: `npm install`
-5. Start the app by running: `meteor` in the app's folder
-6. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Start the app by running: `bin/dev` in the project's root folder
+6. Open [http://127.0.0.1:3000](http://127.0.0.1:3000) in your browser
 
 ## Deploying:
 
@@ -16,8 +16,8 @@ Deploy workflow created based in [this guide](http://meteortips.com/deployment-t
 
 Deploying the app:
 
-1. `npm run mup setup` (only if server configuration has changed)
-2. `npm i --production` (only if production dependencies have changed)
+1. `npm install` (only if dependencies have changed)
+2. `npm run mup setup` (only if server configuration has changed)
 3. `npm run mup deploy`
 
 ## Testing:

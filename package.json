@@ -6,15 +6,12 @@
   "license": "Proprietary",
   "homepage": "https://bitbucket.org/luizfilho/konsilos#readme",
   "main": "",
-  "dependencies": {
-    "bcrypt": "^0.8.7"
-  },
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "babel-eslint": "^6.0.4",
     "eslint": "^2.12.0",
     "mup": "^1.0.4",
-    "mupx-letsencrypt": "^1.0.3",
+    "mupx-letsencrypt": "https://github.com/dtsepelev/meteor-up-letsencrypt.git#meteor-1.4",
     "ssh2": "^0.5.2"
   },
   "scripts": {
