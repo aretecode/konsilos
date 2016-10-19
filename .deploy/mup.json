@@ -22,7 +22,7 @@
   "enableUploadProgressBar": true,
 
   "letsEncrypt": {
-    "domain": "konsilos.com",
+    "domain": "konsilos.com,www.konsilos.com",
     "email": "lfilho@gmail.com"
   }
 }
