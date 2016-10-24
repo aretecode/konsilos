@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-nvm use 4.4.7
+. ~/.nvm/nvm.sh
+nvm use
 # Specyfing an IP so we can alter /etc/hosts to something else and use it in the browser like `konsilos:3000` ;-)
 meteor --port 127.0.0.1:3000
