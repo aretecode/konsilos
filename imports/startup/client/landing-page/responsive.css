@@ -1,6 +1,5 @@
 @media (max-width:1880px)
 {
-.main_block			{}
 .advice_top_rgt 	{ vertical-align:middle; padding:0;}
 .sign 				{ padding:0 0 0 60px;}
 .advice_btm_lft 	{ padding:0; vertical-align:middle;}
@@ -9,14 +8,8 @@
 .civil .owl-prev	{ left:-50px;}
 .top_block 			{ margin:0; width: 80%; left: 5%;}
 .simple_rgt			{ float:none; padding:0 20px 0 55%; z-index:1;}
-
-.sign 				{padding:0 0 0 60px;}
-
 .sign h3			{ font-size:40px; line-height:40px; padding:0 0 20px 0;}
 .sign p				{ padding:0 0 30px 0; line-height:25px;}
-
-
-
 }
 
 @media (max-width:1340px)
@@ -25,10 +18,6 @@
 .civil .owl-prev	{ top: calc(50% - 60px);right: auto; left:-10px; width:25px; height:50px; background-size:100% auto;}
 .civil .owl-prev:hover, .civil .owl-next:hover	{ background-size:100% auto;}
 .civil .owl-next	{ top:calc(50% - 60px); right:-10px;width:25px; height:50px; background-size:100% auto;}
-.country			{ margin:9px 10px 0 0;}
-
-
-
 }
 
 @media (max-width:1260px)
@@ -84,16 +73,11 @@ footer .container 	{ width:98%;}
 .footer_rgt			{ width:auto; padding:20px 0 0 0; float:right;}
 .social_icon ul li  { margin: 0 5px 0 0;}
 .footer_rgt a.clock1{ margin: 24px 10px 0 10px;padding: 0 0 0 20px; width:140px;}
-
-
 }
-
 
 @media (max-width:1023px)
 {
 .main_block  		  { min-height:650px;}
-.country  			  { width:100%; text-align:right; margin:0 0 25px 0;}
-.country .dd .ddTitle { text-align:left;}
 nav 				  { width:auto;}
 .logo 				  { padding:35px 0 0 30px;}
 .header_rgt			  { padding:20px 0 0 0;}
@@ -173,10 +157,7 @@ nav 				  { width:auto;}
 .footer_rgt 			{ width:640px; float:none; margin:0 auto;}
 .social_icon 			{margin: 0;padding: 24px 0 0 169px;}
 .copy					{ text-align:center; padding:0 0 30px 0;}
-
 }
-
-
 
 @media (max-width:767px)
 {
@@ -190,7 +171,6 @@ header 				{ position:relative;}
 .simple_rgt h2 		{font-size:27px;line-height:27px; padding:0 0 20px 0;}
 .simple_rgt p 		{ padding:0 10px 0 0; line-height:25px;}
 
-.country 			{ padding:0; margin:0;}
 .menu	 			{ display:block; text-align:center; float:right; margin:0 30px 0 0;}
 .menu a  			{ width:30px; height:20px; display:inline-block;}
 .menu a img 		{ display:block; margin:0 auto;}
@@ -284,12 +264,7 @@ footer 					{ padding:40px 0 0 0;}
 .feature_rgt_btm h4		{ text-align:left; padding:0 0 13px 22px;}
 .feature_block_btm h4	{ text-align:left;}
 .feature_btm 			{padding:0;}
-
-/* ----------------------------------------------*/
-
-
 }
-
 
 @media (max-width:599px)
 {
@@ -351,8 +326,6 @@ footer .container { padding:0 0 30px 0;}
 
 .feature_top_rgt	{ padding:0;}
 .feature_rgt_top 	{min-height: 75px;}
-
-
 }
 
 @media (max-width:479px)
@@ -363,7 +336,6 @@ footer .container { padding:0 0 30px 0;}
 .logo a img 	{ width:100%; height:auto;}
 .header_rgt 	{padding: 10px 0 0 0;}
 nav 			{ top:55px;}
-.country 		{padding:0;}
 .title 			{padding: 17px 0 0 20px; width:90%;}
 .title h1 		{font-size: 30px;line-height: 34px;}
 .title p		{ font-size:14px; line-height:20px; padding:0 15px 20px 0;}
@@ -376,7 +348,6 @@ nav 			{ top:55px;}
 
 .feature_top_rgt h3{ font-size:20px; line-height:20px; padding:0 0 20px 0;}
 .feature_top_rgt p, .feature_btm_lft p {padding:0 0 20px 0 !important;}
-
 
 .block 		 	{ padding:0 0 40px 0;}
 .block_btm p	{ padding:0 10px 0 0;}
@@ -417,6 +388,4 @@ nav 			{ top:55px;}
 .feature_rgt_btm {width: 124px;}
 .feature_rgt_btm h4 { line-height:10px;}
 .terms 				{ min-height:50px;}
-
 }
-
