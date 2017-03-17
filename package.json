@@ -7,15 +7,14 @@
   "homepage": "https://bitbucket.org/luizfilho/konsilos#readme",
   "main": "",
   "devDependencies": {
-    "autoprefixer": "^6.3.1",
-    "babel-eslint": "^6.0.4",
-    "eslint": "^2.12.0",
-    "mup": "^1.0.4",
-    "mupx-letsencrypt": "https://github.com/lfilho/meteor-up-letsencrypt.git#meteor-1.4",
-    "ssh2": "^0.5.2"
+    "autoprefixer": "^6.7.7",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.17.1",
+    "mup": "^1.2.4",
+    "ssh2": "^0.5.4"
   },
   "scripts": {
-    "mup": "mupx-letsencrypt --config=.deploy/mup.json --settings=.deploy/settings.json",
+    "mup": "mup --config=.deploy/mup.js --settings=.deploy/settings.json",
     "lint": "eslint .",
     "test": "npm run lint"
   },
