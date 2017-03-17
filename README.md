@@ -16,7 +16,7 @@ Deploy workflow created based in [this guide](http://meteortips.com/deployment-t
 
 Deploying the app:
 
-1. `npm install` (only if dependencies have changed)
+1. `meteor npm install` (only if dependencies have changed)
 2. `npm run mup setup` (only if server configuration has changed)
 3. `npm run mup deploy`
 

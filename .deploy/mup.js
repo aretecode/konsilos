@@ -7,7 +7,7 @@ module.exports = {
     },
 
     meteor: {
-        name: 'konsilos-web-production',
+        name: 'konsilos-web',
         path: '../',
         servers: {
             one: {}
@@ -16,16 +16,20 @@ module.exports = {
             serverOnly: true,
         },
         env: {
-            ROOT: 'https://konsilos.com',
-            MONGO_URL: 'mongodb://localhost/meteor'
+            PORT: 80,
+            ROOT_URL: 'https://konsilos.com'
         },
         // Default docker image doesn't suport meteor 1.4+ yet:
-        dockerImage: 'abernix/meteord:base',
+        docker: {
+            image: 'abernix/meteord:base',
+        },
         ssl: {
-            port: 443,
-            crt: './fullchain.pem',
-            key: './privkey.pem'
-        }
+            autogenerate: {
+                email: "lfilho@gmail.com",
+                domains: "konsilos.com,www.konsilos.com",
+            }
+        },
+        enableUploadProgressBar: true
     },
 
     mongo: {
