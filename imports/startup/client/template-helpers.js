@@ -1,3 +1,5 @@
+import { Meteor } from 'meteor/meteor'
+
 ///////////////////////////
 // Global template helpers:
 ///////////////////////////
@@ -16,3 +18,5 @@ Template.registerHelper('isVerifiedEmail', () => {
 Template.registerHelper('profile', () => Meteor.user() && Meteor.user().profile)
 
 Template.registerHelper('currentYear', () => new Date().getFullYear())
+
+Template.registerHelper('isMvpNotReadyYet', () => Meteor.isDevelopment)

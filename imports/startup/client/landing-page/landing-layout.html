@@ -17,7 +17,9 @@
     {{> SubscribeModal }}
     {{> TimeCapsuleModal }}
 
-    {{!-- <div class="sub_menu"><a href="#" class="close"></a></div> --}}
+    {{#if isMvpNotReadyYet}}
+        <div class="sub_menu"><a href="#" class="close"></a></div>
+    {{/if}}
 
     <div class="wrapper">
         <div class="main_block">
@@ -49,32 +51,32 @@
                             </div>
                         </div>
 
-                        {{!--
-                        <nav>
-                            <div class="menu">
-                                <img src="img/landing/menu.png" width="30" height="20" alt="menu">
-                            </div>
+                        {{#if isMvpNotReadyYet}}
+                            <nav>
+                                <div class="menu">
+                                    <img src="img/landing/menu.png" width="30" height="20" alt="menu">
+                                </div>
 
-                            <ul>
-                                <li>{{_ 'login'}}</li>
-                                <li><a href="#" class="subscribe button" data-page-section="top-navigation-bar">{{_ 'subscribe'}}</a>
+                                <ul>
+                                    <li>{{_ 'login'}}</li>
+                                    <li><a href="#" class="subscribe button" data-page-section="top-navigation-bar">{{_ 'subscribe'}}</a>
 
-                                    <ul>
-                                        <li>{{_ 'login'}}</li>
-                                        <li>{{_ 'subscribe'}}</li>
-                                        <li>{{_ 'about-us'}}</li>
-                                    </ul>
-                                    <div class="clear"></div>
+                                        <ul>
+                                            <li>{{_ 'login'}}</li>
+                                            <li>{{_ 'subscribe'}}</li>
+                                            <li>{{_ 'about-us'}}</li>
+                                        </ul>
+                                        <div class="clear"></div>
 
-                                </li>
-                                <li class="last">
-                                    <a href="#" class="clock">{{_ 'time-capsule'}}</a>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li class="last">
+                                        <a href="#" class="clock">{{_ 'time-capsule'}}</a>
+                                    </li>
+                                </ul>
 
-                            <div class="clear"></div>
-                        </nav>
-                        --}}
+                                <div class="clear"></div>
+                            </nav>
+                        {{/if}}
 
                         <div class="clear"></div>
                     </div>
@@ -88,7 +90,9 @@
                     <a href="#" class="start-now-button subscribe button" data-page-section="splash-screen">
                         {{_ 'subscribe'}}
                     </a>
-                    {{!--<span>{{_ 'landing-page.already-a-member'}}</span>--}}
+                    {{#if isMvpNotReadyYet}}
+                        <span>{{_ 'landing-page.already-a-member'}}</span>
+                    {{/if}}
                 </div>
             </div>
         </div>
@@ -594,24 +598,24 @@
                         <img src="img/landing/footer_logo.jpg" width="121" height="77" alt="footer" />
                     </div>
                     <div class="footer_nav">
-                        {{!--
-                        <ul>
-                            <li>
-                                <a href="#">{{_ 'login'}}</a>
-                            </li>
-                            <li>
-                                <a href="#" class="subscribe button" data-page-section="footer">
-                                    {{_ 'subscribe'}}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">{{_ 'about-us'}}</a>
-                            </li>
-                            <li class="last pad_last no_bod">
-                                <a href="#">{{_ 'privacy-policy'}}</a>
-                            </li>
-                        </ul>
-                        --}}
+                        {{#if isMvpNotReadyYet}}
+                            <ul>
+                                <li>
+                                    <a href="#">{{_ 'login'}}</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="subscribe button" data-page-section="footer">
+                                        {{_ 'subscribe'}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">{{_ 'about-us'}}</a>
+                                </li>
+                                <li class="last pad_last no_bod">
+                                    <a href="#">{{_ 'privacy-policy'}}</a>
+                                </li>
+                            </ul>
+                        {{/if}}
                         <a href="#" class="start-now-button subscribe button" data-page-section="start-now-footer">
                             {{_ 'subscribe'}}
                         </a>
