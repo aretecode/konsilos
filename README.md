@@ -28,7 +28,7 @@ Being a non-for-profit, alas, doesn't mean we don't have costs. We have had paid
 1. Install meteor: https://www.meteor.com/install
 2. Install NVM: https://github.com/creationix/nvm#installation
 3. Install Node: `nvm install 4.4.7` (locked version is needed for production's docker container)
-4. Install some dependencies to help development not covered by meteor: `npm install`
+4. Install some dependencies to help development not covered by meteor: `meteor npm install`
 5. Start the app by running: `bin/dev` in the project's root folder
 6. Open [http://127.0.0.1:3000](http://127.0.0.1:3000) in your browser
 
