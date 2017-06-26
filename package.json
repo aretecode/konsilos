@@ -8,7 +8,7 @@
   "main": "meteor",
   "devDependencies": {
     "autoprefixer": "^6.7.7",
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^7.2.3",
     "eslint": "^3.17.1",
     "mup": "^1.2.4",
     "ssh2": "^0.5.4"
