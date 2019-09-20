@@ -51,7 +51,6 @@ const nextConfig = {
     const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
     const plugin = new ForkTsCheckerWebpackPlugin({
       tsconfig: require.resolve('./tsconfig.json'),
-      tslint: require.resolve('./tslint.json'),
       useTypescriptIncrementalApi: true,
       checkSyntacticErrors: true,
       watch: [resolveApp('src'), resolveApp('pages')],

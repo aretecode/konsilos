@@ -11,7 +11,7 @@ module.exports = {
     'react',
     'typescript',
   ],
-  parser: 'typescript-eslint-parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: 'module',
@@ -181,7 +181,15 @@ module.exports = {
     'jsx-a11y/interactive-supports-focus': [
       'warn',
       {
-        tabbable: ['button', 'checkbox', 'link', 'searchbox', 'spinbutton', 'switch', 'textbox'],
+        tabbable: [
+          'button',
+          'checkbox',
+          'link',
+          'searchbox',
+          'spinbutton',
+          'switch',
+          'textbox',
+        ],
       },
     ],
     'jsx-a11y/media-has-caption': 'warn',
@@ -198,14 +206,37 @@ module.exports = {
     'jsx-a11y/no-noninteractive-element-interactions': [
       'warn',
       {
-        handlers: ['onClick', 'onMouseDown', 'onMouseUp', 'onKeyPress', 'onKeyDown', 'onKeyUp'],
+        handlers: [
+          'onClick',
+          'onMouseDown',
+          'onMouseUp',
+          'onKeyPress',
+          'onKeyDown',
+          'onKeyUp',
+        ],
       },
     ],
     'jsx-a11y/no-noninteractive-element-to-interactive-role': [
       'warn',
       {
-        ul: ['listbox', 'menu', 'menubar', 'radiogroup', 'tablist', 'tree', 'treegrid'],
-        ol: ['listbox', 'menu', 'menubar', 'radiogroup', 'tablist', 'tree', 'treegrid'],
+        ul: [
+          'listbox',
+          'menu',
+          'menubar',
+          'radiogroup',
+          'tablist',
+          'tree',
+          'treegrid',
+        ],
+        ol: [
+          'listbox',
+          'menu',
+          'menubar',
+          'radiogroup',
+          'tablist',
+          'tree',
+          'treegrid',
+        ],
         li: ['menuitem', 'option', 'row', 'tab', 'treeitem'],
         table: ['grid'],
         td: ['gridcell'],
@@ -223,7 +254,14 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': [
       'warn',
       {
-        handlers: ['onClick', 'onMouseDown', 'onMouseUp', 'onKeyPress', 'onKeyDown', 'onKeyUp'],
+        handlers: [
+          'onClick',
+          'onMouseDown',
+          'onMouseUp',
+          'onKeyPress',
+          'onKeyDown',
+          'onKeyUp',
+        ],
       },
     ],
     'jsx-a11y/role-has-required-aria-props': 'warn',

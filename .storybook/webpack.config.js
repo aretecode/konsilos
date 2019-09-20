@@ -43,6 +43,7 @@ module.exports = baseConfig => {
 
   /**
    * @see https://www.styled-components.com/docs/tooling#babel-plugin
+   * @see https://storybook.js.org/docs/configurations/typescript-config/#setting-up-typescript-to-work-with-storybook-1
    */
   config.module.rules.unshift({
     test: /\.(tsx?)$/,
@@ -52,6 +53,20 @@ module.exports = baseConfig => {
         loader: 'babel-loader',
         options: {
           babelrc: false,
+          presets: [
+            [
+              '@babel/preset-env',
+              {
+                targets: { chrome: 73 },
+                debug: true,
+                modules: false,
+                useBuiltIns: false,
+                shippedProposals: true,
+              },
+            ],
+            '@babel/preset-react',
+            '@babel/preset-typescript',
+          ],
           plugins: [
             [
               'babel-plugin-styled-components',

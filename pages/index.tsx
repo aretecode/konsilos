@@ -1,3 +1,3 @@
 import * as React from 'react'
 
-export default () => 'eh'
+export default () => <h1>eh</h1>

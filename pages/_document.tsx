@@ -1,10 +1,16 @@
 import * as React from 'react'
-import Document, { Html, Head, Main, NextScript, NextDocumentContext } from 'next/document'
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { fromReqToUrl } from '../src/utils/fromReqToUrl'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: Required<NextDocumentContext>) {
+  static async getInitialProps(ctx: Required<DocumentContext>) {
     const url = fromReqToUrl(ctx.req as any)
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
@@ -12,7 +18,9 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App: React.ComponentType) => (props: {[key: string]: unknown}) => {
+          enhanceApp: (App: React.ComponentType) => (props: {
+            [key: string]: unknown
+          }) => {
             return sheet.collectStyles(<App {...props} />)
           },
         })
@@ -37,7 +45,7 @@ export default class MyDocument extends Document {
   }
 
   render() {
-    const {title, url, ...remainingProps} = (this.props as any) as {
+    const { title } = (this.props as any) as {
       title: string
       url: string
       [key: string]: unknown

@@ -1,4 +1,4 @@
-import App, { Container, NextAppContext } from 'next/app'
+import App, { AppContext } from 'next/app'
 import Head from 'next/head'
 import { ApolloClient } from 'apollo-boost'
 import * as React from 'react'
@@ -15,11 +15,15 @@ export class InnerApp extends React.PureComponent<{
   url: URL
 }> {
   render() {
-    const {apolloClient, apolloClientState, url, children} = this.props
+    const { apolloClient, apolloClientState, url, children } = this.props
 
     return (
       <AppContextProvider url={url}>
-        <ApolloProvider client={apolloClient || initApolloClient(apolloClientState as any, url)}>
+        <ApolloProvider
+          client={
+            apolloClient || initApolloClient(apolloClientState as any, url)
+          }
+        >
           <React.StrictMode>
             <AppStyles />
             {children}
@@ -37,8 +41,8 @@ export default class MyApp extends App<{
   apolloClient?: ApolloClient<any>
   url: URL
 }> {
-  static async getInitialProps(appContext: NextAppContext) {
-    const {Component, ctx} = appContext
+  static async getInitialProps(appContext: AppContext) {
+    const { Component, ctx } = appContext
     const url = fromReqToUrl(ctx.req as any)
     const pageProps = {}
 
@@ -99,14 +103,12 @@ export default class MyApp extends App<{
   }
 
   render() {
-    const {Component, pageProps, apolloClientState, url} = this.props
+    const { Component, pageProps, apolloClientState, url } = this.props
 
     return (
-      <Container>
-        <InnerApp apolloClientState={apolloClientState} url={url}>
-          <Component {...pageProps} />
-        </InnerApp>
-      </Container>
+      <InnerApp apolloClientState={apolloClientState} url={url}>
+        <Component {...pageProps} />
+      </InnerApp>
     )
   }
 }
