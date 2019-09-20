@@ -1,4 +1,0 @@
-# node_modules is ignored by default
-.meteor/
-# Semantic UI stuff:
-imports/startup/client/ui/semantic
