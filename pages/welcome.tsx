@@ -3,6 +3,7 @@
  */
 import * as React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 import { StyledDevice } from '../src/components/Device'
 import { StyledCardListGrid } from '../src/components/CardListGrid'
 import { StyledMaterialIcon } from '../src/components/MaterialIcons'
@@ -175,9 +176,9 @@ const StyledIpadPanel = styled.div`
 const StyledArticleFeatureMacbookSection = styled(StyledArticleFeatureSection)``
 const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
   ${StyledMaterialIcon} {
-      width: 100px;
-      height: 100px;
-      fill: #21c0fd;
+    width: 100px;
+    height: 100px;
+    fill: #21c0fd;
   }
 `
 
@@ -194,7 +195,7 @@ const StyledArticleOverview = styled.section`
     font-weight: 600;
     text-align: center;
   }
-  
+
   p {
     text-align: center;
     font-size: 1rem;
@@ -258,128 +259,135 @@ const CardTextSection = styled.section`
   }
 `
 
-export default () => (
-  <>
-    <StyledBanner>
-      <StyledLogo />
-      <nav>
-        <StyledTimeCapsuleAction href="/advice">
-          <StyledMaterialIcon icon="clock" /> Time Capsule
-        </StyledTimeCapsuleAction>
-        <LanguageSwitcher />
-      </nav>
-    </StyledBanner>
-    <StyledMain>
-      <StyledLeaderboard>
-        <StyledLeaderboardPanel>
-          <h1>Eternize advices to your children</h1>
-          <p>
-            Think of all advices and experiences that have impacted you
-            positively. Now image your children's future if you could share all of
-            these in the right moment of their lives.
-          </p>
-          <form>
-            <StyledSubscripeInput />
-            <StyledSubscribeButton type="submit">Subscribe</StyledSubscribeButton>
-          </form>
-        </StyledLeaderboardPanel>
-      </StyledLeaderboard>
-      <StyledCardListGrid list={DEFAULT_ADVICE_LIST} />
-      <CardTextSection>
-        <header>Leave your legacy</header>
-        <p>
-          Think about advices, books, movies, experiences and everything else
-          that helped you become a better and more prepared person. Now imagine
-          being able to transform them in powerful and inspiring advices to your
-          children too! We want to help you remember to share them in the right
-          occasion or the ideal age, even if you are not there anymore.
-        </p>
-        <p>
-          We want to help you remember to share them in the right occasion or
-          the ideal age, even if you are not there anymore.
-        </p>
-      </CardTextSection>
-      <StyledArticle>
-        <StyledArticleOverview>
-          <header>Simple. Powerful. Konsilos.</header>
-          <p>
-            We believe good advices can change people. Konsilos is an initiative
-            to encourage parents to eternize advices to their children through
-            an easy platform, secure and free. From a computer or mobile device,
-            anyone can create an account, start to register advices, be notified
-            in the future and let everything to their children eternized in time
-            capsules.
-          </p>
-        </StyledArticleOverview>
-        <StyledArticleFeatureMacbookSection>
-          <div className="text">
-            <img
-              src="https://konsilos.com/img/landing/img2.jpg"
-              width="78"
-              height="68"
-              alt="img"
-            />
-            <header>Register Several Advices</header>
+export default () => {
+  const { t } = useTranslation()
+  return (
+    <>
+      <StyledBanner>
+        <StyledLogo />
+        <nav>
+          <StyledTimeCapsuleAction href="/advice">
+            <StyledMaterialIcon icon="clock" />
+            {t('time_capsule')}
+          </StyledTimeCapsuleAction>
+          <LanguageSwitcher />
+        </nav>
+      </StyledBanner>
+      <StyledMain>
+        <StyledLeaderboard>
+          <StyledLeaderboardPanel>
+            <h1>Eternize advices to your children</h1>
             <p>
-              They can be about life, books to be read, movies to be watched or
-              whatever you want. Choose who will receive the advice and point
-              out why it matters. You can edit them at any time.
+              Think of all advices and experiences that have impacted you
+              positively. Now image your children's future if you could share
+              all of these in the right moment of their lives.
             </p>
-          </div>
-          <StyledMacbookPanel>
-            <StyledDevice type="macbook">eh</StyledDevice>
-          </StyledMacbookPanel>
-        </StyledArticleFeatureMacbookSection>
-        <StyledArticleFeatureIPadSection>
-          <StyledIpadPanel>
-            <StyledDevice type="ipad">eh</StyledDevice>
-          </StyledIpadPanel>
+            <form>
+              <StyledSubscripeInput />
+              <StyledSubscribeButton type="submit">
+                Subscribe
+              </StyledSubscribeButton>
+            </form>
+          </StyledLeaderboardPanel>
+        </StyledLeaderboard>
+        <StyledCardListGrid list={DEFAULT_ADVICE_LIST} />
+        <CardTextSection>
+          <header>Leave your legacy</header>
+          <p>
+            Think about advices, books, movies, experiences and everything else
+            that helped you become a better and more prepared person. Now
+            imagine being able to transform them in powerful and inspiring
+            advices to your children too! We want to help you remember to share
+            them in the right occasion or the ideal age, even if you are not
+            there anymore.
+          </p>
+          <p>
+            We want to help you remember to share them in the right occasion or
+            the ideal age, even if you are not there anymore.
+          </p>
+        </CardTextSection>
+        <StyledArticle>
+          <StyledArticleOverview>
+            <header>Simple. Powerful. Konsilos.</header>
+            <p>
+              We believe good advices can change people. Konsilos is an
+              initiative to encourage parents to eternize advices to their
+              children through an easy platform, secure and free. From a
+              computer or mobile device, anyone can create an account, start to
+              register advices, be notified in the future and let everything to
+              their children eternized in time capsules.
+            </p>
+          </StyledArticleOverview>
+          <StyledArticleFeatureMacbookSection>
+            <div className="text">
+              <img
+                src="https://konsilos.com/img/landing/img2.jpg"
+                width="78"
+                height="68"
+                alt="img"
+              />
+              <header>Register Several Advices</header>
+              <p>
+                They can be about life, books to be read, movies to be watched
+                or whatever you want. Choose who will receive the advice and
+                point out why it matters. You can edit them at any time.
+              </p>
+            </div>
+            <StyledMacbookPanel>
+              <StyledDevice type="macbook">eh</StyledDevice>
+            </StyledMacbookPanel>
+          </StyledArticleFeatureMacbookSection>
+          <StyledArticleFeatureIPadSection>
+            <StyledIpadPanel>
+              <StyledDevice type="ipad">eh</StyledDevice>
+            </StyledIpadPanel>
 
-          <div className="text">
-            <StyledMaterialIcon icon="notification" />
-            <header>Notifications and Time Capsule</header>
-            <p>
-              You are in control. You decide when and we will remind you to give
-              an advice. It can be a specific date or when your children reach a
-              certain age. Additionally, your children will be able to access
-              all advices in time capsule programmed by you. Just imagine their
-              reaction when seeing different advices being unlocked in different
-              moments of their lives.
-            </p>
-          </div>
-        </StyledArticleFeatureIPadSection>
-      </StyledArticle>
-      <>
-        <StyledColouredFeatureSection position={0}>
-          <img src="https://konsilos.com/img/landing/man_img.jpg" />
-          <StyledColouredFeaturePanel>
-            <header>
-              Free,
-              <br /> Forever!
-            </header>
-            <p>
-              We're a nonprofit and open source initiative, thought and built by
-              volunteers who share our values from different places around the
-              world. We also benefit from the support from people and companies
-              that believe in our idea.
-            </p>
-          </StyledColouredFeaturePanel>
-        </StyledColouredFeatureSection>
-        <StyledColouredFeatureSection position={1}>
-          <StyledColouredFeaturePanel>
-            <header>
-              Your Advices,
-              <br /> Forever Yours
-            </header>
-            <p>
-              Security, privacy, backup, freedom and availability. Only you and
-              your children have access to the advices. And you are free to
-              download your advices and leave the system at any time.
-            </p>
-          </StyledColouredFeaturePanel>
-          <img src="https://konsilos.com/img/landing/child_img.jpg" />
-        </StyledColouredFeatureSection>
-      </>
-    </StyledMain>
-  </>
-)
+            <div className="text">
+              <StyledMaterialIcon icon="notification" />
+              <header>Notifications and Time Capsule</header>
+              <p>
+                You are in control. You decide when and we will remind you to
+                give an advice. It can be a specific date or when your children
+                reach a certain age. Additionally, your children will be able to
+                access all advices in time capsule programmed by you. Just
+                imagine their reaction when seeing different advices being
+                unlocked in different moments of their lives.
+              </p>
+            </div>
+          </StyledArticleFeatureIPadSection>
+        </StyledArticle>
+        <>
+          <StyledColouredFeatureSection position={0}>
+            <img src="https://konsilos.com/img/landing/man_img.jpg" />
+            <StyledColouredFeaturePanel>
+              <header>
+                Free,
+                <br /> Forever!
+              </header>
+              <p>
+                We're a nonprofit and open source initiative, thought and built
+                by volunteers who share our values from different places around
+                the world. We also benefit from the support from people and
+                companies that believe in our idea.
+              </p>
+            </StyledColouredFeaturePanel>
+          </StyledColouredFeatureSection>
+          <StyledColouredFeatureSection position={1}>
+            <StyledColouredFeaturePanel>
+              <header>
+                Your Advices,
+                <br /> Forever Yours
+              </header>
+              <p>
+                Security, privacy, backup, freedom and availability. Only you
+                and your children have access to the advices. And you are free
+                to download your advices and leave the system at any time.
+              </p>
+            </StyledColouredFeaturePanel>
+            <img src="https://konsilos.com/img/landing/child_img.jpg" />
+          </StyledColouredFeatureSection>
+        </>
+      </StyledMain>
+    </>
+  )
+}
