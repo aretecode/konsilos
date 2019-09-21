@@ -164,7 +164,9 @@ const Input = (props: InputConfigType) => {
   )
 }
 
-const renderInput = (x: InputConfigType) => <Input {...x} />
+const renderInput = (x: InputConfigType) => (
+  <Input key={x.propertyName} {...x} />
+)
 
 const StyledForm = (props: any) => {
   const { onSubmit, serialized } = React.useContext(FormContext)

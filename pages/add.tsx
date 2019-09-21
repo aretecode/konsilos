@@ -3,51 +3,71 @@
  *       but for dev velocity, it's here for now
  */
 import * as React from 'react'
+import { AdviceItemType } from '../src/typings'
+import { Form, InputConfigType } from '../src/components/Form'
 
-const AddAdvice = (props: {}) => {
-  return (
-    <form>
-      <label>
-        <span>who is this advice for?</span>
-        <input required title="populate from data" />
-      </label>
-      <label>
-        <span>what's your advice?</span>
-        <input required />
-      </label>
-      <textarea>why does this advice matter?</textarea>
-      <label>
-        <span>when?</span>
-        <input type="date" required />
-      </label>
-      <button type="submit">eternalize!</button>
-    </form>
-  )
+// add to the family!
+export const familyInputConfigList: InputConfigType[] = [
+  {
+    propertyName: 'name',
+    label: 'name',
+    isRequired: true,
+  },
+  {
+    propertyName: 'birthday',
+    label: 'date of birth',
+    type: 'date',
+  },
+  {
+    propertyName: 'imageUrl',
+    label: 'image',
+    type: 'url',
+  },
+]
+export type AddAdviceInputConfigItemType = InputConfigType & {
+  propertyName: keyof AdviceItemType
 }
-
-const AddFamily = (props: {}) => {
-  return (
-    <form>
-      <label>
-        <span>name</span>
-        <input required />
-      </label>
-      <label>
-        <span>date of birth</span>
-        <input type="date"></input>
-      </label>
-      <input type="url" placeholder="image"></input>
-      <button type="submit">add to the family!</button>
-    </form>
-  )
-}
+export const inputConfigList: AddAdviceInputConfigItemType[] = [
+  {
+    propertyName: 'familyMemberId',
+    label: 'who is this advice for?',
+    isRequired: true,
+  },
+  {
+    propertyName: 'title',
+    label: 'what is your advice?',
+    isRequired: true,
+  },
+  {
+    propertyName: 'description',
+    label: 'why does this advice matter?',
+    type: 'textarea',
+  },
+  {
+    propertyName: 'happenedOn',
+    label: 'when?',
+    type: 'date',
+    isRequired: true,
+  },
+]
 
 export default () => {
   return (
     <>
-      <header>big header meal deal</header>
-      <AddFamily />
-      <AddAdvice />
+      <Form
+        list={inputConfigList}
+        onSubmit={serialized => {
+          console.log(serialized)
+        }}
+      />
+      <hr />
+      <Form
+        list={familyInputConfigList}
+        onSubmit={serialized => {
+          console.log(serialized)
+        }}
+      />
+      <hr />
     </>
   )
 }
