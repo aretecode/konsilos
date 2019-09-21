@@ -2,7 +2,6 @@
  * @todo might be able to put more of these in build-time only
  * @see https://github.com/zeit/next.js/issues/876
  */
-const withTypescript = require('@zeit/next-typescript')
 const withOffline = require('next-offline')
 
 /**
@@ -86,10 +85,10 @@ const nextConfig = {
   },
 }
 
-const typescriptConfig = withTypescript(nextConfig)
-const workboxConfig = withOffline(typescriptConfig)
+const workboxConfig = withOffline(nextConfig)
 const testWorkboxConfig = withOffline(nextConfig)
-const wrapperConfig = process.env.NODE_ENV !== 'test' ? typescriptConfig : testWorkboxConfig
+const wrapperConfig =
+  process.env.NODE_ENV !== 'test' ? nextConfig : testWorkboxConfig
 
 function withBuildTimeDeps() {
   const withSize = require('next-size')

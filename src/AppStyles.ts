@@ -30,8 +30,9 @@ export const AppStyles = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-    background-color: var(--color-orange);
+    /* background-color: var(--color-orange); */
   }
+
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -49,7 +50,7 @@ export const AppStyles = createGlobalStyle`
   }
   #__next {
     min-height: inherit;
-    background-color: #eee;
+    background-color: #24c0fd;
   }
   button {
     background: none;

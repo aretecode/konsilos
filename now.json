@@ -1,11 +1,28 @@
 {
   "version": 2,
-  "name": "react-starter",
+  "alias": "konsilos",
+  "name": "konsilos",
   "env": {
     "IS_NOW": "true",
     "STYLIS_SHOULD_PREFIX": "false"
   },
   "routes": [
+    {
+      "src": "/auth/callback",
+      "dest": "https://auth0-standalone.now.sh/auth/callback"
+    },
+    {
+      "src": "/auth/login",
+      "dest": "https://auth0-standalone.now.sh/auth/login"
+    },
+    {
+      "src": "/auth/logout",
+      "dest": "https://auth0-standalone.now.sh/auth/logout"
+    },
+    {
+      "src": "/user",
+      "dest": "https://auth0-standalone.now.sh/user"
+    },
     {
       "src": "^/service-worker.js$",
       "dest": "/_next/static/service-worker.js",
@@ -41,7 +58,7 @@
     },
     {
       "src": "/favicon.ico",
-      "dest": "https://___YOUR__FAVICON___",
+      "dest": "https://konsilos.com/favicon.ico",
       "headers": {
         "cache-control": "max-age=43200, s-maxage=86400"
       }
@@ -79,11 +96,6 @@
     {
       "src": "package.json",
       "use": "@now/next"
-    },
-    ,
-    {
-      "src": ".storybook/config.js",
-      "use": "now-static-build-storybook"
     }
   ]
 }

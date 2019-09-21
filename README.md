@@ -3,12 +3,14 @@
 1. use [vscode](https://code.visualstudio.com/) (_for the best experience_)
 1. use **nodejs** `12.10.0` (_or **latest**_) 
 2. `npm i` or `yarn` (_install dependencies_)
-3. run app or storybook
+3. (if you do not have already) `npm i -g typescript jest prettier`
+4. run app or storybook
   - `yarn dev` (_app_)
   - `yarn dev:storybook` (_storybook_)
 
 # folder structure
   - `/pages` contains pages, and the nextjs specific `_app` & `_document`
+  - `/server` nextjs server using expressjs, added so we can handle route for auth0/user-signin
   - `/src` all non `page` code
     - `/components` react components. each component _SHOULD_ have:
       - `NAME.test.tsx` jest tests
@@ -47,6 +49,13 @@
   - [dangerjs](https://github.com/danger/danger/blob/master/Dangerfile)
   - [editorconfig](https://editorconfig.org)
 
+## Auth0
+- `GET /user`
+- `GET /auth/login`
+- `GET /auth/logout`
+- `GET /auth/callback`
+
+
 # todo 
 
 > note that these are ordered numerically, but they may be completed in a different order
@@ -65,7 +74,8 @@
 - [ ] move static data out of `welcome` page
 - [ ] component code right now is structured in the way that is easiest to read & change (_single files_), properly separate if our end requirement ends up following such a standard
 - [ ] put MD todos into github issues & project plan & assign
-
+- [ ] move libs out to keep codebase minimal
+- [ ] `{ "src": ".storybook/config.ts", "use": "now-static-build-storybook" }` add back to `now.json` builds
 
 ## 2. homepage sections
 - [x] initial rough outline of page

@@ -1,15 +1,18 @@
 {
-	"name": "react-starter",
+	"name": "konsilos",
 	"version": "1.0.0",
 	"private": false,
 	"sideEffects": false,
 	"main": ".next/server/index.js",
+	"description": "https://konsilos.com v2",
+	"repository": {
+		"url": "https://github.com/aretecode/konsilos"
+	},
 	"scripts": {
-		"dev": "node server",
-		"build": "rm -fr .next && next build && yarn copy",
+		"dev": "next",
+		"build": "rm -fr .next && next build",
 		"export": "next export",
-		"copy": "node static/copy",
-		"start": "NODE_ENV=production node server",
+		"start": "NODE_ENV=production next start",
 		"test": "jest",
 		"now-build": "yarn build",
 		"next:build": "yarn build && yarn build:server",
@@ -26,7 +29,8 @@
 		"test:dev": "jest --config jest.config.js",
 		"build:server": "yarn build && yarn build:server:only && tsc || true && tsc --project tsconfig.server.json || true",
 		"start:server": "DISABLE_SERVERLESS=true NODE_ENV=production node .next/server",
-		"dev:server": "rm -fr dist && rm -fr .next && yarn build:server && yarn start:server"
+		"dev:server": "rm -fr dist && rm -fr .next && yarn build:server && yarn start:server",
+		"now-build-storybook": "build-storybook -o dist/storybook"
 	},
 	"resolutions": {
 		"node-fetch": "2.6.0",
@@ -47,12 +51,12 @@
 	},
 	"dependencies": {
 		"@auth0/auth0-spa-js": "^1.2.3",
-		"@passport-next/passport": "^3.0.1",
-		"passport-auth0": "^1.2.1",
-    "express-session": "^1.16.2",
-    "dotenv": "^8.1.0",
+		"dotenv": "^8.1.0",
 		"next": "9.0.6",
 		"next-server": "9.0.5",
+		"react-i18next": "10.12.5",
+		"i18next": "17.0.16",
+		"i18next-browser-languagedetector": "3.0.3",
 		"@zeit/next-typescript": "^1.1.1",
 		"next-offline": "4.0.5",
 		"node-fetch": "2.6.0",

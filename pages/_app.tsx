@@ -8,6 +8,7 @@ import { initApolloClient } from '../src/graphql/apolloClient'
 import { fromReqToUrl } from '../src/utils/fromReqToUrl'
 import { AppStyles, BelowTheFoldStyles } from '../src/AppStyles'
 import { UnknownObj } from '../src/typings'
+import '../src/i18n'
 
 export class InnerApp extends React.PureComponent<{
   apolloClientState?: UnknownObj

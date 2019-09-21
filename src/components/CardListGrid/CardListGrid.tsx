@@ -7,34 +7,39 @@ import { AdviceItemType } from '../../typings'
 import { StyledMaterialIcon } from '../MaterialIcons'
 
 const StyledCardListGridSection = styled.section`
+  max-width: calc(100% - 15%);
+  margin: auto;
+
   ul {
     display: flex;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
+    margin: 0;
+    padding: 3rem 0;
   }
   ul li {
     &:not(:first-child) {
       margin: 0 0 0 0.5rem;
     }
     &:hover {
-      box-shadow: 0 0 2rem 0 #ccc;
+      box-shadow: 0px 8px 6px 0 rgba(0, 0, 0, 0.4);
     }
 
-    width: 25%;
+    /* width: 25%; */
+    min-height: 340px;
     padding: 0 1rem 2rem;
     background: #fff;
     border-radius: 4px;
-
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-gap: 8px 8px;
+    grid-template-columns: 40% 60%;
+    /* grid-gap: 8px 8px; */
     grid-template-areas:
-      'type avatar'
-      'title title'
-      'summary summary'
-      'description description'
-      'time lock';
+        'type avatar'
+        'title title'
+        'summary summary'
+        'description description'
+        'time lock';
     justify-items: stretch;
+    box-sizing: border-box;
+}
 
     h2,
     h3,
@@ -47,17 +52,25 @@ const StyledCardListGridSection = styled.section`
     }
     h3 {
       grid-area: summary;
+      font-size: 0.9rem;
+      color: #24c0fd;
+      font-weight: 500;
     }
     p {
       grid-area: description;
+      font-size: 0.9rem;
+      font-weight: 300;
+      font-style: italic;
     }
     time {
       color: #a3a3a3;
       grid-area: time;
+      font-size: 0.9rem;
+      font-weight: 100;
     }
     svg {
       grid-area: lock;
-      margin-left: 50%;
+      margin-left: calc(100% - 24px);
     }
   }
 `
@@ -112,7 +125,7 @@ const CardTagType = (props: { type: 'life' }) => {
 }
 
 const AdviceCard = (props: Partial<AdviceItemType>) => {
-  const { title, text, description, time } = props
+  const { title, text, description, happenedOn } = props
 
   return (
     <>
@@ -121,7 +134,7 @@ const AdviceCard = (props: Partial<AdviceItemType>) => {
       <h2>{title}</h2>
       <h3>{text}</h3>
       <p>{description}</p>
-      <time>{time}</time>
+      <time>{happenedOn}</time>
       <StyledMaterialIcon icon="lock" />
     </>
   )
