@@ -53,8 +53,7 @@
               "modules": "commonjs"
             }
           }
-        ],
-        "@babel/preset-typescript"
+        ]
       ],
       "plugins": [
         "@babel/plugin-syntax-dynamic-import",

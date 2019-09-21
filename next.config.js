@@ -60,7 +60,7 @@ const nextConfig = {
         '!**/__tests__/*',
       ],
     })
-    config.plugins.push(plugin)
+    process.env.NODE_ENV !== 'test' && config.plugins.push(plugin)
 
     return config
   },
@@ -88,6 +88,8 @@ const nextConfig = {
 
 const typescriptConfig = withTypescript(nextConfig)
 const workboxConfig = withOffline(typescriptConfig)
+const testWorkboxConfig = withOffline(nextConfig)
+const wrapperConfig = process.env.NODE_ENV !== 'test' ? typescriptConfig : testWorkboxConfig
 
 function withBuildTimeDeps() {
   const withSize = require('next-size')
@@ -111,4 +113,4 @@ function withBuildTimeDeps() {
 }
 
 module.exports =
-  process.env.IS_DOCKER === undefined ? withBuildTimeDeps() : workboxConfig
+  process.env.IS_DOCKER === undefined ? withBuildTimeDeps() : wrapperConfig
