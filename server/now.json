@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "alias": "auth0-standalone",
+  "name": "auth0-standalone",
+  "env": {
+    "IS_NOW": "true"
+  },
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@now/node@canary",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/index.js"
+    }
+  ]
+}

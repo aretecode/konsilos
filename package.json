@@ -9,10 +9,10 @@
 		"url": "https://github.com/aretecode/konsilos"
 	},
 	"scripts": {
-		"dev": "node server",
+		"dev": "next",
 		"build": "rm -fr .next && next build",
 		"export": "next export",
-		"start": "NODE_ENV=production node server",
+		"start": "NODE_ENV=production next start",
 		"test": "jest",
 		"now-build": "yarn build",
 		"next:build": "yarn build && yarn build:server",
@@ -51,9 +51,6 @@
 	},
 	"dependencies": {
 		"@auth0/auth0-spa-js": "^1.2.3",
-		"@passport-next/passport": "^3.0.1",
-		"passport-auth0": "^1.2.1",
-		"express-session": "^1.16.2",
 		"dotenv": "^8.1.0",
 		"next": "9.0.6",
 		"next-server": "9.0.5",
