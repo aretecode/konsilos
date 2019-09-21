@@ -28,8 +28,4 @@ const toStyledStory = story => {
 
 addDecorator(toStyledStory)
 
-const req = require.context('../src', true, /\.story\.tsx$/)
-function loadStories() {
-  req.keys().forEach(req)
-}
-configure(loadStories, module)
+configure(require.context('../src', true, /\.story\.tsx$/), module)

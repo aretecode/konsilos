@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { storiesOf } from '@storybook/react'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
-storiesOf('LanguageSwitcher', module).add('default', () => <LanguageSwitcher />)
+export default { title: 'LanguageSwitcher' }
+export const empty = () => <LanguageSwitcher />

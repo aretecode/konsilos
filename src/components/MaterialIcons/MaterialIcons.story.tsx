@@ -1,6 +1,5 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { storiesOf } from '@storybook/react'
 import { StyledMaterialIcon, IconNameType } from './MaterialIcons'
 
 const list: IconNameType[] = [
@@ -30,7 +29,8 @@ const StyledIconItem = styled.li`
   }
 `
 
-storiesOf('MaterialIcons', module).add('all', () => (
+export default { title: 'MaterialIcons' }
+export const all = () => (
   <ul>
     {list.map(icon => (
       <StyledIconItem key={icon}>
@@ -39,4 +39,4 @@ storiesOf('MaterialIcons', module).add('all', () => (
       </StyledIconItem>
     ))}
   </ul>
-))
+)
