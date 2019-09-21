@@ -5,6 +5,7 @@
     "target": "es2018",
     "module": "commonjs",
 
+    "jsx": "react",
     "resolveJsonModule": true,
     "pretty": true,
     "outDir": "dist",
