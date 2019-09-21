@@ -67,7 +67,7 @@
 - [ ] move static data out of `welcome` page
 - [ ] component code right now is structured in the way that is easiest to read & change (_single files_), properly separate if our end requirement ends up following such a standard
 - [ ] put MD todos into github issues & project plan & assign
-
+- [ ] move libs out to keep codebase minimal
 
 ## 2. homepage sections
 - [x] initial rough outline of page
