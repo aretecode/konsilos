@@ -112,7 +112,7 @@ const CardTagType = (props: { type: 'life' }) => {
 }
 
 const AdviceCard = (props: Partial<AdviceItemType>) => {
-  const { title, text, description, time } = props
+  const { title, text, description, happenedOn } = props
 
   return (
     <>
@@ -121,7 +121,7 @@ const AdviceCard = (props: Partial<AdviceItemType>) => {
       <h2>{title}</h2>
       <h3>{text}</h3>
       <p>{description}</p>
-      <time>{time}</time>
+      <time>{happenedOn}</time>
       <StyledMaterialIcon icon="lock" />
     </>
   )

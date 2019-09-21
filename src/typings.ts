@@ -178,14 +178,46 @@ export interface AdviceItemType {
   text: string
   description: string
 
-  time: string | number
+  /**
+   * advice universally unique id
+   */
   uid: string | number
 
   /**
-   * person receiving the advice (family member id)
-   * @note may be renamed
-   *
    * @todo need to use this for dynamic data in `CardListGrid`
    */
-  receiverId: string | number
+  familyMemberId: string | number
+
+  /**
+   * date
+   */
+  happenedOn: string | number
+
+  /**
+   * date
+   * this functions as `locked` | `unlocked` based on current date
+   */
+  availableOn?: string | number
+}
+
+export interface FamilyMemberItemType {
+  uid: string | number
+  name: string
+  dateOfBirth: string | number
+  imageUrl: string
+}
+
+/**
+ * user from auth0
+ */
+export interface UserType {
+  /**
+   * @todo
+   */
+}
+
+export interface KonsilosStoreType {
+  user: UserType
+  familyList: FamilyMemberItemType[]
+  adviceList: AdviceItemType[]
 }
