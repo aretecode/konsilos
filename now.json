@@ -9,19 +9,19 @@
   "routes": [
     {
       "src": "/auth/callback",
-      "dest": "https://auth0-standalone.aretecode.now.sh/auth/callback"
+      "dest": "https://auth0-standalone.now.sh/auth/callback"
     },
     {
       "src": "/auth/login",
-      "dest": "https://auth0-standalone.aretecode.now.sh/auth/login"
+      "dest": "https://auth0-standalone.now.sh/auth/login"
     },
     {
       "src": "/auth/logout",
-      "dest": "https://auth0-standalone.aretecode.now.sh/auth/logout"
+      "dest": "https://auth0-standalone.now.sh/auth/logout"
     },
     {
       "src": "/user",
-      "dest": "https://auth0-standalone.aretecode.now.sh/user"
+      "dest": "https://auth0-standalone.now.sh/user"
     },
     {
       "src": "^/service-worker.js$",
