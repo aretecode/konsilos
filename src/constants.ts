@@ -1,6 +1,7 @@
 export const DEFAULT_ADVICE_LIST = [
   {
     uid: 1,
+    receiverId: 42,
     title: 'About Life',
     text: 'Turning 18 years',
     description: 'I have something very important to tell you...',
@@ -8,6 +9,7 @@ export const DEFAULT_ADVICE_LIST = [
   },
   {
     uid: 2,
+    receiverId: 42,
     title: 'About Life',
     text: 'Turning 18 years',
     description: 'I have something very important to tell you...',
@@ -15,6 +17,7 @@ export const DEFAULT_ADVICE_LIST = [
   },
   {
     uid: 3,
+    receiverId: 42,
     title: 'About Life',
     text: 'Turning 18 years',
     description: 'I have something very important to tell you...',

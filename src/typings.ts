@@ -187,5 +187,5 @@ export interface AdviceItemType {
    *
    * @todo need to use this for dynamic data in `CardListGrid`
    */
-  receiverId: string
+  receiverId: string | number
 }
