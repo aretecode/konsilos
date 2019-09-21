@@ -26,6 +26,7 @@ router.get('/callback', (req, res, next) => {
       return next(error)
     }
     if (!user) {
+      console.error('__IMPORTANT__ no user')
       return res.redirect('/auth/login')
     }
     req.logIn(user, error => {
@@ -34,7 +35,7 @@ router.get('/callback', (req, res, next) => {
       }
       const returnTo = req.session.returnTo
       delete req.session.returnTo
-      res.redirect(returnTo || '/user')
+      res.redirect(returnTo || '/')
     })
   })(req, res, next)
 })

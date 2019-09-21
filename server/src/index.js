@@ -39,7 +39,9 @@ const server = express()
 
 const sess = {
   secret: 'CodingIsAwesome',
-  cookie: {},
+  cookie: {
+    sameSite: false,
+  },
   resave: false,
   saveUninitialized: true,
 }
@@ -55,6 +57,11 @@ const app = server
   .use(userInViews())
   .use('/auth', authRouter)
   .get('/user', userRouter)
+
+/**
+ * @see https://github.com/auth0/passport-auth0/issues/70
+ */
+app.set('trust proxy', 1)
 
 /**
  * ==== handling for zeit now & local =====
