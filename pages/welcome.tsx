@@ -95,7 +95,6 @@ const StyledBanner = styled.header.attrs({
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -3rem;
 
     > svg {
       width: 4rem;
@@ -119,6 +118,11 @@ const StyledTimeCapsuleAction = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  ${StyledMaterialIcon} {
+    fill: white;
+    margin-right: 4px;
+  }
 `
 
 export type ColouredFeatureSectionPropType = { position: number }
