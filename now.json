@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "alias": "konsilos",
   "name": "konsilos",
   "env": {
     "IS_NOW": "true",
