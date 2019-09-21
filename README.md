@@ -49,6 +49,13 @@
   - [dangerjs](https://github.com/danger/danger/blob/master/Dangerfile)
   - [editorconfig](https://editorconfig.org)
 
+## Auth0
+- `GET /user`
+- `GET /auth/login`
+- `GET /auth/logout`
+- `GET /auth/callback`
+
+
 # todo 
 
 > note that these are ordered numerically, but they may be completed in a different order
@@ -68,6 +75,7 @@
 - [ ] component code right now is structured in the way that is easiest to read & change (_single files_), properly separate if our end requirement ends up following such a standard
 - [ ] put MD todos into github issues & project plan & assign
 - [ ] move libs out to keep codebase minimal
+- [ ] `{ "src": ".storybook/config.ts", "use": "now-static-build-storybook" }` add back to `now.json` builds
 
 ## 2. homepage sections
 - [x] initial rough outline of page

@@ -6,7 +6,7 @@
           "@babel/preset-env",
           {
             "targets": { "chrome": 73 },
-            "debug": true,
+            "debug": false,
             "modules": false,
             "useBuiltIns": false,
             "shippedProposals": true
@@ -28,7 +28,7 @@
           "@babel/preset-env",
           {
             "targets": { "chrome": 73 },
-            "debug": true,
+            "debug": false,
             "modules": false,
             "useBuiltIns": false,
             "shippedProposals": true
