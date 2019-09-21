@@ -179,6 +179,11 @@ export interface AdviceItemType {
   description: string
 
   /**
+   * probably should be an enum
+   */
+  type?: string
+
+  /**
    * advice universally unique id
    */
   uid: string | number

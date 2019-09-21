@@ -39,6 +39,16 @@ export const inputConfigList: AddAdviceInputConfigItemType[] = [
     isRequired: true,
   },
   {
+    propertyName: 'text',
+    label: 'summary?',
+    isRequired: true,
+  },
+  {
+    propertyName: 'type',
+    label: 'life, movie, travel, chat?',
+    isRequired: true,
+  },
+  {
     propertyName: 'description',
     label: 'why does this advice matter?',
     type: 'textarea',
