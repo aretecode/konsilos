@@ -3,7 +3,11 @@
   "alias": "auth0-standalone",
   "name": "auth0-standalone",
   "env": {
-    "IS_NOW": "true"
+    "IS_NOW": "true",
+    "CLIENT_ID": "@konsilos_auth0_client_id",
+    "CLIENT_SECRET": "@konsilos_auth0_client_secret",
+    "DOMAIN": "@konsilos_auth0_domain",
+    "AUTH0_CALLBACK_URL": "@konsilos_auth0_callback_url"
   },
   "builds": [
     {

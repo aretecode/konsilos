@@ -1,9 +1,9 @@
-import { AdviceItemType } from './typings'
+import { AdviceItemType, FamilyMemberItemType } from './typings'
 
 export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   {
     uid: 1,
-    familyMemberId: 42,
+    familyMemberId: -1,
 
     title: 'About Life',
     text: 'Turning 18 years',
@@ -12,20 +12,67 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   },
   {
     uid: 2,
-    familyMemberId: 42,
-
-    title: 'About Life',
-    text: 'Turning 18 years',
-    description: 'I have something very important to tell you...',
-    happenedOn: '02/05/2001',
+    familyMemberId: -2,
+    title: 'Have an Experience',
+    text: 'Turning 40 years',
+    description: 'Dear daughter, silence can be a great friend. Try...',
+    happenedOn: '27/09/2016',
   },
   {
     uid: 3,
-    familyMemberId: 42,
+    familyMemberId: -3,
+    title: 'Rocky Balboa',
+    text: 'When life gets hard',
+    description: ' Son, nobody will hit you as hard as life. But...',
+    happenedOn: '01/08/2015',
+  },
+  {
+    uid: 4,
+    familyMemberId: -4,
+    title: 'The Little Prince',
+    text: 'Turning 9 years',
+    description: 'I must read this book with Daniel and teach...',
+    happenedOn: '13/12/2015',
+  },
+  {
+    uid: 5,
+    familyMemberId: -5,
+    title: 'Steve Jobs',
+    text: 'Never give up',
+    description: 'Sometimes, life hits you in the head with a brick...',
+    happenedOn: '11/12/2019',
+  },
+]
 
-    title: 'About Life',
-    text: 'Turning 18 years',
-    description: 'I have something very important to tell you...',
-    happenedOn: '02/05/2001',
+export const DEFAULT_FAMILY_MEMBER_LIST: FamilyMemberItemType[] = [
+  {
+    uid: -1,
+    dateOfBirth: '01/01/1990',
+    imageUrl: 'https://konsilos.com/img/landing/small1.png',
+    name: 'Laura',
+  },
+  {
+    uid: -2,
+    dateOfBirth: '01/01/1990',
+    imageUrl: 'https://konsilos.com/img/landing/card-example-daniel.png',
+    name: 'Daniel',
+  },
+  {
+    uid: -3,
+    dateOfBirth: '01/01/1990',
+    imageUrl: 'https://konsilos.com/img/landing/small3.png',
+    name: 'Charles',
+  },
+  {
+    uid: -4,
+    dateOfBirth: '01/01/1990',
+    imageUrl: 'https://konsilos.com/img/landing/small4.png',
+    name: 'Meghan',
+  },
+  {
+    uid: -5,
+    dateOfBirth: '01/01/1990',
+    imageUrl: 'https://konsilos.com/img/landing/small5.png',
+    name: 'Barbara',
   },
 ]

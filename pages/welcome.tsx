@@ -4,8 +4,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
+import { StyledAdviceList } from '../src/features/Advice'
 import { StyledDevice } from '../src/components/Device'
-import { StyledCardListGrid } from '../src/components/CardListGrid'
 import { StyledMaterialIcon } from '../src/components/MaterialIcons'
 import { LanguageSwitcher } from '../src/components/LanguageSwitcher'
 import { DEFAULT_ADVICE_LIST } from '../src/constants'
@@ -290,7 +290,7 @@ export default () => {
             </form>
           </StyledLeaderboardPanel>
         </StyledLeaderboard>
-        <StyledCardListGrid list={DEFAULT_ADVICE_LIST} />
+        <StyledAdviceList list={DEFAULT_ADVICE_LIST} />
         <CardTextSection>
           <header>Leave your legacy</header>
           <p>

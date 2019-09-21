@@ -179,12 +179,17 @@ export interface AdviceItemType {
   description: string
 
   /**
+   * probably should be an enum
+   */
+  type?: string
+
+  /**
    * advice universally unique id
    */
   uid: string | number
 
   /**
-   * @todo need to use this for dynamic data in `CardListGrid`
+   * @todo need to use this for dynamic data in `AdviceList`
    */
   familyMemberId: string | number
 

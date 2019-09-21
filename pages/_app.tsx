@@ -4,6 +4,7 @@ import { ApolloClient } from 'apollo-boost'
 import * as React from 'react'
 import { ApolloProvider, getDataFromTree } from 'react-apollo'
 import { AppContextProvider } from '../src/AppContext'
+import { KonsilosContextProvider } from '../src/features/KonsilosContext'
 import { initApolloClient } from '../src/graphql/apolloClient'
 import { fromReqToUrl } from '../src/utils/fromReqToUrl'
 import { AppStyles, BelowTheFoldStyles } from '../src/AppStyles'
@@ -27,7 +28,7 @@ export class InnerApp extends React.PureComponent<{
         >
           <React.StrictMode>
             <AppStyles />
-            {children}
+            <KonsilosContextProvider>{children}</KonsilosContextProvider>
             <BelowTheFoldStyles />
           </React.StrictMode>
         </ApolloProvider>
