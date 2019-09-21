@@ -1,7 +1,14 @@
 /**
  * === basics ===
  */
-export type Primitive = string | number | boolean | symbol | null | undefined | void
+export type Primitive =
+  | string
+  | number
+  | boolean
+  | symbol
+  | null
+  | undefined
+  | void
 
 export type SafePrimitive = string | number | boolean | symbol
 
@@ -19,7 +26,11 @@ export interface FrozenSerializedArray extends Readonly<Serialized[]> {
   readonly(x: number): Serialized
 }
 
-export type Serialized = SerializedObj | Primitive | FrozenSerializedObj | FrozenSerializedArray
+export type Serialized =
+  | SerializedObj
+  | Primitive
+  | FrozenSerializedObj
+  | FrozenSerializedArray
 
 export type Real = AnyArrayOrObj | SafePrimitive
 
@@ -54,7 +65,9 @@ export type UnknownArray = unknown[]
 /**
  * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  */
-export type RecursiveRequired<Type> = {[Key in keyof Type]-?: RecursiveRequired<Type[Key]>}
+export type RecursiveRequired<Type> = {
+  [Key in keyof Type]-?: RecursiveRequired<Type[Key]>
+}
 
 /**
  * @description to add __typename
@@ -67,15 +80,20 @@ export type WithTypeNameRecursive<Type extends {}> = {
     : Type[Key] extends any[]
     ? WithTypeNameRecursive<Type[Key]>
     : Type[Key] extends {}
-    ? Type[Key] & {__typename: string}
+    ? Type[Key] & { __typename: string }
     : Type[Key]
-} & {__typename?: string}
+} & { __typename?: string }
 
 /**
  * === empty ===
  */
 
-export type Empty = {[key: string]: never} | EmptyArray | '' | EmptySet | EmptyMap
+export type Empty =
+  | { [key: string]: never }
+  | EmptyArray
+  | ''
+  | EmptySet
+  | EmptyMap
 export interface EmptyMap<Key = string, Value = any> extends Map<Key, Value> {
   size: 0
 }
@@ -114,8 +132,8 @@ export interface Resolvers<
   ContextType extends object = {},
   ResponseType extends object = AnyObj
 > {
-  Mutation?: {[key: string]: Resolver<ArgsType, ContextType, ResponseType>}
-  Query?: {[key: string]: Resolver<ArgsType, ContextType, ResponseType>}
+  Mutation?: { [key: string]: Resolver<ArgsType, ContextType, ResponseType> }
+  Query?: { [key: string]: Resolver<ArgsType, ContextType, ResponseType> }
 }
 
 /**
@@ -154,3 +172,12 @@ export type GraphqlProps<
 /**
  * === data ===
  */
+
+export interface AdviceItemType {
+  title: string
+  text: string
+  description: string
+
+  time: string | number
+  uid: string | number
+}
