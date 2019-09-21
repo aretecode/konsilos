@@ -22,9 +22,11 @@ const StyledLeaderboard = styled.section`
   background-position: center;
 
   color: #ffffff;
-  padding-top: 12rem;
   min-height: 100vh;
   min-width: 100vw;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
 
   h1,
   p {
@@ -34,10 +36,10 @@ const StyledLeaderboard = styled.section`
   h1 {
     margin: 0;
     font-size: 5rem;
-    font-weight: 800;
-    text-transform: uppercase;
+    font-weight: 300;
     line-height: 80px;
     text-shadow: 0 0 2px #0e0806;
+    margin-bottom: 3rem;
   }
 
   p {
@@ -146,7 +148,12 @@ const StyledArticleFeatureSection = styled.section`
 
   header {
     font-size: 2rem;
-    color: #000;
+    font-weight: 600;
+    color: #000000;
+  }
+
+  p {
+    color: grey;
   }
 `
 
@@ -162,7 +169,13 @@ const StyledIpadPanel = styled.div`
 `
 
 const StyledArticleFeatureMacbookSection = styled(StyledArticleFeatureSection)``
-const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)``
+const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
+  ${StyledMaterialIcon} {
+      width: 100px;
+      height: 100px;
+      fill: #21c0fd;
+  }
+`
 
 const StyledArticleOverview = styled.section`
   /* padding: 0 5rem 5rem 5rem; */
@@ -171,18 +184,28 @@ const StyledArticleOverview = styled.section`
 
   header {
     padding: 3rem 0 2rem 0;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 48px;
     color: var(--color-blue);
-    font-weight: normal;
+    font-weight: 600;
     text-align: center;
   }
+  
   p {
     text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: grey;
   }
 `
 const StyledArticle = styled.article`
   background: #ffffff;
+`
+
+const StyledColouredFeaturePanel = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 const StyledColouredFeatureSection = styled.section`
@@ -198,18 +221,16 @@ const StyledColouredFeatureSection = styled.section`
   }
 
   header {
-    padding: 3rem 3rem 0 3rem;
-    font-size: 40px;
+    padding-left: 3rem;
+    font-size: 3rem;
     line-height: 40px;
-    width: 80%;
+    font-weight: 600;
   }
 
   p {
     padding: 1rem 3rem;
-    letter-spacing: 1px;
     font-size: 1rem;
     line-height: 25px;
-    width: 80%;
   }
 `
 
@@ -220,8 +241,16 @@ const CardTextSection = styled.section`
   padding-bottom: 3rem;
 
   header {
-    color: #23c0ff;
+    color: white;
     font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
   }
 `
 
@@ -319,7 +348,7 @@ export default () => (
       <>
         <StyledColouredFeatureSection position={0}>
           <img src="https://konsilos.com/img/landing/man_img.jpg" />
-          <div>
+          <StyledColouredFeaturePanel>
             <header>
               Free,
               <br /> Forever!
@@ -330,10 +359,10 @@ export default () => (
               world. We also benefit from the support from people and companies
               that believe in our idea.
             </p>
-          </div>
+          </StyledColouredFeaturePanel>
         </StyledColouredFeatureSection>
         <StyledColouredFeatureSection position={1}>
-          <div>
+          <StyledColouredFeaturePanel>
             <header>
               Your Advices,
               <br /> Forever Yours
@@ -343,7 +372,7 @@ export default () => (
               your children have access to the advices. And you are free to
               download your advices and leave the system at any time.
             </p>
-          </div>
+          </StyledColouredFeaturePanel>
           <img src="https://konsilos.com/img/landing/child_img.jpg" />
         </StyledColouredFeatureSection>
       </>

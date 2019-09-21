@@ -20,10 +20,11 @@ const StyledCardListGridSection = styled.section`
       margin: 0 0 0 0.5rem;
     }
     &:hover {
-      box-shadow: 0 0 2rem 0 #ccc;
+      box-shadow: 0px 8px 6px 0 rgba(0, 0, 0, 0.4);
     }
 
     /* width: 25%; */
+    min-height: 340px;
     padding: 0 1rem 2rem;
     background: #fff;
     border-radius: 4px;
