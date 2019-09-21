@@ -13,21 +13,25 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 // eslint-disable-line max-statements
-const strategy = new Auth0Strategy({
-  domain: process.env.DOMAIN,
-  clientID: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/callback'
-}, (accessToken, refreshToken, extraParams, profile, done) => {
-  return done(null, profile)
-})
+const strategy = new Auth0Strategy(
+  {
+    domain: process.env.DOMAIN,
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL:
+      process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/callback',
+  },
+  (accessToken, refreshToken, extraParams, profile, done) => {
+    return done(null, profile)
+  }
+)
 
 passport.use(strategy)
 
 passport.serializeUser((user, done) => {
   return done(null, user)
 })
-  
+
 passport.deserializeUser((user, done) => {
   return done(null, user)
 })
@@ -51,7 +55,7 @@ app.prepare().then(() => {
   server.use(passport.initialize())
 
   server.use(passport.session())
-  
+
   server.all('*', (req, res) => {
     return handle(req, res)
   })

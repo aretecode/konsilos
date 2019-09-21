@@ -1,3 +1,6 @@
+/**
+ * @see https://github.com/sandrinodimattia/nextjs-auth0-example/blob/master/lib/auth0.js
+ */
 import React, { useState, useEffect, useContext } from 'react'
 import createAuth0Client from '@auth0/auth0-spa-js'
 import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client'
@@ -38,7 +41,7 @@ export const Auth0Provider = ({
 
   useEffect(() => {
     // eslint-disable-next-line max-statements
-    const initAuth0 = async() => {
+    const initAuth0 = async () => {
       const auth0FromHook = await createAuth0Client(initOptions)
       setAuth0(auth0FromHook)
 
@@ -65,7 +68,7 @@ export const Auth0Provider = ({
     // eslint-disable-next-line
   }, [])
 
-  const loginWithPopup = async(opts: PopupLoginOptions) => {
+  const loginWithPopup = async (opts: PopupLoginOptions) => {
     setPopupOpen(true)
     try {
       await auth0Client!.loginWithPopup(opts)
@@ -79,7 +82,7 @@ export const Auth0Provider = ({
     setIsAuthenticated(true)
   }
 
-  const handleRedirectCallback = async() => {
+  const handleRedirectCallback = async () => {
     setLoading(true)
     const result = await auth0Client!.handleRedirectCallback()
     const user = await auth0Client!.getUser()
@@ -90,7 +93,7 @@ export const Auth0Provider = ({
   }
   return (
     <Auth0Context.Provider
-      value={ {
+      value={{
         isAuthenticated,
         user,
         loading,
@@ -106,7 +109,8 @@ export const Auth0Provider = ({
         getTokenWithPopup: (opts: GetTokenWithPopupOptions | undefined) =>
           auth0Client!.getTokenWithPopup(opts),
         logout: (opts: LogoutOptions | undefined) => auth0Client!.logout(opts),
-      } }>
+      }}
+    >
       {children}
     </Auth0Context.Provider>
   )
