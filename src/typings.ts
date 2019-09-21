@@ -180,4 +180,12 @@ export interface AdviceItemType {
 
   time: string | number
   uid: string | number
+
+  /**
+   * person receiving the advice (family member id)
+   * @note may be renamed
+   *
+   * @todo need to use this for dynamic data in `CardListGrid`
+   */
+  receiverId: string
 }
