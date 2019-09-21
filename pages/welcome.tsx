@@ -21,63 +21,75 @@ const StyledLeaderboard = styled.section`
   background-size: cover;
   background-position: center;
 
-  color: #fff;
-  padding: 10rem 0 0 1rem;
+  color: #ffffff;
   min-height: 100vh;
   min-width: 100vw;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
 
   h1,
   p {
-    width: 50%;
+    width: 55%;
   }
+
   h1 {
     margin: 0;
-    padding: 0 0 34px 0;
-    font-weight: 600;
-    font-size: 60px;
+    font-size: 5rem;
+    font-weight: 300;
     line-height: 80px;
-    color: #ffffff;
     text-shadow: 0 0 2px #0e0806;
+    margin-bottom: 3rem;
   }
+
   p {
-    font-size: 16px;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
+
   form {
-    margin-top: 4rem;
     display: flex;
 
     input {
       border: none;
+      width: 300px;
+      border-radius: 4px;
+      font-size: 1rem;
     }
   }
+`
+
+const StyledLeaderboardPanel = styled.div`
+  max-width: calc(100% - 15%);
+  margin: auto;
 `
 
 const StyledSubscripeInput = styled.input.attrs({
   placeholder: 'email',
 })`
-  padding: 1rem;
+  padding: 0 1rem;
 `
 const StyledSubscribeButton = styled.button`
-  margin: 0 2rem 0 0.75rem;
+  margin: 0 2rem;
   padding: 1rem 2rem;
   background: #23c0ff;
   text-align: center;
   border-radius: 4px;
-  display: inline-flex;
-  color: #fff;
-  font-weight: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
 `
 const StyledBanner = styled.header.attrs({
   role: 'banner',
 })`
   padding: 2rem 1rem 0 1rem;
-
   display: flex;
   justify-content: space-between;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  max-width: calc(100% - 15%);
+  margin: auto;
 
   > nav {
     display: flex;
@@ -112,96 +124,133 @@ const StyledTimeCapsuleAction = styled.a`
 export type ColouredFeatureSectionPropType = { position: number }
 
 const StyledArticleFeatureSection = styled.section`
-  display: flex;
-  padding: 1rem 1rem;
   position: relative;
   height: 540px;
+  max-width: calc(100% - 15%);
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   > .text {
     width: 50%;
   }
-  > ${StyledDevice} {
-    margin: 0 4rem;
+
+  ${StyledDevice} {
     transform: scale(0.5);
-    transform-origin: 0 0;
+    transform-origin: 0% 50%;
     position: absolute;
     top: 0;
-    right: -40%;
+    margin: auto;
+    bottom: 0;
   }
+
   header {
     font-size: 2rem;
-    color: #000;
+    font-weight: 600;
+    color: #000000;
+  }
+
+  p {
+    color: grey;
   }
 `
 
-const StyledArticleFeatureMacbookSection = styled(StyledArticleFeatureSection)`
-  > .text {
-    padding-left: 4rem;
-    width: 40%;
-  }
-  > ${StyledDevice} {
-    right: -40%;
-  }
+const StyledMacbookPanel = styled.div`
+  width: 50%;
+  height: 100%;
+  padding: 0 3rem;
 `
+
+const StyledIpadPanel = styled.div`
+  width: 50%;
+  height: 100%;
+`
+
+const StyledArticleFeatureMacbookSection = styled(StyledArticleFeatureSection)``
 const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
-  > .text {
-    padding-right: 4rem;
-    margin-left: 50%;
-  }
-  > ${StyledDevice} {
-    left: 5%;
+  ${StyledMaterialIcon} {
+      width: 100px;
+      height: 100px;
+      fill: #21c0fd;
   }
 `
 
 const StyledArticleOverview = styled.section`
-  padding: 0 5rem 5rem 5rem;
+  /* padding: 0 5rem 5rem 5rem; */
+  max-width: calc(100% - 15%);
+  margin: auto;
+
   header {
     padding: 3rem 0 2rem 0;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 48px;
     color: var(--color-blue);
-    font-weight: normal;
+    font-weight: 600;
     text-align: center;
   }
+  
   p {
     text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: grey;
   }
 `
 const StyledArticle = styled.article`
-  background: #fff;
+  background: #ffffff;
+`
+
+const StyledColouredFeaturePanel = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 const StyledColouredFeatureSection = styled.section`
   background-color: ${(props: ColouredFeatureSectionPropType) =>
     props.position === 1 ? '#20ade6' : '#da6550'};
 
-  color: #fff;
+  color: #ffffff;
   display: flex;
+
   img {
     width: 50%;
     object-fit: cover;
   }
+
   header {
-    padding: 3rem 3rem 0 3rem;
-    font-size: 40px;
+    padding-left: 3rem;
+    font-size: 3rem;
     line-height: 40px;
-    width: 80%;
+    font-weight: 600;
   }
+
   p {
     padding: 1rem 3rem;
-    letter-spacing: 1px;
     font-size: 1rem;
     line-height: 25px;
-    width: 80%;
   }
 `
 
 const CardTextSection = styled.section`
-  padding: 1rem;
-  width: 50%;
+  margin: auto;
+  max-width: calc(100% - 15%);
+  text-align: center;
+  padding-bottom: 3rem;
+
   header {
-    color: #23c0ff;
+    color: white;
     font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
   }
 `
 
@@ -218,16 +267,18 @@ export default () => (
     </StyledBanner>
     <StyledMain>
       <StyledLeaderboard>
-        <h1>Eternize advices to your children</h1>
-        <p>
-          Think of all advices and experiences that have impacted you
-          positively. Now image your children's future if you could share all of
-          these in the right moment of their lives.
-        </p>
-        <form>
-          <StyledSubscripeInput />
-          <StyledSubscribeButton type="submit">Subscribe</StyledSubscribeButton>
-        </form>
+        <StyledLeaderboardPanel>
+          <h1>Eternize advices to your children</h1>
+          <p>
+            Think of all advices and experiences that have impacted you
+            positively. Now image your children's future if you could share all of
+            these in the right moment of their lives.
+          </p>
+          <form>
+            <StyledSubscripeInput />
+            <StyledSubscribeButton type="submit">Subscribe</StyledSubscribeButton>
+          </form>
+        </StyledLeaderboardPanel>
       </StyledLeaderboard>
       <StyledCardListGrid list={DEFAULT_ADVICE_LIST} />
       <CardTextSection>
@@ -244,39 +295,6 @@ export default () => (
           the ideal age, even if you are not there anymore.
         </p>
       </CardTextSection>
-
-      <>
-        <StyledColouredFeatureSection position={0}>
-          <img src="https://konsilos.com/img/landing/man_img.jpg" />
-          <div>
-            <header>
-              Free,
-              <br /> Forever!
-            </header>
-            <p>
-              We're a nonprofit and open source initiative, thought and built by
-              volunteers who share our values from different places around the
-              world. We also benefit from the support from people and companies
-              that believe in our idea.
-            </p>
-          </div>
-        </StyledColouredFeatureSection>
-        <StyledColouredFeatureSection position={1}>
-          <div>
-            <header>
-              Your Advices,
-              <br /> Forever Yours
-            </header>
-            <p>
-              Security, privacy, backup, freedom and availability. Only you and
-              your children have access to the advices. And you are free to
-              download your advices and leave the system at any time.
-            </p>
-          </div>
-          <img src="https://konsilos.com/img/landing/child_img.jpg" />
-        </StyledColouredFeatureSection>
-      </>
-
       <StyledArticle>
         <StyledArticleOverview>
           <header>Simple. Powerful. Konsilos.</header>
@@ -304,10 +322,14 @@ export default () => (
               out why it matters. You can edit them at any time.
             </p>
           </div>
-          <StyledDevice type="macbook">eh</StyledDevice>
+          <StyledMacbookPanel>
+            <StyledDevice type="macbook">eh</StyledDevice>
+          </StyledMacbookPanel>
         </StyledArticleFeatureMacbookSection>
         <StyledArticleFeatureIPadSection>
-          <StyledDevice type="ipad">eh</StyledDevice>
+          <StyledIpadPanel>
+            <StyledDevice type="ipad">eh</StyledDevice>
+          </StyledIpadPanel>
 
           <div className="text">
             <StyledMaterialIcon icon="notification" />
@@ -323,6 +345,37 @@ export default () => (
           </div>
         </StyledArticleFeatureIPadSection>
       </StyledArticle>
+      <>
+        <StyledColouredFeatureSection position={0}>
+          <img src="https://konsilos.com/img/landing/man_img.jpg" />
+          <StyledColouredFeaturePanel>
+            <header>
+              Free,
+              <br /> Forever!
+            </header>
+            <p>
+              We're a nonprofit and open source initiative, thought and built by
+              volunteers who share our values from different places around the
+              world. We also benefit from the support from people and companies
+              that believe in our idea.
+            </p>
+          </StyledColouredFeaturePanel>
+        </StyledColouredFeatureSection>
+        <StyledColouredFeatureSection position={1}>
+          <StyledColouredFeaturePanel>
+            <header>
+              Your Advices,
+              <br /> Forever Yours
+            </header>
+            <p>
+              Security, privacy, backup, freedom and availability. Only you and
+              your children have access to the advices. And you are free to
+              download your advices and leave the system at any time.
+            </p>
+          </StyledColouredFeaturePanel>
+          <img src="https://konsilos.com/img/landing/child_img.jpg" />
+        </StyledColouredFeatureSection>
+      </>
     </StyledMain>
   </>
 )
