@@ -4,6 +4,7 @@ module.exports = () => {
       return next()
     }
     req.session.returnTo = req.originalUrl
-    res.redirect('/login')
+    console.warn('__IMPORTANT__ redirect')
+    res.redirect('/auth/login#redirectSecured')
   }
 }
