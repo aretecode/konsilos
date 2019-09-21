@@ -12,7 +12,11 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-// eslint-disable-line max-statements
+const userInViews = require('./userInView')
+const authRouter = require('./auth')
+const userRouter = require('./userInView')
+
+//eslint-disable-line max-statements
 const strategy = new Auth0Strategy(
   {
     domain: process.env.DOMAIN,
@@ -50,20 +54,21 @@ app.prepare().then(() => {
     sess.cookie.secure = true
   }
 
-  server.use(session(sess))
+  server
+    .use(session(sess))
+    .use(passport.initialize())
+    .use(passport.session())
+    .use(userInViews())
+    .use('/auth', authRouter)
+    .get('/user', userRouter)
+    .all('*', (req, res) => {
+      return handle(req, res)
+    })
 
-  server.use(passport.initialize())
-
-  server.use(passport.session())
-
-  server.all('*', (req, res) => {
-    return handle(req, res)
-  })
-
-  server.listen(port, error => {
-    if (error) {
-      throw error
-    }
-    console.log(`> Ready on http://localhost:${port}`)
-  })
+    .listen(port, error => {
+      if (error) {
+        throw error
+      }
+      console.log(`> Ready on http://localhost:${port}`)
+    })
 })
