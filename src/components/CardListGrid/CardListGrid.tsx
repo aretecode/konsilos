@@ -27,17 +27,18 @@ const StyledCardListGridSection = styled.section`
     padding: 0 1rem 2rem;
     background: #fff;
     border-radius: 4px;
-
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-gap: 8px 8px;
+    grid-template-columns: 40% 60%;
+    /* grid-gap: 8px 8px; */
     grid-template-areas:
-      'type avatar'
-      'title title'
-      'summary summary'
-      'description description'
-      'time lock';
+        'type avatar'
+        'title title'
+        'summary summary'
+        'description description'
+        'time lock';
     justify-items: stretch;
+    box-sizing: border-box;
+}
 
     h2,
     h3,
@@ -50,17 +51,25 @@ const StyledCardListGridSection = styled.section`
     }
     h3 {
       grid-area: summary;
+      font-size: 0.9rem;
+      color: #24c0fd;
+      font-weight: 500;
     }
     p {
       grid-area: description;
+      font-size: 0.9rem;
+      font-weight: 300;
+      font-style: italic;
     }
     time {
       color: #a3a3a3;
       grid-area: time;
+      font-size: 0.9rem;
+      font-weight: 100;
     }
     svg {
       grid-area: lock;
-      margin-left: 50%;
+      margin-left: calc(100% - 24px);
     }
   }
 `

@@ -33,19 +33,26 @@ const StyledLeaderboard = styled.section`
 
   h1 {
     margin: 0;
-    font-size: 60px;
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
     line-height: 80px;
     text-shadow: 0 0 2px #0e0806;
   }
+
   p {
-    font-size: 16px;
+    font-size: 1.5rem;
+    font-weight: 300;
   }
+
   form {
-    margin-top: 4rem;
     display: flex;
 
     input {
       border: none;
+      width: 300px;
+      border-radius: 4px;
+      font-size: 1rem;
     }
   }
 `
@@ -58,17 +65,16 @@ const StyledLeaderboardPanel = styled.div`
 const StyledSubscripeInput = styled.input.attrs({
   placeholder: 'email',
 })`
-  padding: 1rem;
+  padding: 0 1rem;
 `
 const StyledSubscribeButton = styled.button`
-  margin: 0 2rem 0 0.75rem;
+  margin: 0 2rem;
   padding: 1rem 2rem;
   background: #23c0ff;
   text-align: center;
   border-radius: 4px;
-  display: inline-flex;
-  color: #fff;
-  font-weight: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
 `
 const StyledBanner = styled.header.attrs({
   role: 'banner',
