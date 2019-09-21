@@ -22,7 +22,7 @@ router.get('/callback', (req, res, next) => {
       return next(error)
     }
     if (!user) {
-      return res.redirect('/login')
+      return res.redirect('/auth/login')
     }
     req.logIn(user, error => {
       if (error) {
@@ -30,7 +30,7 @@ router.get('/callback', (req, res, next) => {
       }
       const returnTo = req.session.returnTo
       delete req.session.returnTo
-      res.redirect(returnTo || '/user')
+      res.redirect(returnTo || '/')
     })
   })(req, res, next)
 })

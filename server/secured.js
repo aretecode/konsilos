@@ -4,6 +4,6 @@ module.exports = () => {
       return next()
     }
     req.session.returnTo = req.originalUrl
-    res.redirect('/login')
+    res.redirect('/auth/login')
   }
 }
