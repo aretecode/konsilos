@@ -99,7 +99,7 @@ const StyledLogo = styled.img.attrs({
   alt: 'logo',
 })``
 
-const StyledTimeCapsuleButton = styled.button`
+const StyledTimeCapsuleAction = styled.a`
   background-color: #f27059;
   border-radius: 4px;
   padding: 0.5rem;
@@ -210,9 +210,9 @@ export default () => (
     <StyledBanner>
       <StyledLogo />
       <nav>
-        <StyledTimeCapsuleButton>
+        <StyledTimeCapsuleAction href="/advice">
           <StyledMaterialIcon icon="clock" /> Time Capsule
-        </StyledTimeCapsuleButton>
+        </StyledTimeCapsuleAction>
         <LanguageSwitcher />
       </nav>
     </StyledBanner>
