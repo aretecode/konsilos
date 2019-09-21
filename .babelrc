@@ -10,7 +10,7 @@
             "modules": false,
             "useBuiltIns": false,
             "shippedProposals": true
-          },
+          }
         ],
         "@babel/preset-react",
         "@babel/preset-typescript"
@@ -32,7 +32,7 @@
             "modules": false,
             "useBuiltIns": false,
             "shippedProposals": true
-          },
+          }
         ],
         "@babel/preset-react",
         "@babel/preset-typescript"
