@@ -30,7 +30,7 @@ export const AppStyles = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-    /* background-color: var(--color-orange); */
+    background-color: #fff;
   }
 
   *, *:before, *:after {

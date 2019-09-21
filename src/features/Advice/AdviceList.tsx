@@ -40,7 +40,6 @@ const StyledAdviceListSection = styled.section`
       'description description'
       'time lock';
     justify-items: stretch;
-    box-sizing: border-box;
   }
 
   h2,
