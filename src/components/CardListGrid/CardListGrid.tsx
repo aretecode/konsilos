@@ -7,10 +7,13 @@ import { AdviceItemType } from '../../typings'
 import { StyledMaterialIcon } from '../MaterialIcons'
 
 const StyledCardListGridSection = styled.section`
+  max-width: calc(100% - 15%);
+  margin: auto;
+
   ul {
     display: flex;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
+    margin: 0;
+    padding: 3rem 0;
   }
   ul li {
     &:not(:first-child) {
@@ -20,7 +23,7 @@ const StyledCardListGridSection = styled.section`
       box-shadow: 0 0 2rem 0 #ccc;
     }
 
-    width: 25%;
+    /* width: 25%; */
     padding: 0 1rem 2rem;
     background: #fff;
     border-radius: 4px;
