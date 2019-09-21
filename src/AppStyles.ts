@@ -2,9 +2,14 @@ import { createGlobalStyle } from 'styled-components'
 
 /**
  * @see https://fonts.google.com/specimen/Roboto?selection.family=Roboto:400,700
+ *
+ * @todo can update variable names as needed
  */
 export const AppStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900,900i&display=swap');
+
   :root {
+    --color-blue: #23c0ff;
     --color-orange: #ff5722;
   }
 
