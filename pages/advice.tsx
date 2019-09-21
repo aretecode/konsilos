@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { StyledCardListGrid } from '../src/components/CardListGrid'
-import { DEFAULT_ADVICE_LIST } from '../src/constants'
-import Add from './add'
+import { StyledAdviceList, AddAdvice } from '../src/features/Advice'
 
-export default () => (
-  <>
-    <h1>Advice</h1>
-    <Add />
-    <StyledCardListGrid list={DEFAULT_ADVICE_LIST} />
-  </>
-)
+export default () => {
+  return (
+    <>
+      <h1>Advice</h1>
+      <AddAdvice />
+      <StyledAdviceList />
+    </>
+  )
+}

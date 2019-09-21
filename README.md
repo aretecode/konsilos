@@ -15,6 +15,7 @@
     - `/components` react components. each component _SHOULD_ have:
       - `NAME.test.tsx` jest tests
       - `NAME.story.tsx`
+    - `/features` react components same as ^, but with domain knowledge
     - `/graphql` graphql specific code (_apollo, queries, mutations_)
     - `/utils` utils that can be moved to separate packages
     - `AppStyles` styled components global styles
@@ -49,11 +50,19 @@
   - [dangerjs](https://github.com/danger/danger/blob/master/Dangerfile)
   - [editorconfig](https://editorconfig.org)
 
+
+## Deployment
+- https://konsilos.now.sh
+- triggered on **PR**s
+- **env** configured using [`now secrets add KEY VALUE`](https://zeit.co/docs/v2/environment-variables-and-secrets)
+
+
 ## Auth0
 - `GET /user`
 - `GET /auth/login`
 - `GET /auth/logout`
 - `GET /auth/callback`
+
 
 
 # todo 
@@ -131,14 +140,21 @@
 - [~] subscribe (_is it needed? because we have login now_)
 
 # 4. advice page
-- [ ] create
+- [x] init
+- [ ] connect with api
+- [ ] state management
+- [ ] tests
+
 
 # 5. forms
-- [ ] use a library or add minimal implementation
+- [ ] tests
+- [x] use a library or add minimal implementation (_went for minimal version that is easy to change_)
 - [ ] add family 
+  - [x] init
   - [ ] styled
   - [ ] other todos #!
 - [ ] add advice
+  - [x] init
   - [ ] styled
   - [ ] other advice #!
 
@@ -148,7 +164,7 @@
   - [ ] dropdown functionality (_or any better UI_)
   - [ ] state handling (_store in idb_)
 - [ ] add tests
-- [ ] add lib
+- [x] add lib
 - [ ] translations
   - [ ] pt 
   - [ ] en 

@@ -189,7 +189,7 @@ export interface AdviceItemType {
   uid: string | number
 
   /**
-   * @todo need to use this for dynamic data in `CardListGrid`
+   * @todo need to use this for dynamic data in `AdviceList`
    */
   familyMemberId: string | number
 
