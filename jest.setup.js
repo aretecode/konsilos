@@ -1,7 +1,5 @@
-require('./env')
 require('intersection-observer')
 require('raf').polyfill(global)
-require('@testing-library/react/cleanup-after-each')
 require('jest-styled-components')
 
 /**
