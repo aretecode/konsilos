@@ -3,12 +3,14 @@
 1. use [vscode](https://code.visualstudio.com/) (_for the best experience_)
 1. use **nodejs** `12.10.0` (_or **latest**_) 
 2. `npm i` or `yarn` (_install dependencies_)
-3. run app or storybook
+3. (if you do not have already) `npm i -g typescript jest prettier`
+4. run app or storybook
   - `yarn dev` (_app_)
   - `yarn dev:storybook` (_storybook_)
 
 # folder structure
   - `/pages` contains pages, and the nextjs specific `_app` & `_document`
+  - `/server` nextjs server using expressjs, added so we can handle route for auth0/user-signin
   - `/src` all non `page` code
     - `/components` react components. each component _SHOULD_ have:
       - `NAME.test.tsx` jest tests
