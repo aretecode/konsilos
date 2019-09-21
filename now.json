@@ -41,7 +41,7 @@
     },
     {
       "src": "/favicon.ico",
-      "dest": "https://___YOUR__FAVICON___",
+      "dest": "https://konsilos.com/favicon.ico",
       "headers": {
         "cache-control": "max-age=43200, s-maxage=86400"
       }
