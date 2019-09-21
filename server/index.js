@@ -29,7 +29,7 @@ function setupWithAuth() {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
       callbackURL:
-        process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/callback',
+        process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/auth/callback',
     },
     (accessToken, refreshToken, extraParams, profile, done) => {
       return done(null, profile)
