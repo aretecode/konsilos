@@ -12,7 +12,6 @@ const StyledListSection = styled.section`
     flex-wrap: wrap;
 
     li {
-      list-style: none;
       width: 100px;
     }
   }
