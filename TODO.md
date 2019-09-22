@@ -16,7 +16,6 @@
 ## 1. cleanup
 - [ ] move static data out of `welcome` page
 - [ ] component code right now is structured in the way that is easiest to read & change (_single files_), properly separate if our end requirement ends up following such a standard
-- [ ] put MD todos into github issues & project plan & assign
 - [ ] move libs out to keep codebase minimal
 - [ ] `{ "src": ".storybook/config.ts", "use": "now-static-build-storybook" }` add back to `now.json` builds
 
@@ -65,7 +64,7 @@
   - [ ] `/giveAdvice`
   - [ ] `/updateAdvice` (_lock icon_)
 - [ ] user
-  - [x] auth0 connection
+  - [x] auth0 connection (_this turned out to be more time consuming than anticipated, had to deploy as a separate software-as-a-service app with express configured to respect the proxy & now routing respecting it, client secrets, whitelisted domain configuring, etc_)
   - [ ] signin
   - [ ] signout
 - [ ] family
@@ -128,3 +127,17 @@
 - [ ] basic SEO (_`modern-stack-portfolio`_)
   - [ ] manifest.json
   - [ ] sitemap.xml
+
+# 9. future features
+- [ ] put MD todos into github issues & project plan & assign
+- [ ] move to org
+- [ ] slack/discord
+- [ ] knock out project plan
+- [ ] advice v2 
+  - [ ] edit
+- [ ] family members
+  - [ ] associate family members with users so they can get the notifications
+  - [ ] update data model for ^ (_e-mail, user id_)
+- [ ] notifications
+  - [ ] setup data model for notifications
+  - [ ] integrate client side notifications (_html5_)
