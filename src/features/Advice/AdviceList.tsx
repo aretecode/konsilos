@@ -3,7 +3,7 @@
  */
 import * as React from 'react'
 import styled from 'styled-components'
-import { AdviceItemType } from '../../typings'
+import { AdviceItemType, AdviceType } from '../../typings'
 import { StyledMaterialIcon } from '../../components/MaterialIcons'
 import { KonsilosContext } from '../KonsilosContext'
 import { UserAvatar } from '../../components/Avatar'
@@ -75,14 +75,10 @@ const StyledAdviceListSection = styled.section`
   }
 `
 
-/**
- * @todo swap this with dynamic data
- * @see /typings.ts
- */
-const CardTagType = (props: { type: 'life' }) => {
+const CardTagType = (props: { type: AdviceType }) => {
   return (
     <img
-      src="https://konsilos.com/img/landing/tag-card-life.png"
+      src={`https://pencamcc.sirv.com/Images/tags/tag-${props.type}.png?format=webp`}
       width="88"
       height="132"
       alt="About Life"

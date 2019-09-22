@@ -17,7 +17,7 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   {
     uid: 2,
     familyMemberId: -2,
-    type: 'life',
+    type: 'advice',
     title: 'Have an Experience',
     text: 'Turning 40 years',
     description: 'Dear daughter, silence can be a great friend. Try...',
@@ -26,7 +26,7 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   {
     uid: 3,
     familyMemberId: -3,
-    type: 'life',
+    type: 'movie',
     title: 'Rocky Balboa',
     text: 'When life gets hard',
     description: ' Son, nobody will hit you as hard as life. But...',
@@ -35,7 +35,7 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   {
     uid: 4,
     familyMemberId: -4,
-    type: 'life',
+    type: 'book',
     title: 'The Little Prince',
     text: 'Turning 9 years',
     description: 'I must read this book with Daniel and teach...',
@@ -44,7 +44,7 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   {
     uid: 5,
     familyMemberId: -5,
-    type: 'life',
+    type: 'travel',
     title: 'Steve Jobs',
     text: 'Never give up',
     description: 'Sometimes, life hits you in the head with a brick...',
@@ -53,7 +53,7 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   {
     uid: 6,
     familyMemberId: -1,
-    type: 'life',
+    type: 'book',
     title: 'Tim Ferriss',
     text: 'Conquor fear',
     description:
@@ -74,7 +74,7 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   {
     uid: 8,
     familyMemberId: -3,
-    type: 'life',
+    type: 'movie',
     title: 'Rocky Balboa',
     text: 'When life gets hard',
     description: ' Son, nobody will hit you as hard as life. But...',
@@ -131,36 +131,6 @@ export const DEFAULT_USER: UserWithFamilyAndAdviceType = {
   picture:
     'https://s.gravatar.com/avatar/a3c1eb95d1396a1b878752e9cdd9613a?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fmi.png',
   nickname: 'testy.jones',
-  adviceList: [
-    {
-      uid: 2,
-      familyMemberId: -2,
-      title: 'Have an Experience',
-      text: 'Turning 40 years',
-      description: 'Dear daughter, silence can be a great friend. Try...',
-      happenedOn: '27/09/2016',
-    },
-    {
-      uid: 3,
-      familyMemberId: -3,
-      title: 'Rocky Balboa',
-      text: 'When life gets hard',
-      description: ' Son, nobody will hit you as hard as life. But...',
-      happenedOn: '01/08/2015',
-    },
-  ],
-  familyList: [
-    {
-      uid: -2,
-      dateOfBirth: '01/01/1990',
-      imageUrl: 'https://konsilos.com/img/landing/card-example-daniel.png',
-      name: 'Daniel',
-    },
-    {
-      uid: -3,
-      dateOfBirth: '01/01/1990',
-      imageUrl: 'https://konsilos.com/img/landing/small3.png',
-      name: 'Charles',
-    },
-  ],
+  adviceList: DEFAULT_ADVICE_LIST,
+  familyList: DEFAULT_FAMILY_MEMBER_LIST,
 }
