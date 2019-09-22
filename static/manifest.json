@@ -1,0 +1,27 @@
+{
+  "name": "Konsilos",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "short_name": "Konsilos",
+  "description": "Eternize advice to your children",
+  "background_color": "#ffffff",
+  "theme_color": "#6200ee",
+  "icons": [
+    {
+      "src": "https://pencamcc.sirv.com/Images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://pencamcc.sirv.com/Images/favicon/android-chrome-192x192.png?w=128&h=128",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://pencamcc.sirv.com/Images/favicon/android-chrome-192x192.png?w=96&h=96",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}

@@ -141,3 +141,4 @@
 - [ ] notifications
   - [ ] setup data model for notifications
   - [ ] integrate client side notifications (_html5_)
+- [ ] responsive image using sirv (_if not using picture_) `<script src="https://scripts.sirv.com/sirv.js"></script>`

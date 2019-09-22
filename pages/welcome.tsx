@@ -18,7 +18,7 @@ const StyledMain = styled.main`
 `
 
 const StyledLeaderboard = styled.section`
-  background: url('https://konsilos.com/img/landing/main_bg.jpg');
+  background: url('https://pencamcc.sirv.com/Images/home/konsilos-background.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -364,7 +364,7 @@ export default () => {
         </StyledArticle>
         <>
           <StyledColouredFeatureSection position={0}>
-            <img src="https://konsilos.com/img/landing/man_img.jpg" />
+            <img src="https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp" />
             <StyledColouredFeaturePanel>
               <header>
                 Free,
@@ -390,7 +390,7 @@ export default () => {
                 to download your advices and leave the system at any time.
               </p>
             </StyledColouredFeaturePanel>
-            <img src="https://konsilos.com/img/landing/child_img.jpg" />
+            <img src="https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp" />
           </StyledColouredFeatureSection>
         </>
       </StyledMain>

@@ -48,31 +48,31 @@ export const DEFAULT_FAMILY_MEMBER_LIST: FamilyMemberItemType[] = [
   {
     uid: -1,
     dateOfBirth: '01/01/1990',
-    imageUrl: 'https://konsilos.com/img/landing/small1.png',
+    imageUrl: 'https://pencamcc.sirv.com/Images/people/laura.png?format=webp',
     name: 'Laura',
   },
   {
     uid: -2,
     dateOfBirth: '01/01/1990',
-    imageUrl: 'https://konsilos.com/img/landing/card-example-daniel.png',
+    imageUrl: 'https://pencamcc.sirv.com/Images/people/daniel.png?format=webp',
     name: 'Daniel',
   },
   {
     uid: -3,
     dateOfBirth: '01/01/1990',
-    imageUrl: 'https://konsilos.com/img/landing/small3.png',
+    imageUrl: 'https://pencamcc.sirv.com/Images/people/charles.png?format=webp',
     name: 'Charles',
   },
   {
     uid: -4,
     dateOfBirth: '01/01/1990',
-    imageUrl: 'https://konsilos.com/img/landing/small4.png',
+    imageUrl: 'https://pencamcc.sirv.com/Images/people/meghan.png?format=webp',
     name: 'Meghan',
   },
   {
     uid: -5,
     dateOfBirth: '01/01/1990',
-    imageUrl: 'https://konsilos.com/img/landing/small5.png',
+    imageUrl: 'https://pencamcc.sirv.com/Images/people/barbara.png?format=webp',
     name: 'Barbara',
   },
 ]
