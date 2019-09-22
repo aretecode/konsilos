@@ -306,6 +306,9 @@ const StyledColouredFeaturePanel = styled.div`
 
 const StyledColouredFeatureImagePanel = styled.div`
   width: 50%;
+  background-image: url("https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (max-width: 1023px) {
     width: 30%;
@@ -313,10 +316,14 @@ const StyledColouredFeatureImagePanel = styled.div`
 
   @media (max-width: 767px) {
     width: 100%;
+    height: 380px;
   }
 `
 
 const StyledColouredFeatureImagePanel2 = styled(StyledColouredFeatureImagePanel)` 
+background-image: url("https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp");
+background-position: center;
+
   @media (max-width: 767px) {
     order: -1;
   }
@@ -530,9 +537,7 @@ export default () => {
         </StyledArticle>
         <>
           <StyledColouredFeatureSection position={0}>
-            <StyledColouredFeatureImagePanel>
-              <img src="https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp" />
-            </StyledColouredFeatureImagePanel>
+            <StyledColouredFeatureImagePanel />
             <StyledColouredFeaturePanel>
               <header>
                 Free,
@@ -558,9 +563,7 @@ export default () => {
                 to download your advices and leave the system at any time.
               </p>
             </StyledColouredFeaturePanel>
-            <StyledColouredFeatureImagePanel2>
-              <img src="https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp" />
-            </StyledColouredFeatureImagePanel2>
+            <StyledColouredFeatureImagePanel2 />
           </StyledColouredFeatureSection>
         </>
       </StyledMain>
