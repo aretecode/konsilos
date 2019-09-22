@@ -122,6 +122,7 @@ const StyledSubscribeButton = styled.button`
   border-radius: 4px;
   font-size: 1rem;
   text-transform: uppercase;
+  color: white;
 `
 const StyledBanner = styled.header.attrs({
   role: 'banner',
@@ -321,12 +322,13 @@ const StyledScribeIcon = styled(StyledMaterialIcon).attrs({
 const StyledCardTextSection = styled.section`
   margin: auto;
   text-align: center;
-  padding: 3rem;
+  padding: 0 3rem;
 
   header {
     font-size: 3rem;
     font-weight: 600;
     text-transform: capitalize;
+    margin-bottom: 2rem;
   }
 
   p {
@@ -336,6 +338,7 @@ const StyledCardTextSection = styled.section`
 
     font-size: 1rem;
     font-weight: 400;
+    margin-top: 1rem;
   }
 `
 const StyledAdviceListWithPromo = styled.article`
@@ -348,10 +351,18 @@ const StyledAdviceListWithPromo = styled.article`
     z-index: 2;
     margin-left: 50%;
     overflow: hidden;
+    background: rgb(236, 239, 241, 0.8);
+
     @media (max-width: 1023px) {
-      background: #eceff1;
       margin-left: 25vw;
+      margin: auto;
+      padding: 3rem 1.2rem 4rem 1.2rem;
+      background: rgb(236, 239, 241, 1);
     }
+  }
+
+  ${StyledSubscribeButton} {
+    margin-top: 2rem;
   }
 
   ${StyledAdviceList} {
@@ -409,7 +420,6 @@ export default () => {
         </StyledLeaderboard>
         <StyledAdviceListWithPromo>
           <StyledAdviceList list={DEFAULT_ADVICE_LIST} />
-
           <StyledCardTextSection>
             <header>Leave your legacy</header>
             <p>
@@ -424,6 +434,9 @@ export default () => {
               We want to help you remember to share them in the right occasion
               or the ideal age, even if you are not there anymore.
             </p>
+            <StyledSubscribeButton type="submit">
+              Subscribe
+            </StyledSubscribeButton>
           </StyledCardTextSection>
         </StyledAdviceListWithPromo>
         <StyledArticle>
