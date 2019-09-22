@@ -3,7 +3,7 @@
  */
 import * as React from 'react'
 import styled from 'styled-components'
-import { AdviceItemType } from '../../typings'
+import { AdviceItemType, AdviceType } from '../../typings'
 import { StyledMaterialIcon } from '../../components/MaterialIcons'
 import { KonsilosContext } from '../KonsilosContext'
 import { UserAvatar } from '../../components/Avatar'
@@ -76,14 +76,16 @@ const StyledAdviceListSection = styled.section`
   }
 `
 
-/**
- * @todo swap this with dynamic data
- * @see /typings.ts
- */
-const CardTagType = (props: { type: 'life' }) => {
+export type CardTagPropType = { type: AdviceType } & Partial<
+  React.DetailedHTMLProps<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  >
+>
+const CardTag = (props: CardTagPropType) => {
   return (
     <img
-      src="https://konsilos.com/img/landing/tag-card-life.png"
+      src={`https://pencamcc.sirv.com/Images/tags/tag-${props.type}.png?format=webp`}
       width="88"
       height="132"
       alt="About Life"
@@ -91,14 +93,14 @@ const CardTagType = (props: { type: 'life' }) => {
   )
 }
 
-const AdviceCard = (props: Partial<AdviceItemType>) => {
-  const { title, text, description, happenedOn, familyMemberId } = props
+const AdviceCard = (props: Omit<AdviceItemType, 'uid'>) => {
+  const { title, text, description, happenedOn, familyMemberId, type } = props
   const { familyList } = React.useContext(KonsilosContext)
   const familyMember = familyList.find(x => x.uid === familyMemberId)!
 
   return (
     <>
-      <CardTagType type="life" />
+      <CardTag type={type} />
       <UserAvatar {...familyMember} />
       <h2>{title}</h2>
       <h3>{text}</h3>
@@ -136,7 +138,7 @@ const StyledAdviceList = styled(AdviceList)``
 
 export {
   StyledAdviceListSection,
-  CardTagType,
+  CardTag,
   AdviceCard,
   AdviceList,
   StyledAdviceList,

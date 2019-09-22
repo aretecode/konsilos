@@ -1,17 +1,18 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 import { AddFamily, StyledFamilyList } from '../src/features/Family'
 
 const FamilyPageWrapper = styled.section`
-   h1 {
+  h1 {
     margin: auto;
     font-size: 2rem;
     background: #f27059;
     color: white;
     padding: 2rem;
-   }
+  }
 
-   form {
+  form {
     width: 50%;
     max-width: 500px;
     padding: 0rem;
@@ -26,7 +27,7 @@ const FamilyPageWrapper = styled.section`
 `
 
 const FormWrapper = styled.div`
-  background-image: url("https://konsilos.com/img/landing/man_img.jpg");
+  background-image: url('https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -38,9 +39,10 @@ const FormWrapper = styled.div`
 `
 
 export default () => {
+  const { t } = useTranslation()
   return (
     <FamilyPageWrapper>
-      <h1>Family</h1>
+      <h1>{t('page_title__family')}</h1>
       <FormWrapper>
         <AddFamily />
       </FormWrapper>

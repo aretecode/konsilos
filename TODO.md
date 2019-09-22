@@ -1,5 +1,5 @@
 
-## todo 
+## todo
 
 > note that these are ordered numerically, but they may be completed in a different order
 
@@ -22,38 +22,39 @@
 ## 2. homepage sections
 - [x] initial rough outline of page
   - [x] leaderboard
-  - [x] grid 
+  - [x] grid
   - [x] legacy
   - [x] coloured features with images
   - [x] devices section
 - [x] devices as a component (css or svg)
-- [ ] subscribe 
+- [ ] subscribe
   - [x] initial ui
   - [ ] polished & responsive
   - [ ] submit event handling on signup form
 - [ ] svg icons
   - [x] `MaterialIcon` component (_from `modern-web-stack-portolio`_)
   - [x] write list of them here
-  - [ ] scribe icon (_feather - same as logo_)
-  - [x] lock 
+  - [x] scribe icon (_feather - same as logo_)
+  - [x] lock
   - [x] unlock
   - [x] notification/bell
   - [x] timer
   - [x] facebook
   - [x] github
   - [x] twitter
-  - [x] close 
-  - [x] video 
+  - [x] close
+  - [x] video
   - [x] chat/message
   - [x] plane/bag/trip/travel
   - [x] clock
+  - [ ] **type** (_life, travel, the badge/flag_)
 - [ ] finish styles
   - [ ] color & size of icons
   - [ ] aligning devices
   - [ ] rotate grid of example advice
 - [x] move `@import` out of `AppStyles.ts`
 - [ ] add content to devices
-- [ ] put images on sirv 
+- [x] put images on sirv
 - [ ] update css background & `img src` links to use sirv images
 - [ ] use responsive `Picture` from `modern-web-stack-portfolio` (_a fork of react-starter_)
 
@@ -82,7 +83,7 @@
 # 5. forms
 - [ ] tests
 - [x] use a library or add minimal implementation (_went for minimal version that is easy to change_)
-- [ ] add family 
+- [ ] add family
   - [x] init
   - [ ] styled
   - [ ] other todos #!
@@ -99,9 +100,8 @@
 - [ ] add tests
 - [x] add lib
 - [ ] translations
-  - [ ] pt 
-  - [ ] en 
-  - [ ] hindi
+  - [ ] pt
+  - [ ] en
 - [ ] ada compliance
 - [ ] speedtest passing with flying colours
 
@@ -120,7 +120,8 @@
   - [konsilos meteor](https://github.com/konsilos/konsilos)
   - [react starter](https://github.com/aretecode/react-starter)
   - [svg optimizer](https://jakearchibald.github.io/svgomg/)
-  - [devices.css](https://github.com/marvelapp/devices.css)
+  - [devices.css 0.1.6](https://github.com/picturepan2/)
+  - [svg flags](https://www.sketchappsources.com/free-source/2101-all-coutry-flags-kit-sketch-freebie-resource.html)
 - [ ] about page
 - [ ] browser support notice for older non evergreen browsers
 - [ ] dark mode
@@ -133,7 +134,7 @@
 - [ ] move to org
 - [ ] slack/discord
 - [ ] knock out project plan
-- [ ] advice v2 
+- [ ] advice v2
   - [ ] edit
 - [ ] family members
   - [ ] associate family members with users so they can get the notifications

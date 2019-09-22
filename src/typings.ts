@@ -173,6 +173,8 @@ export type GraphqlProps<
  * === data ===
  */
 
+export type AdviceType = 'life' | 'book' | 'movie' | 'travel' | 'advice'
+
 export interface AdviceItemType {
   title: string
   text: string
@@ -181,7 +183,7 @@ export interface AdviceItemType {
   /**
    * probably should be an enum
    */
-  type?: string
+  type: AdviceType
 
   /**
    * advice universally unique id
@@ -210,6 +212,7 @@ export interface FamilyMemberItemType {
   name: string
   dateOfBirth: string | number
   imageUrl: string
+  email: string
 }
 
 /**

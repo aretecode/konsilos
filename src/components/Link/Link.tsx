@@ -17,13 +17,13 @@ export type LinkProps = React.HTMLAttributes<HTMLAnchorElement> & {
 export const StyledHref = styled.a``
 
 export class DynamicLink extends React.PureComponent<
-  LinkProps & { theme?: any }
+  LinkProps & { theme?: any; isNotInternal?: boolean }
 > {
   render() {
-    const { to, href, theme, ...remainingProps } = this.props
+    const { to, href, isNotInternal, theme, ...remainingProps } = this.props
     const toHref = (to || href || '') as string
 
-    if (toHref.includes('http')) {
+    if (toHref.includes('http') || isNotInternal === true) {
       return <a {...remainingProps} href={toHref} />
     } else {
       const { children, ...remaining } = remainingProps

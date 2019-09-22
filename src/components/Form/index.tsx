@@ -11,7 +11,7 @@ export type StyledInputPropType = { isValid?: boolean; isActive?: boolean }
 export const StyledInput = styled.input`
   font-size: 1.3rem;
   padding: 2rem 1rem 0.5rem 1rem;
-  background: white;
+  background: #fff;
   display: block;
   border: none;
   width: 100%;
@@ -33,7 +33,7 @@ export const StyledInput = styled.input`
 const StyledTextarea = styled.textarea`
   font-size: 1.3rem;
   padding: 2rem 1rem 0.5rem 1rem;
-  background: white;
+  background: #fff;
   display: block;
   border: none;
   width: 100%;
