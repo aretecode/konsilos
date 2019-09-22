@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 export const BrazilFlag = (props: Partial<React.SVGProps<SVGSVGElement>>) => (
-  <svg width="28" height="20" {...props}>
+  <svg viewBox="0 0 28 20" {...props}>
     <defs>
       <rect id="a" width="28" height="20" rx="2" />
       <circle id="c" cx="4.67" cy="4.67" r="4.67" />

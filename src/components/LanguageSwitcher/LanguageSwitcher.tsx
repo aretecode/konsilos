@@ -9,7 +9,7 @@
 import * as React from 'react'
 import styled, { css } from 'styled-components'
 import { useTranslation } from 'react-i18next'
-import { Flag, SupportedFlagNameType } from './flags/Flag'
+import { StyledFlag, SupportedFlagNameType } from './flags/Flag'
 
 const StyledLanguageSwitcherArea = styled.div`
   position: absolute;
@@ -28,6 +28,13 @@ const StyledLanguageSwitcherArea = styled.div`
 const LanguageSwitcherWrap = styled.aside`
   position: relative;
   z-index: 1;
+  margin-left: 0.5rem;
+
+  > button {
+    display: block;
+    width: 56px;
+    height: 40px;
+  }
 `
 
 const LANGUAGE_LIST = Object.freeze(['brazil', 'canada'])
@@ -51,7 +58,7 @@ const LanguageSwitcher = () => {
     }
     return (
       <i onClick={handleSelectLanguage} key={name}>
-        <Flag flag={name} />
+        <StyledFlag flag={name} />
       </i>
     )
   }
@@ -62,7 +69,7 @@ const LanguageSwitcher = () => {
     <>
       <LanguageSwitcherWrap aria-expanded={isVisible}>
         <button key="languageButton" onClick={() => setIsVisible(!isVisible)}>
-          <Flag flag={activeFlag} />
+          <StyledFlag flag={activeFlag} />
         </button>
 
         <StyledLanguageSwitcherArea
