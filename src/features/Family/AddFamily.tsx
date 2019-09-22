@@ -9,6 +9,11 @@ export const familyInputConfigList: InputConfigType[] = [
     isRequired: true,
   },
   {
+    propertyName: 'email',
+    label: 'email',
+    type: 'email',
+  },
+  {
     propertyName: 'birthday',
     label: 'date of birth',
     type: 'date',
