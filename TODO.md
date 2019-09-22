@@ -120,7 +120,7 @@
   - [konsilos meteor](https://github.com/konsilos/konsilos)
   - [react starter](https://github.com/aretecode/react-starter)
   - [svg optimizer](https://jakearchibald.github.io/svgomg/)
-  - [devices.css](https://github.com/marvelapp/devices.css)
+  - [devices.css 0.1.6](https://github.com/picturepan2/)
   - [svg flags](https://www.sketchappsources.com/free-source/2101-all-coutry-flags-kit-sketch-freebie-resource.html)
 - [ ] about page
 - [ ] browser support notice for older non evergreen browsers
