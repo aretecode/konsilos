@@ -21,7 +21,7 @@ const StyledLeaderboard = styled.section`
   background: url('https://pencamcc.sirv.com/Images/home/konsilos-background.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 60% center;
 
   color: #fff;
   min-height: 100vh;
