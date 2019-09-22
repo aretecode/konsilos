@@ -23,7 +23,9 @@ describe('LanguageSwitcher', () => {
 
     // get our button that opens the dialog, and the options inside of it
     const triggerButton = container.querySelector('button')!
-    const options = container.querySelectorAll('i')!
+
+    // @todo query from this
+    // const options = container.querySelectorAll('i')!
 
     // by default, canada is selected
     const svgTitle = triggerButton.querySelector('title')!
