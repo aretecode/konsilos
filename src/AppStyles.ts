@@ -11,6 +11,7 @@ export const AppStyles = createGlobalStyle`
     --color-blue-dark: #20ade6;
     --color-orange: #f27059;
     --color-orange-dark: #da6550;
+    --color-link: #000;
   }
 
   /* latin-ext */
@@ -88,6 +89,9 @@ export const AppStyles = createGlobalStyle`
     user-select: none;
     justify-content: center;
     align-items: center;
+  }
+  li {
+    list-style: none;
   }
 `
 
