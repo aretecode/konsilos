@@ -293,7 +293,7 @@ const StyledColouredFeaturePanel = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
-  padding: 3rem;
+  padding: 3rem 5rem;
 
   @media (max-width: 1023px) {
     width: 70%;
@@ -301,6 +301,7 @@ const StyledColouredFeaturePanel = styled.div`
 
   @media (max-width: 767px) {
     width: 100%;
+    padding: 3rem;
   }
 `
 
