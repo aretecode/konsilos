@@ -18,6 +18,10 @@ app.prepare().then(() => {
   const server = express()
 
   server
+    /**
+   * @see https://github.com/auth0/passport-auth0/issues/70
+   */
+    .set('trust proxy', 1)
     .use(session(sessionConfig))
     .use(passport.initialize())
     .use(passport.session())
@@ -34,9 +38,7 @@ app.prepare().then(() => {
       console.log(`> Ready on http://localhost:${port}`)
     })
 
-  /**
-   * @see https://github.com/auth0/passport-auth0/issues/70
-   */
-  app.set('trust proxy', 1)
-  server.set('trust proxy', 1)
+  
+  // app.set('trust proxy', 1)
+  // server.
 })
