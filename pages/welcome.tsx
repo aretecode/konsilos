@@ -132,22 +132,26 @@ const StyledArticleFeatureSection = styled.section`
   height: 540px;
   max-width: calc(100% - 15%);
   margin: auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    height: 100vh;
+  }
 
   > .text {
     width: 50%;
   }
 
   ${StyledDevice} {
-    transform: scale(0.5);
-    transform-origin: 0% 50%;
-    position: absolute;
-    top: 0;
     margin: auto;
-    bottom: 0;
+    transform: scale(0.3);
+    transform-origin: 0% 50%;
+    @media (max-width: 1023px) {
+      transform-origin: 0% 0%;
+    }
   }
 
   header {
@@ -162,19 +166,31 @@ const StyledArticleFeatureSection = styled.section`
 `
 
 const StyledMacbookPanel = styled.div`
-  width: 50%;
   height: 100%;
+  width: 50%;
   padding: 0 3rem;
+  @media (max-width: 1023px) {
+    height: unset;
+    padding: 0;
+  }
 `
 
 const StyledIpadPanel = styled.div`
   width: 50%;
-  height: 100%;
+  @media (max-width: 1023px) {
+    padding: 0;
+  }
 `
 
 const StyledArticleFeatureMacbookSection = styled(StyledArticleFeatureSection)``
 
 const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
+  > .text {
+    @media (max-width: 1023px) {
+      order: -1;
+    }
+  }
+
   ${StyledMaterialIcon} {
     width: 100px;
     height: 100px;
