@@ -19,7 +19,8 @@ export const Flag = (props: FlagPropType) => {
   return <CanadaFlag {...rest} />
 }
 
+// (28x20) each * 2
 export const StyledFlag = styled(Flag)`
-  width: 28px;
-  height: 20px;
+  width: 56px;
+  height: 40px;
 `
