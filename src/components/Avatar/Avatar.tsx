@@ -19,16 +19,19 @@ const UserAvatarWrap = styled.section`
   }
 `
 
-const UserAvatar = (props: { name: string; imageUrl: string }) => (
-  <UserAvatarWrap>
-    <img
-      src={props.imageUrl}
-      width="61"
-      height="61"
-      alt={`${props.name} avatar`}
-    />
-    <h5>{props.name}</h5>
-  </UserAvatarWrap>
-)
+export type UserAvatarPropType = {
+  name: string
+  imageUrl: string
+} & React.ComponentProps<typeof UserAvatarWrap>
+
+const UserAvatar = (props: UserAvatarPropType) => {
+  const { name, imageUrl, ...rest } = props
+  return (
+    <UserAvatarWrap {...rest}>
+      <img src={imageUrl} width="61" height="61" alt={`${name} avatar`} />
+      <h5>{name}</h5>
+    </UserAvatarWrap>
+  )
+}
 
 export { UserAvatarWrap, UserAvatar }
