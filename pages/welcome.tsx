@@ -126,7 +126,7 @@ const StyledSubscribeButton = styled.button`
 const StyledBanner = styled.header.attrs({
   role: 'banner',
 })`
-  padding: 2rem 1rem 0 1rem;
+  padding: 2rem 0rem 0 0rem;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -151,7 +151,14 @@ const StyledBanner = styled.header.attrs({
 const StyledLogo = styled(Logo)`
   width: 163px;
   height: 102px;
-  fill: #fff;
+  fill: #ffffff;
+  position: relative;
+  left: -30px;
+
+  @media (max-width: 480px) {
+    width: 80px;
+    left: 0px;
+  }
 `
 
 const StyledTimeCapsuleAction = styled.a`
