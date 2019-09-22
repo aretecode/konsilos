@@ -123,6 +123,7 @@ const StyledSubscribeButton = styled.button`
   font-size: 1rem;
   text-transform: uppercase;
   color: white;
+  min-width: 200px;
 `
 const StyledBanner = styled.header.attrs({
   role: 'banner',
@@ -251,12 +252,12 @@ const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
 `
 
 const StyledArticleOverview = styled.section`
-  /* padding: 0 5rem 5rem 5rem; */
   max-width: calc(100% - 15%);
   margin: auto;
+  padding-bottom: 3rem;
 
   header {
-    padding: 3rem 0 2rem 0;
+    padding: 4rem 0 2rem 0;
     font-size: 3rem;
     line-height: 48px;
     color: var(--color-blue);
@@ -269,6 +270,10 @@ const StyledArticleOverview = styled.section`
     font-size: 1rem;
     font-weight: 400;
     color: grey;
+  }
+
+  @media (max-width: 480px) {
+    max-width: calc(100% - 12%);
   }
 `
 const StyledArticle = styled.article`
@@ -322,7 +327,7 @@ const StyledScribeIcon = styled(StyledMaterialIcon).attrs({
 const StyledCardTextSection = styled.section`
   margin: auto;
   text-align: center;
-  padding: 0 3rem;
+  padding: 0 5.3rem 0 3rem;
 
   header {
     font-size: 3rem;
@@ -333,7 +338,7 @@ const StyledCardTextSection = styled.section`
 
   p {
     margin: auto;
-    max-width: calc(100% - 15%);
+    /* max-width: calc(100% - 15%); */
     text-align: center;
 
     font-size: 1rem;
@@ -356,7 +361,7 @@ const StyledAdviceListWithPromo = styled.article`
     @media (max-width: 1023px) {
       margin-left: 25vw;
       margin: auto;
-      padding: 3rem 1.2rem 4rem 1.2rem;
+      padding: 3rem 2rem;
       background: rgb(236, 239, 241, 1);
     }
   }
