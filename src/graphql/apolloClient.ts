@@ -52,9 +52,9 @@ export function createInstance(
         return process.env.READONLY !== 'true' && isObj(url) && url.searchParams.has('graphql')
           ? url.searchParams.get('graphql')!
           : process.env.NODE_ENV === 'development'
-          ? `http://localhost:4000/graphql?n=${operation.operationName}`
+          ? `http://localhost:3000/api/graphql?n=${operation.operationName}`
           : process.browser
-          ? '/graphql'
+          ? '/api/graphql'
           : process.env.GRAPHQL_API_URL
       },
 
@@ -68,12 +68,12 @@ export function createInstance(
   })
 
   const logError = (error: GraphQLError): void => {
-    const {message, locations, path} = error
+    const { message, locations, path } = error
     console.error(`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`)
   }
 
   const errorLink = onError(namedErrorResponseParams => {
-    const {graphQLErrors, networkError, response} = namedErrorResponseParams
+    const { graphQLErrors, networkError, response } = namedErrorResponseParams
     const hasError = isObj(graphQLErrors) || !isEmpty(networkError)
 
     if (isObj(graphQLErrors)) {
@@ -96,9 +96,9 @@ export function createInstance(
     console.info(`starting request for ${operation.operationName}`)
 
     if (forward !== undefined) {
-      return forward(operation).map(data => {
+      return forward(operation).map(datum => {
         console.info(`ending request for ${operation.operationName}`)
-        return data
+        return datum
       })
     } else {
       // tslint:disable:no-null-keyword
@@ -132,16 +132,16 @@ export function createInstance(
   return client
 }
 
-export function initApolloClient(initialState?: NormalizedCacheObject, url?: URL) {
+export function initApolloClient(initState?: NormalizedCacheObject, url?: URL) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (!process.browser) {
-    return createInstance(initialState, url)
+    return createInstance(initState, url)
   }
 
   // Reuse client on the client-side
   if (apolloClientInstance === undefined) {
-    apolloClientInstance = createInstance(initialState, url)
+    apolloClientInstance = createInstance(initState, url)
   }
 
   return apolloClientInstance
