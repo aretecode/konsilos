@@ -10,11 +10,13 @@ export type StyledInputPropType = { isValid?: boolean; isActive?: boolean }
 
 export const StyledInput = styled.input`
   font-size: 1.3rem;
-  padding: 0.75rem 0.75rem 0.75rem 0.5rem;
-  background: #cfd8dc;
+  padding: 2rem 1rem 0.5rem 1rem;
+  background: white;
   display: block;
   border: none;
-  border-bottom: 1px solid #757575;
+  width: 100%;
+  border-bottom: 1px solid #d2d2d2;
+  border-radius: 5px;
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) border-bottom-color;
   outline: ${props => (props.isActive ? 'none' : 'none')};
   &:hover {
@@ -30,16 +32,20 @@ export const StyledInput = styled.input`
 
 const StyledTextarea = styled.textarea`
   font-size: 1.3rem;
-  padding: 10px 10px 10px 5px;
-  background: #cfd8dc;
+  padding: 2rem 1rem 0.5rem 1rem;
+  background: white;
   display: block;
   border: none;
-  border-bottom: 1px solid #757575;
+  width: 100%;
+  height: 10rem;
+  border-radius: 5px;
+  border-bottom: 1px solid #d2d2d2;
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) border-bottom-color;
   outline: ${props => (props.isActive ? 'none' : 'none')};
   &:hover {
     color: var(--color-blue-dark);
   }
+
   ${(props: StyledInputPropType) =>
     props.isValid === false &&
     css`
@@ -57,7 +63,7 @@ export const StyledLabelText = styled.label`
     0.24s cubic-bezier(0.075, 0.82, 0.165, 1) top;
   position: absolute;
   top: 1rem;
-  left: 0.5rem;
+  left: 1rem;
 
   ${(props: StyledLabelTextPropType) =>
     props.isActive &&
@@ -68,8 +74,8 @@ export const StyledLabelText = styled.label`
   ${props =>
     (props.hasValue || props.isActive) &&
     css`
-      font-size: 0.5rem;
-      top: 0.25rem;
+      font-size: 0.8rem;
+      top: 0.5rem;
     `}
 `
 
@@ -197,6 +203,8 @@ const StyledForm = styled(FormWithContext)`
     background-color: var(--color-blue);
     border: 1px solid var(--color-blue-dark);
     color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
   }
 `
 
