@@ -74,7 +74,7 @@ const StyledSubscripeInput = styled.input.attrs({
 const StyledSubscribeButton = styled.button`
   margin: 0 2rem;
   padding: 1rem 2rem;
-  background: #23c0ff;
+  background: var(--color-blue);
   text-align: center;
   border-radius: 4px;
   font-size: 1rem;
@@ -112,7 +112,7 @@ const StyledLogo = styled(Logo)`
 `
 
 const StyledTimeCapsuleAction = styled.a`
-  background-color: #f27059;
+  background-color: var(--color-orange);
   border-radius: 4px;
   padding: 0.5rem;
   color: #fff;
@@ -179,7 +179,7 @@ const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
   ${StyledMaterialIcon} {
     width: 100px;
     height: 100px;
-    fill: #21c0fd;
+    fill: var(--color-blue);
   }
 `
 
@@ -216,7 +216,9 @@ const StyledColouredFeaturePanel = styled.div`
 
 const StyledColouredFeatureSection = styled.section`
   background-color: ${(props: ColouredFeatureSectionPropType) =>
-    props.position === 1 ? '#20ade6' : '#da6550'};
+    props.position === 1
+      ? 'var(--color-blue-dark)'
+      : 'var(--color-orange-dark)'};
 
   color: #fff;
   display: flex;
@@ -250,23 +252,61 @@ const StyledScribeIcon = styled(StyledMaterialIcon).attrs({
   fill: #21c0fd;
 `
 
-const CardTextSection = styled.section`
+const StyledCardTextSection = styled.section`
   margin: auto;
-  max-width: calc(100% - 15%);
   text-align: center;
-  padding-bottom: 3rem;
+  padding: 3rem;
 
   header {
-    color: #fff;
     font-size: 3rem;
     font-weight: 600;
     text-transform: capitalize;
   }
 
   p {
-    color: #fff;
+    margin: auto;
+    max-width: calc(100% - 15%);
+    text-align: center;
+
     font-size: 1rem;
     font-weight: 400;
+  }
+`
+const StyledAdviceListWithPromo = styled.article`
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 75vh;
+
+  ${StyledCardTextSection} {
+    z-index: 2;
+    margin-left: 50%;
+    overflow: hidden;
+    @media (max-width: 1023px) {
+      background: #eceff1;
+      margin-left: 25vw;
+    }
+  }
+
+  ${StyledAdviceList} {
+    transform: rotate(30deg) translateX(-39%) translateY(8%) scale(0.8);
+    transform: rotate(30deg) translateX(-27%) translateY(7%);
+    position: absolute;
+    top: 0;
+    left: -20%;
+    z-index: 0;
+
+    ul {
+      flex-wrap: nowrap;
+      flex-flow: wrap;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 0.5rem 0.5rem;
+      > li {
+        max-width: 250px;
+        margin: 0;
+      }
+    }
   }
 `
 
@@ -301,22 +341,25 @@ export default () => {
             </form>
           </StyledLeaderboardPanel>
         </StyledLeaderboard>
-        <StyledAdviceList list={DEFAULT_ADVICE_LIST} />
-        <CardTextSection>
-          <header>Leave your legacy</header>
-          <p>
-            Think about advices, books, movies, experiences and everything else
-            that helped you become a better and more prepared person. Now
-            imagine being able to transform them in powerful and inspiring
-            advices to your children too! We want to help you remember to share
-            them in the right occasion or the ideal age, even if you are not
-            there anymore.
-          </p>
-          <p>
-            We want to help you remember to share them in the right occasion or
-            the ideal age, even if you are not there anymore.
-          </p>
-        </CardTextSection>
+        <StyledAdviceListWithPromo>
+          <StyledAdviceList list={DEFAULT_ADVICE_LIST} />
+
+          <StyledCardTextSection>
+            <header>Leave your legacy</header>
+            <p>
+              Think about advices, books, movies, experiences and everything
+              else that helped you become a better and more prepared person. Now
+              imagine being able to transform them in powerful and inspiring
+              advices to your children too! We want to help you remember to
+              share them in the right occasion or the ideal age, even if you are
+              not there anymore.
+            </p>
+            <p>
+              We want to help you remember to share them in the right occasion
+              or the ideal age, even if you are not there anymore.
+            </p>
+          </StyledCardTextSection>
+        </StyledAdviceListWithPromo>
         <StyledArticle>
           <StyledArticleOverview>
             <header>Simple. Powerful. Konsilos.</header>
