@@ -135,6 +135,7 @@
 		"@babel/plugin-syntax-object-rest-spread": "7.2.0",
 		"@babel/plugin-proposal-decorators": "7.6.0",
 		"@babel/preset-env": "7.6.0",
+		"babel-plugin-require-context-hook": "1.0.0",
 		"jest": "24.9.0",
 		"jest-cli": "24.9.0",
 		"ts-jest": "24.1.0",
