@@ -19,7 +19,7 @@ const UserAvatarWrap = styled.section`
   }
 
   img {
-    border: 3px solid white;
+    border: 3px solid #fff;
     border-radius: 50%;
   }
 

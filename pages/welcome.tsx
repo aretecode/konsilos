@@ -8,7 +8,7 @@ import { StyledAdviceList } from '../src/features/Advice'
 import { StyledDevice } from '../src/components/Device'
 import { StyledMaterialIcon } from '../src/components/MaterialIcons'
 import { LanguageSwitcher } from '../src/components/LanguageSwitcher'
-import { Logo } from '../src/components/Logo'
+import { StyledLogo } from '../src/components/Logo'
 import { ScribeIcon } from '../src/components/Media'
 import { DEFAULT_ADVICE_LIST } from '../src/constants'
 
@@ -114,7 +114,7 @@ const StyledSubscribeAction = styled.a`
   border-radius: 4px;
   font-size: 1rem;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   min-width: 250px;
   text-decoration: none;
 `
@@ -140,19 +140,6 @@ const StyledBanner = styled.header.attrs({
       width: 4rem;
       height: 2rem;
     }
-  }
-`
-
-const StyledLogo = styled(Logo)`
-  width: 163px;
-  height: 102px;
-  fill: #ffffff;
-  position: relative;
-  left: -30px;
-
-  @media (max-width: 480px) {
-    width: 80px;
-    left: 0px;
   }
 `
 

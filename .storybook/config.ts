@@ -7,7 +7,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { AppStyles } from '../src/AppStyles'
 
 const StyledStory = styled.div`
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 `
 
