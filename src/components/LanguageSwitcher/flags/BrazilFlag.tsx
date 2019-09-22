@@ -6,7 +6,7 @@ export const BrazilFlag = (props: Partial<React.SVGProps<SVGSVGElement>>) => (
       <rect id="a" width="28" height="20" rx="2" />
       <circle id="c" cx="4.67" cy="4.67" r="4.67" />
     </defs>
-    <g fill="none" fill-rule="evenodd">
+    <g fill="none" fillRule="evenodd">
       <mask id="b" fill="#fff">
         <use xlinkHref="#a" />
       </mask>
@@ -26,8 +26,8 @@ export const BrazilFlag = (props: Partial<React.SVGProps<SVGSVGElement>>) => (
           <path
             d="M-.67 4c.67-.67 3.08-.35 5.34 0 2.25.35 4.67 1.34 5.33 2"
             stroke="#FFF"
-            stroke-width="1.33"
-            stroke-linecap="square"
+            strokeWidth="1.33"
+            strokeLinecap="square"
             mask="url(#d)"
             transform="rotate(6 4.67 4.8)"
           />

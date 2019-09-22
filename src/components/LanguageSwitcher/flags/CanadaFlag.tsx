@@ -5,14 +5,14 @@ export const CanadaFlag = (props: Partial<React.SVGProps<SVGSVGElement>>) => (
     <defs>
       <rect id="a" width="28" height="20" rx="2" />
     </defs>
-    <g fill="none" fill-rule="evenodd">
+    <g fill="none" fillRule="evenodd">
       <mask id="b" fill="#fff">
         <use xlinkHref="#a" />
       </mask>
       <rect
         fill="#fff"
         stroke="#F5F5F5"
-        stroke-width=".5"
+        strokeWidth=".5"
         x=".25"
         y=".25"
         width="27.5"
