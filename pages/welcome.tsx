@@ -9,7 +9,7 @@ import { StyledDevice } from '../src/components/Device'
 import { StyledMaterialIcon } from '../src/components/MaterialIcons'
 import { LanguageSwitcher } from '../src/components/LanguageSwitcher'
 import { Logo } from '../src/components/Logo'
-import { ScribeIcon } from '../src/components/ScribeIcon'
+import { ScribeIcon } from '../src/components/Media'
 import { DEFAULT_ADVICE_LIST } from '../src/constants'
 
 const StyledMain = styled.main``
