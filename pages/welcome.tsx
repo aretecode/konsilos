@@ -8,6 +8,7 @@ import { StyledAdviceList } from '../src/features/Advice'
 import { StyledDevice } from '../src/components/Device'
 import { StyledMaterialIcon } from '../src/components/MaterialIcons'
 import { LanguageSwitcher } from '../src/components/LanguageSwitcher'
+import { Logo } from '../src/components/Logo'
 import { DEFAULT_ADVICE_LIST } from '../src/constants'
 
 const StyledMain = styled.main`
@@ -22,7 +23,7 @@ const StyledLeaderboard = styled.section`
   background-size: cover;
   background-position: center;
 
-  color: #ffffff;
+  color: #fff;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -104,24 +105,23 @@ const StyledBanner = styled.header.attrs({
   }
 `
 
-const StyledLogo = styled.img.attrs({
-  src: 'https://konsilos.com/img/landing/logo.png',
-  width: '163',
-  height: '102',
-  alt: 'logo',
-})``
+const StyledLogo = styled(Logo)`
+  width: 163px;
+  height: 102px;
+  fill: #fff;
+`
 
 const StyledTimeCapsuleAction = styled.a`
   background-color: #f27059;
   border-radius: 4px;
   padding: 0.5rem;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   ${StyledMaterialIcon} {
-    fill: white;
+    fill: #fff;
     margin-right: 4px;
   }
 `
@@ -204,7 +204,7 @@ const StyledArticleOverview = styled.section`
   }
 `
 const StyledArticle = styled.article`
-  background: #ffffff;
+  background: #fff;
 `
 
 const StyledColouredFeaturePanel = styled.div`
@@ -217,7 +217,7 @@ const StyledColouredFeatureSection = styled.section`
   background-color: ${(props: ColouredFeatureSectionPropType) =>
     props.position === 1 ? '#20ade6' : '#da6550'};
 
-  color: #ffffff;
+  color: #fff;
   display: flex;
 
   img {
@@ -246,14 +246,14 @@ const CardTextSection = styled.section`
   padding-bottom: 3rem;
 
   header {
-    color: white;
+    color: #fff;
     font-size: 3rem;
     font-weight: 600;
     text-transform: capitalize;
   }
 
   p {
-    color: white;
+    color: #fff;
     font-size: 1rem;
     font-weight: 400;
   }
