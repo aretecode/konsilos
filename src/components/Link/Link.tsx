@@ -44,7 +44,6 @@ export class DynamicLink extends React.PureComponent<
 export const StyledLink = styled(DynamicLink)`
   text-decoration: none;
   position: relative;
-  letter-spacing: 0.2em;
 
   color: var(--color-link);
 
