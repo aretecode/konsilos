@@ -187,7 +187,7 @@ const StyledArticleFeatureSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 
   @media (max-width: 1023px) {
     flex-direction: column;
