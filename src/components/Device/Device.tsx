@@ -222,15 +222,43 @@ export const StyledAppleMacbookDevice = styled(BaseDevice)`
   }
 `
 
+const macbookSVG = () => (
+  <svg
+    version="1"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMin meet"
+    viewBox="0 0 694 392"
+  >
+    <g id="Laptop" transform="translate(1.000000, 1.000000)" stroke="#8492A5">
+      <path d="M594,0 L98,0 C84.50415,0 73,11.0738184 73,24.7901127 L73,351.027995 L619,351.027985 L619,24.7901127 C618.999971,11.0728209 607.537479,0 594,0 Z" id="bezel" stroke-width="2" fill="#FEFEFE" />
+      <circle id="webcam" stroke-width="2" cx="347" cy="19" r="4"/>
+      <g id="bottom" transform="translate(0.000000, 351.000000)" >
+          <path d="M640.812,31.01 L51.288,31.01 C20.641,31.01 0,20.494 0,16.022 L0,2.428 C0,1.084 1.335,0 2.995,0 L689.104,0 C690.766,0 692.103,1.084 692.103,2.428 L692.103,16.557 C692.096,20.092 676.112,31.01 640.812,31.01 Z" id="Shape" stroke-width="2" fill="#FDFDFD"/>
+          <path d="M0.5,14.5 L690.242676,14.5" id="Line" stroke-linecap="square"/>
+      </g>
+      <rect id="screen" fill="#FFFFFF" x="95" y="39" width="501.073853" height="292.009"/>
+      <path d="M421,352 L421,355.087 C421,357.288 416.666719,357.952714 413.386719,357.952714 L278.815286,357.952714 C275.364286,357.952714 271,357.289 271,355.087 L271,352" id="touchpad" fill="#FFFFFF" />
+    </g>
+  </svg>
+)
+
 /**
  * @example
  *    <Device type="ipad">eh</Device>
  *    <Device type="macbook">eh</Device>
  */
 export const Device = (props: DevicePropTypes) => {
-  const { type, ...remaining } = props
-  if (type === 'ipad') return <StyledAppleIPadDevice {...remaining} />
-  else return <StyledAppleMacbookDevice {...remaining} />
+  // const { type, ...remaining } = props
+  const { type } = props
+  if (type === 'macbook') {
+    // return <StyledAppleIPadDevice {...remaining} />
+    // return laptopSVG()
+    return macbookSVG()
+  }
+  else {
+    return macbookSVG()
+    // return <StyledAppleMacbookDevice {...remaining} />
+  }
 }
 
 export const StyledDevice = styled(Device)``
