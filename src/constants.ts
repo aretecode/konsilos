@@ -119,3 +119,43 @@ export const DEFAULT_FAMILY_MEMBER_LIST: FamilyMemberItemType[] = [
     name: 'Barbara',
   },
 ]
+
+export const DEFAULT_USER: any = {
+  uid: -1,
+  name: 'Testy Jones',
+  email: 'testy.jones@gmail.com',
+  picture: 'https://s.gravatar.com/avatar/a3c1eb95d1396a1b878752e9cdd9613a?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fmi.png',
+  nickname: 'testy.jones',
+  adviceList: [
+    {
+      uid: 2,
+      familyMemberId: -2,
+      title: 'Have an Experience',
+      text: 'Turning 40 years',
+      description: 'Dear daughter, silence can be a great friend. Try...',
+      happenedOn: '27/09/2016',
+    },
+    {
+      uid: 3,
+      familyMemberId: -3,
+      title: 'Rocky Balboa',
+      text: 'When life gets hard',
+      description: ' Son, nobody will hit you as hard as life. But...',
+      happenedOn: '01/08/2015',
+    },
+  ],
+  familyMembers: [
+    {
+      uid: -2,
+      dateOfBirth: '01/01/1990',
+      imageUrl: 'https://konsilos.com/img/landing/card-example-daniel.png',
+      name: 'Daniel',
+    },
+    {
+      uid: -3,
+      dateOfBirth: '01/01/1990',
+      imageUrl: 'https://konsilos.com/img/landing/small3.png',
+      name: 'Charles',
+    },
+  ],
+}
