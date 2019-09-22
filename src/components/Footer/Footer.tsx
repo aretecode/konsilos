@@ -29,7 +29,6 @@ const StyledFooterNav = styled.nav`
 
   li {
     color: grey;
-    /* padding: 0 1rem; */
   }
 
   a {

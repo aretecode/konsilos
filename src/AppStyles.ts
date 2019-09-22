@@ -66,7 +66,7 @@ export const AppStyles = createGlobalStyle`
   }
   body {
     padding: 0;
-    font-family: "Roboto", "chaparral-pro", "Open Sans", "proxima-nova", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif, serif;
+    font-family: "Lato", "Roboto", "chaparral-pro", "Open Sans", "proxima-nova", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif, serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
