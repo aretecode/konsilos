@@ -52,7 +52,7 @@
   - [ ] color & size of icons
   - [ ] aligning devices
   - [ ] rotate grid of example advice
-- [ ] move `@import` out of `AppStyles.ts`
+- [x] move `@import` out of `AppStyles.ts`
 - [ ] add content to devices
 - [ ] put images on sirv 
 - [ ] update css background & `img src` links to use sirv images
