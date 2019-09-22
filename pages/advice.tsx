@@ -23,8 +23,6 @@ const AdvicePageWrapper = styled.section`
       width: 100%;
     }
   }
-
-  
 `
 
 const FormWrapper = styled.div`
@@ -40,7 +38,6 @@ const FormWrapper = styled.div`
 const ThemedStyledAdviceList = styled(StyledAdviceList)`
   background-color: #23c0ff;
 `
-
 
 export default () => {
   return (

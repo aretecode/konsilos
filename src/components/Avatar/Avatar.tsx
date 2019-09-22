@@ -17,6 +17,17 @@ const UserAvatarWrap = styled.section`
     margin: 0;
     padding: 0;
   }
+
+  img {
+    border: 3px solid white;
+    border-radius: 50%;
+  }
+
+  h5 {
+    font-family: 'Lato';
+    margin-top: 4px;
+    color: grey;
+  }
 `
 
 export type UserAvatarPropType = {
