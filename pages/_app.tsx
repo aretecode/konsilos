@@ -4,6 +4,7 @@ import { ApolloClient } from 'apollo-boost'
 import * as React from 'react'
 import { ApolloProvider, getDataFromTree } from 'react-apollo'
 import { AppContextProvider } from '../src/AppContext'
+import { Footer } from '../src/components/Footer'
 import { KonsilosContextProvider } from '../src/features/KonsilosContext'
 import { initApolloClient } from '../src/graphql/apolloClient'
 import { fromReqToUrl } from '../src/utils/fromReqToUrl'
@@ -110,6 +111,7 @@ export default class MyApp extends App<{
     return (
       <InnerApp apolloClientState={apolloClientState} url={url}>
         <Component {...pageProps} />
+        <Footer />
       </InnerApp>
     )
   }
