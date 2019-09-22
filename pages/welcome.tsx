@@ -182,17 +182,16 @@ export type ColouredFeatureSectionPropType = { position: number }
 
 const StyledArticleFeatureSection = styled.section`
   position: relative;
-  height: 400px;
   max-width: calc(100% - 15%);
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 3rem;
 
   @media (max-width: 1023px) {
     flex-direction: column;
     max-width: calc(100% - 12%);
-    height: 550px;
 
     .text {
       width: 100% !important;
@@ -202,12 +201,7 @@ const StyledArticleFeatureSection = styled.section`
   }
 
   > .text {
-    width: 50%;
-  }
-
-  ${StyledDevice} {
-    margin: auto;
-    transform: scale(0.3);
+    width: 40%;
   }
 
   header {
@@ -222,54 +216,36 @@ const StyledArticleFeatureSection = styled.section`
 `
 
 const StyledMacbookPanel = styled.div`
-  width: 50%;
+  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
-  @media (max-width: 1023px) {
+  svg {
     width: 100%;
   }
 
-  ${StyledDevice} {
-    margin: auto;
-    transform: scale(0.3);
-    transform-origin: center right;
-
-    @media (max-width: 1023px) {
-      transform-origin: center top;
-    }
+  @media (max-width: 1023px) {
+    width: 100%;
   }
 `
 
 const StyledIpadPanel = styled.div`
   width: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (max-width: 1023px) {
     width: 100%;
-  }
-
-  ${StyledDevice} {
-    margin: auto;
-    transform: scale(0.3);
-    transform-origin: center left;
-    
-    @media (max-width: 1023px) {
-      transform-origin: center top;
-    }
   }
 `
 
 const StyledArticleFeatureMacbookSection = styled(StyledArticleFeatureSection)``
 
 const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
-  @media (max-width: 1023px) {
-    height: 700px;
-  }
-
   > .text {
     @media (max-width: 1023px) {
       order: -1;
@@ -499,14 +475,13 @@ export default () => {
               </p>
             </div>
             <StyledMacbookPanel>
-              <StyledDevice type="macbook">eh</StyledDevice>
+              {<StyledDevice type="macbook">eh</StyledDevice>}
             </StyledMacbookPanel>
           </StyledArticleFeatureMacbookSection>
           <StyledArticleFeatureIPadSection>
             <StyledIpadPanel>
-              <StyledDevice type="ipad">eh</StyledDevice>
+              {<StyledDevice type="ipad">eh</StyledDevice>}
             </StyledIpadPanel>
-
             <div className="text">
               <StyledMaterialIcon icon="notification" />
               <header>Notifications and Time Capsule</header>
