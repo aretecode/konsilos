@@ -1,4 +1,8 @@
-import { AdviceItemType, FamilyMemberItemType } from './typings'
+import {
+  AdviceItemType,
+  FamilyMemberItemType,
+  UserWithFamilyAndAdviceType,
+} from './typings'
 
 export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   {
@@ -120,11 +124,12 @@ export const DEFAULT_FAMILY_MEMBER_LIST: FamilyMemberItemType[] = [
   },
 ]
 
-export const DEFAULT_USER: any = {
+export const DEFAULT_USER: UserWithFamilyAndAdviceType = {
   uid: -1,
   name: 'Testy Jones',
   email: 'testy.jones@gmail.com',
-  picture: 'https://s.gravatar.com/avatar/a3c1eb95d1396a1b878752e9cdd9613a?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fmi.png',
+  picture:
+    'https://s.gravatar.com/avatar/a3c1eb95d1396a1b878752e9cdd9613a?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fmi.png',
   nickname: 'testy.jones',
   adviceList: [
     {
@@ -144,7 +149,7 @@ export const DEFAULT_USER: any = {
       happenedOn: '01/08/2015',
     },
   ],
-  familyMembers: [
+  familyList: [
     {
       uid: -2,
       dateOfBirth: '01/01/1990',

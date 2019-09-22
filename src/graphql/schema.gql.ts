@@ -1,7 +1,6 @@
 import { gql } from 'apollo-server-micro'
 
 export default gql`
-
   type Advice {
     title: String
     text: String
@@ -26,10 +25,11 @@ export default gql`
     email: String
     picture: String
     nickname: String
+
     adviceList: [Advice]
-    familyMembers: [FamilyMember]
+    familyList: [FamilyMember]
   }
-  
+
   type Query {
     user: User
     adviceList: [Advice]
