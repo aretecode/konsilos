@@ -107,6 +107,7 @@ exports[`Storyshots AddAdvice Styled Add 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        value=""
       />
     </div>
     <div
@@ -125,6 +126,7 @@ exports[`Storyshots AddAdvice Styled Add 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        value=""
       />
     </div>
     <div
@@ -143,6 +145,7 @@ exports[`Storyshots AddAdvice Styled Add 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        value=""
       />
     </div>
     <div
@@ -161,6 +164,7 @@ exports[`Storyshots AddAdvice Styled Add 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        value=""
       />
     </div>
     <div
@@ -179,6 +183,7 @@ exports[`Storyshots AddAdvice Styled Add 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        value=""
       />
     </div>
     <div
@@ -198,6 +203,7 @@ exports[`Storyshots AddAdvice Styled Add 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="date"
+        value=""
       />
     </div>
     <button
@@ -297,6 +303,7 @@ exports[`Storyshots AddFamily Styled Add 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        value=""
       />
     </div>
     <div
@@ -316,6 +323,7 @@ exports[`Storyshots AddFamily Styled Add 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="email"
+        value=""
       />
     </div>
     <div
@@ -335,6 +343,7 @@ exports[`Storyshots AddFamily Styled Add 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="date"
+        value=""
       />
     </div>
     <div
@@ -354,6 +363,7 @@ exports[`Storyshots AddFamily Styled Add 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="url"
+        value=""
       />
     </div>
     <button
@@ -1478,6 +1488,27 @@ exports[`Storyshots Footer Empty 1`] = `
   text-decoration: underline;
 }
 
+@media (max-width:767px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:767px) {
+  .c1 p {
+    width: unset;
+  }
+}
+
+@media (max-width:767px) {
+  .c2 {
+    width: unset;
+    margin-right: -1rem;
+  }
+}
+
 <div
   className="c0"
 >
@@ -1488,7 +1519,6 @@ exports[`Storyshots Footer Empty 1`] = `
       className="c2"
     >
       <ul>
-        <li />
         <li>
           <a
             className="c3 "
@@ -1517,6 +1547,26 @@ exports[`Storyshots Footer Empty 1`] = `
             onMouseEnter={[Function]}
           >
             Advice
+          </a>
+        </li>
+        <li>
+          <a
+            className="c3 "
+            href="/profile"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Profile
+          </a>
+        </li>
+        <li>
+          <a
+            className="c3 "
+            href="/credits"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Credits
           </a>
         </li>
       </ul>
@@ -1640,6 +1690,7 @@ exports[`Storyshots Forms Form With Different Fields 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        value=""
       />
     </div>
     <div
@@ -1658,6 +1709,7 @@ exports[`Storyshots Forms Form With Different Fields 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        value=""
       />
     </div>
     <div
@@ -1677,6 +1729,7 @@ exports[`Storyshots Forms Form With Different Fields 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         type="date"
+        value=""
       />
     </div>
     <button
