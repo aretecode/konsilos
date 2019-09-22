@@ -2,7 +2,7 @@
 
 exports[`Storyshots AddAdvice Styled Add 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -211,7 +211,7 @@ exports[`Storyshots AddAdvice Styled Add 1`] = `
 
 exports[`Storyshots AddFamily Styled Add 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -304,6 +304,25 @@ exports[`Storyshots AddFamily Styled Add 1`] = `
     >
       <label
         className="c4"
+        htmlFor="email"
+      >
+        email
+      </label>
+      <input
+        className="c5"
+        id="email"
+        label="email"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="email"
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
         htmlFor="birthday"
       >
         date of birth
@@ -348,7 +367,7 @@ exports[`Storyshots AddFamily Styled Add 1`] = `
 
 exports[`Storyshots AdviceList With Static List 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -385,7 +404,7 @@ exports[`Storyshots AdviceList With Static List 1`] = `
 }
 
 .c3 img {
-  border: 3px solid white;
+  border: 3px solid #fff;
   border-radius: 50%;
 }
 
@@ -931,7 +950,7 @@ exports[`Storyshots AdviceList With Static List 1`] = `
 
 exports[`Storyshots Avatar Empty 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -968,7 +987,7 @@ exports[`Storyshots Avatar Empty 1`] = `
 }
 
 .c1 img {
-  border: 3px solid white;
+  border: 3px solid #fff;
   border-radius: 50%;
 }
 
@@ -996,7 +1015,7 @@ exports[`Storyshots Avatar Empty 1`] = `
 
 exports[`Storyshots Avatar List 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -1033,7 +1052,7 @@ exports[`Storyshots Avatar List 1`] = `
 }
 
 .c1 img {
-  border: 3px solid white;
+  border: 3px solid #fff;
   border-radius: 50%;
 }
 
@@ -1128,7 +1147,7 @@ exports[`Storyshots Avatar List 1`] = `
 
 exports[`Storyshots Device Ipad 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -1171,7 +1190,7 @@ exports[`Storyshots Device Ipad 1`] = `
 
 exports[`Storyshots Device Macbook 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -1214,7 +1233,7 @@ exports[`Storyshots Device Macbook 1`] = `
 
 exports[`Storyshots FamilyList With Static List 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -1251,7 +1270,7 @@ exports[`Storyshots FamilyList With Static List 1`] = `
 }
 
 .c3 img {
-  border: 3px solid white;
+  border: 3px solid #fff;
   border-radius: 50%;
 }
 
@@ -1379,7 +1398,7 @@ exports[`Storyshots FamilyList With Static List 1`] = `
 
 exports[`Storyshots Footer Empty 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -1520,7 +1539,7 @@ exports[`Storyshots Footer Empty 1`] = `
 
 exports[`Storyshots Forms Form With Different Fields 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -1671,7 +1690,7 @@ exports[`Storyshots Forms Form With Different Fields 1`] = `
 
 exports[`Storyshots LanguageSwitcher Empty 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -1909,7 +1928,7 @@ exports[`Storyshots LanguageSwitcher Empty 1`] = `
 
 exports[`Storyshots Link External 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -1951,7 +1970,7 @@ exports[`Storyshots Link External 1`] = `
 
 exports[`Storyshots Link Internal 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -1995,7 +2014,7 @@ exports[`Storyshots Link Internal 1`] = `
 
 exports[`Storyshots Logo Normal 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -2024,7 +2043,7 @@ exports[`Storyshots Logo Normal 1`] = `
 
 exports[`Storyshots Logo Styled Logo 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -2060,7 +2079,7 @@ exports[`Storyshots Logo Styled Logo 1`] = `
 
 exports[`Storyshots MaterialIcons All 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -2373,9 +2392,45 @@ exports[`Storyshots MaterialIcons All 1`] = `
 </div>
 `;
 
+exports[`Storyshots PageHeader Normal 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <h1>
+    eh
+  </h1>
+</div>
+`;
+
+exports[`Storyshots PageHeader Styled Page Header 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  background-color: var(--color-blue);
+}
+
+<div
+  className="c0"
+>
+  <h1
+    className="c1"
+  >
+    eh
+  </h1>
+</div>
+`;
+
 exports[`Storyshots ScribeIcon Huge Icon 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
@@ -2427,7 +2482,7 @@ exports[`Storyshots ScribeIcon Huge Icon 1`] = `
 
 exports[`Storyshots ScribeIcon Styled Icon 1`] = `
 .c0 {
-  background-color: white;
+  background-color: #fff;
   min-height: 100vh;
 }
 
