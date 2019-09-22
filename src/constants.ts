@@ -72,7 +72,7 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
     happenedOn: '02/05/2001',
   },
   {
-    uid: 5,
+    uid: 8,
     familyMemberId: -5,
     type: 'travel',
     title: 'Steve Jobs',
