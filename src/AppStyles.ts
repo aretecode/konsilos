@@ -8,7 +8,9 @@ import { createGlobalStyle } from 'styled-components'
 export const AppStyles = createGlobalStyle`
   :root {
     --color-blue: #23c0ff;
-    --color-orange: #ff5722;
+    --color-blue-dark: #20ade6;
+    --color-orange: #f27059;
+    --color-orange-dark: #da6550;
   }
 
   /* latin-ext */
@@ -50,7 +52,7 @@ export const AppStyles = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: #ECEFF1;
   }
 
   *, *:before, *:after {
@@ -70,7 +72,6 @@ export const AppStyles = createGlobalStyle`
   }
   #__next {
     min-height: inherit;
-    background-color: #24c0fd;
   }
   button {
     background: none;
