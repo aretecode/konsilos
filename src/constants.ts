@@ -100,30 +100,35 @@ export const DEFAULT_FAMILY_MEMBER_LIST: FamilyMemberItemType[] = [
     dateOfBirth: '01/01/1990',
     imageUrl: 'https://pencamcc.sirv.com/Images/people/laura.png?format=webp',
     name: 'Laura',
+    email: 'laura@example.com',
   },
   {
     uid: -2,
     dateOfBirth: '01/01/1990',
     imageUrl: 'https://pencamcc.sirv.com/Images/people/daniel.png?format=webp',
     name: 'Daniel',
+    email: 'daniel@example.com',
   },
   {
     uid: -3,
     dateOfBirth: '01/01/1990',
     imageUrl: 'https://pencamcc.sirv.com/Images/people/charles.png?format=webp',
     name: 'Charles',
+    email: 'charles@example.com',
   },
   {
     uid: -4,
     dateOfBirth: '01/01/1990',
     imageUrl: 'https://pencamcc.sirv.com/Images/people/meghan.png?format=webp',
     name: 'Meghan',
+    email: 'meghan@example.com',
   },
   {
     uid: -5,
     dateOfBirth: '01/01/1990',
     imageUrl: 'https://pencamcc.sirv.com/Images/people/barbara.png?format=webp',
     name: 'Barbara',
+    email: 'barbara@example.com',
   },
 ]
 

@@ -212,6 +212,7 @@ export interface FamilyMemberItemType {
   name: string
   dateOfBirth: string | number
   imageUrl: string
+  email: string
 }
 
 /**
