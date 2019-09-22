@@ -182,7 +182,7 @@ export type ColouredFeatureSectionPropType = { position: number }
 
 const StyledArticleFeatureSection = styled.section`
   position: relative;
-  height: 540px;
+  height: 400px;
   max-width: calc(100% - 15%);
   margin: auto;
   display: flex;
@@ -191,12 +191,13 @@ const StyledArticleFeatureSection = styled.section`
 
   @media (max-width: 1023px) {
     flex-direction: column;
-    /* height: 100vh; */
     max-width: calc(100% - 12%);
+    height: 550px;
 
     .text {
       width: 100% !important;
       text-align: center;
+      margin-bottom: 3rem;
     }
   }
 
@@ -207,10 +208,6 @@ const StyledArticleFeatureSection = styled.section`
   ${StyledDevice} {
     margin: auto;
     transform: scale(0.3);
-    transform-origin: 0% 50%;
-    @media (max-width: 1023px) {
-      transform-origin: 0% 0%;
-    }
   }
 
   header {
@@ -225,27 +222,54 @@ const StyledArticleFeatureSection = styled.section`
 `
 
 const StyledMacbookPanel = styled.div`
-  height: 100%;
   width: 50%;
-  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (max-width: 1023px) {
-    height: unset;
-    padding: 0;
     width: 100%;
+  }
+
+  ${StyledDevice} {
+    margin: auto;
+    transform: scale(0.3);
+    transform-origin: center right;
+
+    @media (max-width: 1023px) {
+      transform-origin: center top;
+    }
   }
 `
 
 const StyledIpadPanel = styled.div`
   width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (max-width: 1023px) {
-    padding: 0;
     width: 100%;
+  }
+
+  ${StyledDevice} {
+    margin: auto;
+    transform: scale(0.3);
+    transform-origin: center left;
+    
+    @media (max-width: 1023px) {
+      transform-origin: center top;
+    }
   }
 `
 
 const StyledArticleFeatureMacbookSection = styled(StyledArticleFeatureSection)``
 
 const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
+  @media (max-width: 1023px) {
+    height: 700px;
+  }
+
   > .text {
     @media (max-width: 1023px) {
       order: -1;
