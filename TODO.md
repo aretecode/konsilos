@@ -9,8 +9,8 @@
 - [x] project dependency setup
 - [ ] stories for the components
   - [x] initial stories for split out components
-  - [ ] stories for components still in pages
-  - [ ] better stories (_customization etc_)
+  - [x] stories for components still in pages (_mostly done anyway_)
+  - [x] better stories (_customization etc_)
 - [ ] write unit tests & puppeteer/cypress tests (_@note, as this for fun, without designs or requirements [which will be experimented with as it's being done] will start with minimal tests and add, without TDD_)
 - [ ] security audit
 
@@ -77,7 +77,7 @@
 # 4. advice page
 - [x] init
 - [ ] connect with api
-- [ ] state management
+- [x] state management
 - [ ] tests
 
 
@@ -118,8 +118,8 @@
   - [ ] form translations
 
 
-# 7. family & profile page
-- [ ] create
+# 7. family page
+- [x] create
 - [ ] fill in requirements
 
 # 8. lower priority
@@ -161,3 +161,5 @@
 - [ ] responsive image using sirv (_if not using picture_) `<script src="https://scripts.sirv.com/sirv.js"></script>`
 - [ ] speedtest passing with flying colours
 - [ ] ada compliance
+- [ ] profile page
+- [ ] (zeit) micro auth0

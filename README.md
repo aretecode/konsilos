@@ -15,6 +15,7 @@ We created this with good intentions, to scratch our itch, hoping this also woul
 3. (if you do not have already) `npm i -g typescript jest prettier`
 4. run app or storybook
   - `yarn dev` (_app_)
+  - `yarn dev:server` (_for using auth0 locally via custom next server_)
   - `yarn dev:storybook` (_storybook_)
 
 ## folder structure
