@@ -292,7 +292,7 @@ const StyledColouredFeaturePanel = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   padding: 3rem;
 
   @media (max-width: 1023px) {
@@ -354,6 +354,13 @@ const StyledColouredFeatureSection = styled.section`
   p {
     font-size: 1rem;
     line-height: 25px;
+  }
+
+  ${StyledSubscribeButton} {
+    margin: 0;
+    background: white;
+    color: black;
+    max-width: 200px;
   }
 
   @media (max-width: 767px) {
@@ -549,6 +556,9 @@ export default () => {
                 the world. We also benefit from the support from people and
                 companies that believe in our idea.
               </p>
+              <StyledSubscribeButton type="submit">
+                Subscribe
+              </StyledSubscribeButton>
             </StyledColouredFeaturePanel>
           </StyledColouredFeatureSection>
           <StyledColouredFeatureSection position={1}>
@@ -562,6 +572,9 @@ export default () => {
                 and your children have access to the advices. And you are free
                 to download your advices and leave the system at any time.
               </p>
+              <StyledSubscribeButton type="submit">
+                Subscribe
+              </StyledSubscribeButton>
             </StyledColouredFeaturePanel>
             <StyledColouredFeatureImagePanel2 />
           </StyledColouredFeatureSection>
