@@ -1,5 +1,7 @@
 import * as React from 'react'
+import uuid from 'uuid/v4'
 import { Form, InputConfigType } from '../../components/Form'
+import { KonsilosContext } from '../KonsilosContext'
 
 // add to the family!
 export const familyInputConfigList: InputConfigType[] = [
@@ -26,12 +28,21 @@ export const familyInputConfigList: InputConfigType[] = [
 ]
 
 export const AddFamily = (props: { className?: string }) => {
+  const { familyList, setFamilyList } = React.useContext(KonsilosContext)
+
   return (
     <Form
       {...props}
       list={familyInputConfigList}
       onSubmit={(serialized: any) => {
-        console.log(serialized)
+        const merged = {
+          ...serialized,
+          uid: uuid(),
+          imageUrl:
+            serialized.imageUrl || 'https://www.gravatar.com/avatar/example',
+        }
+        console.log({ merged })
+        setFamilyList([...familyList, merged] as any)
       }}
     />
   )
