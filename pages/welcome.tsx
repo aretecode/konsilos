@@ -8,6 +8,7 @@ import { StyledAdviceList } from '../src/features/Advice'
 import { StyledDevice } from '../src/components/Device'
 import { StyledMaterialIcon } from '../src/components/MaterialIcons'
 import { LanguageSwitcher } from '../src/components/LanguageSwitcher'
+import { Logo } from '../src/components/Logo'
 import { DEFAULT_ADVICE_LIST } from '../src/constants'
 
 const StyledMain = styled.main`
@@ -17,16 +18,15 @@ const StyledMain = styled.main`
 `
 
 const StyledLeaderboard = styled.section`
-  background: url('https://konsilos.com/img/landing/main_bg.jpg');
+  background: url('https://pencamcc.sirv.com/Images/home/konsilos-background.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  color: #ffffff;
+  color: #fff;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
 
   h1,
@@ -73,7 +73,7 @@ const StyledSubscripeInput = styled.input.attrs({
 const StyledSubscribeButton = styled.button`
   margin: 0 2rem;
   padding: 1rem 2rem;
-  background: #23c0ff;
+  background: var(--color-blue);
   text-align: center;
   border-radius: 4px;
   font-size: 1rem;
@@ -104,24 +104,23 @@ const StyledBanner = styled.header.attrs({
   }
 `
 
-const StyledLogo = styled.img.attrs({
-  src: 'https://konsilos.com/img/landing/logo.png',
-  width: '163',
-  height: '102',
-  alt: 'logo',
-})``
+const StyledLogo = styled(Logo)`
+  width: 163px;
+  height: 102px;
+  fill: #fff;
+`
 
 const StyledTimeCapsuleAction = styled.a`
-  background-color: #f27059;
+  background-color: var(--color-orange);
   border-radius: 4px;
   padding: 0.5rem;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   ${StyledMaterialIcon} {
-    fill: white;
+    fill: #fff;
     margin-right: 4px;
   }
 `
@@ -133,22 +132,26 @@ const StyledArticleFeatureSection = styled.section`
   height: 540px;
   max-width: calc(100% - 15%);
   margin: auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    height: 100vh;
+  }
 
   > .text {
     width: 50%;
   }
 
   ${StyledDevice} {
-    transform: scale(0.5);
-    transform-origin: 0% 50%;
-    position: absolute;
-    top: 0;
     margin: auto;
-    bottom: 0;
+    transform: scale(0.3);
+    transform-origin: 0% 50%;
+    @media (max-width: 1023px) {
+      transform-origin: 0% 0%;
+    }
   }
 
   header {
@@ -163,22 +166,35 @@ const StyledArticleFeatureSection = styled.section`
 `
 
 const StyledMacbookPanel = styled.div`
-  width: 50%;
   height: 100%;
+  width: 50%;
   padding: 0 3rem;
+  @media (max-width: 1023px) {
+    height: unset;
+    padding: 0;
+  }
 `
 
 const StyledIpadPanel = styled.div`
   width: 50%;
-  height: 100%;
+  @media (max-width: 1023px) {
+    padding: 0;
+  }
 `
 
 const StyledArticleFeatureMacbookSection = styled(StyledArticleFeatureSection)``
+
 const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
+  > .text {
+    @media (max-width: 1023px) {
+      order: -1;
+    }
+  }
+
   ${StyledMaterialIcon} {
     width: 100px;
     height: 100px;
-    fill: #21c0fd;
+    fill: var(--color-blue);
   }
 `
 
@@ -204,7 +220,7 @@ const StyledArticleOverview = styled.section`
   }
 `
 const StyledArticle = styled.article`
-  background: #ffffff;
+  background: #fff;
 `
 
 const StyledColouredFeaturePanel = styled.div`
@@ -215,9 +231,11 @@ const StyledColouredFeaturePanel = styled.div`
 
 const StyledColouredFeatureSection = styled.section`
   background-color: ${(props: ColouredFeatureSectionPropType) =>
-    props.position === 1 ? '#20ade6' : '#da6550'};
+    props.position === 1
+      ? 'var(--color-blue-dark)'
+      : 'var(--color-orange-dark)'};
 
-  color: #ffffff;
+  color: #fff;
   display: flex;
 
   img {
@@ -239,23 +257,71 @@ const StyledColouredFeatureSection = styled.section`
   }
 `
 
-const CardTextSection = styled.section`
+const StyledScribeIcon = styled(StyledMaterialIcon).attrs({
+  icon: 'Scribe' as any,
+  path:
+    'M1.2.1C.7.5 0 1.6 0 2.5v1.8l2.2.1V20.6l.1.2c.2 1 1 1.7 1.8 1.8.3 0 12.2 1.5 13.9 1.4 1.7-.2 1.9-1.6 1.9-3.1l-.1-.7c-.1-.3-.2-.4-.5-.5h-.7v-4.6l.8-.2a8 8 0 0 0 3.5-3l1-1.6a1 1 0 0 0 0-1c-.3-.2-1.4-.5-2.5-.7h-2.8V2.4c-.1-1.1-.5-1.5-1.2-2l-.7-.2C16.2.2 1.5-.2 1.2.2zm16.5 2.4v6.2l-.5.3c-.8.3-1.6 1.1-2 2l-.4 1c-.2 1-.4 1.2-1 1.5-.6.2-.6.7-.5.9 0 .1.4.2 1 0 .5-.2.5-.2 1 0 .4.3 2 .7 2 .7h.4v4.7H6c-.3 0-.5.4-.6.9l-.2 1h-.8c-.3-.2-.6-.4-.7-.8-.2-.2-.2.4-.2-8.5V1l13.4.2c.5.2.8.5 1 1.2zM5.4 8c-.2.1-.3.3-.3.6 0 .2.2.4.4.5h8.3c.6 0 .6-1 .1-1.1H5.4zM2.3 3.4H1.2L1.3 2c.2-.6.4-.9.6-.9h.4v2.3zm3.2 1.7H14c.3-.2.4-.8 0-1L14 4H5.6c-.6.2-.6.8 0 1.1zm16.8 5c0 .3-.1.7-1 1.5-.6.8-1.3 1.5-2.2 1.8-.6.3-1.6.3-3 0-.3 0-.5-.1-.5-.4 0-.3.4-1 1-2 .7-.7 1.3-1.1 2-1.3l1.4-.1h1.3c.3 0 1 .2 1 .5zM5.5 13.7h4.4c.5-.1.5-.8.1-1l-.1-.1H5.6c-.6.2-.6 1-.1 1.1zm13 8.4c-.4.8-.7.8-2.7.7l-10-1.3c-.1-.5 0-.8.3-.9h12.4c.5.2.5.8 0 1.5z',
+})`
+  width: 100px;
+  height: 100px;
+  fill: var(--color-blue);
+`
+
+const StyledCardTextSection = styled.section`
   margin: auto;
-  max-width: calc(100% - 15%);
   text-align: center;
-  padding-bottom: 3rem;
+  padding: 3rem;
 
   header {
-    color: white;
     font-size: 3rem;
     font-weight: 600;
     text-transform: capitalize;
   }
 
   p {
-    color: white;
+    margin: auto;
+    max-width: calc(100% - 15%);
+    text-align: center;
+
     font-size: 1rem;
     font-weight: 400;
+  }
+`
+const StyledAdviceListWithPromo = styled.article`
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 75vh;
+
+  ${StyledCardTextSection} {
+    z-index: 2;
+    margin-left: 50%;
+    overflow: hidden;
+    @media (max-width: 1023px) {
+      background: #eceff1;
+      margin-left: 25vw;
+    }
+  }
+
+  ${StyledAdviceList} {
+    transform: rotate(30deg) translateX(-39%) translateY(8%) scale(0.8);
+    transform: rotate(30deg) translateX(-27%) translateY(7%);
+    position: absolute;
+    top: 0;
+    left: -20%;
+    z-index: 0;
+
+    ul {
+      flex-wrap: nowrap;
+      flex-flow: wrap;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 0.5rem 0.5rem;
+      > li {
+        max-width: 250px;
+        margin: 0;
+      }
+    }
   }
 `
 
@@ -290,22 +356,25 @@ export default () => {
             </form>
           </StyledLeaderboardPanel>
         </StyledLeaderboard>
-        <StyledAdviceList list={DEFAULT_ADVICE_LIST} />
-        <CardTextSection>
-          <header>Leave your legacy</header>
-          <p>
-            Think about advices, books, movies, experiences and everything else
-            that helped you become a better and more prepared person. Now
-            imagine being able to transform them in powerful and inspiring
-            advices to your children too! We want to help you remember to share
-            them in the right occasion or the ideal age, even if you are not
-            there anymore.
-          </p>
-          <p>
-            We want to help you remember to share them in the right occasion or
-            the ideal age, even if you are not there anymore.
-          </p>
-        </CardTextSection>
+        <StyledAdviceListWithPromo>
+          <StyledAdviceList list={DEFAULT_ADVICE_LIST} />
+
+          <StyledCardTextSection>
+            <header>Leave your legacy</header>
+            <p>
+              Think about advices, books, movies, experiences and everything
+              else that helped you become a better and more prepared person. Now
+              imagine being able to transform them in powerful and inspiring
+              advices to your children too! We want to help you remember to
+              share them in the right occasion or the ideal age, even if you are
+              not there anymore.
+            </p>
+            <p>
+              We want to help you remember to share them in the right occasion
+              or the ideal age, even if you are not there anymore.
+            </p>
+          </StyledCardTextSection>
+        </StyledAdviceListWithPromo>
         <StyledArticle>
           <StyledArticleOverview>
             <header>Simple. Powerful. Konsilos.</header>
@@ -320,12 +389,7 @@ export default () => {
           </StyledArticleOverview>
           <StyledArticleFeatureMacbookSection>
             <div className="text">
-              <img
-                src="https://konsilos.com/img/landing/img2.jpg"
-                width="78"
-                height="68"
-                alt="img"
-              />
+              <StyledScribeIcon />
               <header>Register Several Advices</header>
               <p>
                 They can be about life, books to be read, movies to be watched
@@ -358,7 +422,7 @@ export default () => {
         </StyledArticle>
         <>
           <StyledColouredFeatureSection position={0}>
-            <img src="https://konsilos.com/img/landing/man_img.jpg" />
+            <img src="https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp" />
             <StyledColouredFeaturePanel>
               <header>
                 Free,
@@ -384,7 +448,7 @@ export default () => {
                 to download your advices and leave the system at any time.
               </p>
             </StyledColouredFeaturePanel>
-            <img src="https://konsilos.com/img/landing/child_img.jpg" />
+            <img src="https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp" />
           </StyledColouredFeatureSection>
         </>
       </StyledMain>

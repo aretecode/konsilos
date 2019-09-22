@@ -59,13 +59,13 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="//fonts.gstatic.com/" />
           <link
             rel="preload"
-            href="https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2"
+            href="https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXiWtFCc.woff2"
             as="font"
             crossOrigin={'crossOrigin'}
           />
           <link
             rel="preload"
-            href="https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2"
+            href="https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2"
             as="font"
             crossOrigin={'crossOrigin'}
           />

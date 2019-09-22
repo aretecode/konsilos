@@ -46,7 +46,7 @@ export const AddAdvice = () => {
   return (
     <Form
       list={inputConfigList}
-      onSubmit={serialized => {
+      onSubmit={(serialized: any) => {
         console.log(serialized)
         setAdviceList([...adviceList, serialized] as any)
       }}

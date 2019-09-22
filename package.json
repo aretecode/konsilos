@@ -4,7 +4,9 @@
 	"private": false,
 	"sideEffects": false,
 	"main": ".next/server/index.js",
-	"description": "https://konsilos.com v2",
+	"description": "Eternize advices to your children",
+	"originalUrl": "https://konsilos.com",
+	"url": "https://konsilos.now.sh",
 	"repository": {
 		"url": "https://github.com/aretecode/konsilos"
 	},

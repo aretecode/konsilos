@@ -216,13 +216,18 @@ export interface FamilyMemberItemType {
  * user from auth0
  */
 export interface UserType {
-  /**
-   * @todo
-   */
+  uid: string | number
+  name: string
+  email: string
+  picture: string
+  nickname?: string
 }
 
-export interface KonsilosStoreType {
-  user: UserType
+export interface BaseKonsilosStoreType {
   familyList: FamilyMemberItemType[]
   adviceList: AdviceItemType[]
 }
+export type KonsilosStoreType = BaseKonsilosStoreType & {
+  user: UserType
+}
+export type UserWithFamilyAndAdviceType = UserType & BaseKonsilosStoreType

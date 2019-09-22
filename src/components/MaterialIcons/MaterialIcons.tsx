@@ -61,10 +61,13 @@ export function fromIconNameToPath(name: IconNameType) {
   }
 }
 
-export const MaterialIcon = (
-  props: { icon: IconNameType } & React.SVGProps<SVGSVGElement>
-) => {
-  const { icon, ...remainingProps } = props
+export type MaterialIconPropType = {
+  icon: IconNameType
+  path?: string
+} & React.SVGProps<SVGSVGElement>
+
+export const MaterialIcon = (props: MaterialIconPropType) => {
+  const { icon, path = fromIconNameToPath(icon), ...remainingProps } = props
   return (
     <svg
       role="img"
@@ -73,7 +76,7 @@ export const MaterialIcon = (
       {...remainingProps}
     >
       <title key="title">{icon} icon</title>
-      <path key="shape" d={fromIconNameToPath(icon)} />
+      <path key="shape" d={path} />
       {iconInvisibleSquarePathView}
     </svg>
   )

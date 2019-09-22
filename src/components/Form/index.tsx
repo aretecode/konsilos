@@ -1,4 +1,5 @@
 /**
+ * @see https://material.io/components/text-fields/#filled-text-field
  * @see https://codesandbox.io/s/jzr284y1nw
  */
 import * as React from 'react'
@@ -9,15 +10,16 @@ export type StyledInputPropType = { isValid?: boolean; isActive?: boolean }
 
 export const StyledInput = styled.input`
   font-size: 1.3rem;
-  padding: 10px 10px 10px 5px;
-  background: transparent;
+  padding: 0.75rem 0.75rem 0.75rem 0.5rem;
+  background: #cfd8dc;
   display: block;
   border: none;
   border-bottom: 1px solid #757575;
-  transition: 1s ease-in-out border-bottom-color;
-  outline: ${props => (props.isActive ? 'none' : 'hidden')};
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) border-bottom-color;
+  outline: ${props => (props.isActive ? 'none' : 'none')};
   &:hover {
-    color: rgba(98, 0, 238, 0.87);
+    color: var(--color-blue-dark);
+    border-bottom-color: var(--color-blue-dark);
   }
   ${(props: StyledInputPropType) =>
     props.isValid === false &&
@@ -29,13 +31,14 @@ export const StyledInput = styled.input`
 const StyledTextarea = styled.textarea`
   font-size: 1.3rem;
   padding: 10px 10px 10px 5px;
-  background: transparent;
+  background: #cfd8dc;
   display: block;
   border: none;
   border-bottom: 1px solid #757575;
-  transition: 1s ease-in-out border-bottom-color;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) border-bottom-color;
+  outline: ${props => (props.isActive ? 'none' : 'none')};
   &:hover {
-    color: rgba(98, 0, 238, 0.87);
+    color: var(--color-blue-dark);
   }
   ${(props: StyledInputPropType) =>
     props.isValid === false &&
@@ -50,20 +53,23 @@ export interface StyledLabelTextPropType {
 }
 export const StyledLabelText = styled.label`
   color: rgba(0, 0, 0, 0.6);
-  transition: 1s ease-in-out color;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) color,
+    0.24s cubic-bezier(0.075, 0.82, 0.165, 1) top;
   position: absolute;
-  top: 0;
+  top: 1rem;
+  left: 0.5rem;
 
   ${(props: StyledLabelTextPropType) =>
     props.isActive &&
     css`
-      color: rgba(98, 0, 238, 0.87);
+      color: var(--color-blue-dark);
     `};
 
   ${props =>
     (props.hasValue || props.isActive) &&
     css`
       font-size: 0.5rem;
+      top: 0.25rem;
     `}
 `
 
@@ -168,7 +174,7 @@ const renderInput = (x: InputConfigType) => (
   <Input key={x.propertyName} {...x} />
 )
 
-const StyledForm = (props: any) => {
+const FormWithContext = (props: any) => {
   const { onSubmit, serialized } = React.useContext(FormContext)
   return (
     <form
@@ -181,15 +187,30 @@ const StyledForm = (props: any) => {
   )
 }
 
-export class Form extends React.PureComponent<{
+const StyledForm = styled(FormWithContext)`
+  margin: 0;
+  padding: 1rem;
+
+  button {
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-blue);
+    border: 1px solid var(--color-blue-dark);
+    color: #fff;
+  }
+`
+
+export type FormPropType = {
   list: InputConfigType[]
   onSubmit: (serialized: SerializedObj) => void
-}> {
+} & React.ComponentProps<typeof StyledForm>
+
+export class Form extends React.PureComponent<FormPropType> {
   render() {
-    const { list, onSubmit } = this.props
+    const { list, onSubmit, ...remainingProps } = this.props
     return (
       <FormContext.Provider value={{ serialized: {}, onSubmit }}>
-        <StyledForm>
+        <StyledForm {...remainingProps}>
           {list.map(renderInput)}
           <button type="submit">submit</button>
         </StyledForm>
