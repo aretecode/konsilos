@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 import { AddFamily, StyledFamilyList } from '../src/features/Family'
 
 const FamilyPageWrapper = styled.section`
@@ -38,9 +39,10 @@ const FormWrapper = styled.div`
 `
 
 export default () => {
+  const { t } = useTranslation()
   return (
     <FamilyPageWrapper>
-      <h1>Family</h1>
+      <h1>{t('page_title__family')}</h1>
       <FormWrapper>
         <AddFamily />
       </FormWrapper>

@@ -1,3 +1,6 @@
+/**
+ * @todo these are not translated
+ */
 import {
   AdviceItemType,
   FamilyMemberItemType,

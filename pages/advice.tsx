@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 import { StyledAdviceList, AddAdvice } from '../src/features/Advice'
 
 const AdvicePageWrapper = styled.section`
@@ -40,9 +41,10 @@ const ThemedStyledAdviceList = styled(StyledAdviceList)`
 `
 
 export default () => {
+  const { t } = useTranslation()
   return (
     <AdvicePageWrapper>
-      <h1>Advice</h1>
+      <h1>{t('page_title__advice')}</h1>
       <FormWrapper>
         <AddAdvice />
       </FormWrapper>

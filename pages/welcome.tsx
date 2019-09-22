@@ -88,7 +88,8 @@ const StyledLeaderboard = styled.section`
     form {
       flex-direction: column;
 
-      button, input {
+      button,
+      input {
         width: 100%;
       }
 
@@ -97,7 +98,6 @@ const StyledLeaderboard = styled.section`
       }
     }
   }
-
 `
 
 const StyledLeaderboardPanel = styled.div`
@@ -109,21 +109,17 @@ const StyledLeaderboardPanel = styled.div`
   }
 `
 
-const StyledSubscripeInput = styled.input.attrs({
-  placeholder: 'email',
-})`
-  padding: 0 1rem;
-`
-const StyledSubscribeButton = styled.button`
-  margin: 0 2rem;
-  padding: 1rem 2rem;
+const StyledSubscribeAction = styled.a`
+  margin: 0;
+  padding: 1rem 3rem;
   background: var(--color-blue);
   text-align: center;
   border-radius: 4px;
   font-size: 1rem;
   text-transform: uppercase;
   color: white;
-  min-width: 200px;
+  min-width: 250px;
+  text-decoration: none;
 `
 const StyledBanner = styled.header.attrs({
   role: 'banner',
@@ -308,7 +304,7 @@ const StyledColouredFeaturePanel = styled.div`
 
 const StyledColouredFeatureImagePanel = styled.div`
   width: 50%;
-  background-image: url("https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp");
+  background-image: url('https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -322,9 +318,11 @@ const StyledColouredFeatureImagePanel = styled.div`
   }
 `
 
-const StyledColouredFeatureImagePanel2 = styled(StyledColouredFeatureImagePanel)` 
-background-image: url("https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp");
-background-position: center;
+const StyledColouredFeatureImagePanel2 = styled(
+  StyledColouredFeatureImagePanel
+)`
+  background-image: url('https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp');
+  background-position: center;
 
   @media (max-width: 767px) {
     order: -1;
@@ -358,7 +356,7 @@ const StyledColouredFeatureSection = styled.section`
     line-height: 25px;
   }
 
-  ${StyledSubscribeButton} {
+  ${StyledSubscribeAction} {
     margin: 0;
     background: white;
     color: black;
@@ -414,6 +412,8 @@ const StyledCardTextSection = styled.section`
   margin: auto;
   text-align: center;
   padding: 0 5.3rem 0 3rem;
+  display: flex;
+  flex-direction: column;
 
   header {
     font-size: 3rem;
@@ -452,7 +452,7 @@ const StyledAdviceListWithPromo = styled.article`
     }
   }
 
-  ${StyledSubscribeButton} {
+  ${StyledSubscribeAction} {
     margin-top: 2rem;
   }
 
@@ -478,6 +478,15 @@ const StyledAdviceListWithPromo = styled.article`
   }
 `
 
+const SubscribeAction = (props: {}) => {
+  const { t } = useTranslation()
+  return (
+    <StyledSubscribeAction href={'/auth/login'}>
+      {t('subscribe')}
+    </StyledSubscribeAction>
+  )
+}
+
 export default () => {
   const { t } = useTranslation()
   return (
@@ -495,82 +504,53 @@ export default () => {
       <StyledMain>
         <StyledLeaderboard>
           <StyledLeaderboardPanel>
-            <h1>Eternize advices to your children</h1>
-            <p>
-              Think of all advices and experiences that have impacted you
-              positively. Now image your children's future if you could share
-              all of these in the right moment of their lives.
-            </p>
-            <form>
-              <StyledSubscripeInput />
-              <StyledSubscribeButton type="submit">
-                Subscribe
-              </StyledSubscribeButton>
-            </form>
+            <h1>{t('eternalize_advice__title')}</h1>
+            <p>{t('eternalize_advice__body')}</p>
+            <SubscribeAction />
           </StyledLeaderboardPanel>
         </StyledLeaderboard>
         <StyledAdviceListWithPromo>
           <StyledAdviceList list={DEFAULT_ADVICE_LIST} />
           <StyledCardTextSection>
-            <header>Leave your legacy</header>
-            <p>
-              Think about advices, books, movies, experiences and everything
-              else that helped you become a better and more prepared person. Now
-              imagine being able to transform them in powerful and inspiring
-              advices to your children too! We want to help you remember to
-              share them in the right occasion or the ideal age, even if you are
-              not there anymore.
-            </p>
-            <p>
-              We want to help you remember to share them in the right occasion
-              or the ideal age, even if you are not there anymore.
-            </p>
-            <StyledSubscribeButton type="submit">
-              Subscribe
-            </StyledSubscribeButton>
+            <header>{t('leave_your_legacy__title')}</header>
+            <p>{t('leave_your_legacy__body_1')}</p>
+            <p>{t('leave_your_legacy__body_2')}</p>
+            <SubscribeAction />
           </StyledCardTextSection>
         </StyledAdviceListWithPromo>
         <StyledArticle>
           <StyledArticleOverview>
-            <header>Simple. Powerful. Konsilos.</header>
-            <p>
-              We believe good advices can change people. Konsilos is an
-              initiative to encourage parents to eternize advices to their
-              children through an easy platform, secure and free. From a
-              computer or mobile device, anyone can create an account, start to
-              register advices, be notified in the future and let everything to
-              their children eternized in time capsules.
-            </p>
+            <header>{t('simple__title')}</header>
+            <p>{t('simple__body')}</p>
           </StyledArticleOverview>
           <StyledArticleFeatureMacbookSection>
             <div className="text">
               <StyledScribeIcon />
-              <header>Register Several Advices</header>
-              <p>
-                They can be about life, books to be read, movies to be watched
-                or whatever you want. Choose who will receive the advice and
-                point out why it matters. You can edit them at any time.
-              </p>
+              <header>{t('macbook_section__title')}</header>
+              <p>{t('macbook_section__body')}</p>
             </div>
             <StyledMacbookPanel>
-              {<StyledDevice type="macbook">eh</StyledDevice>}
+              <StyledDevice type="macbook">
+                <img
+                  className="device-content"
+                  src="https://pencamcc.sirv.com/Devices/bg-07.jpg"
+                />
+              </StyledDevice>
             </StyledMacbookPanel>
           </StyledArticleFeatureMacbookSection>
           <StyledArticleFeatureIPadSection>
             <StyledIpadPanel>
-              {<StyledDevice type="ipad">eh</StyledDevice>}
+              <StyledDevice type="ipad">
+                <img
+                  className="device-content"
+                  src="https://pencamcc.sirv.com/Devices/bg-02.jpg"
+                />
+              </StyledDevice>
             </StyledIpadPanel>
             <div className="text">
               <StyledMaterialIcon icon="notification" />
-              <header>Notifications and Time Capsule</header>
-              <p>
-                You are in control. You decide when and we will remind you to
-                give an advice. It can be a specific date or when your children
-                reach a certain age. Additionally, your children will be able to
-                access all advices in time capsule programmed by you. Just
-                imagine their reaction when seeing different advices being
-                unlocked in different moments of their lives.
-              </p>
+              <header>{t('ipad_section__title')}</header>
+              <p>{t('ipad_section__body')}</p>
             </div>
           </StyledArticleFeatureIPadSection>
         </StyledArticle>
@@ -579,34 +559,23 @@ export default () => {
             <StyledColouredFeatureImagePanel />
             <StyledColouredFeaturePanel>
               <header>
-                Free,
-                <br /> Forever!
+                {t('features_free__title_1')}
+                <br />
+                {t('features_free__title_2')}
               </header>
-              <p>
-                We're a nonprofit and open source initiative, thought and built
-                by volunteers who share our values from different places around
-                the world. We also benefit from the support from people and
-                companies that believe in our idea.
-              </p>
-              <StyledSubscribeButton type="submit">
-                Subscribe
-              </StyledSubscribeButton>
+              <p>{t('features_free__body')}</p>
+              <SubscribeAction />
             </StyledColouredFeaturePanel>
           </StyledColouredFeatureSection>
           <StyledColouredFeatureSection position={1}>
             <StyledColouredFeaturePanel>
               <header>
-                Your Advices,
-                <br /> Forever Yours
+                {t('features_privacy__title_1')}
+                <br />
+                {t('features_privacy__title_2')}
               </header>
-              <p>
-                Security, privacy, backup, freedom and availability. Only you
-                and your children have access to the advices. And you are free
-                to download your advices and leave the system at any time.
-              </p>
-              <StyledSubscribeButton type="submit">
-                Subscribe
-              </StyledSubscribeButton>
+              <p>{t('features_privacy__body')}</p>
+              <SubscribeAction />
             </StyledColouredFeaturePanel>
             <StyledColouredFeatureImagePanel2 />
           </StyledColouredFeatureSection>

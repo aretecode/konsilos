@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 import { StyledLink } from '../Link'
 
 const StyledFooter = styled.footer`
@@ -40,6 +41,7 @@ const StyledFooterNav = styled.nav`
 `
 
 export const Footer = (props: {}) => {
+  const { t } = useTranslation()
   return (
     <StyledFooter>
       <StyledFooterNav>
@@ -47,24 +49,24 @@ export const Footer = (props: {}) => {
           <li>
             {process.env.NODE_ENV === 'production' && (
               <StyledLink href="/auth/login" isNotInternal={true}>
-                Login
+                {t('nav__login')}
               </StyledLink>
             )}
           </li>
           <li>
-            <StyledLink href="/">Home</StyledLink>
+            <StyledLink href="/">{t('nav__home')}</StyledLink>
           </li>
           <li>
-            <StyledLink href="/family">Family</StyledLink>
+            <StyledLink href="/family">{t('nav__family')}</StyledLink>
           </li>
           <li>
-            <StyledLink href="/advice">Advice</StyledLink>
+            <StyledLink href="/advice">{t('nav__advice')}</StyledLink>
           </li>
         </ul>
       </StyledFooterNav>
       <p>
-        <span>©{new Date().getFullYear()}</span>{' '}
-        <span>Konsilos - All rights reserved.</span>
+        <span>© {new Date().getFullYear()}</span>{' '}
+        <span>Konsilos - {t('copyright')}.</span>
       </p>
     </StyledFooter>
   )
