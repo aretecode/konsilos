@@ -6,6 +6,16 @@ import { UserAvatar } from '../../components/Avatar'
 
 const StyledListSection = styled.section`
   padding: 1rem;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      list-style: none;
+      width: 100px;
+    }
+  }
 `
 
 export type FamilyListPropType = {
