@@ -2,14 +2,22 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { StyledDevice } from './Device'
 const StyledScaledDevice = styled(StyledDevice)`
-  margin: 10vh 10vw 25vw 10vh;
-  transform: scale(0.5);
-  transform-origin: 0 0;
+  margin: 5vh 5vw;
 `
 export default { title: 'Device' }
 export const ipad = () => (
-  <StyledScaledDevice type="ipad">eh</StyledScaledDevice>
+  <StyledScaledDevice type="ipad">
+    <img
+      className="device-content"
+      src="https://pencamcc.sirv.com/Devices/bg-07.jpg"
+    />
+  </StyledScaledDevice>
 )
 export const macbook = () => (
-  <StyledScaledDevice type="macbook">eh</StyledScaledDevice>
+  <StyledScaledDevice type="macbook">
+    <img
+      className="device-content"
+      src="https://pencamcc.sirv.com/Devices/bg-02.jpg"
+    />
+  </StyledScaledDevice>
 )

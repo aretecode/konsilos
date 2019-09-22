@@ -20,9 +20,10 @@ export const familyInputConfigList: InputConfigType[] = [
   },
 ]
 
-export const AddFamily = () => {
+export const AddFamily = (props: { className?: string }) => {
   return (
     <Form
+      {...props}
       list={familyInputConfigList}
       onSubmit={(serialized: any) => {
         console.log(serialized)

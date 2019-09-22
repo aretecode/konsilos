@@ -6,6 +6,9 @@ import { KonsilosContext } from '../KonsilosContext'
 export type AddAdviceInputConfigItemType = InputConfigType & {
   propertyName: keyof AdviceItemType
 }
+/**
+ * @todo i18n on these
+ */
 export const inputConfigList: AddAdviceInputConfigItemType[] = [
   {
     propertyName: 'familyMemberId',
@@ -40,11 +43,12 @@ export const inputConfigList: AddAdviceInputConfigItemType[] = [
   },
 ]
 
-export const AddAdvice = () => {
+export const AddAdvice = (props: { className?: string }) => {
   const { adviceList, setAdviceList } = React.useContext(KonsilosContext)
 
   return (
     <Form
+      {...props}
       list={inputConfigList}
       onSubmit={(serialized: any) => {
         console.log(serialized)
