@@ -4,7 +4,7 @@
 > note that these are ordered numerically, but they may be completed in a different order
 
 ## 0. critical
-- [ ] add README instructional (_merge from both, add new_)
+- [x] add README instructional (_merge from both, add new_)
 - [x] merge git histories
 - [x] project dependency setup
 - [ ] stories for the components
@@ -12,6 +12,7 @@
   - [ ] stories for components still in pages
   - [ ] better stories (_customization etc_)
 - [ ] write unit tests & puppeteer/cypress tests (_@note, as this for fun, without designs or requirements [which will be experimented with as it's being done] will start with minimal tests and add, without TDD_)
+- [ ] security audit
 
 ## 1. cleanup
 - [ ] move static data out of `welcome` page
@@ -82,28 +83,40 @@
 
 # 5. forms
 - [ ] tests
+- [x] stories
+- [ ] show **required** in ui
 - [x] use a library or add minimal implementation (_went for minimal version that is easy to change_)
 - [ ] add family
   - [x] init
-  - [ ] styled
+  - [x] styled
   - [ ] other todos #!
 - [ ] add advice
   - [x] init
-  - [ ] styled
+  - [x] styled
   - [ ] other advice #!
 
 # 6. i18n
-- [ ] language switcher #!!
-  - [ ] svg icons for pt, en, in
-  - [ ] dropdown functionality (_or any better UI_)
-  - [ ] state handling (_store in idb_)
+- [x] language switcher #!!
+  - [x] svg icons for pt, en, in
+  - [x] dropdown functionality (_or any better UI_)
+  - [x] state handling
+  - [ ] persist (_store in idb_)
 - [ ] add tests
+  - [x] simple
+  - [ ] advanced
 - [x] add lib
-- [ ] translations
-  - [ ] pt
-  - [ ] en
-- [ ] ada compliance
-- [ ] speedtest passing with flying colours
+- [x] translations
+  - [x] pt
+  - [x] en
+- [ ] pages
+  - [x] welcome
+  - [x] advice
+  - [x] family
+  - [x] footer
+  - [x] nav
+  - [ ] fixture/constant/default data
+  - [ ] form translations
+
 
 # 7. family & profile page
 - [ ] create
@@ -126,10 +139,13 @@
 - [ ] browser support notice for older non evergreen browsers
 - [ ] dark mode
 - [ ] basic SEO (_`modern-stack-portfolio`_)
-  - [ ] manifest.json
+  - [x] manifest.json
   - [ ] sitemap.xml
+- [ ] add donation link (_github, paypal_)
+- [ ] contributor guidelines
 
 # 9. future features
+- [ ] schema.org rich snippets
 - [ ] put MD todos into github issues & project plan & assign
 - [ ] move to org
 - [ ] slack/discord
@@ -143,3 +159,5 @@
   - [ ] setup data model for notifications
   - [ ] integrate client side notifications (_html5_)
 - [ ] responsive image using sirv (_if not using picture_) `<script src="https://scripts.sirv.com/sirv.js"></script>`
+- [ ] speedtest passing with flying colours
+- [ ] ada compliance
