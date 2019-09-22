@@ -15,7 +15,9 @@ export const Footer = (props: {}) => {
         <ul>
           <li>
             {process.env.NODE_ENV === 'production' && (
-              <StyledLink href="/auth/login">Login</StyledLink>
+              <StyledLink href="/auth/login" isNotInternal={true}>
+                Login
+              </StyledLink>
             )}
           </li>
           <li>
