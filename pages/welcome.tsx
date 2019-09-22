@@ -289,9 +289,37 @@ const StyledArticle = styled.article`
 `
 
 const StyledColouredFeaturePanel = styled.div`
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 3rem;
+
+  @media (max-width: 1023px) {
+    width: 70%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+`
+
+const StyledColouredFeatureImagePanel = styled.div`
+  width: 50%;
+
+  @media (max-width: 1023px) {
+    width: 30%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+`
+
+const StyledColouredFeatureImagePanel2 = styled(StyledColouredFeatureImagePanel)` 
+  @media (max-width: 767px) {
+    order: -1;
+  }
 `
 
 const StyledColouredFeatureSection = styled.section`
@@ -302,23 +330,27 @@ const StyledColouredFeatureSection = styled.section`
 
   color: #ffffff;
   display: flex;
+  position: relative;
 
   img {
-    width: 50%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
   header {
-    padding-left: 3rem;
     font-size: 3rem;
     line-height: 40px;
     font-weight: 600;
   }
 
   p {
-    padding: 1rem 3rem;
     font-size: 1rem;
     line-height: 25px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
   }
 `
 
@@ -498,7 +530,9 @@ export default () => {
         </StyledArticle>
         <>
           <StyledColouredFeatureSection position={0}>
-            <img src="https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp" />
+            <StyledColouredFeatureImagePanel>
+              <img src="https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp" />
+            </StyledColouredFeatureImagePanel>
             <StyledColouredFeaturePanel>
               <header>
                 Free,
@@ -524,7 +558,9 @@ export default () => {
                 to download your advices and leave the system at any time.
               </p>
             </StyledColouredFeaturePanel>
-            <img src="https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp" />
+            <StyledColouredFeatureImagePanel2>
+              <img src="https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp" />
+            </StyledColouredFeatureImagePanel2>
           </StyledColouredFeatureSection>
         </>
       </StyledMain>
