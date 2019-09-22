@@ -24,7 +24,7 @@ export const AddFamily = () => {
   return (
     <Form
       list={familyInputConfigList}
-      onSubmit={serialized => {
+      onSubmit={(serialized: any) => {
         console.log(serialized)
       }}
     />
