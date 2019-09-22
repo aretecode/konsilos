@@ -174,6 +174,7 @@ const StyledIpadPanel = styled.div`
 `
 
 const StyledArticleFeatureMacbookSection = styled(StyledArticleFeatureSection)``
+
 const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
   ${StyledMaterialIcon} {
     width: 100px;
@@ -237,6 +238,16 @@ const StyledColouredFeatureSection = styled.section`
     font-size: 1rem;
     line-height: 25px;
   }
+`
+
+const StyledScribeIcon = styled(StyledMaterialIcon).attrs({
+  icon: 'Scribe' as any,
+  path:
+    'M1.2.1C.7.5 0 1.6 0 2.5v1.8l2.2.1V20.6l.1.2c.2 1 1 1.7 1.8 1.8.3 0 12.2 1.5 13.9 1.4 1.7-.2 1.9-1.6 1.9-3.1l-.1-.7c-.1-.3-.2-.4-.5-.5h-.7v-4.6l.8-.2a8 8 0 0 0 3.5-3l1-1.6a1 1 0 0 0 0-1c-.3-.2-1.4-.5-2.5-.7h-2.8V2.4c-.1-1.1-.5-1.5-1.2-2l-.7-.2C16.2.2 1.5-.2 1.2.2zm16.5 2.4v6.2l-.5.3c-.8.3-1.6 1.1-2 2l-.4 1c-.2 1-.4 1.2-1 1.5-.6.2-.6.7-.5.9 0 .1.4.2 1 0 .5-.2.5-.2 1 0 .4.3 2 .7 2 .7h.4v4.7H6c-.3 0-.5.4-.6.9l-.2 1h-.8c-.3-.2-.6-.4-.7-.8-.2-.2-.2.4-.2-8.5V1l13.4.2c.5.2.8.5 1 1.2zM5.4 8c-.2.1-.3.3-.3.6 0 .2.2.4.4.5h8.3c.6 0 .6-1 .1-1.1H5.4zM2.3 3.4H1.2L1.3 2c.2-.6.4-.9.6-.9h.4v2.3zm3.2 1.7H14c.3-.2.4-.8 0-1L14 4H5.6c-.6.2-.6.8 0 1.1zm16.8 5c0 .3-.1.7-1 1.5-.6.8-1.3 1.5-2.2 1.8-.6.3-1.6.3-3 0-.3 0-.5-.1-.5-.4 0-.3.4-1 1-2 .7-.7 1.3-1.1 2-1.3l1.4-.1h1.3c.3 0 1 .2 1 .5zM5.5 13.7h4.4c.5-.1.5-.8.1-1l-.1-.1H5.6c-.6.2-.6 1-.1 1.1zm13 8.4c-.4.8-.7.8-2.7.7l-10-1.3c-.1-.5 0-.8.3-.9h12.4c.5.2.5.8 0 1.5z',
+})`
+  width: 100px;
+  height: 100px;
+  fill: #21c0fd;
 `
 
 const CardTextSection = styled.section`
@@ -320,12 +331,7 @@ export default () => {
           </StyledArticleOverview>
           <StyledArticleFeatureMacbookSection>
             <div className="text">
-              <img
-                src="https://konsilos.com/img/landing/img2.jpg"
-                width="78"
-                height="68"
-                alt="img"
-              />
+              <StyledScribeIcon />
               <header>Register Several Advices</header>
               <p>
                 They can be about life, books to be read, movies to be watched
