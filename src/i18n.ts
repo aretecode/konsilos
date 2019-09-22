@@ -12,6 +12,7 @@ i18n
         translations: {
           page_title__advice: 'Advice',
           page_title__family: 'Family',
+          page_title__open_source: 'Credits',
 
           nav__home: 'Home',
           nav__advice: 'Advice',
