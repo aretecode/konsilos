@@ -183,7 +183,7 @@ export interface AdviceItemType {
   /**
    * probably should be an enum
    */
-  type?: AdviceType
+  type: AdviceType
 
   /**
    * advice universally unique id

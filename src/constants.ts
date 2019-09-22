@@ -64,7 +64,7 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
   // === duplicated ===
   {
     uid: 7,
-    familyMemberId: -1,
+    familyMemberId: -2,
     type: 'life',
     title: 'About Life',
     text: 'Turning 18 years',
@@ -72,13 +72,13 @@ export const DEFAULT_ADVICE_LIST: AdviceItemType[] = [
     happenedOn: '02/05/2001',
   },
   {
-    uid: 8,
-    familyMemberId: -3,
-    type: 'movie',
-    title: 'Rocky Balboa',
-    text: 'When life gets hard',
-    description: ' Son, nobody will hit you as hard as life. But...',
-    happenedOn: '01/08/2015',
+    uid: 5,
+    familyMemberId: -5,
+    type: 'travel',
+    title: 'Steve Jobs',
+    text: 'Never give up',
+    description: 'Sometimes, life hits you in the head with a brick...',
+    happenedOn: '11/12/2019',
   },
   {
     uid: 9,
