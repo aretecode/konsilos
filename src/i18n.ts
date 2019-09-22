@@ -16,7 +16,9 @@ i18n
           nav__home: 'Home',
           nav__advice: 'Advice',
           nav__family: 'Family',
+          nav__profile: 'Profile',
           nav__login: 'Login',
+          nav__logout: 'Logout',
           copyright: 'All rights reserved',
 
           eternalize_advice__title: 'Eternize advices to your children',

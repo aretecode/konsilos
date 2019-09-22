@@ -5,6 +5,7 @@ import * as React from 'react'
 import { ApolloProvider, getDataFromTree } from 'react-apollo'
 import { AppContextProvider } from '../src/AppContext'
 import { Footer } from '../src/components/Footer'
+import { Auth0Provider } from '../src/components/Auth0'
 import { KonsilosContextProvider } from '../src/features/KonsilosContext'
 import { initApolloClient } from '../src/graphql/apolloClient'
 import { fromReqToUrl } from '../src/utils/fromReqToUrl'
@@ -29,7 +30,15 @@ export class InnerApp extends React.PureComponent<{
         >
           <React.StrictMode>
             <AppStyles />
-            <KonsilosContextProvider>{children}</KonsilosContextProvider>
+            <Auth0Provider
+              domain={process.env.CLIENT_AUTH0_DOMAIN!}
+              client_id={process.env.CLIENT_AUTH0_CLIENT_ID!}
+              redirect_uri={
+                process.browser ? window.location.origin + '/auth/callback' : ''
+              }
+            >
+              <KonsilosContextProvider>{children}</KonsilosContextProvider>
+            </Auth0Provider>
             <BelowTheFoldStyles />
           </React.StrictMode>
         </ApolloProvider>
