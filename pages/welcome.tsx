@@ -27,7 +27,6 @@ const StyledLeaderboard = styled.section`
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
 
   h1,
@@ -249,7 +248,7 @@ const StyledScribeIcon = styled(StyledMaterialIcon).attrs({
 })`
   width: 100px;
   height: 100px;
-  fill: #21c0fd;
+  fill: var(--color-blue);
 `
 
 const StyledCardTextSection = styled.section`
