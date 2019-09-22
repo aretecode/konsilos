@@ -21,7 +21,7 @@ const StyledLeaderboard = styled.section`
   background: url('https://pencamcc.sirv.com/Images/home/konsilos-background.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 60% center;
 
   color: #fff;
   min-height: 100vh;
@@ -34,18 +34,33 @@ const StyledLeaderboard = styled.section`
     width: 55%;
   }
 
+  @media (max-width: 1023px) {
+    h1,
+    p {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 760px) {
+    h1,
+    p {
+      width: 100%;
+    }
+  }
+
   h1 {
     margin: 0;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 300;
-    line-height: 80px;
+    line-height: 4.5rem;
     text-shadow: 0 0 2px #0e0806;
     margin-bottom: 3rem;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
+    margin: 3rem 0;
   }
 
   form {
@@ -54,15 +69,44 @@ const StyledLeaderboard = styled.section`
     input {
       border: none;
       width: 300px;
+      height: 50px;
       border-radius: 4px;
       font-size: 1rem;
     }
+
+    button {
+      height: 50px;
+    }
   }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+    }
+
+    form {
+      flex-direction: column;
+
+      button, input {
+        width: 100%;
+      }
+
+      button {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+
 `
 
 const StyledLeaderboardPanel = styled.div`
   max-width: calc(100% - 15%);
   margin: auto;
+
+  @media (max-width: 480px) {
+    max-width: calc(100% - 12%);
+  }
 `
 
 const StyledSubscripeInput = styled.input.attrs({
@@ -78,11 +122,13 @@ const StyledSubscribeButton = styled.button`
   border-radius: 4px;
   font-size: 1rem;
   text-transform: uppercase;
+  color: white;
+  min-width: 200px;
 `
 const StyledBanner = styled.header.attrs({
   role: 'banner',
 })`
-  padding: 2rem 1rem 0 1rem;
+  padding: 2rem 0rem 0 0rem;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -107,7 +153,14 @@ const StyledBanner = styled.header.attrs({
 const StyledLogo = styled(Logo)`
   width: 163px;
   height: 102px;
-  fill: #fff;
+  fill: #ffffff;
+  position: relative;
+  left: -30px;
+
+  @media (max-width: 480px) {
+    width: 80px;
+    left: 0px;
+  }
 `
 
 const StyledTimeCapsuleAction = styled.a`
@@ -130,29 +183,26 @@ export type ColouredFeatureSectionPropType = { position: number }
 
 const StyledArticleFeatureSection = styled.section`
   position: relative;
-  height: 540px;
   max-width: calc(100% - 15%);
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 5rem;
 
   @media (max-width: 1023px) {
     flex-direction: column;
-    height: 100vh;
+    max-width: calc(100% - 12%);
+
+    .text {
+      width: 100% !important;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
   }
 
   > .text {
-    width: 50%;
-  }
-
-  ${StyledDevice} {
-    margin: auto;
-    transform: scale(0.3);
-    transform-origin: 0% 50%;
-    @media (max-width: 1023px) {
-      transform-origin: 0% 0%;
-    }
+    width: 40%;
   }
 
   header {
@@ -167,19 +217,30 @@ const StyledArticleFeatureSection = styled.section`
 `
 
 const StyledMacbookPanel = styled.div`
-  height: 100%;
-  width: 50%;
-  padding: 0 3rem;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  svg {
+    width: 100%;
+  }
+
   @media (max-width: 1023px) {
-    height: unset;
-    padding: 0;
+    width: 100%;
   }
 `
 
 const StyledIpadPanel = styled.div`
-  width: 50%;
-  @media (max-width: 1023px) {
-    padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  svg {
+    width: 100%;
   }
 `
 
@@ -200,12 +261,12 @@ const StyledArticleFeatureIPadSection = styled(StyledArticleFeatureSection)`
 `
 
 const StyledArticleOverview = styled.section`
-  /* padding: 0 5rem 5rem 5rem; */
   max-width: calc(100% - 15%);
   margin: auto;
+  padding-bottom: 3rem;
 
   header {
-    padding: 3rem 0 2rem 0;
+    padding: 4rem 0 2rem 0;
     font-size: 3rem;
     line-height: 48px;
     color: var(--color-blue);
@@ -219,15 +280,55 @@ const StyledArticleOverview = styled.section`
     font-weight: 400;
     color: grey;
   }
+
+  @media (max-width: 480px) {
+    max-width: calc(100% - 12%);
+  }
 `
 const StyledArticle = styled.article`
   background: #fff;
 `
 
 const StyledColouredFeaturePanel = styled.div`
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
+  padding: 3rem 5rem;
+
+  @media (max-width: 1023px) {
+    width: 70%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 3rem;
+  }
+`
+
+const StyledColouredFeatureImagePanel = styled.div`
+  width: 50%;
+  background-image: url("https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 1023px) {
+    width: 30%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 380px;
+  }
+`
+
+const StyledColouredFeatureImagePanel2 = styled(StyledColouredFeatureImagePanel)` 
+background-image: url("https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp");
+background-position: center;
+
+  @media (max-width: 767px) {
+    order: -1;
+  }
 `
 
 const StyledColouredFeatureSection = styled.section`
@@ -236,25 +337,36 @@ const StyledColouredFeatureSection = styled.section`
       ? 'var(--color-blue-dark)'
       : 'var(--color-orange-dark)'};
 
-  color: #fff;
+  color: #ffffff;
   display: flex;
+  position: relative;
 
   img {
-    width: 50%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
   header {
-    padding-left: 3rem;
     font-size: 3rem;
     line-height: 40px;
     font-weight: 600;
   }
 
   p {
-    padding: 1rem 3rem;
     font-size: 1rem;
     line-height: 25px;
+  }
+
+  ${StyledSubscribeButton} {
+    margin: 0;
+    background: white;
+    color: black;
+    max-width: 200px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
   }
 `
 
@@ -271,21 +383,23 @@ const StyledScribeIcon = styled(StyledMaterialIcon).attrs({
 const StyledCardTextSection = styled.section`
   margin: auto;
   text-align: center;
-  padding: 3rem;
+  padding: 0 5.3rem 0 3rem;
 
   header {
     font-size: 3rem;
     font-weight: 600;
     text-transform: capitalize;
+    margin-bottom: 2rem;
+    color: #f27059;
   }
 
   p {
     margin: auto;
-    max-width: calc(100% - 15%);
     text-align: center;
-
+    color: grey;
     font-size: 1rem;
     font-weight: 400;
+    margin-top: 1rem;
   }
 `
 const StyledAdviceListWithPromo = styled.article`
@@ -298,10 +412,18 @@ const StyledAdviceListWithPromo = styled.article`
     z-index: 2;
     margin-left: 50%;
     overflow: hidden;
+    background: rgb(236, 239, 241, 0.8);
+
     @media (max-width: 1023px) {
-      background: #eceff1;
       margin-left: 25vw;
+      margin: auto;
+      padding: 3rem 2rem;
+      background: rgb(236, 239, 241, 1);
     }
+  }
+
+  ${StyledSubscribeButton} {
+    margin-top: 2rem;
   }
 
   ${StyledAdviceList} {
@@ -359,7 +481,6 @@ export default () => {
         </StyledLeaderboard>
         <StyledAdviceListWithPromo>
           <StyledAdviceList list={DEFAULT_ADVICE_LIST} />
-
           <StyledCardTextSection>
             <header>Leave your legacy</header>
             <p>
@@ -374,6 +495,9 @@ export default () => {
               We want to help you remember to share them in the right occasion
               or the ideal age, even if you are not there anymore.
             </p>
+            <StyledSubscribeButton type="submit">
+              Subscribe
+            </StyledSubscribeButton>
           </StyledCardTextSection>
         </StyledAdviceListWithPromo>
         <StyledArticle>
@@ -399,14 +523,13 @@ export default () => {
               </p>
             </div>
             <StyledMacbookPanel>
-              <StyledDevice type="macbook">eh</StyledDevice>
+              {<StyledDevice type="macbook">eh</StyledDevice>}
             </StyledMacbookPanel>
           </StyledArticleFeatureMacbookSection>
           <StyledArticleFeatureIPadSection>
             <StyledIpadPanel>
-              <StyledDevice type="ipad">eh</StyledDevice>
+              {<StyledDevice type="ipad">eh</StyledDevice>}
             </StyledIpadPanel>
-
             <div className="text">
               <StyledMaterialIcon icon="notification" />
               <header>Notifications and Time Capsule</header>
@@ -423,7 +546,7 @@ export default () => {
         </StyledArticle>
         <>
           <StyledColouredFeatureSection position={0}>
-            <img src="https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp" />
+            <StyledColouredFeatureImagePanel />
             <StyledColouredFeaturePanel>
               <header>
                 Free,
@@ -435,6 +558,9 @@ export default () => {
                 the world. We also benefit from the support from people and
                 companies that believe in our idea.
               </p>
+              <StyledSubscribeButton type="submit">
+                Subscribe
+              </StyledSubscribeButton>
             </StyledColouredFeaturePanel>
           </StyledColouredFeatureSection>
           <StyledColouredFeatureSection position={1}>
@@ -448,8 +574,11 @@ export default () => {
                 and your children have access to the advices. And you are free
                 to download your advices and leave the system at any time.
               </p>
+              <StyledSubscribeButton type="submit">
+                Subscribe
+              </StyledSubscribeButton>
             </StyledColouredFeaturePanel>
-            <img src="https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp" />
+            <StyledColouredFeatureImagePanel2 />
           </StyledColouredFeatureSection>
         </>
       </StyledMain>
