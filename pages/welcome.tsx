@@ -191,7 +191,13 @@ const StyledArticleFeatureSection = styled.section`
 
   @media (max-width: 1023px) {
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
+    max-width: calc(100% - 12%);
+
+    .text {
+      width: 100% !important;
+      text-align: center;
+    }
   }
 
   > .text {
@@ -225,6 +231,7 @@ const StyledMacbookPanel = styled.div`
   @media (max-width: 1023px) {
     height: unset;
     padding: 0;
+    width: 100%;
   }
 `
 
@@ -232,6 +239,7 @@ const StyledIpadPanel = styled.div`
   width: 50%;
   @media (max-width: 1023px) {
     padding: 0;
+    width: 100%;
   }
 `
 
