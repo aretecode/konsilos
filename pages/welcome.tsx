@@ -342,13 +342,13 @@ const StyledCardTextSection = styled.section`
     font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 2rem;
+    color: #f27059;
   }
 
   p {
     margin: auto;
-    /* max-width: calc(100% - 15%); */
     text-align: center;
-
+    color: grey;
     font-size: 1rem;
     font-weight: 400;
     margin-top: 1rem;
