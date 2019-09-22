@@ -3,15 +3,15 @@ import styled from 'styled-components'
 import { AddFamily, StyledFamilyList } from '../src/features/Family'
 
 const FamilyPageWrapper = styled.section`
-   h1 {
+  h1 {
     margin: auto;
     font-size: 2rem;
     background: #f27059;
     color: white;
     padding: 2rem;
-   }
+  }
 
-   form {
+  form {
     width: 50%;
     max-width: 500px;
     padding: 0rem;
@@ -26,7 +26,7 @@ const FamilyPageWrapper = styled.section`
 `
 
 const FormWrapper = styled.div`
-  background-image: url("https://konsilos.com/img/landing/man_img.jpg");
+  background-image: url('https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
