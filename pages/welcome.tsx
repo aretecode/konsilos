@@ -118,6 +118,7 @@ const StyledTimeCapsuleAction = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
 
   ${StyledMaterialIcon} {
     fill: #fff;
