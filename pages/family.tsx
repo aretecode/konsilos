@@ -33,6 +33,8 @@ const FormWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   padding: 2rem 4rem;
+  height: 500px;
+  box-sizing: border-box;
 `
 
 export default () => {
