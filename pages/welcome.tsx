@@ -483,7 +483,7 @@ export default () => {
               <StyledDevice type="macbook">
                 <img
                   className="device-content"
-                  src="https://pencamcc.sirv.com/Devices/bg-07.jpg"
+                  src="https://pencamcc.sirv.com/Images/stock/family-hands.jpg?format=webp"
                 />
               </StyledDevice>
             </StyledMacbookPanel>
@@ -493,7 +493,7 @@ export default () => {
               <StyledDevice type="ipad">
                 <img
                   className="device-content"
-                  src="https://pencamcc.sirv.com/Devices/bg-02.jpg"
+                  src="https://pencamcc.sirv.com/Images/screenshots/add-family.png?format=webp"
                 />
               </StyledDevice>
             </StyledIpadPanel>

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { StyledLink } from '../Link'
 
 const StyledFooter = styled.footer`
+  padding-top: 1rem;
   text-align: center;
   display: flex;
   align-items: center;

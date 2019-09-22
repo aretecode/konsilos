@@ -116,6 +116,11 @@ export default () => {
                 friendship hands
               </StyledLink>
             </li>
+            <li>
+              <StyledLink href="https://pixabay.com/photos/goslings-chicks-goose-young-bird-1566724/">
+                ducks
+              </StyledLink>
+            </li>
           </ul>
         </section>
       </main>

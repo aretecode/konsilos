@@ -20,7 +20,7 @@ const AdvicePageWrapper = styled.section`
 `
 
 const FormWrapper = styled.div`
-  background-image: url('https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp');
+  background-image: url('https://pencamcc.sirv.com/Images/stock/family-hands.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -29,8 +29,11 @@ const FormWrapper = styled.div`
   padding: 2rem 4rem;
 `
 
+/**
+ * @note this was styled with a blue bg, but it does not follow material standards
+ */
 const ThemedStyledAdviceList = styled(StyledAdviceList)`
-  background-color: #23c0ff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `
 
 export default () => {

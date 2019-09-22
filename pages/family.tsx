@@ -17,10 +17,14 @@ const FamilyPageWrapper = styled.section`
       width: 100%;
     }
   }
+
+  main {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
 `
 
 const FormWrapper = styled.div`
-  background-image: url('https://pencamcc.sirv.com/Images/home/konsilos_man_mountain_backpack.jpg?format=webp');
+  background-image: url('https://pencamcc.sirv.com/Images/stock/family-ducks.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
