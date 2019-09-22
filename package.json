@@ -12,6 +12,7 @@
 	},
 	"scripts": {
 		"dev": "next",
+		"dev:server": "IS_DEV_SERVER=true COOKIE_SECRET=dev node server/now/index.js",
 		"build": "rm -fr .next && next build",
 		"export": "next export",
 		"start": "NODE_ENV=production next start",
@@ -31,7 +32,7 @@
 		"test:dev": "jest --config jest.config.js",
 		"build:server": "yarn build && yarn build:server:only && tsc || true && tsc --project tsconfig.server.json || true",
 		"start:server": "DISABLE_SERVERLESS=true NODE_ENV=production node .next/server",
-		"dev:server": "rm -fr dist && rm -fr .next && yarn build:server && yarn start:server",
+		"wip:dev:server": "rm -fr dist && rm -fr .next && yarn build:server && yarn start:server",
 		"now-build-storybook": "build-storybook -o dist/storybook"
 	},
 	"resolutions": {
