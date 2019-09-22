@@ -59,6 +59,10 @@ export const AppStyles = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: inherit;
   }
+  * {
+    font-family: 'Lato';
+  }
+
   html, body {
     margin: 0;
     min-height: 100vh;
