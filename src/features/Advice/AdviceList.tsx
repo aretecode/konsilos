@@ -27,7 +27,7 @@ const StyledAdviceListSection = styled.section`
       box-shadow: 0px 8px 6px 0 rgba(0, 0, 0, 0.4);
     }
 
-    min-width: 25%;
+    min-width: 250px;
     min-height: 340px;
     padding: 0 1rem 2rem;
     background: #fff;

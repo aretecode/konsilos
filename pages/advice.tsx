@@ -12,11 +12,19 @@ const AdvicePageWrapper = styled.section`
    }
 
    form {
-    min-width: 40%;
+    width: 50%;
+    max-width: 500px;
     padding: 0rem;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 767px) {
+      margin: auto;
+      width: 100%;
+    }
   }
+
+  
 `
 
 const FormWrapper = styled.div`
@@ -32,6 +40,7 @@ const FormWrapper = styled.div`
 const ThemedStyledAdviceList = styled(StyledAdviceList)`
   background-color: #23c0ff;
 `
+
 
 export default () => {
   return (
