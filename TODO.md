@@ -122,19 +122,18 @@
 - [x] create
 - [ ] fill in requirements
 
-# 8. lower priority
-- [ ] extract any `@todo` comments
+# 8. polish
+- [x] stock photos on family & advice
 - [ ] unlock icon animation
+- [ ] animate language switcher
+- [ ] add photos to devices
+
+
+# 9. lower priority
+- [ ] extract any `@todo` comments
 - [ ] footer
-  - [ ] footer icons
-  - [ ] footer copyright
-- [ ] credits page (_open source credits, authors_)
-  - [material icons](https://material.io/resources/icons/)
-  - [konsilos meteor](https://github.com/konsilos/konsilos)
-  - [react starter](https://github.com/aretecode/react-starter)
-  - [svg optimizer](https://jakearchibald.github.io/svgomg/)
-  - [devices.css 0.1.6](https://github.com/picturepan2/)
-  - [svg flags](https://www.sketchappsources.com/free-source/2101-all-coutry-flags-kit-sketch-freebie-resource.html)
+  - [ ] footer icons (_google play - these are ready but not needed_)
+  - [x] footer copyright
 - [ ] about page
 - [ ] browser support notice for older non evergreen browsers
 - [ ] dark mode
@@ -143,8 +142,9 @@
   - [ ] sitemap.xml
 - [ ] add donation link (_github, paypal_)
 - [ ] contributor guidelines
+- [x] credits page (_open source credits, authors_)
 
-# 9. future features
+# 10. future features
 - [ ] schema.org rich snippets
 - [ ] put MD todos into github issues & project plan & assign
 - [ ] move to org

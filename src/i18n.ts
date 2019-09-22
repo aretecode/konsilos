@@ -19,6 +19,7 @@ i18n
           nav__profile: 'Profile',
           nav__login: 'Login',
           nav__logout: 'Logout',
+          nav__open_source: 'Credits',
           copyright: 'All rights reserved',
 
           eternalize_advice__title: 'Eternize advices to your children',

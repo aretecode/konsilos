@@ -65,6 +65,9 @@ export const Footer = (props: {}) => {
           <li>
             <StyledLink href="/profile">{t('nav__profile')}</StyledLink>
           </li>
+          <li>
+            <StyledLink href="/credits">{t('nav__open_source')}</StyledLink>
+          </li>
         </ul>
       </StyledFooterNav>
       <p>
