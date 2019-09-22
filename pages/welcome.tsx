@@ -34,18 +34,33 @@ const StyledLeaderboard = styled.section`
     width: 55%;
   }
 
+  @media (max-width: 1023px) {
+    h1,
+    p {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 760px) {
+    h1,
+    p {
+      width: 100%;
+    }
+  }
+
   h1 {
     margin: 0;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 300;
-    line-height: 80px;
+    line-height: 4.5rem;
     text-shadow: 0 0 2px #0e0806;
     margin-bottom: 3rem;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
+    margin: 3rem 0;
   }
 
   form {
@@ -54,15 +69,44 @@ const StyledLeaderboard = styled.section`
     input {
       border: none;
       width: 300px;
+      height: 50px;
       border-radius: 4px;
       font-size: 1rem;
     }
+
+    button {
+      height: 50px;
+    }
   }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+    }
+
+    form {
+      flex-direction: column;
+
+      button, input {
+        width: 100%;
+      }
+
+      button {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+
 `
 
 const StyledLeaderboardPanel = styled.div`
   max-width: calc(100% - 15%);
   margin: auto;
+
+  @media (max-width: 480px) {
+    max-width: calc(100% - 12%);
+  }
 `
 
 const StyledSubscripeInput = styled.input.attrs({
@@ -235,7 +279,7 @@ const StyledColouredFeatureSection = styled.section`
       ? 'var(--color-blue-dark)'
       : 'var(--color-orange-dark)'};
 
-  color: #fff;
+  color: #ffffff;
   display: flex;
 
   img {
