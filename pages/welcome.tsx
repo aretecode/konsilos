@@ -358,7 +358,7 @@ const StyledColouredFeatureSection = styled.section`
 
   ${StyledSubscribeAction} {
     margin: 0;
-    background: white;
+    background: #fff;
     color: black;
     max-width: 200px;
   }
