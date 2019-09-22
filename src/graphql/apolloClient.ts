@@ -52,9 +52,9 @@ export function createInstance(
         return process.env.READONLY !== 'true' && isObj(url) && url.searchParams.has('graphql')
           ? url.searchParams.get('graphql')!
           : process.env.NODE_ENV === 'development'
-          ? `http://localhost:4000/graphql?n=${operation.operationName}`
+          ? `http://localhost:3000/api/graphql?n=${operation.operationName}`
           : process.browser
-          ? '/graphql'
+          ? '/api/graphql'
           : process.env.GRAPHQL_API_URL
       },
 

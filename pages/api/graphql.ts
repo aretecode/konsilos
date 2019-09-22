@@ -1,20 +1,12 @@
-import { ApolloServer, gql } from 'apollo-server-micro'
+import { ApolloServer } from 'apollo-server-micro'
+import {
+  typeDefs,
+  resolvers,
+}  from '../../src/graphql'
 
-const typeDefs = gql`
-  type Query {
-    sayHello: String
-  }
-`
-
-const resolvers = {
-  Query: {
-    sayHello() {
-      return 'Hello World!'
-    },
-  },
-}
-
-const apolloServer = new ApolloServer({ typeDefs, resolvers })
+const apolloServer = new ApolloServer({ 
+  typeDefs, resolvers 
+})
 
 export const config = {
   api: {
