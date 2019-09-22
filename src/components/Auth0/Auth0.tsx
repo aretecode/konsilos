@@ -70,9 +70,11 @@ export const Auth0Provider = ({
        *       otherwise, it falls back to default
        */
       if (!user) {
-        const json = await fetch(window.location.origin + '/user').then(x =>
-          x.json()
-        )
+        const json = await fetch(window.location.origin + '/user')
+          .then(x => x.json())
+          .catch(errror => {
+            // ignore
+          })
         if (json != null && Object.keys(json).length > 0) {
           setIsAuthenticated(true)
           setUser(json)
