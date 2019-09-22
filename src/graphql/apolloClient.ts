@@ -25,7 +25,7 @@ const IS_BROWSER = process.browser && typeof window === 'object'
  */
 if (!process.browser) {
   // tslint:disable:no-var-requires
-  (global as any).fetch = require('node-fetch')
+  ;(global as any).fetch = require('node-fetch')
 }
 
 let apolloClientInstance: ApolloClient<any> = undefined as any
@@ -49,7 +49,9 @@ export function createInstance(
          * 3. if it's the browser, use `/graphql` (_same origin_)
          * 4. use `now.sh` deployment of graphql from `env`
          */
-        return process.env.READONLY !== 'true' && isObj(url) && url.searchParams.has('graphql')
+        return process.env.READONLY !== 'true' &&
+          isObj(url) &&
+          url.searchParams.has('graphql')
           ? url.searchParams.get('graphql')!
           : process.env.NODE_ENV === 'development'
           ? `http://localhost:3000/api/graphql?n=${operation.operationName}`
@@ -69,7 +71,9 @@ export function createInstance(
 
   const logError = (error: GraphQLError): void => {
     const { message, locations, path } = error
-    console.error(`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`)
+    console.error(
+      `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+    )
   }
 
   const errorLink = onError(namedErrorResponseParams => {
