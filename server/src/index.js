@@ -9,7 +9,7 @@ const passport = require('passport')
 const Auth0Strategy = require('passport-auth0')
 const userInViews = require('./userInView')
 const authRouter = require('./auth')
-const userRouter = require('./userInView')
+const userRouter = require('./user')
 
 // eslint-disable-line max-statements
 const strategyConfig = {
@@ -38,7 +38,7 @@ passport.deserializeUser((user, done) => {
 const server = express()
 
 const sess = {
-  secret: 'CodingIsAwesome',
+  secret: process.env.COOKIE_SECRET,
   cookie: {
     sameSite: false,
   },

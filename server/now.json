@@ -7,7 +7,8 @@
     "CLIENT_ID": "@konsilos_auth0_client_id",
     "CLIENT_SECRET": "@konsilos_auth0_client_secret",
     "DOMAIN": "@konsilos_auth0_domain",
-    "AUTH0_CALLBACK_URL": "@konsilos_auth0_callback_url"
+    "AUTH0_CALLBACK_URL": "@konsilos_auth0_callback_url",
+    "COOKIE_SECRET": "@konsilos_cookie_secret"
   },
   "builds": [
     {
