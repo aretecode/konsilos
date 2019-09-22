@@ -1,7 +1,13 @@
 import * as React from 'react'
 
 export const CanadaFlag = (props: Partial<React.SVGProps<SVGSVGElement>>) => (
-  <svg viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg
+    role="img"
+    viewBox="0 0 28 20"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <title key="title">Canada flag</title>
     <defs>
       <rect id="a" width="28" height="20" rx="2" />
     </defs>
