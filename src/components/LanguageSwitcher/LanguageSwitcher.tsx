@@ -8,7 +8,7 @@
  */
 import * as React from 'react'
 import styled, { css } from 'styled-components'
-import { useTranslation } from 'react-i18next'
+import i18n from '../../i18n'
 import { StyledFlag, SupportedFlagNameType } from './flags/Flag'
 
 const StyledLanguageSwitcherArea = styled.div`
@@ -44,7 +44,6 @@ const languageListSorted = (activeName: SupportedFlagNameType) => {
 }
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation()
   const [isVisible, setIsVisible] = React.useState(false)
   const [activeFlag, setActiveFlag] = React.useState<SupportedFlagNameType>(
     'canada'
