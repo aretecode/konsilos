@@ -3,10 +3,42 @@ import styled from 'styled-components'
 import { StyledLink } from '../Link'
 
 const StyledFooter = styled.footer`
-  border-top: 1px solid #757575;
   text-align: center;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  max-width: calc(100% - 15%);
+  margin: auto;
+
+  p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-family: 'Lato';
+    color: grey;
+    width: 50%;
+    text-align: right;
+  }
 `
-const StyledFooterNav = styled.nav``
+const StyledFooterNav = styled.nav`
+  width: 50%;
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  li {
+    color: grey;
+    /* padding: 0 1rem; */
+  }
+
+  a {
+    font-family: 'Lato';
+    letter-spacing: 0;
+    padding-right: 1rem;
+    text-decoration: underline;
+  }
+`
 
 export const Footer = (props: {}) => {
   return (
