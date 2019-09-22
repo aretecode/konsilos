@@ -12,10 +12,8 @@ const AdvicePageWrapper = styled.section`
    }
 
    form {
-    width: 40%;
-    margin: 0 2rem;
-    padding: 2rem 0;
-    padding-bottom: 3rem;
+    min-width: 40%;
+    padding: 0rem;
     display: flex;
     flex-direction: column;
   }
@@ -28,6 +26,7 @@ const FormWrapper = styled.div`
   background-position: center;
   display: flex;
   justify-content: flex-end;
+  padding: 2rem 4rem;
 `
 
 const ThemedStyledAdviceList = styled(StyledAdviceList)`
