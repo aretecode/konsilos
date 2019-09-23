@@ -8,9 +8,8 @@
  */
 import * as React from 'react'
 import styled, { css } from 'styled-components'
-import i18n from '../../i18n'
 import { StyledFlag, SupportedFlagNameType } from './flags/Flag'
-import { useTranslation } from 'react-i18next'
+import { i18n, useTranslation } from '../../i18n'
 
 const StyledLanguageSwitcherArea = styled.div`
   position: absolute;
@@ -98,4 +97,4 @@ const LanguageSwitcher = (props: { className?: string }) => {
   )
 }
 
-export { LanguageSwitcher }
+export { LanguageSwitcher, StyledLanguageSwitcherArea, LanguageSwitcherWrap }

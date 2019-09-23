@@ -1,6 +1,6 @@
 import * as React from 'react'
+import { useTranslation } from '../../i18n'
 import { useAuth0 } from '../Auth0'
-import { useTranslation } from 'react-i18next'
 
 const Auth0NavBar = (props: { className?: string }) => {
   const { t } = useTranslation()
