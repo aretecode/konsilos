@@ -47,16 +47,18 @@ export default {
       const [error, records] = await getAdvices()
       if (error) return
       return records.forEach((record: any) => {
-        console.log('Advice', { ...record.fields })
-        return { ...record.fields }
+        const list = { ...record.fields, uid: record.getId() }
+        console.log('Advice', list)
+        return list
       })
     },
     async familyList() {
       const [error, records] = await getFamilyMembers()
       if (error) return
       return records.forEach((record: any) => {
-        console.log('Family Member', { ...record.fields })
-        return { ...record.fields }
+        const list = { ...record.fields, uid: record.getId() }
+        console.log('Family Member', list)
+        return list
       })
     },
   },
