@@ -1,4 +1,3 @@
-import { promisify } from 'util'
 import { DEFAULT_USER } from '../constants'
 const Airtable = require('airtable')
 
@@ -13,8 +12,8 @@ const Advices = base.table('Advices')
 const FamilyMembers = base.table('FamilyMembers')
                     .select({ view: 'Grid view' })
 
-const getAdvices = promisify(Advices.firstPage)
-const getFamilies = promisify(FamilyMembers.firstPage)
+const getAdvices = Advices.firstPage
+const getFamilies = FamilyMembers.firstPage
 
 
 export default {
@@ -23,12 +22,22 @@ export default {
       return Promise.resolve({ ...DEFAULT_USER })
     },
     async adviceList() {
-      const adviceList = await getAdvices()
-      return adviceList
+      await getAdvices((error:any, records:any) => {
+        if (error) {
+          console.error(error)
+          return
+        }
+        return records
+      })
     },
     async familyList() {
-      const familyList = await getFamilies()
-      return familyList
+      await getFamilies((error:any, records:any) => {
+        if (error) {
+          console.error(error)
+          return
+        }
+        return records
+      })
     },
   },
 }
