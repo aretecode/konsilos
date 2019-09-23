@@ -48,7 +48,9 @@ const createItem = (table:any, item:any) => {
     if (error) {
       console.error(error)
     }
-    return Promise.resolve(records.map((record:any) => record))
+    const record = records[0]
+    const payload =  { ...record.fields  }
+    return Promise.resolve(payload)
   })
 }
 
@@ -59,7 +61,9 @@ const updateItem = (table:any, item:any, id:string) => {
     if (error) {
       console.error(error)
     }
-    return Promise.resolve(records.map((record:any) => record))
+    const record = records[0]
+    const payload =  { ...record.fields  }
+    return Promise.resolve(payload)
   })
 }
 
@@ -106,11 +110,13 @@ export default {
   },
   Mutation: {
     createAdvice: async(_, { input }) => {
-      const result = await createItem(Advices, input)[0]
+      const result = await createItem(Advices, input)
+      console.log(result)
       return result
     },
     updateAdvice: async(_, { input, id }) => {
-      const result = await updateItem(Advices, input, id)[0]
+      const result = await updateItem(Advices, input, id)
+      console.log(result)
       return result
     },
     deleteAdvice: async(_, { id }) => {

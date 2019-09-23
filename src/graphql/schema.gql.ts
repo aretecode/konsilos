@@ -66,12 +66,13 @@ export default gql`
 
   type Mutation {
     createUser(input: UserInput): User
+    updateUser(id: ID!, input: UserInput): User
     createAdvice(input: AdviceInput): Advice
     updateAdvice(id: ID!, input: AdviceInput): Advice
     deleteAdvice(id: ID!): Advice
     addFamilyMember(input: FamilyMemberInput): FamilyMember
     updateFamilyMember(id: ID!, input: FamilyMemberInput): FamilyMember
-    deleteFamilyMember(id: ID!) FamilyMember
+    deleteFamilyMember(id: ID!): FamilyMember
     nukeAccount(userId: ID!): String
   }
 `
