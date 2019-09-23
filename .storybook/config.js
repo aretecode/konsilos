@@ -19,7 +19,8 @@ const toStyledStory = story => {
       return React.createElement(
         StyledStory,
         null,
-        React.createElement(AppStyles, null, story())
+        React.createElement(AppStyles, null),
+        React.createElement(StrictMode, null, story())
       )
     }
   }
