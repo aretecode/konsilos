@@ -15,10 +15,9 @@
 - [ ] security audit
 
 ## 1. cleanup
-- [ ] move static data out of `welcome` page
-- [ ] component code right now is structured in the way that is easiest to read & change (_single files_), properly separate if our end requirement ends up following such a standard
+- [x] move static data out of `welcome` page
 - [ ] move libs out to keep codebase minimal
-- [ ] `{ "src": ".storybook/config.ts", "use": "now-static-build-storybook" }` add back to `now.json` builds
+- [x] `{ "src": ".storybook/config.ts", "use": "now-static-build-storybook" }` add back to `now.json` builds (_to deploy static storybook_)
 
 ## 2. homepage sections
 - [x] initial rough outline of page
@@ -89,10 +88,12 @@
 - [ ] add family
   - [x] init
   - [x] styled
+  - [x] state
   - [ ] other todos #!
 - [ ] add advice
   - [x] init
   - [x] styled
+  - [x] state
   - [ ] other advice #!
 
 # 6. i18n
@@ -164,3 +165,4 @@
 - [ ] profile page
 - [ ] (zeit) micro auth0
 - [ ] move uuid to server
+- [ ] show toast when already logged in
