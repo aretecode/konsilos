@@ -28,6 +28,17 @@ export default () => {
       <StyledPageHeader>{t('page_title__open_source')}</StyledPageHeader>
       <main>
         <section>
+          <header>source code</header>
+          <ul>
+            <li>
+              <StyledLink href="https://github.com/aretecode/konsilos">
+                konsilos (v2) github
+              </StyledLink>
+            </li>
+          </ul>
+        </section>
+
+        <section>
           <header>contributors</header>
           <ul>
             <li>

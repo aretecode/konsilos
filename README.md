@@ -3,7 +3,8 @@
 **A non-rofit organization.**
 We created this with good intentions, to scratch our itch, hoping this also would benefit people all over the world.
 
-- [https://konsilos.now.sh](https://konsilos.now.sh)
+- site & app: [https://konsilos.now.sh](https://konsilos.now.sh)
+- storybook: [https://konsilos.now.sh/ui/](https://konsilos.now.sh/ui/)
 - [TODOS](./TODO.md)
 
 

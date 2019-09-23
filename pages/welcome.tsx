@@ -487,6 +487,7 @@ export default () => {
                   height="768"
                   className="device-content"
                   src="https://pencamcc.sirv.com/Images/stock/family-hands.jpg?format=webp"
+                  alt="family hands"
                 />
               </StyledDevice>
             </StyledMacbookPanel>
@@ -499,6 +500,7 @@ export default () => {
                   height="872"
                   className="device-content"
                   src="https://pencamcc.sirv.com/Images/screenshots/add-family.png?format=webp"
+                  alt="add family app screenshot"
                 />
               </StyledDevice>
             </StyledIpadPanel>

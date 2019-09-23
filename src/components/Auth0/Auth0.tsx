@@ -1,4 +1,5 @@
 /**
+ * @todo @perf requestIdleCallback
  * @see https://auth0.com/docs/quickstart/spa/react/
  * @see https://github.com/sandrinodimattia/nextjs-auth0-example/blob/master/lib/auth0.js
  */
