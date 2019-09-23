@@ -163,3 +163,4 @@
 - [ ] ada compliance
 - [ ] profile page
 - [ ] (zeit) micro auth0
+- [ ] move uuid to server

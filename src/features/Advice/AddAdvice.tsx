@@ -1,4 +1,5 @@
 import * as React from 'react'
+import uuid from 'uuid/v4'
 import { AdviceItemType } from '../../typings'
 import { Form, InputConfigType } from '../../components/Form'
 import { KonsilosContext } from '../KonsilosContext'
@@ -51,8 +52,11 @@ export const AddAdvice = (props: { className?: string }) => {
       {...props}
       list={inputConfigList}
       onSubmit={(serialized: any) => {
-        console.log(serialized)
-        setAdviceList([...adviceList, serialized] as any)
+        const merged = {
+          uid: uuid(),
+          ...serialized,
+        }
+        setAdviceList([...adviceList, merged] as any)
       }}
     />
   )
