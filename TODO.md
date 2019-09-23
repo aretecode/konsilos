@@ -186,3 +186,10 @@
 - [ ] show toast when already logged in
 - [ ] pagination on advice & families
 - [ ] move to https://www.npmjs.com/package/@apollo/react-hooks instead of all 3 packages in 1 booster
+
+- [ ] add back to now.json (_made build very slow, was missing corejs dep_) (```
+    {
+      "src": "./.storybook/config.js",
+      "use": "now-static-build-storybook"
+    }
+```)
