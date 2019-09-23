@@ -5,8 +5,25 @@ We created this with good intentions, to scratch our itch, hoping this also woul
 
 - site & app: [https://konsilos.now.sh](https://konsilos.now.sh)
 - storybook: [https://konsilos.now.sh/ui/](https://konsilos.now.sh/ui/)
+- graphql playground: [https://konsilos.now.sh/graphql/](https://konsilos.now.sh/ui/) (_see the ["everything" query](./src/graphql/everythingQuery.graphql.ts)_)
 - [TODOS](./TODO.md)
 
+# features
+- deployment to serverless aws lamda (_with ephemeral urls on every pr, and docker setup for custom deploys_)
+- react SPA (_using nextjs, also with service worker / offline support and lighthouse compliance_)
+- oauth on subscribe button, with a SAAS authentication microservice (_using auth2_)
+- storybook for ui development velocity (_aslso available on deployment_)
+- graphql as a micro api connected to airtable (_aslso available on deployment_)
+- images via cdn with webp format (_using sirv_)
+- svg images (_flags, icons, logo_)
+- semantic html, seo including card previews minimal styles (_using styled-components_)
+- custom responsive css devices
+- typescript with all types passing, eslint, prettier, stylelint, editorconfig
+- unit testing with storybook snapshots, react-testing-library
+- i18n translation
+- app domain features
+  - family: add & view family (_using react hooks, graphql in progress_)
+  - advice: add & view advice (_using react hooks, graphql in progress_)
 
 ## how to run
 
