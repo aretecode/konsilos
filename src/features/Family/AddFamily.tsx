@@ -1,6 +1,5 @@
 import * as React from 'react'
 import uuid from 'uuid/v4'
-import { isFunction } from '../../utils/is'
 import { SerializedObj } from '../../typings'
 import { Form, InputConfigType } from '../../components/Form'
 import { KonsilosContext } from '../KonsilosContext'
@@ -50,7 +49,7 @@ export const AddFamily = (props: AddFamilyPropType) => {
         console.log({ merged })
         setFamilyList([...familyList, merged] as any)
 
-        if (isFunction(props.onSubmit)) props.onSubmit(merged)
+        if (props.onSubmit) props.onSubmit(merged)
       }}
     />
   )

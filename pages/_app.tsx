@@ -11,7 +11,14 @@ import { initApolloClient } from '../src/graphql/apolloClient'
 import { fromReqToUrl } from '../src/utils/fromReqToUrl'
 import { AppStyles, BelowTheFoldStyles } from '../src/AppStyles'
 import { UnknownObj } from '../src/typings'
-import { appWithTranslation } from '../src/i18n'
+
+// @todo @fixme is getting dropped?
+import * as sideEffect from '../src/i18n'
+console.log(sideEffect)
+
+// @todo for ssr, but it shows just "loading"
+// import { i18n, I18nextProvider } from '../src/i18n'
+// <I18nextProvider i18n={i18n}>
 
 export class InnerApp extends React.PureComponent<{
   apolloClientState?: UnknownObj
@@ -126,4 +133,4 @@ class MyApp extends App<{
   }
 }
 
-export default appWithTranslation(MyApp)
+export default MyApp
