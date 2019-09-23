@@ -14,7 +14,7 @@ const env = {
 }
 
 Object.keys(env).forEach(key => {
-  if (process.env[key] === undefined) {
+  if (process.env[key] === undefined && env[key] !== undefined) {
     process.env[key] = env[key]
   }
 })
