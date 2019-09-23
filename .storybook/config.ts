@@ -2,8 +2,8 @@
  * @see https://storybook.js.org/basics/guide-react/
  */
 import * as React from 'react'
-import { configure, setAddon, addDecorator } from '@storybook/react'
-import styled, { createGlobalStyle } from 'styled-components'
+import { configure, addDecorator } from '@storybook/react'
+import styled from 'styled-components'
 import { AppStyles } from '../src/AppStyles'
 
 const StyledStory = styled.div`

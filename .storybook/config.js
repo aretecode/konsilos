@@ -5,7 +5,7 @@
  */
 import React from 'react'
 import { configure, addDecorator } from '@storybook/react'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 import { AppStyles } from '../src/AppStyles'
 
 const StyledStory = styled.div`
