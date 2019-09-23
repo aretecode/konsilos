@@ -1,10 +1,6 @@
 /**
- * @todo might be able to put more of these in build-time only
- * @see https://github.com/zeit/next.js/issues/876
- */
-const withOffline = require('next-offline')
-
-/**
+ * @see https://github.com/zeit/now-builders/issues/61 had this issue
+ *
  * @description Make sure any symlinks in the project folder are resolved:
  * @see https://github.com/facebookincubator/create-react-app/issues/637
  */
@@ -12,7 +8,6 @@ const { resolve, join } = require('path')
 const { realpathSync } = require('fs')
 const appDirectory = realpathSync(process.cwd())
 const resolveApp = relativePath => resolve(appDirectory, relativePath)
-
 const { env } = require('./env')
 
 /**
@@ -90,11 +85,6 @@ const nextConfig = {
   },
 }
 
-const workboxConfig = withOffline(nextConfig)
-const testWorkboxConfig = withOffline(nextConfig)
-const wrapperConfig =
-  process.env.NODE_ENV !== 'test' ? nextConfig : testWorkboxConfig
-
 function withBuildTimeDeps() {
   const withSize = require('next-size')
   const withBundleAnalyzer = require('@zeit/next-bundle-analyzer')
@@ -116,5 +106,24 @@ function withBuildTimeDeps() {
   })
 }
 
-module.exports =
-  process.env.IS_DOCKER === undefined ? withBuildTimeDeps() : wrapperConfig
+// process.env.IS_DOCKER === undefined ? withBuildTimeDeps() : wrapperConfig
+const { PHASE_PRODUCTION_SERVER } =
+  process.env.NODE_ENV === 'development' ? {} : require('next-server/constants')
+
+module.exports = (phase, { defaultConfig }) => {
+  if (phase === PHASE_PRODUCTION_SERVER) {
+    // Config used to run in production.
+    return {}
+  }
+  /**
+   * @todo might be able to put more of these in build-time only
+   * @see https://github.com/zeit/next.js/issues/876
+   */
+  const withOffline = require('next-offline')
+  const workboxConfig = withOffline(nextConfig)
+  const testWorkboxConfig = withOffline(nextConfig)
+  const wrapperConfig =
+    process.env.NODE_ENV !== 'test' ? nextConfig : testWorkboxConfig
+
+  return wrapperConfig
+}
