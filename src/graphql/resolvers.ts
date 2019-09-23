@@ -29,8 +29,8 @@ export default {
         }
         
         return records.forEach((record:any) => {
-          console.log('Advice', { ...record.fields })
-          return { ...record.fields }
+          console.log('Advice', { ...record.fields, uid: record.getId() })
+          return { ...record.fields, uid: record.getId() }
         })
       })
     },
@@ -41,8 +41,8 @@ export default {
           return
         }
         return records.forEach((record:any) => {
-          console.log('Family Member', { ...record.fields })
-          return { ...record.fields }
+          console.log('Family Member', { ...record.fields, uid: record.getId() })
+          return { ...record.fields, uid: record.getId() }
         })
       })
     },

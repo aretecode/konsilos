@@ -8,6 +8,7 @@ export default gql`
     type: String
     uid: ID!
     familyMemberId: String
+    userId: String
     happenedOn: String
     availableOn: String
   }
