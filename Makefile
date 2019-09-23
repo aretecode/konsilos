@@ -1,5 +1,5 @@
 dev:
-	yarn dev
+	yarn dev:server
 
 .PHONY:
 	$(MAKE) dev

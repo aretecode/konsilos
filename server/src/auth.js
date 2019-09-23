@@ -33,9 +33,14 @@ router.get('/callback', (req, res, next) => {
       if (error) {
         return next(error)
       }
-      const returnTo = req.session.returnTo
+      const returnTo = req.session.returnTo || '/'
       delete req.session.returnTo
-      res.redirect(returnTo || '/')
+      /**
+       * @note this was returning to `/user` which is not what we want
+       *       not sure where that's configured
+       */
+      const finalReturnTo = returnTo.includes('user') ? '/' : returnTo
+      res.redirect(finalReturnTo)
     })
   })(req, res, next)
 })

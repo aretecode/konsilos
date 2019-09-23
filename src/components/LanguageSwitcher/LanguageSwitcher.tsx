@@ -8,8 +8,8 @@
  */
 import * as React from 'react'
 import styled, { css } from 'styled-components'
-import i18n from '../../i18n'
 import { StyledFlag, SupportedFlagNameType } from './flags/Flag'
+import { i18n, useTranslation } from '../../i18n'
 
 const StyledLanguageSwitcherArea = styled.div`
   position: absolute;
@@ -37,13 +37,17 @@ const LanguageSwitcherWrap = styled.aside`
   }
 `
 
-const LANGUAGE_LIST = Object.freeze(['brazil', 'canada'])
+const LANGUAGE_LIST: ReadonlyArray<SupportedFlagNameType> = Object.freeze([
+  'brazil',
+  'canada',
+])
 const languageListSorted = (activeName: SupportedFlagNameType) => {
   const isNotActiveFlag = (x: SupportedFlagNameType) => x !== activeName
   return [activeName, ...LANGUAGE_LIST.filter(isNotActiveFlag)]
 }
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = (props: { className?: string }) => {
+  const { t } = useTranslation()
   const [isVisible, setIsVisible] = React.useState(false)
   const [activeFlag, setActiveFlag] = React.useState<SupportedFlagNameType>(
     'canada'
@@ -56,18 +60,29 @@ const LanguageSwitcher = () => {
       setIsVisible(false)
     }
     return (
-      <i onClick={handleSelectLanguage} key={name}>
+      <i
+        onClick={handleSelectLanguage}
+        key={name}
+        title={`select language of ${name}`}
+      >
         <StyledFlag flag={name} />
       </i>
     )
+  }
+  const handleLanguageToggleClick = () => {
+    setIsVisible(!isVisible)
   }
 
   const languageList = languageListSorted(activeFlag)
 
   return (
     <>
-      <LanguageSwitcherWrap aria-expanded={isVisible}>
-        <button key="languageButton" onClick={() => setIsVisible(!isVisible)}>
+      <LanguageSwitcherWrap aria-expanded={isVisible} {...props}>
+        <button
+          key="languageButton"
+          onClick={handleLanguageToggleClick}
+          aria-label={t('label__change_language')}
+        >
           <StyledFlag flag={activeFlag} />
         </button>
 
@@ -82,4 +97,4 @@ const LanguageSwitcher = () => {
   )
 }
 
-export { LanguageSwitcher }
+export { LanguageSwitcher, StyledLanguageSwitcherArea, LanguageSwitcherWrap }

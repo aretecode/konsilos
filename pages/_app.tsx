@@ -5,12 +5,20 @@ import * as React from 'react'
 import { ApolloProvider, getDataFromTree } from 'react-apollo'
 import { AppContextProvider } from '../src/AppContext'
 import { Footer } from '../src/components/Footer'
+import { Auth0Provider } from '../src/components/Auth0'
 import { KonsilosContextProvider } from '../src/features/KonsilosContext'
 import { initApolloClient } from '../src/graphql/apolloClient'
 import { fromReqToUrl } from '../src/utils/fromReqToUrl'
 import { AppStyles, BelowTheFoldStyles } from '../src/AppStyles'
 import { UnknownObj } from '../src/typings'
-import '../src/i18n'
+
+// @todo @fixme is getting dropped?
+import * as sideEffect from '../src/i18n'
+console.log(sideEffect)
+
+// @todo for ssr, but it shows just "loading"
+// import { i18n, I18nextProvider } from '../src/i18n'
+// <I18nextProvider i18n={i18n}>
 
 export class InnerApp extends React.PureComponent<{
   apolloClientState?: UnknownObj
@@ -29,7 +37,15 @@ export class InnerApp extends React.PureComponent<{
         >
           <React.StrictMode>
             <AppStyles />
-            <KonsilosContextProvider>{children}</KonsilosContextProvider>
+            <Auth0Provider
+              domain={process.env.CLIENT_AUTH0_DOMAIN!}
+              client_id={process.env.CLIENT_AUTH0_CLIENT_ID!}
+              redirect_uri={
+                process.browser ? window.location.origin + '/auth/callback' : ''
+              }
+            >
+              <KonsilosContextProvider>{children}</KonsilosContextProvider>
+            </Auth0Provider>
             <BelowTheFoldStyles />
           </React.StrictMode>
         </ApolloProvider>
@@ -38,7 +54,7 @@ export class InnerApp extends React.PureComponent<{
   }
 }
 
-export default class MyApp extends App<{
+class MyApp extends App<{
   /** these come from getInitialProps */
   apolloClientState?: UnknownObj
   apolloClient?: ApolloClient<any>
@@ -116,3 +132,5 @@ export default class MyApp extends App<{
     )
   }
 }
+
+export default MyApp

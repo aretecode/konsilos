@@ -1,17 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '../src/i18n'
+import { StyledPageHeader } from '../src/components/PageHeader'
 import { StyledAdviceList, AddAdvice } from '../src/features/Advice'
 
 const AdvicePageWrapper = styled.section`
-  h1 {
-    margin: auto;
-    font-size: 2rem;
-    background: #f27059;
-    color: white;
-    padding: 2rem;
-  }
-
   form {
     width: 50%;
     max-width: 500px;
@@ -27,7 +20,7 @@ const AdvicePageWrapper = styled.section`
 `
 
 const FormWrapper = styled.div`
-  background-image: url('https://pencamcc.sirv.com/Images/home/konsilos_woman_holding_child.jpg?format=webp');
+  background-image: url('https://pencamcc.sirv.com/Images/stock/family-hands.jpg?format=webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -36,19 +29,25 @@ const FormWrapper = styled.div`
   padding: 2rem 4rem;
 `
 
+/**
+ * @note this was styled with a blue bg, but it does not follow material standards
+ */
 const ThemedStyledAdviceList = styled(StyledAdviceList)`
-  background-color: #23c0ff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `
 
 export default () => {
   const { t } = useTranslation()
   return (
-    <AdvicePageWrapper>
-      <h1>{t('page_title__advice')}</h1>
-      <FormWrapper>
-        <AddAdvice />
-      </FormWrapper>
-      <ThemedStyledAdviceList />
-    </AdvicePageWrapper>
+    <>
+      <title>{'Konsilos - ' + t('page_title__advice')}</title>
+      <AdvicePageWrapper>
+        <StyledPageHeader>{t('page_title__advice')}</StyledPageHeader>
+        <FormWrapper>
+          <AddAdvice />
+        </FormWrapper>
+        <ThemedStyledAdviceList />
+      </AdvicePageWrapper>
+    </>
   )
 }

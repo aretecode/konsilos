@@ -1,11 +1,15 @@
 import * as React from 'react'
-import { AdviceItemType } from '../../typings'
+import uuid from 'uuid/v4'
+import { AdviceItemType, SerializedObj } from '../../typings'
 import { Form, InputConfigType } from '../../components/Form'
 import { KonsilosContext } from '../KonsilosContext'
 
 export type AddAdviceInputConfigItemType = InputConfigType & {
   propertyName: keyof AdviceItemType
 }
+/**
+ * @todo i18n on these
+ */
 export const inputConfigList: AddAdviceInputConfigItemType[] = [
   {
     propertyName: 'familyMemberId',
@@ -40,15 +44,25 @@ export const inputConfigList: AddAdviceInputConfigItemType[] = [
   },
 ]
 
-export const AddAdvice = () => {
+export type AddAdvicePropType = {
+  className?: string
+  onSubmit?: (serialized: SerializedObj) => void
+}
+export const AddAdvice = (props: AddAdvicePropType) => {
   const { adviceList, setAdviceList } = React.useContext(KonsilosContext)
 
   return (
     <Form
+      {...props}
       list={inputConfigList}
       onSubmit={(serialized: any) => {
-        console.log(serialized)
-        setAdviceList([...adviceList, serialized] as any)
+        const merged = {
+          uid: uuid(),
+          ...serialized,
+        }
+        setAdviceList([...adviceList, merged] as any)
+
+        if (props.onSubmit) props.onSubmit(merged)
       }}
     />
   )

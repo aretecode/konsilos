@@ -1,0 +1,2688 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots AddAdvice Styled Add 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c5 {
+  font-size: 1.3rem;
+  padding: 2rem 1rem 0.5rem 1rem;
+  background: #fff;
+  display: block;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #d2d2d2;
+  border-radius: 5px;
+  -webkit-transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  outline: none;
+}
+
+.c5:hover {
+  color: var(--color-blue-dark);
+  border-bottom-color: var(--color-blue-dark);
+}
+
+.c6 {
+  font-size: 1.3rem;
+  padding: 2rem 1rem 0.5rem 1rem;
+  background: #fff;
+  display: block;
+  border: none;
+  width: 100%;
+  height: 10rem;
+  border-radius: 5px;
+  border-bottom: 1px solid #d2d2d2;
+  -webkit-transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  outline: none;
+}
+
+.c6:hover {
+  color: var(--color-blue-dark);
+}
+
+.c4 {
+  color: rgba(0,0,0,0.6);
+  -webkit-transition: 1s cubic-bezier(0.075,0.82,0.165,1) color, 0.24s cubic-bezier(0.075,0.82,0.165,1) top;
+  transition: 1s cubic-bezier(0.075,0.82,0.165,1) color, 0.24s cubic-bezier(0.075,0.82,0.165,1) top;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0.5rem;
+  min-height: 1.5rem;
+}
+
+.c2 {
+  margin: 0;
+  padding: 1rem;
+}
+
+.c2 button {
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue-dark);
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.c1 {
+  padding: 5rem;
+}
+
+<div
+  className="c0"
+>
+  <form
+    className="c1 c2"
+    onSubmit={[Function]}
+  >
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="familyMemberId"
+      >
+        who is this advice for?
+      </label>
+      <input
+        className="c5"
+        id="familyMemberId"
+        label="who is this advice for?"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="title"
+      >
+        what is your advice?
+      </label>
+      <input
+        className="c5"
+        id="title"
+        label="what is your advice?"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="text"
+      >
+        summary?
+      </label>
+      <input
+        className="c5"
+        id="text"
+        label="summary?"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="type"
+      >
+        life, movie, travel, chat?
+      </label>
+      <input
+        className="c5"
+        id="type"
+        label="life, movie, travel, chat?"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="description"
+      >
+        why does this advice matter?
+      </label>
+      <textarea
+        className="c6"
+        id="description"
+        label="why does this advice matter?"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="happenedOn"
+      >
+        when?
+      </label>
+      <input
+        className="c5"
+        id="happenedOn"
+        label="when?"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="date"
+        value=""
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      submit
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storyshots AddFamily Styled Add 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c5 {
+  font-size: 1.3rem;
+  padding: 2rem 1rem 0.5rem 1rem;
+  background: #fff;
+  display: block;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #d2d2d2;
+  border-radius: 5px;
+  -webkit-transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  outline: none;
+}
+
+.c5:hover {
+  color: var(--color-blue-dark);
+  border-bottom-color: var(--color-blue-dark);
+}
+
+.c4 {
+  color: rgba(0,0,0,0.6);
+  -webkit-transition: 1s cubic-bezier(0.075,0.82,0.165,1) color, 0.24s cubic-bezier(0.075,0.82,0.165,1) top;
+  transition: 1s cubic-bezier(0.075,0.82,0.165,1) color, 0.24s cubic-bezier(0.075,0.82,0.165,1) top;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0.5rem;
+  min-height: 1.5rem;
+}
+
+.c2 {
+  margin: 0;
+  padding: 1rem;
+}
+
+.c2 button {
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue-dark);
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.c1 {
+  padding: 5rem;
+}
+
+<div
+  className="c0"
+>
+  <form
+    className="c1 c2"
+    onSubmit={[Function]}
+  >
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="name"
+      >
+        name
+      </label>
+      <input
+        className="c5"
+        id="name"
+        label="name"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="email"
+      >
+        email
+      </label>
+      <input
+        className="c5"
+        id="email"
+        label="email"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="birthday"
+      >
+        date of birth
+      </label>
+      <input
+        className="c5"
+        id="birthday"
+        label="date of birth"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="date"
+        value=""
+      />
+    </div>
+    <div
+      className="c3"
+    >
+      <label
+        className="c4"
+        htmlFor="imageUrl"
+      >
+        image
+      </label>
+      <input
+        className="c5"
+        id="imageUrl"
+        label="image"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="url"
+        value=""
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      submit
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storyshots AdviceList With Static List 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c3 {
+  grid-area: avatar;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 > h5 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c3 > h5,
+.c3 > img {
+  margin: 0;
+  padding: 0;
+}
+
+.c3 img {
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.c3 h5 {
+  font-family: 'Lato';
+  margin-top: 4px;
+  color: grey;
+}
+
+.c4 {
+  width: 24px;
+  height: 24px;
+}
+
+.c2 {
+  margin: auto;
+  overflow-x: scroll;
+  padding: 1rem;
+}
+
+.c2 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 3rem 0;
+}
+
+.c2 ul li {
+  -webkit-transition: box-shadow 0.5s cubic-bezier(0.075,0.82,0.165,1);
+  transition: box-shadow 0.5s cubic-bezier(0.075,0.82,0.165,1);
+  min-width: 250px;
+  min-height: 340px;
+  padding: 0 1rem 2rem;
+  background: #fff;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: 'type avatar' 'title title' 'summary summary' 'description description' 'time lock';
+  justify-items: stretch;
+}
+
+.c2 ul li:not(:first-child) {
+  margin: 0 0 0 0.5rem;
+}
+
+.c2 ul li:hover {
+  box-shadow: 0px 8px 6px 0 rgba(0,0,0,0.4);
+}
+
+.c2 h2,
+.c2 h3,
+.c2 h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.c2 h2 {
+  grid-area: title;
+}
+
+.c2 h3 {
+  grid-area: summary;
+  font-size: 0.9rem;
+  color: #24c0fd;
+  font-weight: 500;
+}
+
+.c2 p {
+  grid-area: description;
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.c2 time {
+  color: #a3a3a3;
+  grid-area: time;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+.c2 svg {
+  grid-area: lock;
+  margin-left: calc(100% - 24px);
+}
+
+.c1 {
+  background: #efefef;
+  padding: 1rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <section
+      className="c2"
+    >
+      <ul>
+        <li>
+          <img
+            alt="life"
+            className=""
+            height="132"
+            loading="lazy"
+            src="https://pencamcc.sirv.com/Images/tags/tag-life.png?format=webp"
+            width="88"
+          />
+          <section
+            className="c3"
+          >
+            <img
+              alt="undefined avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              width="61"
+            />
+            <h5 />
+          </section>
+          <h2>
+            About Life
+          </h2>
+          <h3>
+            Turning 18 years
+          </h3>
+          <p>
+            I have something very important to tell you...
+          </p>
+          <time>
+            02/05/2001
+          </time>
+          <svg
+            className="c4"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <title>
+              lock
+               icon
+            </title>
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+          </svg>
+        </li>
+        <li>
+          <img
+            alt="advice"
+            className=""
+            height="132"
+            loading="lazy"
+            src="https://pencamcc.sirv.com/Images/tags/tag-advice.png?format=webp"
+            width="88"
+          />
+          <section
+            className="c3"
+          >
+            <img
+              alt="undefined avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              width="61"
+            />
+            <h5 />
+          </section>
+          <h2>
+            Have an Experience
+          </h2>
+          <h3>
+            Turning 40 years
+          </h3>
+          <p>
+            Dear daughter, silence can be a great friend. Try...
+          </p>
+          <time>
+            27/09/2016
+          </time>
+          <svg
+            className="c4"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <title>
+              lock
+               icon
+            </title>
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+          </svg>
+        </li>
+        <li>
+          <img
+            alt="movie"
+            className=""
+            height="132"
+            loading="lazy"
+            src="https://pencamcc.sirv.com/Images/tags/tag-movie.png?format=webp"
+            width="88"
+          />
+          <section
+            className="c3"
+          >
+            <img
+              alt="undefined avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              width="61"
+            />
+            <h5 />
+          </section>
+          <h2>
+            Rocky Balboa
+          </h2>
+          <h3>
+            When life gets hard
+          </h3>
+          <p>
+             Son, nobody will hit you as hard as life. But...
+          </p>
+          <time>
+            01/08/2015
+          </time>
+          <svg
+            className="c4"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <title>
+              lock
+               icon
+            </title>
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+          </svg>
+        </li>
+        <li>
+          <img
+            alt="book"
+            className=""
+            height="132"
+            loading="lazy"
+            src="https://pencamcc.sirv.com/Images/tags/tag-book.png?format=webp"
+            width="88"
+          />
+          <section
+            className="c3"
+          >
+            <img
+              alt="undefined avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              width="61"
+            />
+            <h5 />
+          </section>
+          <h2>
+            The Little Prince
+          </h2>
+          <h3>
+            Turning 9 years
+          </h3>
+          <p>
+            I must read this book with Daniel and teach...
+          </p>
+          <time>
+            13/12/2015
+          </time>
+          <svg
+            className="c4"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <title>
+              lock
+               icon
+            </title>
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+          </svg>
+        </li>
+        <li>
+          <img
+            alt="travel"
+            className=""
+            height="132"
+            loading="lazy"
+            src="https://pencamcc.sirv.com/Images/tags/tag-travel.png?format=webp"
+            width="88"
+          />
+          <section
+            className="c3"
+          >
+            <img
+              alt="undefined avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              width="61"
+            />
+            <h5 />
+          </section>
+          <h2>
+            Steve Jobs
+          </h2>
+          <h3>
+            Never give up
+          </h3>
+          <p>
+            Sometimes, life hits you in the head with a brick...
+          </p>
+          <time>
+            11/12/2019
+          </time>
+          <svg
+            className="c4"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <title>
+              lock
+               icon
+            </title>
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+          </svg>
+        </li>
+        <li>
+          <img
+            alt="book"
+            className=""
+            height="132"
+            loading="lazy"
+            src="https://pencamcc.sirv.com/Images/tags/tag-book.png?format=webp"
+            width="88"
+          />
+          <section
+            className="c3"
+          >
+            <img
+              alt="undefined avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              width="61"
+            />
+            <h5 />
+          </section>
+          <h2>
+            Tim Ferriss
+          </h2>
+          <h3>
+            Conquor fear
+          </h3>
+          <p>
+            What we fear doing most is usually what we most need to do most...
+          </p>
+          <time>
+            11/12/2019
+          </time>
+          <svg
+            className="c4"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <title>
+              lock
+               icon
+            </title>
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+          </svg>
+        </li>
+        <li>
+          <img
+            alt="life"
+            className=""
+            height="132"
+            loading="lazy"
+            src="https://pencamcc.sirv.com/Images/tags/tag-life.png?format=webp"
+            width="88"
+          />
+          <section
+            className="c3"
+          >
+            <img
+              alt="undefined avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              width="61"
+            />
+            <h5 />
+          </section>
+          <h2>
+            About Life
+          </h2>
+          <h3>
+            Turning 18 years
+          </h3>
+          <p>
+            I have something very important to tell you...
+          </p>
+          <time>
+            02/05/2001
+          </time>
+          <svg
+            className="c4"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <title>
+              lock
+               icon
+            </title>
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+          </svg>
+        </li>
+        <li>
+          <img
+            alt="travel"
+            className=""
+            height="132"
+            loading="lazy"
+            src="https://pencamcc.sirv.com/Images/tags/tag-travel.png?format=webp"
+            width="88"
+          />
+          <section
+            className="c3"
+          >
+            <img
+              alt="undefined avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              width="61"
+            />
+            <h5 />
+          </section>
+          <h2>
+            Steve Jobs
+          </h2>
+          <h3>
+            Never give up
+          </h3>
+          <p>
+            Sometimes, life hits you in the head with a brick...
+          </p>
+          <time>
+            11/12/2019
+          </time>
+          <svg
+            className="c4"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <title>
+              lock
+               icon
+            </title>
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+          </svg>
+        </li>
+        <li>
+          <img
+            alt="life"
+            className=""
+            height="132"
+            loading="lazy"
+            src="https://pencamcc.sirv.com/Images/tags/tag-life.png?format=webp"
+            width="88"
+          />
+          <section
+            className="c3"
+          >
+            <img
+              alt="undefined avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              width="61"
+            />
+            <h5 />
+          </section>
+          <h2>
+            The Little Prince
+          </h2>
+          <h3>
+            Turning 9 years
+          </h3>
+          <p>
+            I must read this book with Daniel and teach...
+          </p>
+          <time>
+            13/12/2015
+          </time>
+          <svg
+            className="c4"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="https://www.w3.org/2000/svg"
+          >
+            <title>
+              lock
+               icon
+            </title>
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+            />
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+          </svg>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Avatar Empty 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  grid-area: avatar;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > h5 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c1 > h5,
+.c1 > img {
+  margin: 0;
+  padding: 0;
+}
+
+.c1 img {
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.c1 h5 {
+  font-family: 'Lato';
+  margin-top: 4px;
+  color: grey;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <img
+      alt="undefined avatar"
+      className=""
+      height="61"
+      loading="lazy"
+      width="61"
+    />
+    <h5 />
+  </section>
+</div>
+`;
+
+exports[`Storyshots Avatar List 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  grid-area: avatar;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 > h5 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c1 > h5,
+.c1 > img {
+  margin: 0;
+  padding: 0;
+}
+
+.c1 img {
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.c1 h5 {
+  font-family: 'Lato';
+  margin-top: 4px;
+  color: grey;
+}
+
+<div
+  className="c0"
+>
+  <ul>
+    <li>
+      <section
+        className="c1"
+      >
+        <img
+          alt="Laura avatar"
+          className=""
+          height="61"
+          loading="lazy"
+          src="https://pencamcc.sirv.com/Images/people/laura.png?format=webp"
+          width="61"
+        />
+        <h5>
+          Laura
+        </h5>
+      </section>
+    </li>
+    <li>
+      <section
+        className="c1"
+      >
+        <img
+          alt="Daniel avatar"
+          className=""
+          height="61"
+          loading="lazy"
+          src="https://pencamcc.sirv.com/Images/people/daniel.png?format=webp"
+          width="61"
+        />
+        <h5>
+          Daniel
+        </h5>
+      </section>
+    </li>
+    <li>
+      <section
+        className="c1"
+      >
+        <img
+          alt="Charles avatar"
+          className=""
+          height="61"
+          loading="lazy"
+          src="https://pencamcc.sirv.com/Images/people/charles.png?format=webp"
+          width="61"
+        />
+        <h5>
+          Charles
+        </h5>
+      </section>
+    </li>
+    <li>
+      <section
+        className="c1"
+      >
+        <img
+          alt="Meghan avatar"
+          className=""
+          height="61"
+          loading="lazy"
+          src="https://pencamcc.sirv.com/Images/people/meghan.png?format=webp"
+          width="61"
+        />
+        <h5>
+          Meghan
+        </h5>
+      </section>
+    </li>
+    <li>
+      <section
+        className="c1"
+      >
+        <img
+          alt="Barbara avatar"
+          className=""
+          height="61"
+          loading="lazy"
+          src="https://pencamcc.sirv.com/Images/people/barbara.png?format=webp"
+          width="61"
+        />
+        <h5>
+          Barbara
+        </h5>
+      </section>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots Device Ipad 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  padding: 3rem;
+  background: #fff;
+}
+
+.c2 {
+  margin: 5vh 5vw;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="device device-ipad-pro device-spacegray c2"
+    >
+      <div
+        className="device-frame"
+      >
+        <img
+          className="device-content"
+          src="https://pencamcc.sirv.com/Devices/bg-07.jpg"
+        />
+      </div>
+      <div
+        className="device-stripe"
+      />
+      <div
+        className="device-header"
+      />
+      <div
+        className="device-sensors"
+      />
+      <div
+        className="device-btns"
+      />
+      <div
+        className="device-power"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Device Macbook 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  padding: 3rem;
+  background: #fff;
+}
+
+.c2 {
+  margin: 5vh 5vw;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="device device-macbook-pro device-spacegray c2"
+    >
+      <div
+        className="device-frame"
+      >
+        <img
+          className="device-content"
+          src="https://pencamcc.sirv.com/Devices/bg-02.jpg"
+        />
+      </div>
+      <div
+        className="device-stripe"
+      />
+      <div
+        className="device-header"
+      />
+      <div
+        className="device-sensors"
+      />
+      <div
+        className="device-btns"
+      />
+      <div
+        className="device-power"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots FamilyList With Static List 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c3 {
+  grid-area: avatar;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 > h5 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c3 > h5,
+.c3 > img {
+  margin: 0;
+  padding: 0;
+}
+
+.c3 img {
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.c3 h5 {
+  font-family: 'Lato';
+  margin-top: 4px;
+  color: grey;
+}
+
+.c2 {
+  padding: 1rem;
+}
+
+.c2 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c2 ul li {
+  width: 100px;
+}
+
+.c1 {
+  background: #efefef;
+  padding: 1rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <section
+      className="c2"
+    >
+      <ul>
+        <li>
+          <section
+            className="c3"
+          >
+            <img
+              alt="Laura avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              src="https://pencamcc.sirv.com/Images/people/laura.png?format=webp"
+              width="61"
+            />
+            <h5>
+              Laura
+            </h5>
+          </section>
+        </li>
+        <li>
+          <section
+            className="c3"
+          >
+            <img
+              alt="Daniel avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              src="https://pencamcc.sirv.com/Images/people/daniel.png?format=webp"
+              width="61"
+            />
+            <h5>
+              Daniel
+            </h5>
+          </section>
+        </li>
+        <li>
+          <section
+            className="c3"
+          >
+            <img
+              alt="Charles avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              src="https://pencamcc.sirv.com/Images/people/charles.png?format=webp"
+              width="61"
+            />
+            <h5>
+              Charles
+            </h5>
+          </section>
+        </li>
+        <li>
+          <section
+            className="c3"
+          >
+            <img
+              alt="Meghan avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              src="https://pencamcc.sirv.com/Images/people/meghan.png?format=webp"
+              width="61"
+            />
+            <h5>
+              Meghan
+            </h5>
+          </section>
+        </li>
+        <li>
+          <section
+            className="c3"
+          >
+            <img
+              alt="Barbara avatar"
+              className=""
+              height="61"
+              loading="lazy"
+              src="https://pencamcc.sirv.com/Images/people/barbara.png?format=webp"
+              width="61"
+            />
+            <h5>
+              Barbara
+            </h5>
+          </section>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Footer Empty 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  color: var(--color-link);
+}
+
+.c3:link,
+.c3:visited {
+  color: var(--color-link);
+}
+
+.c3:focus {
+  outline: thin dotted;
+}
+
+.c3:hover {
+  color: #aaa;
+}
+
+.c3:link {
+  -webkit-tap-highlight-color: rgba(102,102,102,0.5);
+}
+
+.c1 {
+  padding-top: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 5rem;
+  max-width: calc(100% - 15%);
+  margin: auto;
+}
+
+.c1 p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: 'Lato';
+  color: grey;
+  width: 50%;
+  text-align: right;
+}
+
+.c2 {
+  width: 50%;
+}
+
+.c2 ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 li {
+  color: grey;
+}
+
+.c2 a {
+  font-family: 'Lato';
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  padding-right: 1rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (max-width:767px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:767px) {
+  .c1 p {
+    width: unset;
+  }
+}
+
+@media (max-width:767px) {
+  .c2 {
+    width: unset;
+    margin-right: -1rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <footer
+    className="c1"
+  >
+    <nav
+      className="c2"
+    >
+      <ul>
+        <li>
+          <a
+            className="c3 "
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            nav__home
+          </a>
+        </li>
+        <li>
+          <a
+            className="c3 "
+            href="/family"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            nav__family
+          </a>
+        </li>
+        <li>
+          <a
+            className="c3 "
+            href="/advice"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            nav__advice
+          </a>
+        </li>
+        <li>
+          <a
+            className="c3 "
+            href="/profile"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            nav__profile
+          </a>
+        </li>
+        <li>
+          <a
+            className="c3 "
+            href="/credits"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            nav__open_source
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <p>
+      <span>
+        © 
+        2019
+      </span>
+       
+      <span>
+        Konsilos - 
+        copyright
+        .
+      </span>
+    </p>
+  </footer>
+</div>
+`;
+
+exports[`Storyshots Forms Form With Different Fields 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c4 {
+  font-size: 1.3rem;
+  padding: 2rem 1rem 0.5rem 1rem;
+  background: #fff;
+  display: block;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #d2d2d2;
+  border-radius: 5px;
+  -webkit-transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  outline: none;
+}
+
+.c4:hover {
+  color: var(--color-blue-dark);
+  border-bottom-color: var(--color-blue-dark);
+}
+
+.c5 {
+  font-size: 1.3rem;
+  padding: 2rem 1rem 0.5rem 1rem;
+  background: #fff;
+  display: block;
+  border: none;
+  width: 100%;
+  height: 10rem;
+  border-radius: 5px;
+  border-bottom: 1px solid #d2d2d2;
+  -webkit-transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  transition: 1s cubic-bezier(0.075,0.82,0.165,1) border-bottom-color;
+  outline: none;
+}
+
+.c5:hover {
+  color: var(--color-blue-dark);
+}
+
+.c3 {
+  color: rgba(0,0,0,0.6);
+  -webkit-transition: 1s cubic-bezier(0.075,0.82,0.165,1) color, 0.24s cubic-bezier(0.075,0.82,0.165,1) top;
+  transition: 1s cubic-bezier(0.075,0.82,0.165,1) color, 0.24s cubic-bezier(0.075,0.82,0.165,1) top;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0.5rem;
+  min-height: 1.5rem;
+}
+
+.c1 {
+  margin: 0;
+  padding: 1rem;
+}
+
+.c1 button {
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue-dark);
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+<div
+  className="c0"
+>
+  <form
+    className="c1"
+    onSubmit={[Function]}
+  >
+    <div
+      className="c2"
+    >
+      <label
+        className="c3"
+        htmlFor="familyMemberId"
+      >
+        who is this advice for?
+      </label>
+      <input
+        className="c4"
+        id="familyMemberId"
+        label="who is this advice for?"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <label
+        className="c3"
+        htmlFor="description"
+      >
+        why does this advice matter?
+      </label>
+      <textarea
+        className="c5"
+        id="description"
+        label="why does this advice matter?"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value=""
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <label
+        className="c3"
+        htmlFor="happenedOn"
+      >
+        when?
+      </label>
+      <input
+        className="c4"
+        id="happenedOn"
+        label="when?"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="date"
+        value=""
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      submit
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Image Lazy 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <img
+    className=""
+    loading="lazy"
+    src="https://pencamcc.sirv.com/Images/stock/family-hands.jpg?format=webp"
+  />
+</div>
+`;
+
+exports[`Storyshots LanguageSwitcher Empty 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c2 {
+  width: 56px;
+  height: 40px;
+}
+
+.c3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: none;
+}
+
+.c1 {
+  position: relative;
+  z-index: 1;
+  margin-left: 0.5rem;
+}
+
+.c1 > button {
+  display: block;
+  width: 56px;
+  height: 40px;
+}
+
+<div
+  className="c0"
+>
+  <aside
+    aria-expanded={false}
+    className="c1"
+  >
+    <button
+      aria-label="label__change_language"
+      onClick={[Function]}
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 28 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Canada flag
+        </title>
+        <defs>
+          <rect
+            height="20"
+            id="a"
+            rx="2"
+            width="28"
+          />
+        </defs>
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <mask
+            fill="#fff"
+            id="b"
+          >
+            <use
+              xlinkHref="#a"
+            />
+          </mask>
+          <rect
+            fill="#fff"
+            height="19.5"
+            rx="2"
+            stroke="#F5F5F5"
+            strokeWidth=".5"
+            width="27.5"
+            x=".25"
+            y=".25"
+          />
+          <path
+            d="M20 0h8v20h-8zM0 0h8v20H0zM15.57 9.77c-.13.13-.2.09-.17-.1l.6-3-1.33.66-.67-2-.67 2L12 6.67l.6 3c.04.18-.04.23-.17.1l-.86-.87a.33.33 0 0 0-.48 0l-.42.43-1.34-.66L10 10l-.43.43a.34.34 0 0 0 0 .47l1.76 1.77h2l.34 2h.66l.34-2h2l1.77-1.77a.33.33 0 0 0-.01-.47L18 10l.67-1.33-1.34.66-.42-.42a.34.34 0 0 0-.48-.01l-.86.87z"
+            fill="#FF3131"
+            mask="url(#b)"
+          />
+        </g>
+      </svg>
+    </button>
+    <div
+      className="c3"
+      hidden={false}
+    >
+      <i
+        onClick={[Function]}
+        title="select language of canada"
+      >
+        <svg
+          className="c2"
+          role="img"
+          viewBox="0 0 28 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Canada flag
+          </title>
+          <defs>
+            <rect
+              height="20"
+              id="a"
+              rx="2"
+              width="28"
+            />
+          </defs>
+          <g
+            fill="none"
+            fillRule="evenodd"
+          >
+            <mask
+              fill="#fff"
+              id="b"
+            >
+              <use
+                xlinkHref="#a"
+              />
+            </mask>
+            <rect
+              fill="#fff"
+              height="19.5"
+              rx="2"
+              stroke="#F5F5F5"
+              strokeWidth=".5"
+              width="27.5"
+              x=".25"
+              y=".25"
+            />
+            <path
+              d="M20 0h8v20h-8zM0 0h8v20H0zM15.57 9.77c-.13.13-.2.09-.17-.1l.6-3-1.33.66-.67-2-.67 2L12 6.67l.6 3c.04.18-.04.23-.17.1l-.86-.87a.33.33 0 0 0-.48 0l-.42.43-1.34-.66L10 10l-.43.43a.34.34 0 0 0 0 .47l1.76 1.77h2l.34 2h.66l.34-2h2l1.77-1.77a.33.33 0 0 0-.01-.47L18 10l.67-1.33-1.34.66-.42-.42a.34.34 0 0 0-.48-.01l-.86.87z"
+              fill="#FF3131"
+              mask="url(#b)"
+            />
+          </g>
+        </svg>
+      </i>
+      <i
+        onClick={[Function]}
+        title="select language of brazil"
+      >
+        <svg
+          className="c2"
+          role="img"
+          viewBox="0 0 28 20"
+        >
+          <title>
+            Brazil flag
+          </title>
+          <defs>
+            <rect
+              height="20"
+              id="e"
+              rx="2"
+              width="28"
+            />
+            <circle
+              cx="4.67"
+              cy="4.67"
+              id="c"
+              r="4.67"
+            />
+          </defs>
+          <g
+            fill="none"
+            fillRule="evenodd"
+          >
+            <mask
+              fill="#fff"
+              id="f"
+            >
+              <use
+                xlinkHref="#a"
+              />
+            </mask>
+            <use
+              fill="#FFF"
+              xlinkHref="#e"
+            />
+            <path
+              d="M0 0h28v20H0z"
+              fill="#05AB41"
+              mask="url(#f)"
+            />
+            <path
+              d="M3.23 10.36c-.31-.2-.3-.53 0-.72l10.2-6.61c.32-.2.83-.2 1.13 0l10.21 6.6c.31.2.3.54 0 .73l-10.2 6.61c-.32.2-.83.2-1.13 0l-10.21-6.6z"
+              fill="#FDD216"
+              mask="url(#f)"
+            />
+            <g
+              mask="url(#f)"
+            >
+              <g
+                transform="translate(9.33 5.33)"
+              >
+                <mask
+                  fill="#fff"
+                  id="d"
+                >
+                  <use
+                    xlinkHref="#c"
+                  />
+                </mask>
+                <use
+                  fill="#053087"
+                  xlinkHref="#c"
+                />
+                <path
+                  d="M-.67 4c.67-.67 3.08-.35 5.34 0 2.25.35 4.67 1.34 5.33 2"
+                  mask="url(#d)"
+                  stroke="#FFF"
+                  strokeLinecap="square"
+                  strokeWidth="1.33"
+                  transform="rotate(6 4.67 4.8)"
+                />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </i>
+    </div>
+  </aside>
+</div>
+`;
+
+exports[`Storyshots Link External 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  color: var(--color-link);
+}
+
+.c1:link,
+.c1:visited {
+  color: var(--color-link);
+}
+
+.c1:focus {
+  outline: thin dotted;
+}
+
+.c1:hover {
+  color: #aaa;
+}
+
+.c1:link {
+  -webkit-tap-highlight-color: rgba(102,102,102,0.5);
+}
+
+<div
+  className="c0"
+>
+  <a
+    className="c1"
+    href="https://google.com"
+  >
+    google.com
+  </a>
+</div>
+`;
+
+exports[`Storyshots Link Internal 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  color: var(--color-link);
+}
+
+.c1:link,
+.c1:visited {
+  color: var(--color-link);
+}
+
+.c1:focus {
+  outline: thin dotted;
+}
+
+.c1:hover {
+  color: #aaa;
+}
+
+.c1:link {
+  -webkit-tap-highlight-color: rgba(102,102,102,0.5);
+}
+
+<div
+  className="c0"
+>
+  <a
+    className="c1 "
+    href="/eh"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+  >
+    eh
+  </a>
+</div>
+`;
+
+exports[`Storyshots Logo Normal 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <svg
+    height="266.667"
+    version="1"
+    viewBox="0 0 200 200"
+    width="266.667"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Logo
+    </title>
+    <path
+      d="M146.7 32.6c-.1.2-1.4.5-2.7.7-5.6 1.1-8.8 2-15.5 4.4-8.3 3.1-20.5 8.9-22.3 10.7-.8.7-2.4 4.6-3.7 8.7-1.7 5.5-2.4 6.6-2.4 4.4-.1-1.7-.4-4-.7-5.2-.6-2.2-.8-2.1-4.5 2-4.8 5.3-9.7 14.3-10.5 19.2-.3 2.1-.7 4.5-.9 5.4-.2.9.3 2.7 1 4 1.1 2.2.8 3.1-3 9-5.5 8.7-9 16.3-7.8 17.5.3.3 2.8-2.7 5.6-6.7 9.3-13.3 10.2-14.2 14.5-13.9 6.7.5 15.8-4.5 31.1-17.3l8.3-6.9-4.4-1.5-4.3-1.5 8.1-1.6c6.5-1.2 9.7-2.6 16.8-7 9.6-6 16-11.6 17-14.7 1.1-3.4-1.1-7.3-5-8.9-2.9-1.2-13.7-1.8-14.7-.8zm-4.5 13.6c-.6.7-3.4 2.6-6.4 4.1-17.3 9.1-43.2 34.1-56.5 54.7-5.3 8-5.6 7-.6-1.9 13-23.2 33-43.1 53.9-53.4 6.1-3 9-4.4 10.3-4.6.2-.1-.1.5-.7 1.1zM10.6 79.4c-3.8 3.3-4.4 4.3-2.3 4.3 7 0 23.6 6.9 33.4 13.9 12.8 9.1 31.6 30.3 40.6 45.6 6.1 10.5 2.7 1.7-4.1-10.7-12.8-23-34.6-43.9-55.7-53.4-6.9-3.1-8-3.1-11.9.3z"
+    />
+    <path
+      d="M.3 89.7c.3.5.8 2.9 1.2 5.3.4 2.5.8 4.9.9 5.5.2.5.9 3.8 1.6 7.2l1.2 6.2 4.7.7c12.1 1.8 28.8 8.4 39.5 15.7 8.3 5.6 20.7 17.7 28.4 27.7 3.6 4.7 6.6 8.6 6.7 8.7 0 .1 4.4-2 9.6-4.7 16.9-8.7 32-11.3 49.4-8.3 9.1 1.5 21 5.2 30.4 9.4l6.4 2.9 4-4.2c2.2-2.4 6.6-7.1 9.9-10.5l5.8-6.1-2.7-2c-10-7-24.6-11.4-37.3-11.3-16.2.1-31.4 4.9-60.7 19.4l-11.1 5.4-4.3-6.1C63.5 121.2 49.1 106.1 34 97.8c-5.1-2.8-16-7-16-6.3 0 .3-.8.1-1.9-.4C13.7 89.8-.4 88.6.3 89.7z"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Logo Styled Logo 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  width: 100px;
+  height: 100px;
+  fill: var(--color-blue);
+}
+
+<div
+  className="c0"
+>
+  <svg
+    className="c1"
+    height="266.667"
+    version="1"
+    viewBox="0 0 200 200"
+    width="266.667"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Logo
+    </title>
+    <path
+      d="M146.7 32.6c-.1.2-1.4.5-2.7.7-5.6 1.1-8.8 2-15.5 4.4-8.3 3.1-20.5 8.9-22.3 10.7-.8.7-2.4 4.6-3.7 8.7-1.7 5.5-2.4 6.6-2.4 4.4-.1-1.7-.4-4-.7-5.2-.6-2.2-.8-2.1-4.5 2-4.8 5.3-9.7 14.3-10.5 19.2-.3 2.1-.7 4.5-.9 5.4-.2.9.3 2.7 1 4 1.1 2.2.8 3.1-3 9-5.5 8.7-9 16.3-7.8 17.5.3.3 2.8-2.7 5.6-6.7 9.3-13.3 10.2-14.2 14.5-13.9 6.7.5 15.8-4.5 31.1-17.3l8.3-6.9-4.4-1.5-4.3-1.5 8.1-1.6c6.5-1.2 9.7-2.6 16.8-7 9.6-6 16-11.6 17-14.7 1.1-3.4-1.1-7.3-5-8.9-2.9-1.2-13.7-1.8-14.7-.8zm-4.5 13.6c-.6.7-3.4 2.6-6.4 4.1-17.3 9.1-43.2 34.1-56.5 54.7-5.3 8-5.6 7-.6-1.9 13-23.2 33-43.1 53.9-53.4 6.1-3 9-4.4 10.3-4.6.2-.1-.1.5-.7 1.1zM10.6 79.4c-3.8 3.3-4.4 4.3-2.3 4.3 7 0 23.6 6.9 33.4 13.9 12.8 9.1 31.6 30.3 40.6 45.6 6.1 10.5 2.7 1.7-4.1-10.7-12.8-23-34.6-43.9-55.7-53.4-6.9-3.1-8-3.1-11.9.3z"
+    />
+    <path
+      d="M.3 89.7c.3.5.8 2.9 1.2 5.3.4 2.5.8 4.9.9 5.5.2.5.9 3.8 1.6 7.2l1.2 6.2 4.7.7c12.1 1.8 28.8 8.4 39.5 15.7 8.3 5.6 20.7 17.7 28.4 27.7 3.6 4.7 6.6 8.6 6.7 8.7 0 .1 4.4-2 9.6-4.7 16.9-8.7 32-11.3 49.4-8.3 9.1 1.5 21 5.2 30.4 9.4l6.4 2.9 4-4.2c2.2-2.4 6.6-7.1 9.9-10.5l5.8-6.1-2.7-2c-10-7-24.6-11.4-37.3-11.3-16.2.1-31.4 4.9-60.7 19.4l-11.1 5.4-4.3-6.1C63.5 121.2 49.1 106.1 34 97.8c-5.1-2.8-16-7-16-6.3 0 .3-.8.1-1.9-.4C13.7 89.8-.4 88.6.3 89.7z"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots MaterialIcons All 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c2 {
+  width: 24px;
+  height: 24px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  padding-top: 0.5rem;
+}
+
+.c1 span {
+  padding-left: 1rem;
+  font-family: monospace;
+}
+
+<div
+  className="c0"
+>
+  <ul>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          facebook
+           icon
+        </title>
+        <path
+          d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        facebook
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          github
+           icon
+        </title>
+        <path
+          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        github
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          twitter
+           icon
+        </title>
+        <path
+          d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        twitter
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          lock
+           icon
+        </title>
+        <path
+          d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        lock
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          unlock
+           icon
+        </title>
+        <path
+          d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        unlock
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          notification
+           icon
+        </title>
+        <path
+          d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        notification
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          clock
+           icon
+        </title>
+        <path
+          d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        clock
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          close
+           icon
+        </title>
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        close
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          video
+           icon
+        </title>
+        <path
+          d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        video
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          chat
+           icon
+        </title>
+        <path
+          d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        chat
+      </span>
+    </li>
+    <li
+      className="c1"
+    >
+      <svg
+        className="c2"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="https://www.w3.org/2000/svg"
+      >
+        <title>
+          plane
+           icon
+        </title>
+        <path
+          d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+        />
+        <path
+          d="M0 0h24v24H0V0z"
+          fill="none"
+        />
+      </svg>
+      <span>
+        plane
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots PageHeader Normal 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <h1>
+    eh
+  </h1>
+</div>
+`;
+
+exports[`Storyshots PageHeader Styled Page Header 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  background-color: var(--color-blue);
+}
+
+<div
+  className="c0"
+>
+  <h1
+    className="c1"
+  >
+    eh
+  </h1>
+</div>
+`;
+
+exports[`Storyshots ScribeIcon Huge Icon 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <svg
+    role="img"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Scribe/edit icon
+    </title>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M12.75 13.48l1.74-.79s0-3.7 4.08-3.7c2 0 3.64.36 5.07 0 0 0-2.03 4.31-4.93 4.68 0 0-3.15.55-4.22-.98"
+        stroke="#27C1FC"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth=".72"
+      />
+      <g
+        fill="#27C1FC"
+        fillRule="nonzero"
+      >
+        <path
+          d="M18.71 13.67s-.35.06-.85.08l.02 3.77h.84l-.01-3.85z"
+        />
+        <path
+          d="M5.74 19.1c0 .66-.07.97-.74.97h-.04c-.7 0-1.16-.56-1.16-1.25V3.76c0-.46-.17-.9-.44-1.24H16.6c.7 0 1.27.56 1.27 1.25v5.27c.23-.03.46-.04.71-.04h.14V3.76a2.1 2.1 0 0 0-2.12-2.08H1.91C.74 1.68.03 2.62.03 3.76v1.76h2.92v13.3c0 1.14.83 2.07 1.76 2.08l12.76.82c1.4 0 2.36-1.05 2.36-2.2v-2.08l-14.09.12v1.54zM2.94 4.81H.89V3.77c0-.7.33-1.25 1.03-1.25s1.04.56 1.04 1.24v1.05zm3.65 14.3v-.72l12.4-.11v1.24c0 .7-.58 1.37-1.28 1.37l-11.28-.82c.25-.34.16-.52.16-.97z"
+        />
+      </g>
+      <path
+        d="M13.51 6.36H5.95a.54.54 0 0 1-.54-.54c0-.3.24-.54.54-.54h7.56a.54.54 0 0 1 0 1.08zM13.51 9.26H5.95a.54.54 0 0 1-.54-.54c0-.3.24-.54.54-.54h7.56c.3 0 .54.25.54.54 0 .3-.24.54-.54.54zM10.02 12.16H5.95a.54.54 0 0 1-.54-.54c0-.3.24-.54.54-.54h4.07c.3 0 .54.25.54.54 0 .3-.24.54-.54.54z"
+        fill="#27C1FC"
+        fillRule="nonzero"
+      />
+      <path
+        d="M0 0h24v24H0z"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`Storyshots ScribeIcon Styled Icon 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.c1 {
+  width: 100px;
+  height: 100px;
+  fill: var(--color-blue);
+}
+
+<div
+  className="c0"
+>
+  <svg
+    className="c1"
+    role="img"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Scribe/edit icon
+    </title>
+    <g
+      fill="none"
+      fillRule="evenodd"
+    >
+      <path
+        d="M12.75 13.48l1.74-.79s0-3.7 4.08-3.7c2 0 3.64.36 5.07 0 0 0-2.03 4.31-4.93 4.68 0 0-3.15.55-4.22-.98"
+        stroke="#27C1FC"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth=".72"
+      />
+      <g
+        fill="#27C1FC"
+        fillRule="nonzero"
+      >
+        <path
+          d="M18.71 13.67s-.35.06-.85.08l.02 3.77h.84l-.01-3.85z"
+        />
+        <path
+          d="M5.74 19.1c0 .66-.07.97-.74.97h-.04c-.7 0-1.16-.56-1.16-1.25V3.76c0-.46-.17-.9-.44-1.24H16.6c.7 0 1.27.56 1.27 1.25v5.27c.23-.03.46-.04.71-.04h.14V3.76a2.1 2.1 0 0 0-2.12-2.08H1.91C.74 1.68.03 2.62.03 3.76v1.76h2.92v13.3c0 1.14.83 2.07 1.76 2.08l12.76.82c1.4 0 2.36-1.05 2.36-2.2v-2.08l-14.09.12v1.54zM2.94 4.81H.89V3.77c0-.7.33-1.25 1.03-1.25s1.04.56 1.04 1.24v1.05zm3.65 14.3v-.72l12.4-.11v1.24c0 .7-.58 1.37-1.28 1.37l-11.28-.82c.25-.34.16-.52.16-.97z"
+        />
+      </g>
+      <path
+        d="M13.51 6.36H5.95a.54.54 0 0 1-.54-.54c0-.3.24-.54.54-.54h7.56a.54.54 0 0 1 0 1.08zM13.51 9.26H5.95a.54.54 0 0 1-.54-.54c0-.3.24-.54.54-.54h7.56c.3 0 .54.25.54.54 0 .3-.24.54-.54.54zM10.02 12.16H5.95a.54.54 0 0 1-.54-.54c0-.3.24-.54.54-.54h4.07c.3 0 .54.25.54.54 0 .3-.24.54-.54.54z"
+        fill="#27C1FC"
+        fillRule="nonzero"
+      />
+      <path
+        d="M0 0h24v24H0z"
+      />
+    </g>
+  </svg>
+</div>
+`;

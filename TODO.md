@@ -1,23 +1,41 @@
-
 ## todo
 
 > note that these are ordered numerically, but they may be completed in a different order
 
 ## 0. critical
-- [ ] add README instructional (_merge from both, add new_)
+- [x] add README instructional (_merge from both, add new_)
 - [x] merge git histories
 - [x] project dependency setup
 - [ ] stories for the components
   - [x] initial stories for split out components
-  - [ ] stories for components still in pages
-  - [ ] better stories (_customization etc_)
+  - [x] stories for components still in pages (_mostly done anyway_)
+  - [x] better stories (_customization etc_)
 - [ ] write unit tests & puppeteer/cypress tests (_@note, as this for fun, without designs or requirements [which will be experimented with as it's being done] will start with minimal tests and add, without TDD_)
+  ```md
+  #1
+  - go to site
+  - create account
+  - login
+  - verify ends up on homepage
+  #2
+  - click family members
+  - add family members
+  - verify is in list
+  #3
+  - click advice
+  - add advice
+  - verify is in list
+  #4
+  - go to home
+  - use translation
+  - verify text translated
+  ```
+- [ ] security audit
 
 ## 1. cleanup
-- [ ] move static data out of `welcome` page
-- [ ] component code right now is structured in the way that is easiest to read & change (_single files_), properly separate if our end requirement ends up following such a standard
+- [x] move static data out of `welcome` page
 - [ ] move libs out to keep codebase minimal
-- [ ] `{ "src": ".storybook/config.ts", "use": "now-static-build-storybook" }` add back to `now.json` builds
+- [x] `{ "src": ".storybook/config.ts", "use": "now-static-build-storybook" }` add back to `now.json` builds (_to deploy static storybook_)
 
 ## 2. homepage sections
 - [x] initial rough outline of page
@@ -76,60 +94,77 @@
 # 4. advice page
 - [x] init
 - [ ] connect with api
-- [ ] state management
+- [x] state management
 - [ ] tests
 
 
 # 5. forms
 - [ ] tests
+- [x] stories
+- [ ] show **required** in ui
 - [x] use a library or add minimal implementation (_went for minimal version that is easy to change_)
 - [ ] add family
   - [x] init
-  - [ ] styled
+  - [x] styled
+  - [x] state
   - [ ] other todos #!
 - [ ] add advice
   - [x] init
-  - [ ] styled
+  - [x] styled
+  - [x] state
   - [ ] other advice #!
 
 # 6. i18n
-- [ ] language switcher #!!
-  - [ ] svg icons for pt, en, in
-  - [ ] dropdown functionality (_or any better UI_)
-  - [ ] state handling (_store in idb_)
+- [x] language switcher #!!
+  - [x] svg icons for pt, en, in
+  - [x] dropdown functionality (_or any better UI_)
+  - [x] state handling
+  - [ ] persist (_store in idb_)
 - [ ] add tests
+  - [x] simple
+  - [ ] advanced
 - [x] add lib
-- [ ] translations
-  - [ ] pt
-  - [ ] en
-- [ ] ada compliance
-- [ ] speedtest passing with flying colours
+- [x] translations
+  - [x] pt
+  - [x] en
+- [ ] pages
+  - [x] welcome
+  - [x] advice
+  - [x] family
+  - [x] footer
+  - [x] nav
+  - [ ] fixture/constant/default data
+  - [ ] form translations
 
-# 7. family & profile page
-- [ ] create
+
+# 7. family page
+- [x] create
 - [ ] fill in requirements
 
-# 8. lower priority
-- [ ] extract any `@todo` comments
+# 8. polish
+- [x] stock photos on family & advice
 - [ ] unlock icon animation
+- [ ] animate language switcher
+- [ ] add photos to devices
+
+
+# 9. lower priority
+- [ ] extract any `@todo` comments
 - [ ] footer
-  - [ ] footer icons
-  - [ ] footer copyright
-- [ ] credits page (_open source credits, authors_)
-  - [material icons](https://material.io/resources/icons/)
-  - [konsilos meteor](https://github.com/konsilos/konsilos)
-  - [react starter](https://github.com/aretecode/react-starter)
-  - [svg optimizer](https://jakearchibald.github.io/svgomg/)
-  - [devices.css 0.1.6](https://github.com/picturepan2/)
-  - [svg flags](https://www.sketchappsources.com/free-source/2101-all-coutry-flags-kit-sketch-freebie-resource.html)
+  - [ ] footer icons (_google play - these are ready but not needed_)
+  - [x] footer copyright
 - [ ] about page
 - [ ] browser support notice for older non evergreen browsers
 - [ ] dark mode
 - [ ] basic SEO (_`modern-stack-portfolio`_)
-  - [ ] manifest.json
+  - [x] manifest.json
   - [ ] sitemap.xml
+- [ ] add donation link (_github, paypal_)
+- [ ] contributor guidelines
+- [x] credits page (_open source credits, authors_)
 
-# 9. future features
+# 10. future features
+- [ ] schema.org rich snippets
 - [ ] put MD todos into github issues & project plan & assign
 - [ ] move to org
 - [ ] slack/discord
@@ -143,3 +178,18 @@
   - [ ] setup data model for notifications
   - [ ] integrate client side notifications (_html5_)
 - [ ] responsive image using sirv (_if not using picture_) `<script src="https://scripts.sirv.com/sirv.js"></script>`
+- [ ] speedtest passing with flying colours
+- [ ] ada compliance
+- [ ] profile page
+- [ ] (zeit) micro auth0
+- [ ] move uuid to server
+- [ ] show toast when already logged in
+- [ ] pagination on advice & families
+- [ ] move to https://www.npmjs.com/package/@apollo/react-hooks instead of all 3 packages in 1 booster
+
+- [ ] add back to now.json (_made build very slow, was missing corejs dep_) (```
+    {
+      "src": "./.storybook/config.js",
+      "use": "now-static-build-storybook"
+    }
+```)

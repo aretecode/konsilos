@@ -1,11 +1,13 @@
 import { ApolloServer } from 'apollo-server-micro'
-import {
+import { typeDefs, resolvers } from '../../src/graphql'
+
+const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
-}  from '../../src/graphql'
-
-const apolloServer = new ApolloServer({ 
-  typeDefs, resolvers 
+  /**
+   * @security @note this enables playground in production
+   */
+  playground: true,
 })
 
 export const config = {

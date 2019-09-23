@@ -4,7 +4,7 @@
 	"private": false,
 	"sideEffects": false,
 	"main": ".next/server/index.js",
-	"description": "Eternize advices to your children",
+	"description": "Eternize advice to your children",
 	"originalUrl": "https://konsilos.com",
 	"url": "https://konsilos.now.sh",
 	"repository": {
@@ -12,6 +12,7 @@
 	},
 	"scripts": {
 		"dev": "next",
+		"dev:server": "IS_DEV_SERVER=true COOKIE_SECRET=dev node server/now/index.js",
 		"build": "rm -fr .next && next build",
 		"export": "next export",
 		"start": "NODE_ENV=production next start",
@@ -31,12 +32,14 @@
 		"test:dev": "jest --config jest.config.js",
 		"build:server": "yarn build && yarn build:server:only && tsc || true && tsc --project tsconfig.server.json || true",
 		"start:server": "DISABLE_SERVERLESS=true NODE_ENV=production node .next/server",
-		"dev:server": "rm -fr dist && rm -fr .next && yarn build:server && yarn start:server",
+		"wip:dev:server": "rm -fr dist && rm -fr .next && yarn build:server && yarn start:server",
 		"now-build-storybook": "build-storybook -o dist/storybook"
 	},
 	"resolutions": {
+		"next": "9.0.6",
+		"next-server": "9.0.5",
 		"node-fetch": "2.6.0",
-		"webpack": "4.39.1",
+		"webpack": "4.40.2",
 		"fork-ts-checker-webpack-plugin": "1.5.0",
 		"apollo-link": "1.2.12",
 		"typescript": "3.6.3",
@@ -49,17 +52,21 @@
 		"@babel/plugin-transform-runtime": "^7.6.0",
 		"@babel/plugin-syntax-dynamic-import": "^7.2.0",
 		"@babel/preset-env": "^7.6.0",
-		"@babel/runtime": "^7.6.0"
+		"@babel/runtime": "^7.6.0",
+		"next-i18next": "1.2.1",
+		"react-i18next": "10.12.5"
 	},
 	"dependencies": {
+		"uuid": "3.3.3",
 		"@auth0/auth0-spa-js": "^1.2.3",
+		"airtable": "^0.7.1",
 		"dotenv": "^8.1.0",
 		"next": "9.0.6",
 		"next-server": "9.0.5",
+		"next-i18next": "1.2.1",
 		"react-i18next": "10.12.5",
 		"i18next": "17.0.16",
 		"i18next-browser-languagedetector": "3.0.3",
-		"@zeit/next-typescript": "^1.1.1",
 		"next-offline": "4.0.5",
 		"node-fetch": "2.6.0",
 		"react-amphtml": "^4.0.2",
@@ -78,10 +85,12 @@
 		"idb": "4.0.4",
 		"idb-keyval": "3.2.0",
 		"mkdirp": "0.5.1",
-		"image-size": "0.8.1"
+		"image-size": "0.8.1",
+		"date-fns": "2.2.1"
 	},
 	"devDependencies": {
 		"@types/node": "12.7.5",
+		"@types/airtable": "0.5.6",
 		"prettier": "1.18.2",
 		"eslint": "^6.4.0",
 		"eslint-plugin-i18n": "^1.2.3",
@@ -94,9 +103,7 @@
 		"@typescript-eslint/parser": "2.3.0",
 		"fork-ts-checker-webpack-plugin": "1.5.0",
 		"lighthouse": "https://github.com/GoogleChromeLabs/lighthousebot",
-		"@zeit/next-bundle-analyzer": "0.1.2",
 		"danger": "9.2.0",
-		"next-size": "2.0.2",
 		"@types/gapi.client.tagmanager": "2.0.1",
 		"intersection-observer": "0.7.0",
 		"@types/lru-cache": "5.1.0",
@@ -135,6 +142,7 @@
 		"@babel/plugin-syntax-object-rest-spread": "7.2.0",
 		"@babel/plugin-proposal-decorators": "7.6.0",
 		"@babel/preset-env": "7.6.0",
+		"babel-plugin-require-context-hook": "1.0.0",
 		"jest": "24.9.0",
 		"jest-cli": "24.9.0",
 		"ts-jest": "24.1.0",
@@ -149,6 +157,6 @@
 		"typescript-styled-plugin": "0.14.0",
 		"case-sensitive-paths-webpack-plugin": "2.2.0",
 		"ts-loader": "6.1.1",
-		"date-fns": "2.2.1"
+		"@types/uuid": "3.4.5"
 	}
 }

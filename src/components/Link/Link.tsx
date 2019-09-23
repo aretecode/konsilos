@@ -3,6 +3,8 @@
  * @see https://raw.githubusercontent.com/zeit/next.js/canary/packages/next/client/link.js
  * ^ does not accept className
  * @see https://github.com/zeit/next.js/issues/1942#issuecomment-313925454
+ *
+ * @todo use Link from i18n
  */
 import * as React from 'react'
 import BaseLink from 'next/link'
@@ -44,7 +46,6 @@ export class DynamicLink extends React.PureComponent<
 export const StyledLink = styled(DynamicLink)`
   text-decoration: none;
   position: relative;
-  letter-spacing: 0.2em;
 
   color: var(--color-link);
 

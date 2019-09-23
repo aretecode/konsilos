@@ -146,7 +146,7 @@ const Input = (props: InputConfigType) => {
   const { label, propertyName, value } = props
   const context = React.useContext(FormContext)
   const [isActive, setIsActive] = React.useState(false)
-  const [stateValue, setValue] = React.useState(value)
+  const [stateValue, setValue] = React.useState(value || '')
 
   /**
    * @todo gross

@@ -1,18 +1,39 @@
 # Konsilos
 
-[https://konsilos.now.sh](https://konsilos.now.sh)
+**A non-rofit organization.**
+We created this with good intentions, to scratch our itch, hoping this also would benefit people all over the world.
 
-[TODOS](./TODO.md)
+- site & app: [https://konsilos.now.sh](https://konsilos.now.sh)
+- storybook: [https://konsilos.now.sh/ui/](https://konsilos.now.sh/ui/)
+- graphql playground: [https://konsilos.now.sh/graphql/](https://konsilos.now.sh/ui/) (_see the ["everything" query](./src/graphql/everythingQuery.graphql.ts)_)
+- [TODOS](./TODO.md)
 
+# features
+- deployment to serverless aws lamda (_with ephemeral urls on every pr, and docker setup for custom deploys_)
+- react SPA (_using nextjs, also with service worker / offline support and lighthouse compliance_)
+- oauth on subscribe button, with a SAAS authentication microservice (_using auth2_)
+- storybook for ui development velocity (_aslso available on deployment_)
+- graphql as a micro api connected to airtable (_aslso available on deployment_)
+- images via cdn with webp format (_using sirv_)
+- svg images (_flags, icons, logo_)
+- semantic html, seo including card previews minimal styles (_using styled-components_)
+- custom responsive css devices
+- typescript with all types passing, eslint, prettier, stylelint, editorconfig
+- unit testing with storybook snapshots, react-testing-library
+- i18n translation
+- app domain features
+  - family: add & view family (_using react hooks, graphql in progress_)
+  - advice: add & view advice (_using react hooks, graphql in progress_)
 
 ## how to run
 
 1. use [vscode](https://code.visualstudio.com/) (_for the best experience_)
-1. use **nodejs** `12.10.0` (_or **latest**_) 
+1. use **nodejs** `12.10.0` (_or **latest**_)
 2. `npm i` or `yarn` (_install dependencies_)
-3. (if you do not have already) `npm i -g typescript jest prettier`
+3. go to [env.js](./env.js) file to set your keys
 4. run app or storybook
   - `yarn dev` (_app_)
+  - `yarn dev:server` (_for using auth0 locally via custom next server_)
   - `yarn dev:storybook` (_storybook_)
 
 ## folder structure
