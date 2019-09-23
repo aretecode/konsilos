@@ -16,6 +16,7 @@ export default gql`
   type FamilyMember {
     uid: ID!
     name: String
+    userId: String
     dateOfBirth: String
     imageUrl: String
   }
