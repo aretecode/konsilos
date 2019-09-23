@@ -1,5 +1,6 @@
 import { DEFAULT_USER } from '../constants'
 import { Response as AirtableResponse } from 'airtable'
+import { UnknownObj } from '../typings'
 
 /**
  * @todo typings for airtable are wrong
@@ -21,8 +22,7 @@ const FamilyMembers = base('FamilyMembers').select({ view: 'Grid view' })
 export type FirstPageCallbackType = (error: any, records: any) => unknown
 export type BaseSelectResultType = {
   firstPage: (cb: FirstPageCallbackType) => Promise<any>
-  [key: string]: unknown
-}
+} & UnknownObj
 const getFirstPage = <RecordsType = unknown>(
   baseSelect: BaseSelectResultType
 ): Promise<[Error | undefined, AirtableResponse<unknown>]> =>
@@ -38,6 +38,18 @@ const getFirstPage = <RecordsType = unknown>(
 const getFamilyMembers = () => getFirstPage(FamilyMembers)
 const getAdvices = () => getFirstPage(Advices)
 
+export type DefaultRecordType = {
+  fields: UnknownObj
+  getId: () => string
+} & UnknownObj
+const fromRecordToItemWithUid = <
+  RecordType extends DefaultRecordType = DefaultRecordType
+>(
+  record: RecordType
+) => {
+  return { ...record.fields, uid: record.getId() }
+}
+
 export default {
   Query: {
     user() {
@@ -46,20 +58,16 @@ export default {
     async adviceList() {
       const [error, records] = await getAdvices()
       if (error) return
-      return records.forEach((record: any) => {
-        const list = { ...record.fields, uid: record.getId() }
-        console.log('Advice', list)
-        return list
-      })
+      const list = records.map((x: any) => fromRecordToItemWithUid(x))
+      console.log('Advice', list)
+      return list
     },
     async familyList() {
       const [error, records] = await getFamilyMembers()
       if (error) return
-      return records.forEach((record: any) => {
-        const list = { ...record.fields, uid: record.getId() }
-        console.log('Family Member', list)
-        return list
-      })
+      const list = records.map((x: any) => fromRecordToItemWithUid(x))
+      console.log('Family', list)
+      return list
     },
   },
 }
