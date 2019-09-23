@@ -13,7 +13,7 @@ We created this with good intentions, to scratch our itch, hoping this also woul
 1. use [vscode](https://code.visualstudio.com/) (_for the best experience_)
 1. use **nodejs** `12.10.0` (_or **latest**_)
 2. `npm i` or `yarn` (_install dependencies_)
-3. (if you do not have already) `npm i -g typescript jest prettier`
+3. go to [env.js](./env.js) file to set your keys
 4. run app or storybook
   - `yarn dev` (_app_)
   - `yarn dev:server` (_for using auth0 locally via custom next server_)
