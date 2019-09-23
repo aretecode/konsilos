@@ -38,6 +38,17 @@ declare namespace NodeJS {
      * probably will remove this
      */
     WEBSITE_ORIGIN?: string
+
+    AUTH0_CALLBACK_URL: STRING
+    CLIENT_SECRET: string
+    AIRTABLE_API_KEY: string
+    AIRTABLE_APP_KEY: string
+    CLIENT_AUTH0_CLIENT_ID: string
+    CLIENT_AUTH0_DOMAIN: string
+    /**
+     * @deprecated use CLIENT_AUTH0_DOMAIN
+     */
+    DOMAIN: string
   }
   interface Process {
     browser: boolean
