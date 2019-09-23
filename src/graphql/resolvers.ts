@@ -1,6 +1,6 @@
 import { DEFAULT_USER } from '../constants'
 import { Response as AirtableResponse } from 'airtable'
-import { UnknownObj } from '../typings'
+import { UnknownObj, FamilyMemberItemType, AdviceItemType } from '../typings'
 
 /**
  * @todo typings for airtable are wrong
@@ -16,6 +16,8 @@ const Advices = base('Advices').select({ view: 'Grid view' })
 const FamilyMembers = base('FamilyMembers').select({ view: 'Grid view' })
 
 /**
+ * === helpers ===
+ *
  * @todo import typings to replace `unknown`
  * @todo move this into library code
  */
@@ -34,10 +36,6 @@ const getFirstPage = <RecordsType = unknown>(
       }
     )
   })
-
-const getFamilyMembers = () => getFirstPage(FamilyMembers)
-const getAdvices = () => getFirstPage(Advices)
-
 export type DefaultRecordType = {
   fields: UnknownObj
   getId: () => string
@@ -49,6 +47,17 @@ const fromRecordToItemWithUid = <
 ) => {
   return { ...record.fields, uid: record.getId() }
 }
+/**
+ * @todo type safety
+ */
+const mapRecords = <ItemType>(records: any[] | readonly any[]): ItemType[] =>
+  [...records].map(fromRecordToItemWithUid) as any[]
+
+/**
+ * === domain ===
+ */
+const getFamilyMembers = () => getFirstPage(FamilyMembers)
+const getAdvices = () => getFirstPage(Advices)
 
 export default {
   Query: {
@@ -58,14 +67,14 @@ export default {
     async adviceList() {
       const [error, records] = await getAdvices()
       if (error) return
-      const list = records.map((x: any) => fromRecordToItemWithUid(x))
+      const list = mapRecords<AdviceItemType>(records)
       console.log('Advice', list)
       return list
     },
     async familyList() {
       const [error, records] = await getFamilyMembers()
       if (error) return
-      const list = records.map((x: any) => fromRecordToItemWithUid(x))
+      const list = mapRecords<FamilyMemberItemType>(records)
       console.log('Family', list)
       return list
     },
