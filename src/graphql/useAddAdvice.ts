@@ -4,7 +4,7 @@ import { AdviceItemType } from '../typings'
 
 export const ADD_ADVICE = gql`
   mutation AddAdvice($input: AdviceInput) {
-    addAdvice(input: $input) {
+    createAdvice(input: $input) {
       text
       description
       type
