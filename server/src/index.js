@@ -21,7 +21,7 @@ const app = server
   .use(passport.session())
   .use(userInViews())
   .use('/auth', authRouter)
-  .get('/user', userRouter)
+  .use(userRouter)
 
 /**
  * @see https://github.com/auth0/passport-auth0/issues/70
