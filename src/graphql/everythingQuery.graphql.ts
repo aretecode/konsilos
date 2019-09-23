@@ -4,6 +4,7 @@ export default gql`
   query Everything {
     user {
       name
+      nickname
       email
       adviceList {
         text
@@ -20,7 +21,6 @@ export default gql`
         dateOfBirth
         uid
       }
-      nickname
     }
   }
 `
