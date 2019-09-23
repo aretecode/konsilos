@@ -12,6 +12,25 @@
   - [x] stories for components still in pages (_mostly done anyway_)
   - [x] better stories (_customization etc_)
 - [ ] write unit tests & puppeteer/cypress tests (_@note, as this for fun, without designs or requirements [which will be experimented with as it's being done] will start with minimal tests and add, without TDD_)
+  ```md
+  #1
+  - go to site
+  - create account
+  - login
+  - verify ends up on homepage
+  #2
+  - click family members
+  - add family members
+  - verify is in list
+  #3
+  - click advice
+  - add advice
+  - verify is in list
+  #4
+  - go to home
+  - use translation
+  - verify text translated
+  ```
 - [ ] security audit
 
 ## 1. cleanup
