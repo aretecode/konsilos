@@ -12,8 +12,9 @@ Airtable.configure({
 })
 
 const base = Airtable.base(process.env.AIRTABLE_APP_KEY)
-const Advices = base('Advices').select({ view: 'Grid view' })
-const FamilyMembers = base('FamilyMembers').select({ view: 'Grid view' })
+const Advices = base('Advices')
+const FamilyMembers = base('FamilyMembers')
+const Users = base('Users')
 
 /**
  * @todo import typings to replace `unknown`
@@ -35,8 +36,41 @@ const getFirstPage = <RecordsType = unknown>(
     )
   })
 
-const getFamilyMembers = () => getFirstPage(FamilyMembers)
-const getAdvices = () => getFirstPage(Advices)
+const getFamilyMembers = () => {
+  return getFirstPage(FamilyMembers.select({ view: 'Grid view' }))
+}
+const getAdvices = () => {
+  return getFirstPage(Advices.select({ view: 'Grid view' }))
+}
+
+const createItem = (table:any, item:any) => {
+  return table.create([{ fields: { ...item } }], (error:any, records:any) => {
+    if (error) {
+      console.error(error)
+    }
+    return Promise.resolve(records.map((record:any) => record))
+  })
+}
+
+const updateItem = (table:any, item:any, id:string) => {
+  return table.update([{
+    id,
+    fields: { ...item } }], (error:any, records:any) => {
+    if (error) {
+      console.error(error)
+    }
+    return Promise.resolve(records.map((record:any) => record))
+  })
+}
+
+const deleteItem = (table:any, id:string) => {
+  return table.destroy([id], (error:any, records:any) => {
+    if (error) {
+      console.error(error)
+    }
+    return `Deleted record with ID ${records[0].getId()}`
+  })
+}
 
 export type DefaultRecordType = {
   fields: UnknownObj
@@ -68,6 +102,44 @@ export default {
       const list = records.map((x: any) => fromRecordToItemWithUid(x))
       console.log('Family', list)
       return list
+    },
+  },
+  Mutation: {
+    createAdvice: async(_, { input }) => {
+      const result = await createItem(Advices, input)[0]
+      return result
+    },
+    updateAdvice: async(_, { input, id }) => {
+      const result = await updateItem(Advices, input, id)[0]
+      return result
+    },
+    deleteAdvice: async(_, { id }) => {
+      const result = await deleteItem(Advices, id)
+      return result
+    },
+    addFamilyMember: async(_, { input }) => {
+      const result = await createItem(FamilyMembers, input)[0]
+      return result
+    },
+    updateFamilyMember: async(_, { input, id}) => {
+      const result = await updateItem(Advices, input, id)[0]
+      return result
+    },
+    deleteFamilyMember: async(_, { id }) => {
+      const result = await deleteItem(FamilyMembers, id)
+      return result
+    },
+    createUser: async(_, { input }) => {
+      const result = await createItem(Users, input)[0]
+      return result
+    },
+    updateUser: async(_, { input, id}) => {
+      const result = await updateItem(Users, input, id)[0]
+      return result
+    },
+    nukeAccount: async(_, { id }) => {
+      const result = await deleteItem(Users, id)
+      return result
     },
   },
 }
