@@ -1162,6 +1162,11 @@ exports[`Storyshots Device Ipad 1`] = `
 }
 
 .c1 {
+  padding: 3rem;
+  background: #fff;
+}
+
+.c2 {
   margin: 5vh 5vw;
 }
 
@@ -1169,31 +1174,35 @@ exports[`Storyshots Device Ipad 1`] = `
   className="c0"
 >
   <div
-    className="device device-ipad-pro device-spacegray c1"
+    className="c1"
   >
     <div
-      className="device-frame"
+      className="device device-ipad-pro device-spacegray c2"
     >
-      <img
-        className="device-content"
-        src="https://pencamcc.sirv.com/Devices/bg-07.jpg"
+      <div
+        className="device-frame"
+      >
+        <img
+          className="device-content"
+          src="https://pencamcc.sirv.com/Devices/bg-07.jpg"
+        />
+      </div>
+      <div
+        className="device-stripe"
+      />
+      <div
+        className="device-header"
+      />
+      <div
+        className="device-sensors"
+      />
+      <div
+        className="device-btns"
+      />
+      <div
+        className="device-power"
       />
     </div>
-    <div
-      className="device-stripe"
-    />
-    <div
-      className="device-header"
-    />
-    <div
-      className="device-sensors"
-    />
-    <div
-      className="device-btns"
-    />
-    <div
-      className="device-power"
-    />
   </div>
 </div>
 `;
@@ -1205,6 +1214,11 @@ exports[`Storyshots Device Macbook 1`] = `
 }
 
 .c1 {
+  padding: 3rem;
+  background: #fff;
+}
+
+.c2 {
   margin: 5vh 5vw;
 }
 
@@ -1212,31 +1226,35 @@ exports[`Storyshots Device Macbook 1`] = `
   className="c0"
 >
   <div
-    className="device device-macbook-pro device-spacegray c1"
+    className="c1"
   >
     <div
-      className="device-frame"
+      className="device device-macbook-pro device-spacegray c2"
     >
-      <img
-        className="device-content"
-        src="https://pencamcc.sirv.com/Devices/bg-02.jpg"
+      <div
+        className="device-frame"
+      >
+        <img
+          className="device-content"
+          src="https://pencamcc.sirv.com/Devices/bg-02.jpg"
+        />
+      </div>
+      <div
+        className="device-stripe"
+      />
+      <div
+        className="device-header"
+      />
+      <div
+        className="device-sensors"
+      />
+      <div
+        className="device-btns"
+      />
+      <div
+        className="device-power"
       />
     </div>
-    <div
-      className="device-stripe"
-    />
-    <div
-      className="device-header"
-    />
-    <div
-      className="device-sensors"
-    />
-    <div
-      className="device-btns"
-    />
-    <div
-      className="device-power"
-    />
   </div>
 </div>
 `;
@@ -1437,6 +1455,7 @@ exports[`Storyshots Footer Empty 1`] = `
 }
 
 .c1 {
+  padding-top: 1rem;
   text-align: center;
   display: -webkit-box;
   display: -webkit-flex;

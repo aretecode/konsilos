@@ -1,7 +1,9 @@
 /**
- * @see https://storybook.js.org/basics/guide-react/
+ * @see config.js
+ * this file is a duplicate because `Storybook config.js must be specified as entrypoint`
+ * for static storybook builder
  */
-import * as React from 'react'
+import React from 'react'
 import { configure, addDecorator } from '@storybook/react'
 import styled from 'styled-components'
 import { AppStyles } from '../src/AppStyles'
@@ -26,21 +28,4 @@ const toStyledStory = story => {
 }
 
 addDecorator(toStyledStory)
-
-/**
- * @todo https://github.com/storybookjs/storybook/issues/4479
- */
-if (process.env.NODE_ENV === 'test') {
-  // not polyfilled in config file
-  configure(
-    (global as any).__requireContext(
-      __dirname,
-      '../src',
-      true,
-      /\.story\.tsx$/
-    ),
-    module
-  )
-} else {
-  configure(require.context('../src', true, /\.story\.tsx$/), module)
-}
+configure(require.context('../src', true, /\.story\.tsx$/), module)

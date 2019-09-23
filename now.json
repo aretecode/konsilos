@@ -98,6 +98,10 @@
     {
       "src": "package.json",
       "use": "@now/next"
+    },
+    {
+      "src": "./.storybook/config.js",
+      "use": "now-static-build-storybook"
     }
   ]
 }
