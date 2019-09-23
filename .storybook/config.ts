@@ -1,7 +1,7 @@
 /**
  * @see https://storybook.js.org/basics/guide-react/
  */
-import React from 'react'
+import * as React from 'react'
 import { configure, setAddon, addDecorator } from '@storybook/react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { AppStyles } from '../src/AppStyles'
@@ -18,7 +18,7 @@ const toStyledStory = story => {
         StyledStory,
         null,
         React.createElement(AppStyles, null),
-        React.createElement(StrictMode, null, story())
+        React.createElement(React.StrictMode, null, story())
       )
     }
   }

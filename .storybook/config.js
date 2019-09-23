@@ -20,7 +20,7 @@ const toStyledStory = story => {
         StyledStory,
         null,
         React.createElement(AppStyles, null),
-        React.createElement(StrictMode, null, story())
+        React.createElement(React.StrictMode, null, story())
       )
     }
   }
