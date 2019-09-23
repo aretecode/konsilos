@@ -4,6 +4,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { AdviceItemType, AdviceType } from '../../typings'
+import { StyledImage } from '../../components/Image'
 import { StyledMaterialIcon } from '../../components/MaterialIcons'
 import { KonsilosContext } from '../KonsilosContext'
 import { UserAvatar } from '../../components/Avatar'
@@ -84,11 +85,11 @@ export type CardTagPropType = { type: AdviceType } & Partial<
 >
 const CardTag = (props: CardTagPropType) => {
   return (
-    <img
+    <StyledImage
       src={`https://pencamcc.sirv.com/Images/tags/tag-${props.type}.png?format=webp`}
       width="88"
       height="132"
-      alt="About Life"
+      alt={props.type}
     />
   )
 }

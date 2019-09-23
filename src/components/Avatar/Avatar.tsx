@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { StyledImage } from '../Image'
 
 const UserAvatarWrap = styled.section`
   grid-area: avatar;
@@ -39,7 +40,12 @@ const UserAvatar = (props: UserAvatarPropType) => {
   const { name, imageUrl, ...rest } = props
   return (
     <UserAvatarWrap {...rest}>
-      <img src={imageUrl} width="61" height="61" alt={`${name} avatar`} />
+      <StyledImage
+        src={imageUrl}
+        width="61"
+        height="61"
+        alt={`${name} avatar`}
+      />
       <h5>{name}</h5>
     </UserAvatarWrap>
   )
