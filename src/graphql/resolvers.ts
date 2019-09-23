@@ -7,9 +7,9 @@ Airtable.configure({
 })
 
 const base = Airtable.base('appEtPntnilqHwtKW')
-const Advices = base.table('Advices')
+const Advices = base('Advices')
                     .select({ view: 'Grid view' })
-const FamilyMembers = base.table('FamilyMembers')
+const FamilyMembers = base('FamilyMembers')
                     .select({ view: 'Grid view' })
 
 const getAdvices = Advices.firstPage
@@ -27,7 +27,11 @@ export default {
           console.error(error)
           return
         }
-        return records
+        
+        return records.forEach((record:any) => {
+          console.log('Advice', { ...record.fields })
+          return { ...record.fields }
+        })
       })
     },
     async familyList() {
@@ -36,7 +40,10 @@ export default {
           console.error(error)
           return
         }
-        return records
+        return records.forEach((record:any) => {
+          console.log('Family Member', { ...record.fields })
+          return { ...record.fields }
+        })
       })
     },
   },
