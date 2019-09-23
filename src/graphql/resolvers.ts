@@ -7,7 +7,7 @@ import { Response as AirtableResponse } from 'airtable'
 const Airtable = require('airtable')
 
 Airtable.configure({
-  apiKey: process.env.AIRTABLE_APP_KEY,
+  apiKey: process.env.AIRTABLE_API_KEY,
 })
 
 const base = Airtable.base(process.env.AIRTABLE_APP_KEY)
