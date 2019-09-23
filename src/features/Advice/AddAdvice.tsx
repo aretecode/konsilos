@@ -1,6 +1,7 @@
 import * as React from 'react'
 import uuid from 'uuid/v4'
-import { AdviceItemType } from '../../typings'
+import { isFunction } from '../../utils/is'
+import { AdviceItemType, SerializedObj } from '../../typings'
 import { Form, InputConfigType } from '../../components/Form'
 import { KonsilosContext } from '../KonsilosContext'
 
@@ -44,7 +45,11 @@ export const inputConfigList: AddAdviceInputConfigItemType[] = [
   },
 ]
 
-export const AddAdvice = (props: { className?: string }) => {
+export type AddAdvicePropType = {
+  className?: string
+  onSubmit?: (serialized: SerializedObj) => void
+}
+export const AddAdvice = (props: AddAdvicePropType) => {
   const { adviceList, setAdviceList } = React.useContext(KonsilosContext)
 
   return (
@@ -57,6 +62,8 @@ export const AddAdvice = (props: { className?: string }) => {
           ...serialized,
         }
         setAdviceList([...adviceList, merged] as any)
+
+        if (isFunction(props.onSubmit)) props.onSubmit(merged)
       }}
     />
   )

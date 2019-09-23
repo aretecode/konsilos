@@ -1,3 +1,5 @@
 export * from './useFamilyState'
 export * from './AddFamily'
 export * from './FamilyList'
+export * from './GraphqlFamilyList'
+export * from './GraphqlAddFamily'

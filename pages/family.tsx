@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 import { StyledPageHeader } from '../src/components/PageHeader'
-import { AddFamily, StyledFamilyList } from '../src/features/Family'
+import { GraphqlFamilyList, GraphqlAddFamily } from '../src/features/Family'
 
 const FamilyPageWrapper = styled.section`
   form {
@@ -43,10 +43,10 @@ export default () => {
       <FamilyPageWrapper>
         <StyledPageHeader>{t('page_title__family')}</StyledPageHeader>
         <FormWrapper>
-          <AddFamily />
+          <GraphqlAddFamily />
         </FormWrapper>
         <main>
-          <StyledFamilyList />
+          <GraphqlFamilyList />
         </main>
       </FamilyPageWrapper>
     </>
