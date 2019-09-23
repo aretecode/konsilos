@@ -522,8 +522,10 @@ exports[`Storyshots AdviceList With Static List 1`] = `
       <ul>
         <li>
           <img
-            alt="About Life"
+            alt="life"
+            className=""
             height="132"
+            loading="lazy"
             src="https://pencamcc.sirv.com/Images/tags/tag-life.png?format=webp"
             width="88"
           />
@@ -532,7 +534,9 @@ exports[`Storyshots AdviceList With Static List 1`] = `
           >
             <img
               alt="undefined avatar"
+              className=""
               height="61"
+              loading="lazy"
               width="61"
             />
             <h5 />
@@ -570,8 +574,10 @@ exports[`Storyshots AdviceList With Static List 1`] = `
         </li>
         <li>
           <img
-            alt="About Life"
+            alt="advice"
+            className=""
             height="132"
+            loading="lazy"
             src="https://pencamcc.sirv.com/Images/tags/tag-advice.png?format=webp"
             width="88"
           />
@@ -580,7 +586,9 @@ exports[`Storyshots AdviceList With Static List 1`] = `
           >
             <img
               alt="undefined avatar"
+              className=""
               height="61"
+              loading="lazy"
               width="61"
             />
             <h5 />
@@ -618,8 +626,10 @@ exports[`Storyshots AdviceList With Static List 1`] = `
         </li>
         <li>
           <img
-            alt="About Life"
+            alt="movie"
+            className=""
             height="132"
+            loading="lazy"
             src="https://pencamcc.sirv.com/Images/tags/tag-movie.png?format=webp"
             width="88"
           />
@@ -628,7 +638,9 @@ exports[`Storyshots AdviceList With Static List 1`] = `
           >
             <img
               alt="undefined avatar"
+              className=""
               height="61"
+              loading="lazy"
               width="61"
             />
             <h5 />
@@ -666,8 +678,10 @@ exports[`Storyshots AdviceList With Static List 1`] = `
         </li>
         <li>
           <img
-            alt="About Life"
+            alt="book"
+            className=""
             height="132"
+            loading="lazy"
             src="https://pencamcc.sirv.com/Images/tags/tag-book.png?format=webp"
             width="88"
           />
@@ -676,7 +690,9 @@ exports[`Storyshots AdviceList With Static List 1`] = `
           >
             <img
               alt="undefined avatar"
+              className=""
               height="61"
+              loading="lazy"
               width="61"
             />
             <h5 />
@@ -714,8 +730,10 @@ exports[`Storyshots AdviceList With Static List 1`] = `
         </li>
         <li>
           <img
-            alt="About Life"
+            alt="travel"
+            className=""
             height="132"
+            loading="lazy"
             src="https://pencamcc.sirv.com/Images/tags/tag-travel.png?format=webp"
             width="88"
           />
@@ -724,7 +742,9 @@ exports[`Storyshots AdviceList With Static List 1`] = `
           >
             <img
               alt="undefined avatar"
+              className=""
               height="61"
+              loading="lazy"
               width="61"
             />
             <h5 />
@@ -762,8 +782,10 @@ exports[`Storyshots AdviceList With Static List 1`] = `
         </li>
         <li>
           <img
-            alt="About Life"
+            alt="book"
+            className=""
             height="132"
+            loading="lazy"
             src="https://pencamcc.sirv.com/Images/tags/tag-book.png?format=webp"
             width="88"
           />
@@ -772,7 +794,9 @@ exports[`Storyshots AdviceList With Static List 1`] = `
           >
             <img
               alt="undefined avatar"
+              className=""
               height="61"
+              loading="lazy"
               width="61"
             />
             <h5 />
@@ -810,8 +834,10 @@ exports[`Storyshots AdviceList With Static List 1`] = `
         </li>
         <li>
           <img
-            alt="About Life"
+            alt="life"
+            className=""
             height="132"
+            loading="lazy"
             src="https://pencamcc.sirv.com/Images/tags/tag-life.png?format=webp"
             width="88"
           />
@@ -820,7 +846,9 @@ exports[`Storyshots AdviceList With Static List 1`] = `
           >
             <img
               alt="undefined avatar"
+              className=""
               height="61"
+              loading="lazy"
               width="61"
             />
             <h5 />
@@ -858,8 +886,10 @@ exports[`Storyshots AdviceList With Static List 1`] = `
         </li>
         <li>
           <img
-            alt="About Life"
+            alt="travel"
+            className=""
             height="132"
+            loading="lazy"
             src="https://pencamcc.sirv.com/Images/tags/tag-travel.png?format=webp"
             width="88"
           />
@@ -868,7 +898,9 @@ exports[`Storyshots AdviceList With Static List 1`] = `
           >
             <img
               alt="undefined avatar"
+              className=""
               height="61"
+              loading="lazy"
               width="61"
             />
             <h5 />
@@ -906,8 +938,10 @@ exports[`Storyshots AdviceList With Static List 1`] = `
         </li>
         <li>
           <img
-            alt="About Life"
+            alt="life"
+            className=""
             height="132"
+            loading="lazy"
             src="https://pencamcc.sirv.com/Images/tags/tag-life.png?format=webp"
             width="88"
           />
@@ -916,7 +950,9 @@ exports[`Storyshots AdviceList With Static List 1`] = `
           >
             <img
               alt="undefined avatar"
+              className=""
               height="61"
+              loading="lazy"
               width="61"
             />
             <h5 />
@@ -1015,7 +1051,9 @@ exports[`Storyshots Avatar Empty 1`] = `
   >
     <img
       alt="undefined avatar"
+      className=""
       height="61"
+      loading="lazy"
       width="61"
     />
     <h5 />
@@ -1082,7 +1120,9 @@ exports[`Storyshots Avatar List 1`] = `
       >
         <img
           alt="Laura avatar"
+          className=""
           height="61"
+          loading="lazy"
           src="https://pencamcc.sirv.com/Images/people/laura.png?format=webp"
           width="61"
         />
@@ -1097,7 +1137,9 @@ exports[`Storyshots Avatar List 1`] = `
       >
         <img
           alt="Daniel avatar"
+          className=""
           height="61"
+          loading="lazy"
           src="https://pencamcc.sirv.com/Images/people/daniel.png?format=webp"
           width="61"
         />
@@ -1112,7 +1154,9 @@ exports[`Storyshots Avatar List 1`] = `
       >
         <img
           alt="Charles avatar"
+          className=""
           height="61"
+          loading="lazy"
           src="https://pencamcc.sirv.com/Images/people/charles.png?format=webp"
           width="61"
         />
@@ -1127,7 +1171,9 @@ exports[`Storyshots Avatar List 1`] = `
       >
         <img
           alt="Meghan avatar"
+          className=""
           height="61"
+          loading="lazy"
           src="https://pencamcc.sirv.com/Images/people/meghan.png?format=webp"
           width="61"
         />
@@ -1142,7 +1188,9 @@ exports[`Storyshots Avatar List 1`] = `
       >
         <img
           alt="Barbara avatar"
+          className=""
           height="61"
+          loading="lazy"
           src="https://pencamcc.sirv.com/Images/people/barbara.png?format=webp"
           width="61"
         />
@@ -1349,7 +1397,9 @@ exports[`Storyshots FamilyList With Static List 1`] = `
           >
             <img
               alt="Laura avatar"
+              className=""
               height="61"
+              loading="lazy"
               src="https://pencamcc.sirv.com/Images/people/laura.png?format=webp"
               width="61"
             />
@@ -1364,7 +1414,9 @@ exports[`Storyshots FamilyList With Static List 1`] = `
           >
             <img
               alt="Daniel avatar"
+              className=""
               height="61"
+              loading="lazy"
               src="https://pencamcc.sirv.com/Images/people/daniel.png?format=webp"
               width="61"
             />
@@ -1379,7 +1431,9 @@ exports[`Storyshots FamilyList With Static List 1`] = `
           >
             <img
               alt="Charles avatar"
+              className=""
               height="61"
+              loading="lazy"
               src="https://pencamcc.sirv.com/Images/people/charles.png?format=webp"
               width="61"
             />
@@ -1394,7 +1448,9 @@ exports[`Storyshots FamilyList With Static List 1`] = `
           >
             <img
               alt="Meghan avatar"
+              className=""
               height="61"
+              loading="lazy"
               src="https://pencamcc.sirv.com/Images/people/meghan.png?format=webp"
               width="61"
             />
@@ -1409,7 +1465,9 @@ exports[`Storyshots FamilyList With Static List 1`] = `
           >
             <img
               alt="Barbara avatar"
+              className=""
               height="61"
+              loading="lazy"
               src="https://pencamcc.sirv.com/Images/people/barbara.png?format=webp"
               width="61"
             />
@@ -1545,7 +1603,7 @@ exports[`Storyshots Footer Empty 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
           >
-            Home
+            nav__home
           </a>
         </li>
         <li>
@@ -1555,7 +1613,7 @@ exports[`Storyshots Footer Empty 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
           >
-            Family
+            nav__family
           </a>
         </li>
         <li>
@@ -1565,7 +1623,7 @@ exports[`Storyshots Footer Empty 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
           >
-            Advice
+            nav__advice
           </a>
         </li>
         <li>
@@ -1575,7 +1633,7 @@ exports[`Storyshots Footer Empty 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
           >
-            Profile
+            nav__profile
           </a>
         </li>
         <li>
@@ -1585,7 +1643,7 @@ exports[`Storyshots Footer Empty 1`] = `
             onClick={[Function]}
             onMouseEnter={[Function]}
           >
-            Credits
+            nav__open_source
           </a>
         </li>
       </ul>
@@ -1598,7 +1656,7 @@ exports[`Storyshots Footer Empty 1`] = `
        
       <span>
         Konsilos - 
-        All rights reserved
+        copyright
         .
       </span>
     </p>
@@ -1760,6 +1818,23 @@ exports[`Storyshots Forms Form With Different Fields 1`] = `
 </div>
 `;
 
+exports[`Storyshots Image Lazy 1`] = `
+.c0 {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+<div
+  className="c0"
+>
+  <img
+    className=""
+    loading="lazy"
+    src="https://pencamcc.sirv.com/Images/stock/family-hands.jpg?format=webp"
+  />
+</div>
+`;
+
 exports[`Storyshots LanguageSwitcher Empty 1`] = `
 .c0 {
   background-color: #fff;
@@ -1806,6 +1881,7 @@ exports[`Storyshots LanguageSwitcher Empty 1`] = `
     className="c1"
   >
     <button
+      aria-label="label__change_language"
       onClick={[Function]}
     >
       <svg
@@ -1925,7 +2001,7 @@ exports[`Storyshots LanguageSwitcher Empty 1`] = `
           <defs>
             <rect
               height="20"
-              id="a"
+              id="e"
               rx="2"
               width="28"
             />
@@ -1942,7 +2018,7 @@ exports[`Storyshots LanguageSwitcher Empty 1`] = `
           >
             <mask
               fill="#fff"
-              id="b"
+              id="f"
             >
               <use
                 xlinkHref="#a"
@@ -1950,20 +2026,20 @@ exports[`Storyshots LanguageSwitcher Empty 1`] = `
             </mask>
             <use
               fill="#FFF"
-              xlinkHref="#a"
+              xlinkHref="#e"
             />
             <path
               d="M0 0h28v20H0z"
               fill="#05AB41"
-              mask="url(#b)"
+              mask="url(#f)"
             />
             <path
               d="M3.23 10.36c-.31-.2-.3-.53 0-.72l10.2-6.61c.32-.2.83-.2 1.13 0l10.21 6.6c.31.2.3.54 0 .73l-10.2 6.61c-.32.2-.83.2-1.13 0l-10.21-6.6z"
               fill="#FDD216"
-              mask="url(#b)"
+              mask="url(#f)"
             />
             <g
-              mask="url(#b)"
+              mask="url(#f)"
             >
               <g
                 transform="translate(9.33 5.33)"
