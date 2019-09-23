@@ -1,4 +1,3 @@
-import { promisify } from 'util'
 import { DEFAULT_USER } from '../constants'
 
 /**
@@ -10,12 +9,12 @@ Airtable.configure({
   apiKey: process.env.AIRTABLE_APP_KEY,
 })
 
-const base = Airtable.base()
-const Advices = base.table('Advices').select({ view: 'Grid view' })
-const FamilyMembers = base.table('FamilyMembers').select({ view: 'Grid view' })
+const base = Airtable.base(process.env.AIRTABLE_APP_KEY)
+const Advices = base('Advices').select({ view: 'Grid view' })
+const FamilyMembers = base('FamilyMembers').select({ view: 'Grid view' })
 
-const getAdvices = promisify(Advices.firstPage)
-const getFamilies = promisify(FamilyMembers.firstPage)
+const getAdvices = Advices.firstPage
+const getFamilies = FamilyMembers.firstPage
 
 export default {
   Query: {
@@ -23,12 +22,29 @@ export default {
       return Promise.resolve({ ...DEFAULT_USER })
     },
     async adviceList() {
-      const adviceList = await getAdvices()
-      return adviceList
+      await getAdvices((error: any, records: any) => {
+        if (error) {
+          console.error(error)
+          return
+        }
+
+        return records.forEach((record: any) => {
+          console.log('Advice', { ...record.fields })
+          return { ...record.fields }
+        })
+      })
     },
     async familyList() {
-      const familyList = await getFamilies()
-      return familyList
+      await getFamilies((error: any, records: any) => {
+        if (error) {
+          console.error(error)
+          return
+        }
+        return records.forEach((record: any) => {
+          console.log('Family Member', { ...record.fields })
+          return { ...record.fields }
+        })
+      })
     },
   },
 }
