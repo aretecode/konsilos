@@ -11,7 +11,7 @@ import { initApolloClient } from '../src/graphql/apolloClient'
 import { fromReqToUrl } from '../src/utils/fromReqToUrl'
 import { AppStyles, BelowTheFoldStyles } from '../src/AppStyles'
 import { UnknownObj } from '../src/typings'
-import '../src/i18n'
+import { appWithTranslation } from '../src/i18n'
 
 export class InnerApp extends React.PureComponent<{
   apolloClientState?: UnknownObj
@@ -47,7 +47,7 @@ export class InnerApp extends React.PureComponent<{
   }
 }
 
-export default class MyApp extends App<{
+class MyApp extends App<{
   /** these come from getInitialProps */
   apolloClientState?: UnknownObj
   apolloClient?: ApolloClient<any>
@@ -125,3 +125,5 @@ export default class MyApp extends App<{
     )
   }
 }
+
+export default appWithTranslation(MyApp)

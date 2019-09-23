@@ -3,7 +3,7 @@
  */
 import * as React from 'react'
 import styled from 'styled-components'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '../src/i18n'
 import { StyledLink } from '../src/components/Link'
 import { StyledPageHeader } from '../src/components/PageHeader'
 
