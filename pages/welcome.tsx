@@ -442,6 +442,7 @@ export default () => {
   const { t } = useTranslation()
   return (
     <>
+      <title>{'Konsilos'}</title>
       <StyledBanner>
         <StyledLogo />
         <nav>

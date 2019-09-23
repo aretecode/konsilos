@@ -39,12 +39,15 @@ const ThemedStyledAdviceList = styled(StyledAdviceList)`
 export default () => {
   const { t } = useTranslation()
   return (
-    <AdvicePageWrapper>
-      <StyledPageHeader>{t('page_title__advice')}</StyledPageHeader>
-      <FormWrapper>
-        <AddAdvice />
-      </FormWrapper>
-      <ThemedStyledAdviceList />
-    </AdvicePageWrapper>
+    <>
+      <title>{'Konsilos - ' + t('page_title__advice')}</title>
+      <AdvicePageWrapper>
+        <StyledPageHeader>{t('page_title__advice')}</StyledPageHeader>
+        <FormWrapper>
+          <AddAdvice />
+        </FormWrapper>
+        <ThemedStyledAdviceList />
+      </AdvicePageWrapper>
+    </>
   )
 }

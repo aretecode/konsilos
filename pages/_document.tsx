@@ -53,7 +53,7 @@ export default class MyDocument extends Document {
     const imageUrl =
       'https://pencamcc.sirv.com/Images/docs/leaderboard.png?format=webp'
     const siteName = titleText
-    const { title = <title>{titleText}</title>, url } = (this.props as any) as {
+    const { title, url } = (this.props as any) as {
       title: string
       url: string
       [key: string]: unknown
@@ -83,7 +83,6 @@ export default class MyDocument extends Document {
           />
           <meta property="og:image" content={imageUrl} key="head:og:image" />
           <meta property="og:title" content={titleText} key="head:og:title" />
-          <title key="head:title">{titleText}</title>
           <meta
             name="description"
             content={description}
