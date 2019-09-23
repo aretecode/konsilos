@@ -7,8 +7,11 @@ import {
   AnyFunction,
 } from '../typings'
 
-export function has<T, K extends keyof T>(obj: T, key: K): T[K] {
-  return Object.prototype.hasOwnProperty.bind(Object)(obj, key)
+/**
+ * @return { !!T[K] }
+ */
+export function has<T, K extends keyof T>(obj: T, key: K) {
+  return Object.prototype.hasOwnProperty.call(obj, key)
 }
 
 export const hasOwnProperty = has
@@ -96,13 +99,13 @@ export const isObjNotNull = isObj
 
 export function isMap(x: unknown): x is Map<any, any> {
   return Object.prototype.toString
-    .call(Object, x)
+    .call(x)
     .toLowerCase()
     .includes('map')
 }
 export function isSet(x: unknown): x is Set<any> {
   return Object.prototype.toString
-    .call(Object, x)
+    .call(x)
     .toLowerCase()
     .includes('set')
 }
