@@ -1,20 +1,20 @@
 import { DEFAULT_USER } from '../constants'
+
+/**
+ * @todo typings for airtable are wrong
+ */
 const Airtable = require('airtable')
 
-
 Airtable.configure({
-  apiKey: 'keyZU3E7hyIL4gkhr',
+  apiKey: process.env.AIRTABLE_APP_KEY,
 })
 
-const base = Airtable.base('appEtPntnilqHwtKW')
-const Advices = base('Advices')
-                    .select({ view: 'Grid view' })
-const FamilyMembers = base('FamilyMembers')
-                    .select({ view: 'Grid view' })
+const base = Airtable.base(process.env.AIRTABLE_APP_KEY)
+const Advices = base('Advices').select({ view: 'Grid view' })
+const FamilyMembers = base('FamilyMembers').select({ view: 'Grid view' })
 
 const getAdvices = Advices.firstPage
 const getFamilies = FamilyMembers.firstPage
-
 
 export default {
   Query: {
@@ -22,7 +22,7 @@ export default {
       return Promise.resolve({ ...DEFAULT_USER })
     },
     async adviceList() {
-      await getAdvices((error:any, records:any) => {
+      await getAdvices((error: any, records: any) => {
         if (error) {
           console.error(error)
           return
@@ -35,13 +35,13 @@ export default {
       })
     },
     async familyList() {
-      await getFamilies((error:any, records:any) => {
+      await getFamilies((error: any, records: any) => {
         if (error) {
           console.error(error)
           return
         }
         return records.forEach((record:any) => {
-          console.log('Family Member', { ...record.fields, uid: record.getId() })
+          console.log('FamilyMember', { ...record.fields, uid: record.getId() })
           return { ...record.fields, uid: record.getId() }
         })
       })

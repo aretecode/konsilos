@@ -6,21 +6,24 @@ const withOffline = require('next-offline')
 
 /**
  * @description Make sure any symlinks in the project folder are resolved:
- * @see  https://github.com/facebookincubator/create-react-app/issues/637
+ * @see https://github.com/facebookincubator/create-react-app/issues/637
  */
 const { resolve, join } = require('path')
 const { realpathSync } = require('fs')
 const appDirectory = realpathSync(process.cwd())
 const resolveApp = relativePath => resolve(appDirectory, relativePath)
 
+const { env } = require('./env')
+
 /**
  * @see https://zeit.co/examples/nextjs/
  * @see https://zeit.co/docs/v2/deployments/ignoring-source-paths
- * @see https://github.com/hanford/next-offline/tree/master/examples/now2
+ * @see https://github.com/hanford/next-offline/blob/master/packages/now2-example/next.config.js
  *
  * @see https://nextjs.org/docs#build-time-configuration
  */
 const nextConfig = {
+  env,
   target:
     process.env.DISABLE_SERVERLESS !== undefined ? 'server' : 'serverless',
   webpack(config, options) {
@@ -63,12 +66,14 @@ const nextConfig = {
 
     return config
   },
+  // add the homepage to the cache
+  transformManifest: manifest => ['/'].concat(manifest),
   workboxOpts: {
     swDest: 'static/service-worker.js',
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
-        handler: 'networkFirst',
+        handler: 'NetworkFirst',
         options: {
           cacheName: 'https-calls',
           networkTimeoutSeconds: 15,

@@ -4,6 +4,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
+import { StyledImage } from '../src/components/Image'
 import { StyledAdviceList } from '../src/features/Advice'
 import { StyledDevice } from '../src/components/Device'
 import { StyledMaterialIcon } from '../src/components/MaterialIcons'
@@ -441,6 +442,7 @@ export default () => {
   const { t } = useTranslation()
   return (
     <>
+      <title>{'Konsilos'}</title>
       <StyledBanner>
         <StyledLogo />
         <nav>
@@ -481,9 +483,12 @@ export default () => {
             </div>
             <StyledMacbookPanel>
               <StyledDevice type="macbook">
-                <img
+                <StyledImage
+                  width="1152"
+                  height="768"
                   className="device-content"
                   src="https://pencamcc.sirv.com/Images/stock/family-hands.jpg?format=webp"
+                  alt="family hands"
                 />
               </StyledDevice>
             </StyledMacbookPanel>
@@ -491,9 +496,12 @@ export default () => {
           <StyledArticleFeatureIPadSection>
             <StyledIpadPanel>
               <StyledDevice type="ipad">
-                <img
+                <StyledImage
+                  width="678"
+                  height="872"
                   className="device-content"
                   src="https://pencamcc.sirv.com/Images/screenshots/add-family.png?format=webp"
+                  alt="add family app screenshot"
                 />
               </StyledDevice>
             </StyledIpadPanel>

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { Image } from '../src/components/Image'
 import { useAuth0, Auth0NavBar } from '../src/components/Auth0'
 
 const StyledAuth0NavBar = styled(Auth0NavBar)`
@@ -41,7 +42,7 @@ const Profile = (props: {}) => {
     <div {...props}>
       <StyledAuth0NavBar />
       <main>
-        <img src={picture} alt="Profile" />
+        <Image src={picture} alt="Profile" />
         <h2>{name.givenName}</h2>
         <p>{emails[0].value}</p>
       </main>

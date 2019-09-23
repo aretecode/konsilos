@@ -38,14 +38,17 @@ const FormWrapper = styled.div`
 export default () => {
   const { t } = useTranslation()
   return (
-    <FamilyPageWrapper>
-      <StyledPageHeader>{t('page_title__family')}</StyledPageHeader>
-      <FormWrapper>
-        <AddFamily />
-      </FormWrapper>
-      <main>
-        <StyledFamilyList />
-      </main>
-    </FamilyPageWrapper>
+    <>
+      <title>{'Konsilos - ' + t('page_title__family')}</title>
+      <FamilyPageWrapper>
+        <StyledPageHeader>{t('page_title__family')}</StyledPageHeader>
+        <FormWrapper>
+          <AddFamily />
+        </FormWrapper>
+        <main>
+          <StyledFamilyList />
+        </main>
+      </FamilyPageWrapper>
+    </>
   )
 }

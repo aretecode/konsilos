@@ -1,4 +1,5 @@
 /**
+ * @todo @perf requestIdleCallback
  * @see https://auth0.com/docs/quickstart/spa/react/
  * @see https://github.com/sandrinodimattia/nextjs-auth0-example/blob/master/lib/auth0.js
  */
@@ -68,9 +69,11 @@ export const Auth0Provider = ({
        * @note this block was changed, the code that came with the starter
        *       did not work, so this is connected to fetch user from /user
        *       otherwise, it falls back to default
+       * @security does a fetch to unauthorized domain triggering console
        */
       if (!user) {
-        const json = await fetch(window.location.origin + '/user')
+        const fetchUrl = window.location.origin + '/user'
+        const json = await fetch(fetchUrl)
           .then(x => x.json())
           .catch(errror => {
             // ignore
@@ -81,6 +84,7 @@ export const Auth0Provider = ({
         }
         // fallback
         else if (isAuthenticated) {
+          console.warn('fetching')
           const fetchedUser = await auth0FromHook.getUser()
           if (fetchedUser) {
             setUser(fetchedUser)

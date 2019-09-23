@@ -14,6 +14,7 @@ i18n
           page_title__family: 'Family',
           page_title__open_source: 'Credits',
 
+          label__change_language: 'change language',
           nav__home: 'Home',
           nav__advice: 'Advice',
           nav__family: 'Family',
