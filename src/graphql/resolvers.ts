@@ -12,8 +12,9 @@ Airtable.configure({
 })
 
 const base = Airtable.base(process.env.AIRTABLE_APP_KEY)
-const Advices = base('Advices').select({ view: 'Grid view' })
-const FamilyMembers = base('FamilyMembers').select({ view: 'Grid view' })
+const Advices = base('Advices')
+const FamilyMembers = base('FamilyMembers')
+const Users = base('Users')
 
 /**
  * === helpers ===
@@ -36,6 +37,53 @@ const getFirstPage = <RecordsType = unknown>(
       }
     )
   })
+
+const getFamilyMembers = () => {
+  return getFirstPage(FamilyMembers.select({ view: 'Grid view' }))
+}
+const getAdvices = () => {
+  return getFirstPage(Advices.select({ view: 'Grid view' }))
+}
+
+const createItem = (table: any, item: any) => {
+  return table.create([{ fields: { ...item } }], (error: any, records: any) => {
+    if (error) {
+      console.error(error)
+    }
+    const record = records[0]
+    const payload = { ...record.fields }
+    return Promise.resolve(payload)
+  })
+}
+
+const updateItem = (table: any, item: any, id: string) => {
+  return table.update(
+    [
+      {
+        id,
+        fields: { ...item },
+      },
+    ],
+    (error: any, records: any) => {
+      if (error) {
+        console.error(error)
+      }
+      const record = records[0]
+      const payload = { ...record.fields }
+      return Promise.resolve(payload)
+    }
+  )
+}
+
+const deleteItem = (table: any, id: string) => {
+  return table.destroy([id], (error: any, records: any) => {
+    if (error) {
+      console.error(error)
+    }
+    return `Deleted record with ID ${records[0].getId()}`
+  })
+}
+
 export type DefaultRecordType = {
   fields: UnknownObj
   getId: () => string
@@ -52,12 +100,6 @@ const fromRecordToItemWithUid = <
  */
 const mapRecords = <ItemType>(records: any[] | readonly any[]): ItemType[] =>
   [...records].map(fromRecordToItemWithUid) as any[]
-
-/**
- * === domain ===
- */
-const getFamilyMembers = () => getFirstPage(FamilyMembers)
-const getAdvices = () => getFirstPage(Advices)
 
 export default {
   Query: {
@@ -77,6 +119,46 @@ export default {
       const list = mapRecords<FamilyMemberItemType>(records)
       console.log('Family', list)
       return list
+    },
+  },
+  Mutation: {
+    createAdvice: async (_: any, { input }: any) => {
+      const result = await createItem(Advices, input)
+      console.log(result)
+      return result
+    },
+    updateAdvice: async (_: any, { input, id }: any) => {
+      const result = await updateItem(Advices, input, id)
+      console.log(result)
+      return result
+    },
+    deleteAdvice: async (_: any, { id }: any) => {
+      const result = await deleteItem(Advices, id)
+      return result
+    },
+    addFamilyMember: async (_: any, { input }: any) => {
+      const result = await createItem(FamilyMembers, input)[0]
+      return result
+    },
+    updateFamilyMember: async (_: any, { input, id }: any) => {
+      const result = await updateItem(Advices, input, id)[0]
+      return result
+    },
+    deleteFamilyMember: async (_: any, { id }: any) => {
+      const result = await deleteItem(FamilyMembers, id)
+      return result
+    },
+    createUser: async (_: any, { input }: any) => {
+      const result = await createItem(Users, input)[0]
+      return result
+    },
+    updateUser: async (_: any, { input, id }: any) => {
+      const result = await updateItem(Users, input, id)[0]
+      return result
+    },
+    nukeAccount: async (_: any, { id }: any) => {
+      const result = await deleteItem(Users, id)
+      return result
     },
   },
 }
