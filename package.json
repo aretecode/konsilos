@@ -38,7 +38,7 @@
 	"resolutions": {
 		"next": "9.0.6",
 		"next-server": "9.0.5",
-		"node-fetch": "2.6.0",
+		"node-fetch": "2.6.7",
 		"webpack": "4.40.2",
 		"fork-ts-checker-webpack-plugin": "1.5.0",
 		"apollo-link": "1.2.12",
@@ -68,7 +68,7 @@
 		"i18next": "17.0.16",
 		"i18next-browser-languagedetector": "3.0.3",
 		"next-offline": "4.0.5",
-		"node-fetch": "2.6.0",
+		"node-fetch": "2.6.7",
 		"react-amphtml": "^4.0.2",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
